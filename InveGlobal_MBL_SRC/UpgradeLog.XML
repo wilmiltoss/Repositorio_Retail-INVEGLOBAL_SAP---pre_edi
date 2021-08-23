@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="InveGlobal">
+</Property><Property Name="Archivo de la solución" Value="D:\ACTUAL\MOBILE\VS_2005\InveGlobal_SRC\InveGlobal.sln">
+</Property><Property Name="Date" Value="lunes, 12 de abril de 2010">
+</Property><Property Name="Time" Value="14:42">
+</Property></Properties><Event ErrorLevel="0" Project="InveGlobal_SRC" Source="InveGlobal_SRC.csproj" Description="Proyecto convertido correctamente">
+</Event><Event ErrorLevel="3" Project="InveGlobal_SRC" Source="InveGlobal_SRC.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="InveGlobal.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="InveGlobal.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InveGlobal_SRC" Source="frm_principal.resx" Description="Archivo convertido correctamente">
+</Event><Event ErrorLevel="3" Project="InveGlobal_SRC" Source="frm_principal.resx" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InveGlobal_SRC" Source="Properties\Resources.resx" Description="Archivo convertido correctamente">
+</Event><Event ErrorLevel="3" Project="InveGlobal_SRC" Source="Properties\Resources.resx" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InveGlobal_SRC" Source="InveGlobal_SRC.csproj" Description="Examen completo: no es necesario actualizar los archivos de proyecto.">
+</Event></UpgradeLog>

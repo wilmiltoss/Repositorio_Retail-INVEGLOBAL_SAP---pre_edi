@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Configuration.Install</name>
+  </assembly>
+  <members>
+    <member name="T:System.Configuration.Install.AssemblyInstaller">
+      <summary>
+          Carga un ensamblado y ejecuta todos los instaladores que contiene.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.AssemblyInstaller" />.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.#ctor(System.Reflection.Assembly,System.String[])">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.AssemblyInstaller" /> y especifica tanto el ensamblado que se va a instalar como la línea de comandos que se va a utilizar al crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" />.
+        </summary>
+      <param name="assembly">
+              <see cref="T:System.Reflection.Assembly" /> que se va a instalar. 
+            </param>
+      <param name="commandLine">
+              Línea de comandos que se va a utilizar al crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" /> para la instalación del ensamblado. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.#ctor(System.String,System.String[])">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.AssemblyInstaller" /> y especifica tanto el nombre de archivo del ensamblado que se va a instalar como la línea de comandos que se va a utilizar al crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" /> para la instalación del ensamblado.
+        </summary>
+      <param name="fileName">
+              Nombre de archivo del ensamblado que se va a instalar. 
+            </param>
+      <param name="commandLine">
+              Línea de comandos que se va a utilizar al crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" /> para la instalación del ensamblado. 
+            </param>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.Assembly">
+      <summary>
+          Obtiene o establece el ensamblado que se va a instalar.
+        </summary>
+      <returns>
+          <see cref="T:System.Reflection.Assembly" /> que define el ensamblado que se va a instalar.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor de la propiedad es null. 
+            </exception>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.CheckIfInstallable(System.String)">
+      <summary>
+          Comprueba si se puede instalar el ensamblado especificado.
+        </summary>
+      <param name="assemblyName">
+              Ensamblado donde se van a buscar los instaladores. 
+            </param>
+      <exception cref="T:System.Exception">
+              No se puede instalar el ensamblado especificado. 
+            </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.CommandLine">
+      <summary>
+          Obtiene o establece la línea de comandos que se va a utilizar al crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" /> para la instalación del ensamblado.
+        </summary>
+      <returns>
+          Matriz de tipo <see cref="T:System.String" /> que representa la línea de comandos que se va a utilizar al crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" /> para la instalación del ensamblado.
+        </returns>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)">
+      <summary>
+          Completa la transacción de instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo tras ejecutarse todos los instaladores de la colección de instaladores. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="savedState" /> es null.
+              O bien
+              La interfaz <see cref="T:System.Collections.IDictionary" /> de estados guardados puede estar dañada.
+              O bien
+              No se encontró un archivo. 
+            </exception>
+      <exception cref="T:System.Exception">
+              Se ha producido un error en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.Committing" /> de uno de los instaladores de la colección.
+              O bien
+              Se ha producido un error en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.Committed" /> de uno de los instaladores de la colección.
+              O bien
+              Se ha producido una excepción durante la fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)" /> de la instalación. Se omite la excepción y continúa la instalación. Sin embargo, puede que la aplicación no funcione correctamente una vez finalizada la instalación.
+              O bien
+              No se encontraron los tipos de instalador en uno de los ensamblados.
+              O bien
+              No se pudo crear una instancia de uno de los tipos de instalador. 
+            </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">
+              Se ha producido una excepción durante la fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)" /> de la instalación. Se omite la excepción y continúa la instalación. Sin embargo, puede que la aplicación no funcione correctamente una vez finalizada la instalación. 
+            </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.HelpText">
+      <summary>
+          Obtiene el texto de ayuda de todos los instaladores que se encuentran en la colección de instaladores.
+        </summary>
+      <returns>
+          Texto de ayuda de todos los instaladores que se encuentran en la colección de instaladores, incluidas la descripción de lo que hace cada instalador y las opciones de la línea de comandos (del programa de instalación) que pueden pasarse y que cada instalador puede interpretar.
+        </returns>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Install(System.Collections.IDictionary)">
+      <summary>
+          Realiza la instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que se utiliza con el fin de guardar la información necesaria para realizar una operación de confirmar, deshacer o desinstalar. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="savedState" /> es null.
+              O bien
+              No se encontró un archivo. 
+            </exception>
+      <exception cref="T:System.Exception">
+              Se ha producido una excepción en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.BeforeInstall" /> de uno de los instaladores de la colección.
+              O bien
+              Se ha producido una excepción en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.AfterInstall" /> de uno de los instaladores de la colección.
+              O bien
+              No se encontraron los tipos de instalador en uno de los ensamblados.
+              O bien
+              No se pudo crear una instancia de uno de los tipos de instalador. 
+            </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.Path">
+      <summary>
+          Obtiene o establece la ruta de acceso al ensamblado que se va a instalar.
+        </summary>
+      <returns>
+          Ruta de acceso al ensamblado que se va a instalar.
+        </returns>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>
+          Restaura el estado en el que estaba el equipo antes de la instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo previo a la instalación. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="savedState" /> es null.
+              O bien
+              La interfaz <see cref="T:System.Collections.IDictionary" /> de estados guardados puede estar dañada.
+              O bien
+              No se encontró un archivo. 
+            </exception>
+      <exception cref="T:System.Exception">
+              Se ha producido una excepción en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.BeforeRollback" /> de uno de los instaladores de la colección.
+              O bien
+              Se ha producido una excepción en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.AfterRollback" /> de uno de los instaladores de la colección.
+              O bien
+              Se ha producido una excepción durante la fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)" /> de la instalación. Se omite la excepción y continúa la operación de deshacer. Sin embargo, puede que el equipo no haya vuelto por completo a su estado inicial una vez finalizada la operación de deshacer.
+              O bien
+              No se encontraron los tipos de instalador en uno de los ensamblados.
+              O bien
+              No se pudo crear una instancia de uno de los tipos de instalador. 
+            </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">
+              Se ha producido una excepción durante la fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)" /> de la instalación. Se omite la excepción y continúa la operación de deshacer. Sin embargo, puede que el equipo no haya vuelto por completo a su estado inicial una vez finalizada la operación de deshacer. 
+            </exception>
+    </member>
+    <member name="M:System.Configuration.Install.AssemblyInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>
+          Quita una instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo después de la instalación. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Puede estar dañada la interfaz <see cref="T:System.Collections.IDictionary" /> de estado guardado.
+              O bien
+              No se encontró un archivo. 
+            </exception>
+      <exception cref="T:System.Exception">
+              Se ha producido un error en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> de uno de los instaladores de la colección.
+              O bien
+              Se ha producido un error en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.AfterUninstall" /> de uno de los instaladores de la colección.
+              O bien
+              Se ha producido una excepción durante la desinstalación. Se omite la excepción y continúa la desinstalación. Sin embargo, puede que la aplicación no se haya desinstalado totalmente una vez finalizada la desinstalación.
+              O bien
+              No se encontraron los tipos de instalador en uno de los ensamblados.
+              O bien
+              No se pudo crear una instancia de uno de los tipos de instalador.
+              O bien
+              No se pudo eliminar un archivo. 
+            </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">
+              Se ha producido una excepción durante la desinstalación. Se omite la excepción y continúa la desinstalación. Sin embargo, puede que la aplicación no se haya desinstalado totalmente una vez finalizada la desinstalación. 
+            </exception>
+    </member>
+    <member name="P:System.Configuration.Install.AssemblyInstaller.UseNewContext">
+      <summary>
+          Obtiene o establece un valor que indica si se va a crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" /> para la instalación del ensamblado.
+        </summary>
+      <returns>
+          
+            Es true si se debe crear un nuevo objeto <see cref="T:System.Configuration.Install.InstallContext" /> para la instalación del ensamblado; en caso contrario, es false. El valor predeterminado es true.
+        </returns>
+    </member>
+    <member name="T:System.Configuration.Install.ComponentInstaller">
+      <summary>
+          Especifica un instalador que copia las propiedades de un componente para utilizarlas en tiempo de instalación.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.ComponentInstaller.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.ComponentInstaller" />.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>
+          Cuando se reemplaza en una clase derivada, copia todas las propiedades del componente especificado que se requieren en tiempo de instalación.
+        </summary>
+      <param name="component">
+              Componente del que se va a copiar. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)">
+      <summary>
+          Determina si el instalador especificado instala el mismo objeto que este instalador.
+        </summary>
+      <returns>
+          
+            Es true si este instalador y el instalador especificado por el parámetro <paramref name="otherInstaller" /> instalan el mismo objeto; en caso contrario, false.
+        </returns>
+      <param name="otherInstaller">
+              Instalador que se va a comparar. 
+            </param>
+    </member>
+    <member name="T:System.Configuration.Install.IManagedInstaller">
+      <summary>
+          Proporciona una interfaz para un instalador administrado.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.IManagedInstaller.ManagedInstall(System.String,System.Int32)">
+      <summary>
+          Ejecuta una instalación administrada.
+        </summary>
+      <param name="commandLine">
+              Línea de comandos para instalar.
+            </param>
+      <param name="hInstall">
+            </param>
+    </member>
+    <member name="T:System.Configuration.Install.InstallContext">
+      <summary>
+          Contiene información sobre la actual instalación.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallContext" />.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.#ctor(System.String,System.String[])">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallContext" /> y crea un archivo de registro para la instalación.
+        </summary>
+      <param name="logFilePath">
+              Ruta de acceso al archivo de registro para esta instalación o null si no se debe crear ningún archivo de registro. 
+            </param>
+      <param name="commandLine">
+              Parámetros de la línea de comandos que se especifican cuando se ejecuta el programa de instalación o null si no se especifica ninguno. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.IsParameterTrue(System.String)">
+      <summary>
+          Determina si el parámetro especificado de la línea de comandos es true.
+        </summary>
+      <returns>
+          
+            Es true si el parámetro especificado está establecido en "yes", "true", "1" o una cadena vacía (""); en caso contrario, false.
+        </returns>
+      <param name="paramName">
+              Nombre del parámetro de la línea de comandos que se va a comprobar. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.LogMessage(System.String)">
+      <summary>
+          Escribe un mensaje en la consola y el archivo de registro para la instalación.
+        </summary>
+      <param name="message">
+              Mensaje que se va a escribir. 
+            </param>
+    </member>
+    <member name="P:System.Configuration.Install.InstallContext.Parameters">
+      <summary>
+          Obtiene los parámetros de la línea de comandos que se especificaron al ejecutar InstallUtil.exe.
+        </summary>
+      <returns>
+          <see cref="T:System.Collections.Specialized.StringDictionary" /> que representa los parámetros de la línea de comandos que se especificaron al ejecutar el ejecutable de instalación.
+        </returns>
+    </member>
+    <member name="M:System.Configuration.Install.InstallContext.ParseCommandLine(System.String[])">
+      <summary>
+          Analiza los parámetros de la línea de comandos en un diccionario de cadenas.
+        </summary>
+      <returns>
+          <see cref="T:System.Collections.Specialized.StringDictionary" /> que contiene los parámetros analizados de la línea de comandos.
+        </returns>
+      <param name="args">
+              Matriz que contiene los parámetros de la línea de comandos. 
+            </param>
+    </member>
+    <member name="T:System.Configuration.Install.Installer">
+      <summary>
+          Proporciona la base para las instalaciones personalizadas.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.Installer" />.
+        </summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.AfterInstall">
+      <summary>
+          Se produce después de ejecutarse los métodos <see cref="M:System.Configuration.Install.Installer.Install(System.Collections.IDictionary)" /> de todos los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />.
+        </summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.AfterRollback">
+      <summary>
+          Se produce después de deshacerse la instalación de todos los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />.
+        </summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.AfterUninstall">
+      <summary>
+          Se produce después de que todos los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" /> realicen sus operaciones de desinstalación.
+        </summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.BeforeInstall">
+      <summary>
+          Se produce antes de ejecutarse el método <see cref="M:System.Configuration.Install.Installer.Install(System.Collections.IDictionary)" /> de cada instalador en la colección de instaladores.
+        </summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.BeforeRollback">
+      <summary>
+          Se produce antes de deshacerse los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />.
+        </summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.BeforeUninstall">
+      <summary>
+          Se produce antes de que los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" /> realicen sus operaciones de desinstalación.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Commit(System.Collections.IDictionary)">
+      <summary>
+          Cuando se reemplaza en una clase derivada, finaliza la transacción de instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo tras ejecutarse todos los instaladores de la colección. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="savedState" /> es null.
+              O bien 
+              El <see cref="T:System.Collections.IDictionary" /> de estados guardados puede estar dañado. 
+            </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">
+              Se ha producido una excepción durante la fase <see cref="M:System.Configuration.Install.Installer.Commit(System.Collections.IDictionary)" /> de la instalación. Se omite esta excepción y continúa la instalación. Sin embargo, puede que la aplicación no funcione correctamente una vez finalizada la instalación. 
+            </exception>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.Committed">
+      <summary>
+          Se produce después de que todos los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" /> confirmen sus instalaciones.
+        </summary>
+    </member>
+    <member name="E:System.Configuration.Install.Installer.Committing">
+      <summary>
+          Se produce antes de que los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" /> confirmen sus instalaciones.
+        </summary>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.Context">
+      <summary>
+          Obtiene o establece información sobre la instalación actual.
+        </summary>
+      <returns>
+          <see cref="T:System.Configuration.Install.InstallContext" /> que contiene información sobre la instalación actual.
+        </returns>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.HelpText">
+      <summary>
+          Obtiene el texto de ayuda de todos los instaladores que se encuentran en la colección de instaladores.
+        </summary>
+      <returns>
+          Texto de ayuda de todos los instaladores en la colección de instaladores, incluidas la descripción de lo que hace el instalador y las opciones de la línea de comandos del ejecutable de instalación, como la utilidad InstallUtil.exe, que pueden pasarse y que este instalador puede interpretar.
+        </returns>
+      <exception cref="T:System.NullReferenceException">
+              Uno de los instaladores de la colección de instaladores especifica una referencia null en lugar de texto de ayuda. Una causa probable de esta excepción es que se haya definido un campo para contener el texto de ayuda, pero que no se haya inicializado.
+            </exception>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Install(System.Collections.IDictionary)">
+      <summary>
+          Cuando se reemplaza en una clase derivada, se lleva a cabo la instalación.
+        </summary>
+      <param name="stateSaver">
+              <see cref="T:System.Collections.IDictionary" /> que se utiliza con el fin de guardar la información necesaria para realizar una operación de confirmar, deshacer o desinstalar. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="stateSaver" /> es null. 
+            </exception>
+      <exception cref="T:System.Exception">
+              Se ha producido una excepción en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.BeforeInstall" /> de uno de los instaladores de la colección.
+              O bien 
+              Se ha producido una excepción en el controlador de eventos <see cref="E:System.Configuration.Install.Installer.AfterInstall" /> de uno de los instaladores de la colección. 
+            </exception>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.Installers">
+      <summary>
+          Obtiene la colección de instaladores que contiene este instalador.
+        </summary>
+      <returns>
+          <see cref="T:System.Configuration.Install.InstallerCollection" /> que contiene la colección de instaladores asociada a este instalador.
+        </returns>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnAfterInstall(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.AfterInstall" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo después de que todos los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" /> finalicen sus instalaciones. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnAfterRollback(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.AfterRollback" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo después de deshacer los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnAfterUninstall(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.AfterUninstall" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo después de desinstalar todos los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnBeforeInstall(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.BeforeInstall" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo antes de instalar los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />. Llegados a este punto, el objeto <see cref="T:System.Collections.IDictionary" /> debe estar vacío. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnBeforeRollback(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.BeforeRollback" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo antes de deshacer los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnBeforeUninstall(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo antes de que los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" /> desinstalen su instalación. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnCommitted(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.Committed" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo después de ejecutar todos los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.OnCommitting(System.Collections.IDictionary)">
+      <summary>
+          Provoca el evento <see cref="E:System.Configuration.Install.Installer.Committing" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo antes de confirmar los instaladores de la propiedad <see cref="P:System.Configuration.Install.Installer.Installers" />. 
+            </param>
+    </member>
+    <member name="P:System.Configuration.Install.Installer.Parent">
+      <summary>
+          Obtiene o establece el instalador que contiene la colección a la que pertenece este instalador.
+        </summary>
+      <returns>
+          <see cref="T:System.Configuration.Install.Installer" /> que contiene la colección a la que pertenece esta instancia o null si esta instancia no pertenece a ninguna colección.
+        </returns>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Rollback(System.Collections.IDictionary)">
+      <summary>
+          Cuando se reemplaza en una clase derivada, restaura el estado en el que estaba el equipo antes de la instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo previo a la instalación. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="savedState" /> es null.
+              O bien 
+              El <see cref="T:System.Collections.IDictionary" /> de estados guardados puede estar dañado. 
+            </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">
+              Se ha producido una excepción durante la fase <see cref="M:System.Configuration.Install.Installer.Rollback(System.Collections.IDictionary)" /> de la instalación. Se omite esta excepción y continúa la operación de deshacer. Sin embargo, puede que el equipo no haya vuelto por completo a su estado inicial una vez finalizada la operación de deshacer. 
+            </exception>
+    </member>
+    <member name="M:System.Configuration.Install.Installer.Uninstall(System.Collections.IDictionary)">
+      <summary>
+          Cuando se reemplaza en una clase derivada, quita una instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo una vez finalizada la instalación. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El <see cref="T:System.Collections.IDictionary" /> de estados guardados puede estar dañado. 
+            </exception>
+      <exception cref="T:System.Configuration.Install.InstallException">
+              Se ha producido una excepción durante la desinstalación. Se omite esta excepción y continúa la desinstalación. Sin embargo, puede que la aplicación no se haya desinstalado totalmente una vez finalizada la desinstalación. 
+            </exception>
+    </member>
+    <member name="T:System.Configuration.Install.InstallerCollection">
+      <summary>
+          Contiene una colección de instaladores que se ejecutan durante una instalación.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Add(System.Configuration.Install.Installer)">
+      <summary>
+          Agrega el instalador especificado a esta colección de instaladores.
+        </summary>
+      <returns>
+          Índice basado en cero del instalador agregado.
+        </returns>
+      <param name="value">
+              <see cref="T:System.Configuration.Install.Installer" /> que representa al instalador que se va a agregar a la colección. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.AddRange(System.Configuration.Install.Installer[])">
+      <summary>
+          Agrega la matriz especificada de instaladores a esta colección.
+        </summary>
+      <param name="value">
+              Matriz de tipo <see cref="T:System.Configuration.Install.Installer" /> que representa a los instaladores que se van a agregar a esta colección. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.AddRange(System.Configuration.Install.InstallerCollection)">
+      <summary>
+          Agrega la colección especificada de instaladores a esta colección.
+        </summary>
+      <param name="value">
+              <see cref="T:System.Configuration.Install.InstallerCollection" /> que representa a los instaladores que se van a agregar a esta colección. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Contains(System.Configuration.Install.Installer)">
+      <summary>
+          Determina si el instalador especificado está incluido en la colección.
+        </summary>
+      <returns>
+          
+            Es true si el instalador especificado está en esta colección; en caso contrario, es false.
+        </returns>
+      <param name="value">
+              <see cref="T:System.Configuration.Install.Installer" /> que representa al instalador que se va a buscar. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.CopyTo(System.Configuration.Install.Installer[],System.Int32)">
+      <summary>
+          Copia los elementos de la colección en una matriz, empezando por el índice especificado.
+        </summary>
+      <param name="array">
+              Matriz en la que se va a copiar. 
+            </param>
+      <param name="index">
+              Índice de la matriz donde se va a pegar la colección. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.IndexOf(System.Configuration.Install.Installer)">
+      <summary>
+          Determina el índice de un instalador especificado de la colección.
+        </summary>
+      <returns>
+          Índice basado en cero del instalador en la colección.
+        </returns>
+      <param name="value">
+              Objeto <see cref="T:System.Configuration.Install.Installer" /> que se va a buscar en la colección. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Insert(System.Int32,System.Configuration.Install.Installer)">
+      <summary>
+          Inserta el instalador especificado en el índice especificado de la colección.
+        </summary>
+      <param name="index">
+              Índice basado en cero donde se inserta el instalador. 
+            </param>
+      <param name="value">
+              Objeto <see cref="T:System.Configuration.Install.Installer" /> que se va a insertar. 
+            </param>
+    </member>
+    <member name="P:System.Configuration.Install.InstallerCollection.Item(System.Int32)">
+      <summary>
+          Obtiene o establece un instalador en el índice especificado.
+        </summary>
+      <returns>
+          <see cref="T:System.Configuration.Install.Installer" /> que representa al instalador en el índice especificado.
+        </returns>
+      <param name="index">
+              Índice basado en cero del instalador que se va a obtener o establecer. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.OnInsert(System.Int32,System.Object)">
+      <summary>
+          Lleva a cabo procesos personalizados adicionales antes de que se inserte un nuevo instalador en la colección.
+        </summary>
+      <param name="index">
+              Índice de base cero en el que se va a insertar <paramref name="value" />.
+            </param>
+      <param name="value">
+              Nuevo valor del instalador situado en <paramref name="index" />.
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.OnRemove(System.Int32,System.Object)">
+      <summary>
+          Lleva a cabo proceso personalizados adicionales antes de se quite un instalador de la colección.
+        </summary>
+      <param name="index">
+              Índice de base cero en el que se puede encontrar <paramref name="value" />.
+            </param>
+      <param name="value">
+              Instalador que se va a quitar de <paramref name="index" />. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.OnSet(System.Int32,System.Object,System.Object)">
+      <summary>
+          Lleva a cabo proceso personalizados antes de que se establezca un nuevo valor para un instalador existente.
+        </summary>
+      <param name="index">
+              Índice de base cero en el que se va a reemplazar <paramref name="oldValue" />.
+            </param>
+      <param name="oldValue">
+              Valor que se va a reemplazar por <paramref name="newValue." />.
+            </param>
+      <param name="newValue">
+              Nuevo valor del instalador situado en <paramref name="index" />.
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallerCollection.Remove(System.Configuration.Install.Installer)">
+      <summary>
+          Quita de la colección el objeto <see cref="T:System.Configuration.Install.Installer" /> especificado.
+        </summary>
+      <param name="value">
+              <see cref="T:System.Configuration.Install.Installer" /> que representa al instalador que se va a quitar. 
+            </param>
+    </member>
+    <member name="T:System.Configuration.Install.InstallEventArgs">
+      <summary>
+          Proporciona datos para los eventos: <see cref="E:System.Configuration.Install.Installer.BeforeInstall" />, <see cref="E:System.Configuration.Install.Installer.AfterInstall" />, <see cref="E:System.Configuration.Install.Installer.Committing" />, <see cref="E:System.Configuration.Install.Installer.Committed" />, <see cref="E:System.Configuration.Install.Installer.BeforeRollback" />, <see cref="E:System.Configuration.Install.Installer.AfterRollback" />, <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> y <see cref="E:System.Configuration.Install.Installer.AfterUninstall" />.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallEventArgs.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallEventArgs" /> y deja vacía la propiedad <see cref="P:System.Configuration.Install.InstallEventArgs.SavedState" />.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallEventArgs.#ctor(System.Collections.IDictionary)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallEventArgs" /> y especifica el valor de la propiedad <see cref="P:System.Configuration.Install.InstallEventArgs.SavedState" />.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que representa el estado actual de la instalación. 
+            </param>
+    </member>
+    <member name="P:System.Configuration.Install.InstallEventArgs.SavedState">
+      <summary>
+          Obtiene un objeto <see cref="T:System.Collections.IDictionary" /> que representa el estado actual de la instalación.
+        </summary>
+      <returns>
+          <see cref="T:System.Collections.IDictionary" /> que representa el estado actual de la instalación.
+        </returns>
+    </member>
+    <member name="T:System.Configuration.Install.InstallEventHandler">
+      <summary>
+          Representa al método que controlará el evento <see cref="E:System.Configuration.Install.Installer.BeforeInstall" />, <see cref="E:System.Configuration.Install.Installer.AfterInstall" />, <see cref="E:System.Configuration.Install.Installer.Committing" />, <see cref="E:System.Configuration.Install.Installer.Committed" />, <see cref="E:System.Configuration.Install.Installer.BeforeRollback" />, <see cref="E:System.Configuration.Install.Installer.AfterRollback" />, <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> o <see cref="E:System.Configuration.Install.Installer.AfterUninstall" /> de un <see cref="T:System.Configuration.Install.Installer" />.
+        </summary>
+      <param name="sender">
+              Origen del evento. 
+            </param>
+      <param name="e">
+              <see cref="T:System.Configuration.Install.InstallEventArgs" /> que contiene los datos del evento. 
+            </param>
+    </member>
+    <member name="T:System.Configuration.Install.InstallException">
+      <summary>
+          Excepción que se produce al producirse un error durante la fase en la que se confirma, se deshace o se desinstala una instalación.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallException" />.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallException" /> con datos serializados.
+        </summary>
+      <param name="info">
+              <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contiene los datos serializados del objeto que hacen referencia a la excepción que se va a producir. 
+            </param>
+      <param name="context">
+              <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contiene información contextual sobre el origen o el destino. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallException" /> y especifica el mensaje que se va a mostrar al usuario.
+        </summary>
+      <param name="message">
+              Mensaje que se va a mostrar al usuario. 
+            </param>
+    </member>
+    <member name="M:System.Configuration.Install.InstallException.#ctor(System.String,System.Exception)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.InstallException" /> y especifica el mensaje que se va a mostrar al usuario y una referencia a la excepción interna que ha provocado esta excepción.
+        </summary>
+      <param name="message">
+              Mensaje que se va a mostrar al usuario. 
+            </param>
+      <param name="innerException">
+              Excepción que es la causa de la excepción actual. Si el parámetro <paramref name="innerException" /> no es null, la excepción actual se inicia en un bloque catch que controla la excepción interna. 
+            </param>
+    </member>
+    <member name="T:System.Configuration.Install.ManagedInstallerClass">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.ManagedInstallerClass.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.ManagedInstallerClass.InstallHelper(System.String[])">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.ManagedInstallerClass.System#Configuration#Install#IManagedInstaller#ManagedInstall(System.String,System.Int32)">
+      <summary>
+          Para obtener una descripción de este miembro, vea <see cref="M:System.Configuration.Install.IManagedInstaller.ManagedInstall(System.String,System.Int32)" />.
+        </summary>
+    </member>
+    <member name="T:System.Configuration.Install.TransactedInstaller">
+      <summary>
+          Define un instalador que se ejecuta de manera totalmente satisfactoria o incorrecta y que mantiene el estado inicial del equipo.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.TransactedInstaller.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Configuration.Install.TransactedInstaller" />.
+        </summary>
+    </member>
+    <member name="M:System.Configuration.Install.TransactedInstaller.Install(System.Collections.IDictionary)">
+      <summary>
+          Realiza la instalación.
+        </summary>
+      <param name="savedState">
+              Objeto <see cref="T:System.Collections.IDictionary" /> donde este método guarda la información necesaria para confirmar, deshacer o desinstalar. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="savedState" /> es null. 
+            </exception>
+      <exception cref="T:System.Exception">
+              La instalación no se ha realizado correctamente y se procede a una operación de deshacer. 
+            </exception>
+    </member>
+    <member name="M:System.Configuration.Install.TransactedInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>
+          Quita una instalación.
+        </summary>
+      <param name="savedState">
+              Objeto <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo una vez finalizada la instalación. 
+            </param>
+    </member>
+    <member name="T:System.Configuration.Install.UninstallAction">
+      <summary>
+          Especifica lo que debe hacer un instalador durante una operación de desinstalación.
+        </summary>
+    </member>
+    <member name="F:System.Configuration.Install.UninstallAction.Remove">
+      <summary>
+          Quita el recurso creado por el instalador.
+        </summary>
+    </member>
+    <member name="F:System.Configuration.Install.UninstallAction.NoAction">
+      <summary>
+          No modifica el recurso creado por el instalador.
+        </summary>
+    </member>
+    <member name="T:System.Diagnostics.EventLogInstaller">
+      <summary>
+          Permite instalar y configurar un registro de eventos en el que la aplicación lee o escribe cuando se ejecuta. 
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.EventLogInstaller" />. 
+        </summary>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.CategoryCount">
+      <summary>
+          Obtiene o establece el número de categorías en el archivo de recursos de categoría.
+        </summary>
+      <returns>
+          El número de categorías del archivo de recursos de categoría. El valor predeterminado es cero.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.CategoryResourceFile">
+      <summary>
+          Obtiene o establece la ruta de acceso del archivo de recursos que contiene las cadenas de categoría para el origen.
+        </summary>
+      <returns>
+          La ruta de acceso del archivo de recursos de categoría. El valor predeterminado es una cadena vacía ("").
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>
+          Copia los valores de propiedad de un componente <see cref="T:System.Diagnostics.EventLog" /> que se necesitan durante la instalación para un registro de eventos.
+        </summary>
+      <param name="component">
+              <see cref="T:System.ComponentModel.IComponent" /> que se utiliza como plantilla para <see cref="T:System.Diagnostics.EventLogInstaller" />. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El componente especificado no es un <see cref="T:System.Diagnostics.EventLog" />.
+              O bien 
+              Las propiedades <see cref="P:System.Diagnostics.EventLog.Log" /> o <see cref="P:System.Diagnostics.EventLog.Source" /> del componente especificado son null o están vacías. 
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.Install(System.Collections.IDictionary)">
+      <summary>
+          Realiza la instalación y escribe la información del registro de eventos en el Registro.
+        </summary>
+      <param name="stateSaver">
+              <see cref="T:System.Collections.IDictionary" /> que se utiliza para guardar la información necesaria para realizar una operación de deshacer o desinstalar. 
+            </param>
+      <exception cref="T:System.PlatformNotSupportedException">
+              La plataforma que el instalador está intentando usar no es Windows NT 4.0 o posterior. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El nombre especificado en la propiedad <see cref="P:System.Diagnostics.EventLogInstaller.Source" /> ya está registrado para un registro de eventos diferente.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)">
+      <summary>
+          Determina si un instalador y otro instalador especificado hacen referencia al mismo origen.
+        </summary>
+      <returns>
+          
+            Es true si este instalador y el instalador especificado por el parámetro <paramref name="otherInstaller" /> instalarán o desinstalarán el mismo origen; en caso contrario, es false.
+        </returns>
+      <param name="otherInstaller">
+              Instalador que se va a comparar. 
+            </param>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.Log">
+      <summary>
+          Obtiene o establece el nombre del registro en el que hay que establecer el origen.
+        </summary>
+      <returns>
+          Nombre del registro. Puede ser Application, System o el nombre de un registro personalizado. El valor predeterminado es una cadena vacía ("").
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.MessageResourceFile">
+      <summary>
+          Obtiene o establece la ruta de acceso del archivo de recursos que contiene las cadenas de formato de mensaje para el origen.
+        </summary>
+      <returns>
+          La ruta de acceso del archivo de recursos de mensaje. El valor predeterminado es una cadena vacía ("").
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.ParameterResourceFile">
+      <summary>
+          Obtiene o establece la ruta de acceso del archivo de recursos que contiene las cadenas de parámetros de mensaje para el origen.
+        </summary>
+      <returns>
+          La ruta de acceso del archivo de recursos de parámetros de mensaje. El valor predeterminado es una cadena vacía ("").
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>
+          Restaura el equipo al estado que tenía antes de la instalación, deshaciendo la información del registro de eventos que el procedimiento de instalación escribió en el Registro.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo previo a la instalación. 
+            </param>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.Source">
+      <summary>
+          Obtiene o establece el nombre del origen que se va a registrar con el registro.
+        </summary>
+      <returns>
+          Nombre que se va a registrar con el registro de eventos como origen de entradas. El valor predeterminado es una cadena vacía ("").
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.EventLogInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>
+          Quita una instalación suprimiendo la información del registro de eventos del Registro.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo previo a la instalación. 
+            </param>
+    </member>
+    <member name="P:System.Diagnostics.EventLogInstaller.UninstallAction">
+      <summary>
+          Obtiene o establece un valor que indica si Installer Tool (Installutil.exe) debe quitar el registro de eventos o dejarlo en su estado instalado, en el momento de la desinstalación.
+        </summary>
+      <returns>
+          Uno de los valores <see cref="T:System.Configuration.Install.UninstallAction" /> que indica el estado en el que permanecerá el registro de eventos cuando se desinstale <see cref="T:System.Diagnostics.EventLog" />. El valor predeterminado es Remove.
+        </returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+              
+                <see cref="P:System.Diagnostics.EventLogInstaller.UninstallAction" /> contiene un valor no válido. Los únicos valores válidos para esta propiedad son Remove y NoAction.
+            </exception>
+    </member>
+    <member name="T:System.Diagnostics.PerformanceCounterInstaller">
+      <summary>
+          Especifica un instalador para el componente <see cref="T:System.Diagnostics.PerformanceCounter" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.PerformanceCounterInstaller" />. 
+        </summary>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.CategoryHelp">
+      <summary>
+          Obtiene o establece el mensaje descriptivo para el contador de rendimiento.
+        </summary>
+      <returns>
+          Mensaje descriptivo para el contador de rendimiento.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor se establece en null. 
+            </exception>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.CategoryName">
+      <summary>
+          Obtiene o establece el nombre de la categoría (CategoryName) de rendimiento para el contador de rendimiento.
+        </summary>
+      <returns>
+          Nombre de la categoría (CategoryName) de rendimiento para el contador de rendimiento.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor se establece en null. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor no es un nombre de categoría válido.
+            </exception>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.CategoryType">
+      <summary>
+          Obtiene o establece el tipo de categoría del contador de rendimiento.
+        </summary>
+      <returns>
+          Uno de los valores <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />. 
+        </returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+              El valor no es un <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>
+          Copia todas las propiedades del componente especificado requeridas por el contador de rendimiento en el momento de su instalación.
+        </summary>
+      <param name="component">
+              Componente del que se va a copiar. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El componente especificado no es <see cref="T:System.Diagnostics.PerformanceCounter" />.
+              O bien 
+              El <see cref="T:System.Diagnostics.PerformanceCounter" /> especificado está incompleto.
+              O bien 
+              Se están intentando instalar varios contadores en categorías distintas. 
+            </exception>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.Counters">
+      <summary>
+          Obtiene una colección de datos relacionados con los contadores que se van a instalar.
+        </summary>
+      <returns>
+          <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> que contiene los nombres, los mensajes de ayuda y los tipos de los contadores que se van a instalar.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.Install(System.Collections.IDictionary)">
+      <summary>
+          Realiza la instalación.
+        </summary>
+      <param name="stateSaver">
+              <see cref="T:System.Collections.IDictionary" /> que se utiliza para guardar la información necesaria para confirmar, deshacer o desinstalar. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>
+          Restaura el estado en el que estaba el equipo antes de la instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo previo a la instalación. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.PerformanceCounterInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>
+          Quita una instalación.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene el estado del equipo después de la instalación. 
+            </param>
+    </member>
+    <member name="P:System.Diagnostics.PerformanceCounterInstaller.UninstallAction">
+      <summary>
+          Determina si el contador de rendimiento debe eliminarse en el momento de la desinstalación.
+        </summary>
+      <returns>
+          Uno de los valores de <see cref="T:System.Configuration.Install.UninstallAction" />. El valor predeterminado es Remove.
+        </returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+              El valor no es <see cref="T:System.Configuration.Install.UninstallAction" />.
+            </exception>
+    </member>
+  </members>
+</doc>

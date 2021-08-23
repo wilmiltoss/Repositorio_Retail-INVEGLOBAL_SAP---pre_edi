@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CdgUtiles</name>
+    </assembly>
+    <members>
+        <member name="T:CdgUtiles.Util.DataSetDesdeXLS">
+            <summary>
+            Clase de carga de datos desde archivos XLS
+            </summary>
+        </member>
+        <member name="M:CdgUtiles.Util.DataSetDesdeXLS.ImportarExcelXLS(System.String,System.Boolean)">
+            <summary>
+            Ejecuta la carga de datos desde el arcxhivo Excel y lo devuelve en un DataSet
+            </summary>
+            <param name="cPathArchivoXLS">Path absoluto al archivo XLS</param>
+            <param name="bContieneCabeceras">SI el archivo contiene cabeceras o no</param>
+            <returns>DataSet con los datos importados</returns>
+        </member>
+        <member name="T:CdgUtiles.Util.Cripto">
+            <summary>
+            Clase de utilería de encrptamiento de datos
+            </summary>
+        </member>
+        <member name="M:CdgUtiles.Util.Cripto.Get_SHA1(System.String)">
+            <summary>
+            Encripta con el algoritmo SHA1 el string pasado
+            </summary>
+            <param name="cCadena">Cadena a encriptar</param>
+            <returns>Cadena de bytes</returns>
+        </member>
+        <member name="M:CdgUtiles.Log.InfoALog.#ctor(System.String)">
+            <summary>
+            Constructor de la clase
+            </summary>
+            <param name="cNombreAplicaciónParam">Nombre de la aplicacion actual</param>
+        </member>
+        <member name="M:CdgUtiles.Log.InfoALog.#ctor(System.String,System.String)">
+            <summary>
+            Constructor de la clase
+            </summary>
+            <param name="cNombreAplicaciónParam">Nombre de la aplicacion actual</param>
+            <param name="cNombreArchivoParam">Nombre del archivo de log a escribir (automaticamente anade '.log')</param>
+        </member>
+        <member name="M:CdgUtiles.Log.InfoALog.__bCrearArchivo">
+            <summary>
+            Crea el archivo y lo deja listao para escribir en el
+            </summary>
+            <returns>True si el archivo fue creado</returns>
+        </member>
+        <member name="M:CdgUtiles.Log.InfoALog.__bValidar_Archivo">
+            <summary>
+            Valida que el archivo destino de log existe
+            </summary>
+            <returns>True si el archivo existe</returns>
+        </member>
+        <member name="M:CdgUtiles.Log.InfoALog.Escribir(System.String)">
+            <summary>
+            Escribe una linea en el archivo de log
+            </summary>
+            <param name="cLinea">Cadena a escribir dentro del archivo</param>
+        </member>
+        <member name="M:CdgUtiles.Log.InfoALog.__Eliminar_Logs_Viejos">
+            <summary>
+            Metodo de eliminacion de archivos de LOGs viejos
+            </summary>
+        </member>
+        <member name="P:CdgUtiles.Log.InfoALog.directorio_logs">
+            <summary>
+            Devuelve el directorio de destino de logs de la aplicacion
+            </summary>
+        </member>
+        <member name="T:CdgUtiles.Util.WinMobile">
+            <summary>
+            Clase de interaccion con colectores handheld via ActiveSync
+            </summary>
+        </member>
+        <member name="M:CdgUtiles.Util.WinMobile.lMover_Archivo_Dispositivo(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Transfiere un Archivo al Dispositivo Conectado al Equipo
+            </summary>
+            <param name="cArchivoOrigenParam">Path Absoluto del Archivo Origen</param>
+            <param name="cDestinoArchivoParam">Path Absoluto del Archivo Destino</param>
+            <param name="bReemplazarParam">Reemplazar en copia Previa</param>
+            <param name="bEnviarArchivoParam">Si el Archivo se Envia='True', si se Trae='False'</param>
+            <returns></returns>
+        </member>
+        <member name="P:CdgUtiles.Util.WinMobile.Equipo_conectado">
+            <summary>
+            Devuelve el estado de conexion del equipo portatil a la PC
+            </summary>
+        </member>
+        <member name="P:CdgUtiles.Util.WinMobile.Get_rom">
+            <summary>
+            Devuelve el PATH al directorio de la ROM del Dipositivo 
+            o en su defecto el directorio raiz
+            </summary>
+        </member>
+        <member name="T:CdgUtiles.Util.Codificaciones">
+            <summary>
+            Clase de utilería para codificacion de cadenas de caracteres
+            </summary>
+        </member>
+        <member name="M:CdgUtiles.Util.Codificaciones.Get_base64_encode(System.Byte[])">
+            <summary>
+            Codifica la cadena parametro a base64
+            </summary>
+            <param name="aCadenaBytes">Cadena de bytes a codificar</param>
+            <returns>Cadena Base64</returns>
+        </member>
+        <member name="M:CdgUtiles.Util.Codificaciones.Get_base64_decode(System.String)">
+            <summary>
+            decodifica la cadena parametro base64 a utf8
+            </summary>
+            <param name="str">Cadena Base64 a decodificar</param>
+            <returns>Cadena ASCII</returns>
+        </member>
+    </members>
+</doc>

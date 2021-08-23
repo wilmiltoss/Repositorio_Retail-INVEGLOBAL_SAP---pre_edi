@@ -1,0 +1,1883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>AspNetMMCExt</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Aspnet.Snapin.AspNetManagementUtility">
+      <summary>
+          Proporciona métodos auxiliares que utiliza el complemento de ASP.NET para la Consola de Administración de Microsoft (MMC).  Esta clase no se puede heredar.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Aspnet.Snapin.AspNetManagementUtility" />.
+        </summary>
+      <returns>
+          Una nueva instancia de <see cref="T:Microsoft.Aspnet.Snapin.AspNetManagementUtility" />.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.AcquireVersionList(System.String@,System.Int32)">
+      <summary>
+          Devuelve una lista de valores separados por comas que contiene la versión y la ruta de acceso al archivo Aspnet_isapi.dll de cada versión de ASP.NET instalada.
+        </summary>
+      <param name="versionList">
+              Lista de valores separados por comas que contiene la versión y la ruta de acceso al archivo Aspnet_isapi.dll de cada versión de ASP.NET instalada.
+            </param>
+      <param name="versionFirst">
+              0 para que se muestre la versión de ASP.NET delante de la ruta de acceso para cada entrada; de lo contrario, se muestra la ruta de acceso delante de la versión de ASP.NET para cada entrada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.ChangeScriptMap(System.String,System.String,System.Int32)">
+      <summary>
+          Registra la versión de Aspnet_isapi.dll que especifica el parámetro <paramref name="dllInstall" /> en la ruta de acceso virtual de IIS (Servicios de Microsoft Internet Information Server) determinada por el parámetro <paramref name="keyPath" />.
+        </summary>
+      <param name="keyPath">
+              Ruta de acceso virtual en la que se va a registrar el archivo Aspnet_isapi.dll especificado por la ruta de acceso pasada en <paramref name="dllInstall" />.
+            </param>
+      <param name="dllInstall">
+              Ruta de acceso al archivo Aspnet_isapi.dll que se va registrar con <paramref name="keyPath" />.
+            </param>
+      <param name="flags">
+              Comportamiento que debe aplicarse cuando se registra Aspnet_isapi.dll.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.DisplayAspNetConfigSettings(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String@)">
+      <summary>
+          Recupera la configuración de ASP.NET para la aplicación Web ASP.NET especificada.
+        </summary>
+      <param name="machineName">
+              Equipo del que se va a recuperar la configuración.
+            </param>
+      <param name="site">
+              Identificador del sitio Web de IIS del que se va a recuperar la configuración.
+            </param>
+      <param name="virtualDirectory">
+              Directorio virtual de IIS del que se va a recuperar la configuración.
+            </param>
+      <param name="siteName">
+              Nombre del sitio de IIS del que se va a recuperar la configuración.
+            </param>
+      <param name="location">
+              Recurso específico al que se aplica la configuración.
+            </param>
+      <param name="processID">
+              Identificador del proceso del sistema que muestra el cuadro de diálogo de la configuración.
+            </param>
+      <param name="exception">
+              Excepción o excepciones que se han producido.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.GetActiveWindow">
+      <summary>
+          Recupera el identificador de la ventana activa asociada a la cola de mensajes del subproceso de la llamada.
+        </summary>
+      <returns>
+          El identificador de la ventana activa asociada a la cola de mensajes del subproceso de la llamada; de lo contrario, es null.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.IsRemoteConfigured(System.Int32@)">
+      <summary>
+          Devuelve un valor que indica si está habilitado el acceso remoto al contenedor de configuración de ASP.NET.
+        </summary>
+      <param name="isRemoteConfigured">
+              Es 1 si está habilitado el acceso remoto al contenedor de configuración de ASP.NET; de lo contrario, el valor es 0.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.MessageBox(System.IntPtr,System.String,System.String,System.Int32)">
+      <summary>
+          Crea, muestra y ejecuta un cuadro de mensaje en el complemento de ASP.NET para la Consola de administración de Microsoft (MMC).
+        </summary>
+      <returns>
+          IDCANCEL si el cuadro de mensaje tiene un botón Cancelar y se presiona ESC o se hace clic en Cancelar. Si el mensaje no tiene el botón Cancelar, presionar ESC no tiene ningún efecto.
+          Si se genera un error en la función, el valor devuelto es 0.
+          Si la función es correcta, el valor devuelto es uno de los siguientes valores de elemento de menú:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                IDABORT 
+              
+              
+                
+                  Se ha hecho clic en Anular.
+              
+            
+            
+              
+                IDCANCEL
+              
+              
+                
+                  Se ha hecho clic en Cancelar.
+              
+            
+            
+              
+                IDCONTINUE
+              
+              
+                
+                  Se ha hecho clic en Continuar.
+              
+            
+            
+              
+                IDIGNORE
+              
+              
+                
+                  Se ha hecho clic en Omitir.
+              
+            
+            
+              
+                IDNO
+              
+              
+                
+                  Se ha hecho clic en No.
+              
+            
+            
+              
+                IDOK
+              
+              
+                
+                  Se ha hecho clic en Aceptar.
+              
+            
+            
+              
+                IDRETRY
+              
+              
+                
+                  Se ha hecho clic en Reintentar.
+              
+            
+            
+              
+                IDTRYAGAIN
+              
+              
+                
+                  Se ha hecho clic en Intentar de nuevo.
+              
+            
+            
+              
+                IDYES
+              
+              
+                
+                  Se ha hecho clic en Sí.
+              
+            
+          
+        </returns>
+      <param name="hWnd">
+              Identificador del propietario del cuadro de mensaje que se va a crear. Si el valor de <paramref name="hWnd" /> es null, el cuadro de mensaje no tiene ventana propietaria.
+            </param>
+      <param name="text">
+              Mensaje del cuadro de mensaje que se va a mostrar.
+            </param>
+      <param name="caption">
+              Título del cuadro de mensaje.
+            </param>
+      <param name="type">
+              Contenido y comportamiento del cuadro de mensaje.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.PathIsDirectory(System.String,System.Int32@)">
+      <summary>
+          Devuelve un valor que indica si el parámetro <paramref name="filename" /> pasado es un directorio.
+        </summary>
+      <param name="filename">
+              Ruta de acceso al directorio que se va a comprobar.
+            </param>
+      <param name="result">
+              1 si <paramref name="filename" /> es un directorio; de lo contrario, 0.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.ReadFileDates(System.String,System.String@,System.String@,System.String@)">
+      <summary>
+          Devuelve las fechas y horas de creación, última modificación y último acceso del valor de <paramref name="filename" /> especificado.
+        </summary>
+      <param name="filename">
+              Nombre del archivo del que se van a leer las fechas.
+            </param>
+      <param name="creationDate">
+              Fecha y hora de creación del archivo.
+            </param>
+      <param name="modifiedDate">
+              Fecha y hora de la última modificación del archivo.
+            </param>
+      <param name="lastAccessDate">
+              Fecha y hora del último acceso al archivo.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.AspNetManagementUtility.RegisterAsnetMmcAssembly(System.Int32,System.String,System.String,System.IntPtr@)">
+      <summary>
+          Registra el complemento de ASP.NET con la Consola de administración de Microsoft (MMC).
+        </summary>
+      <param name="doReg">
+              1 para registrar el tipo ó 0 para anular el registro del tipo.
+            </param>
+      <param name="typeName">
+              Nombre del tipo que se va a registrar.
+            </param>
+      <param name="binaryDirectory">
+              Directorio que contiene el ensamblado.
+            </param>
+      <param name="exception">
+              Puntero a cualquier excepción producida durante el registro.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.CLSID">
+      <summary>
+          Actúa como contenedor para un identificador único global (GUID) de una clase COM.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.CONTEXTMENUITEM">
+      <summary>
+          Define un nuevo elemento de menú, submenú o punto de inserción para el método <see cref="M:Microsoft.Aspnet.Snapin.IContextMenuCallback.AddItem(Microsoft.Aspnet.Snapin.CONTEXTMENUITEM@)" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.DialogProc">
+      <summary>
+          Procesa mensajes que se envían a un cuadro de diálogo modal o no modal.
+        </summary>
+      <returns>
+          
+            Es true si <see cref="T:Microsoft.Aspnet.Snapin.DialogProc" /> ha procesado correctamente el mensaje; de lo contrario, es false.
+        </returns>
+      <param name="hwndDlg">
+              Identificador del cuadro de diálogo.
+            </param>
+      <param name="uMsg">
+              El mensaje.
+            </param>
+      <param name="wParam">
+              Información adicional específica del mensaje.
+            </param>
+      <param name="lParam">
+              Información adicional específica del mensaje.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.FORMATETC">
+      <summary>
+          Formato de Portapapeles generalizado que contiene un dispositivo de destino, la apariencia o la vista de los datos y un indicador del medio de almacenamiento.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IAspNetManagementUtility">
+      <summary>
+          Proporciona métodos auxiliares que utiliza el complemento de ASP.NET para la Consola de Administración de Microsoft (MMC).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IAspNetManagementUtility.AcquireVersionList(System.String@,System.Int32)">
+      <summary>
+          Devuelve una lista de valores separados por comas que contiene la versión y la ruta de acceso al archivo Aspnet_isapi.dll de cada versión de ASP.NET instalada.
+        </summary>
+      <param name="versionList">
+              Lista de valores separados por comas que contiene la versión y la ruta de acceso al archivo Aspnet_isapi.dll de cada versión de ASP.NET instalada.
+            </param>
+      <param name="versionFirst">
+              0 para que se muestre la versión de ASP.NET delante de la ruta de acceso para cada entrada; de lo contrario, se muestra la ruta de acceso delante de la versión de ASP.NET para cada entrada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IAspNetManagementUtility.ChangeScriptMap(System.String,System.String,System.Int32)">
+      <summary>
+          Asigna el archivo Aspnet_isapi.dll especificado a la ruta de acceso virtual especificada de IIS (Internet Information Services).
+        </summary>
+      <param name="keyPath">
+              Ruta de acceso virtual en la que se va a registrar el archivo Aspnet_isapi.dll especificado por la ruta de acceso pasada en <paramref name="dllInstall" />.
+            </param>
+      <param name="dllInstall">
+              Ruta de acceso al archivo Aspnet_isapi.dll que se va registrar con <paramref name="keyPath" />.
+            </param>
+      <param name="flags">
+              Comportamiento que debe aplicarse cuando se registra Aspnet_isapi.dll.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IAspNetManagementUtility.DisplayAspNetConfigSettings(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String@)">
+      <summary>
+          Recupera la configuración de ASP.NET para la aplicación Web ASP.NET especificada.
+        </summary>
+      <param name="machineName">
+              Equipo del que se va a recuperar la configuración.
+            </param>
+      <param name="site">
+              Sitio Web de IIS del que se va a recuperar la configuración.
+            </param>
+      <param name="virtualDirectory">
+              Directorio virtual de IIS del que se va a recuperar la configuración.
+            </param>
+      <param name="siteName">
+              Nombre del sitio de IIS del que se va a recuperar la configuración.
+            </param>
+      <param name="location">
+              Recurso específico al que se aplica la configuración.
+            </param>
+      <param name="processID">
+              Identificador del proceso del sistema que muestra el cuadro de diálogo de la configuración.
+            </param>
+      <param name="exception">
+              Excepción o excepciones que se han producido.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IAspNetManagementUtility.IsRemoteConfigured(System.Int32@)">
+      <summary>
+          Devuelve un valor que indica si está habilitado el acceso remoto al contenedor de configuración de ASP.NET.
+        </summary>
+      <param name="isRemoteConfigured">
+              Es 1 si está habilitado el acceso remoto al contenedor de configuración de ASP.NET; de lo contrario, el valor es 0.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IAspNetManagementUtility.PathIsDirectory(System.String,System.Int32@)">
+      <summary>
+          Devuelve un valor que indica si el parámetro <paramref name="filename" /> pasado es un directorio.
+        </summary>
+      <param name="filename">
+              Ruta de acceso al directorio que se va a comprobar.
+            </param>
+      <param name="result">
+              1 si <paramref name="filename" /> es un directorio; de lo contrario, 0.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IAspNetManagementUtility.ReadFileDates(System.String,System.String@,System.String@,System.String@)">
+      <summary>
+          Devuelve las fechas y horas de creación, última modificación y último acceso del valor de <paramref name="filename" /> especificado.
+        </summary>
+      <param name="filename">
+              Nombre del archivo del que se van a leer las fechas.
+            </param>
+      <param name="creationDate">
+              Fecha y hora de creación del archivo.
+            </param>
+      <param name="modifiedDate">
+              Fecha y hora de la última modificación del archivo.
+            </param>
+      <param name="lastAccessDate">
+              Fecha y hora del último acceso al archivo.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IAspNetManagementUtility.RegisterAsnetMmcAssembly(System.Int32,System.String,System.String,System.IntPtr@)">
+      <summary>
+          Registra el complemento de ASP.NET con la Consola de administración de Microsoft (MMC).
+        </summary>
+      <param name="doReg">
+              1 para registrar el ensamblado ó 0 para anular el registro del ensamblado.
+            </param>
+      <param name="assemblyName">
+              Nombre del ensamblado que se va a registrar.
+            </param>
+      <param name="binaryDirectory">
+              Directorio que contiene el ensamblado.
+            </param>
+      <param name="exception">
+              Puntero a cualquier excepción producida durante el registro.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IContextMenuCallback">
+      <summary>
+          Agrega elementos de menú a un menú contextual.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IContextMenuCallback.AddItem(Microsoft.Aspnet.Snapin.CONTEXTMENUITEM@)">
+      <summary>
+          Agrega un elemento único a un menú contextual.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                
+                  Se agregó <paramref name="pItem" /> correctamente.
+              
+            
+            
+              
+                E_UNEXPECTED
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+            
+              
+                E_POINTER
+              
+              
+                
+                  <paramref name="pItem" /> es null.
+              
+            
+            
+              
+                E_INVALIDARG
+              
+              
+                Uno o más de los miembros <see cref="T:Microsoft.Aspnet.Snapin.CONTEXTMENUITEM" /> contiene uno o más valores que no son válidos o los valores en cuestión producen un error conocido.
+              
+            
+          
+        </returns>
+      <param name="pItem">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.CONTEXTMENUITEM" /> con el elemento que se va a agregar.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IDataObject">
+      <summary>
+          Crea una conexión entre un llamador y un objeto de datos que implementa la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" />. Esta conexión permite la notificación al llamador de los cambios en los datos del objeto de datos.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.DAdvise(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)">
+      <summary>
+          Crea una conexión de notificación entre un objeto de datos que implementa la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> y un objeto de llamador, por lo que el llamador recibe una notificación de los cambios en los datos del objeto de datos.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.DAdvise(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)" /> admite los valores devueltos estándar: E_INVALIDARG, E_UNEXPECTED y E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.DAdvise(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)" /> creó correctamente la conexión.
+              
+            
+            
+              
+                E_NOTIMPL
+              
+              
+                El objeto de datos no implementa el método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.DAdvise(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)" />.
+              
+            
+            
+              
+                DV_E_LINDEX
+              
+              
+                
+                  <paramref name="lindex" /> no es válido.
+              
+            
+            
+              
+                DV_E_FORMATETC
+              
+              
+                El valor del puntero a datos no es válido.
+              
+            
+            
+              
+                OLE_E_ADVISENOTSUPPORTED
+              
+              
+                El objeto no admite la notificación de cambios.
+              
+            
+          
+        </returns>
+      <param name="a">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> que define el formato, el medio y el dispositivo de destino de las notificaciones.
+            </param>
+      <param name="b">
+              Valor de <see cref="T:System.Runtime.InteropServices.ComTypes.ADVF" /> que especifica el comportamiento solicitado de la conexión.
+            </param>
+      <param name="c">
+              Puntero a <see cref="T:System.Runtime.InteropServices.ComTypes.IAdviseSink" /> en el objeto de llamador.
+            </param>
+      <param name="d">
+              Puntero a la conexión establecida por esta llamada al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.DAdvise(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)" />.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.DUnadvise(System.Int32)">
+      <summary>
+          Destruye una conexión de notificación creada por una llamada anterior al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.DAdvise(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)" />.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.DUnadvise(System.Int32)" /> eliminó correctamente la conexión especificada.
+              
+            
+            
+              
+                OLE_E_NOCONNECTION
+              
+              
+                La conexión especificada no es válida.
+              
+            
+            
+              
+                OLE_E_ADVISENOTSUPPORTED
+              
+              
+                El objeto no admite la notificación de cambios.
+              
+            
+          
+        </returns>
+      <param name="a">
+              Conexión que se va a destruir.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.EnumDAdvise(System.IntPtr)">
+      <summary>
+          Recupera un puntero a un objeto que puede enumerar las conexiones de notificación que mantiene actualmente la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" />.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.EnumDAdvise(System.IntPtr)" /> admite el valor devuelto estándar E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Esta llamada al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.EnumDAdvise(System.IntPtr)" /> creó correctamente la instancia del objeto de enumerador. 
+                O bien
+                No hay conexiones.
+              
+            
+            
+              
+                OLE_E_ADVISENOTSUPPORTED
+              
+              
+                El objeto no admite la notificación de cambios.
+              
+            
+          
+        </returns>
+      <param name="a">
+              Dirección de <see cref="T:System.Runtime.InteropServices.ComTypes.IEnumSTATDATA" /> que recibe el puntero de interfaz al nuevo objeto de enumerador. No hay ninguna conexión si esta llamada al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.EnumDAdvise(System.IntPtr)" /> establece el valor de <paramref name="a" /> en null.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.EnumFormatEtc(System.Int32,System.IntPtr)">
+      <summary>
+          Recupera un puntero a un objeto que puede enumerar los tipos de enumerador <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> que admite esta implementación.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.EnumFormatEtc(System.Int32,System.IntPtr)" /> admite los valores devueltos estándar: E_INVALIDARG y E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Esta llamada al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.EnumFormatEtc(System.Int32,System.IntPtr)" /> creó correctamente el objeto de enumerador.
+              
+            
+            
+              
+                E_NOTIMPL
+              
+              
+                La dirección especificada no se admite.
+              
+            
+            
+              
+                OLE_S_USEREG
+              
+              
+                Solicitud a OLE para enumerar los formatos del Registro.
+              
+            
+          
+        </returns>
+      <param name="a">
+              Valor de <see cref="T:System.Runtime.InteropServices.ComTypes.DATADIR" /> que indica la dirección de los datos.
+            </param>
+      <param name="b">
+              Dirección de variable de salida que recibe <see cref="T:Microsoft.Aspnet.Snapin.IEnumFORMATETC" />.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.GetCanonicalFormatEtc(System.IntPtr,System.IntPtr)">
+      <summary>
+          Recupera un puntero a una estructura <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> estándar lógicamente equivalente, pero no necesariamente igual, a la estructura <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> a la que hace referencia el parámetro <paramref name="a" />.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.GetCanonicalFormatEtc(System.IntPtr,System.IntPtr)" /> admite los valores devueltos estándar: E_INVALIDARG, E_UNEXPECTED y E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                La estructura FORMATETC devuelta es diferente de la estructura pasada en los parámetros.
+              
+            
+            
+              
+                DATA_S_SAMEFORMATETC
+              
+              
+                La estructura FORMATETC devuelta es igual que la estructura pasada en los parámetros y se devuelve null en <paramref name="b" />.
+              
+            
+            
+              
+                DV_E_LINDEX
+              
+              
+                
+                  <paramref name="lindex" /> no es válido.
+              
+            
+            
+              
+                DV_E_FORMATETC
+              
+              
+                
+                  <paramref name="a" /> no es válido.
+              
+            
+            
+              
+                OLE_E_NOTRUNNING
+              
+              
+                La aplicación no se está ejecutando.
+              
+            
+          
+        </returns>
+      <param name="a">
+              Puntero a la estructura <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> que define el formato, medio y dispositivo de destino de las llamadas para recuperar datos.
+            </param>
+      <param name="b">
+              Puntero de salida a una estructura FORMATETC que contiene la información más general posible de una representación concreta.
+              O bien 
+              
+                null si el método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.GetCanonicalFormatEtc(System.IntPtr,System.IntPtr)" /> devuelve DATA_S_SAMEFORMATETC.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.GetData(Microsoft.Aspnet.Snapin.FORMATETC@,Microsoft.Aspnet.Snapin.STGMEDIUM@)">
+      <summary>
+          Representa los datos que se describen en la estructura <paramref name="pFormatEtc" /> especificada y los transfiere al parámetro <paramref name="b" />.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.GetData(Microsoft.Aspnet.Snapin.FORMATETC@,Microsoft.Aspnet.Snapin.STGMEDIUM@)" /> admite los valores devueltos estándar: E_INVALIDARG, E_UNEXPECTED y E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Esta llamada al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.GetData(Microsoft.Aspnet.Snapin.FORMATETC@,Microsoft.Aspnet.Snapin.STGMEDIUM@)" /> recuperó y colocó correctamente los datos en el medio de almacenamiento proporcionado.
+              
+            
+            
+              
+                DV_E_LINDEX
+              
+              
+                
+                  <paramref name="lindex" /> no es válido.
+              
+            
+            
+              
+                DV_E_FORMATETC
+              
+              
+                
+                  <paramref name="pFormatEtc" /> no es válido.
+              
+            
+            
+              
+                DV_E_TYMED
+              
+              
+                
+                  <paramref name="tymed" /> no es válido.
+              
+            
+            
+              
+                DV_E_DVASPECT
+              
+              
+                
+                  <paramref name="dwAspect" /> no es válido.
+              
+            
+            
+              
+                OLE_E_NOTRUNNING
+              
+              
+                La aplicación no se está ejecutando.
+              
+            
+            
+              
+                STG_E_MEDIUMFULL
+              
+              
+                Se ha producido un error al asignar el medio.
+              
+            
+          
+        </returns>
+      <param name="pFormatEtc">
+              Puntero a la estructura <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> que define el formato, medio y dispositivo de destino de las llamadas para recuperar datos.
+            </param>
+      <param name="b">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.STGMEDIUM" /> que indica el medio de almacenamiento que contiene los datos devueltos.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.GetDataHere(Microsoft.Aspnet.Snapin.FORMATETC@,Microsoft.Aspnet.Snapin.STGMEDIUM@)">
+      <summary>
+          Representa los datos que se describen en la estructura <paramref name="pFormatEtc" /> especificada y los transfiere al parámetro <paramref name="b" />.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.GetDataHere(Microsoft.Aspnet.Snapin.FORMATETC@,Microsoft.Aspnet.Snapin.STGMEDIUM@)" /> admite los valores devueltos estándar: E_INVALIDARG, E_UNEXPECTED y E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Esta llamada al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.GetDataHere(Microsoft.Aspnet.Snapin.FORMATETC@,Microsoft.Aspnet.Snapin.STGMEDIUM@)" /> recuperó y colocó correctamente los datos en el medio de almacenamiento proporcionado.
+              
+            
+            
+              
+                DV_E_LINDEX
+              
+              
+                
+                  <paramref name="lindex" /> no es válido.
+              
+            
+            
+              
+                DV_E_FORMATETC
+              
+              
+                
+                  <paramref name="pFormatEtc" /> no es válido.
+              
+            
+            
+              
+                DV_E_TYMED
+              
+              
+                
+                  <paramref name="tymed" /> no es válido.
+              
+            
+            
+              
+                DV_E_DVASPECT
+              
+              
+                
+                  <paramref name="dwAspect" /> no es válido.
+              
+            
+            
+              
+                OLE_E_NOTRUNNING
+              
+              
+                La aplicación no se está ejecutando.
+              
+            
+            
+              
+                STG_E_MEDIUMFULL
+              
+              
+                Se ha producido un error al asignar el medio.
+              
+            
+          
+        </returns>
+      <param name="pFormatEtc">
+              Puntero a la estructura <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> que define el formato, medio y dispositivo de destino de las llamadas para recuperar datos.
+            </param>
+      <param name="b">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.STGMEDIUM" /> que indica el medio de almacenamiento que contiene los datos devueltos.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.QueryGetData(Microsoft.Aspnet.Snapin.FORMATETC)">
+      <summary>
+          Recupera un valor que indica si el implementador puede representar los datos que contiene el parámetro <paramref name="a" />.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.QueryGetData(Microsoft.Aspnet.Snapin.FORMATETC)" /> admite los valores devueltos estándar: E_INVALIDARG, E_UNEXPECTED y E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Una llamada subsiguiente al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.GetData(Microsoft.Aspnet.Snapin.FORMATETC@,Microsoft.Aspnet.Snapin.STGMEDIUM@)" /> se realizará probablemente de manera correcta.
+              
+            
+            
+              
+                DV_E_LINDEX
+              
+              
+                
+                  <paramref name="lindex" /> no es válido.
+              
+            
+            
+              
+                DV_E_FORMATETC
+              
+              
+                
+                  <paramref name="pFormatEtc" /> no es válido.
+              
+            
+            
+              
+                DV_E_TYMED
+              
+              
+                
+                  <paramref name="tymed" /> no es válido.
+              
+            
+            
+              
+                DV_E_DVASPECT
+              
+              
+                
+                  Valor de <paramref name="dwAspect" />.
+              
+            
+            
+              
+                OLE_E_NOTRUNNING
+              
+              
+                La aplicación no se está ejecutando.
+              
+            
+          
+        </returns>
+      <param name="a">
+              Puntero a la estructura <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> que define el formato, medio y dispositivo de destino de las llamadas para recuperar datos.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IDataObject.SetData(System.IntPtr,System.IntPtr,System.Int32)">
+      <summary>
+          Transfiere los datos que contiene la estructura <see cref="T:Microsoft.Aspnet.Snapin.STGMEDIUM" />, a la que hace referencia <paramref name="a" />, a esta instancia de la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" />.
+        </summary>
+      <returns>
+          El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.SetData(System.IntPtr,System.IntPtr,System.Int32)" /> admite los valores devueltos estándar: E_FAIL, E_INVALIDARG, E_UNEXPECTED y E_OUTOFMEMORY, así como los siguientes valores devueltos:
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Esta llamada al método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.SetData(System.IntPtr,System.IntPtr,System.Int32)" /> transfirió correctamente los datos.
+              
+            
+            
+              
+                E_NOTIMPL
+              
+              
+                El método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.SetData(System.IntPtr,System.IntPtr,System.Int32)" /> no está implementado para el objeto de datos que implementa <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" />.
+              
+            
+            
+              
+                DV_E_LINDEX
+              
+              
+                
+                  <paramref name="lindex" /> no es válido.
+              
+            
+            
+              
+                DV_E_FORMATETC
+              
+              
+                
+                  <paramref name="pFormatEtc" /> no es válido.
+              
+            
+            
+              
+                DV_E_TYMED
+              
+              
+                
+                  <paramref name="tymed" /> no es válido.
+              
+            
+            
+              
+                DV_E_DVASPECT
+              
+              
+                
+                  <paramref name="dwAspect" /> no es válido.
+              
+            
+            
+              
+                OLE_E_NOTRUNNING
+              
+              
+                La aplicación no se está ejecutando.
+              
+            
+          
+        </returns>
+      <param name="a">
+              Puntero a la estructura <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" /> que define el formato del objeto de datos que implementa la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> que se va a utilizar para interpretar los datos que contiene el medio de almacenamiento.
+            </param>
+      <param name="b">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.STGMEDIUM" /> que define el medio de almacenamiento para el método <see cref="M:Microsoft.Aspnet.Snapin.IDataObject.SetData(System.IntPtr,System.IntPtr,System.Int32)" /> que se va a utilizar para pasar los datos.
+            </param>
+      <param name="c">
+              
+                Es true para especificar que el objeto de datos llamado que implementa la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> posee el medio de almacenamiento después de la llamada y debe liberarlo después de su uso; en caso contrario, es false para especificar que el llamador conserva la propiedad del medio de almacenamiento y que el objeto de datos utiliza el medio sólo durante la llamada.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IEnumFORMATETC">
+      <summary>
+          Se utiliza para enumerar una matriz de estructuras <see cref="T:Microsoft.Aspnet.Snapin.FORMATETC" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IExtendContextMenu">
+      <summary>
+          Permite a un complemento agregar elementos a un menú de acceso directo existente.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IExtendContextMenu.AddMenuItems(Microsoft.Aspnet.Snapin.IDataObject,Microsoft.Aspnet.Snapin.IContextMenuCallback,System.Int32@)">
+      <summary>
+          Permite a un complemento agregar elementos a un menú de acceso directo existente.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                
+                  S_OK
+                
+              
+              
+                <see cref="M:Microsoft.Aspnet.Snapin.IExtendContextMenu.AddMenuItems(Microsoft.Aspnet.Snapin.IDataObject,Microsoft.Aspnet.Snapin.IContextMenuCallback,System.Int32@)" /> agregó correctamente cero o más elementos al menú de acceso directo.
+              
+            
+            
+              
+                
+                  E_UNEXPECTED
+                
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+          
+        </returns>
+      <param name="piDataObject">
+              Puntero a la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> en el objeto de datos del menú donde <see cref="M:Microsoft.Aspnet.Snapin.IExtendContextMenu.AddMenuItems(Microsoft.Aspnet.Snapin.IDataObject,Microsoft.Aspnet.Snapin.IContextMenuCallback,System.Int32@)" /> está agregando elementos al menú de acceso directo.
+            </param>
+      <param name="piCallback">
+              Puntero a una interfaz <see cref="T:Microsoft.Aspnet.Snapin.IContextMenuCallback" /> que puede agregar elementos al menú de acceso directo.
+            </param>
+      <param name="pInsertionAllowed">
+              Puntos de inserción de elementos de menú definidos por MMC que se pueden utilizar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IExtendContextMenu.Command(System.Int32,Microsoft.Aspnet.Snapin.IDataObject)">
+      <summary>
+          La Consola de administración de Microsoft (MMC) llama al método <see cref="M:Microsoft.Aspnet.Snapin.IExtendContextMenu.Command(System.Int32,Microsoft.Aspnet.Snapin.IDataObject)" /> cuando está seleccionado uno de los elementos de menú de acceso directo que se han agregado.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                
+                  S_OK
+                
+              
+              
+                <see cref="M:Microsoft.Aspnet.Snapin.IExtendContextMenu.Command(System.Int32,Microsoft.Aspnet.Snapin.IDataObject)" /> seleccionó correctamente el elemento de menú de acceso directo.
+              
+            
+            
+              
+                
+                  E_UNEXPECTED
+                
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+          
+        </returns>
+      <param name="lCommandID">
+              Identificador de comando del elemento de menú.
+            </param>
+      <param name="piDataObject">
+              Puntero a la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> en el objeto para el que se mostró el menú de acceso directo.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IExtendPropertySheet">
+      <summary>
+          Permite a un componente de complemento agregar páginas de propiedades a la hoja de propiedades de un elemento.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet.CreatePropertyPages(Microsoft.Aspnet.Snapin.IPropertySheetCallback,System.IntPtr,Microsoft.Aspnet.Snapin.IDataObject)">
+      <summary>
+          Agrega páginas a una hoja de propiedades.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                <see cref="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet.CreatePropertyPages(Microsoft.Aspnet.Snapin.IPropertySheetCallback,System.IntPtr,Microsoft.Aspnet.Snapin.IDataObject)" /> agregó correctamente las páginas de hojas de propiedades.
+              
+            
+            
+              
+                S_FALSE
+              
+              
+                <see cref="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet.CreatePropertyPages(Microsoft.Aspnet.Snapin.IPropertySheetCallback,System.IntPtr,Microsoft.Aspnet.Snapin.IDataObject)" /> no agregó ninguna página de hojas de propiedades.
+              
+            
+            
+              
+                E_UNEXPECTED
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+            
+              
+                E_INVALIDARG
+              
+              
+                Uno o más parámetros no son válidos.
+              
+            
+          
+        </returns>
+      <param name="lpProvider">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.IPropertySheetCallback" />.
+            </param>
+      <param name="handle">
+              Identificador que se va a utilizar para enrutar el mensaje de notificación al <see cref="T:Microsoft.CLRAdmin.IComponent" /> o <see cref="T:Microsoft.CLRAdmin.IComponentData" /> adecuado.
+            </param>
+      <param name="lpIDataObject">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> en el objeto que contiene información de contexto sobre el ámbito o el elemento de resultado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet.QueryPagesFor(Microsoft.Aspnet.Snapin.IDataObject)">
+      <summary>
+          Determina si el objeto necesita páginas.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Existen propiedades para este objeto de datos.
+              
+            
+            
+              
+                E_UNEXPECTED
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+            
+              
+                E_INVALID
+              
+              
+                El parámetro no es válido.
+              
+            
+            
+              
+                Cualquier otro código de error
+              
+              
+                No se proporciona ninguna página para el objeto de datos.
+              
+            
+          
+        </returns>
+      <param name="lpDataObject">
+              Puntero a <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> en el objeto que contiene información de contexto sobre el ámbito o el elemento de resultado.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IExtendPropertySheet2">
+      <summary>
+          Permite a un componente del complemento agregar páginas de propiedades a la hoja de propiedades de un elemento.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet2.CreatePropertyPages(Microsoft.Aspnet.Snapin.IPropertySheetCallback,System.IntPtr,Microsoft.Aspnet.Snapin.IDataObject)">
+      <summary>
+          Agrega páginas a una hoja de propiedades.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El método <see cref="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet.CreatePropertyPages(Microsoft.Aspnet.Snapin.IPropertySheetCallback,System.IntPtr,Microsoft.Aspnet.Snapin.IDataObject)" /> agregó correctamente las páginas de hojas de propiedades.
+              
+            
+            
+              
+                S_FALSE
+              
+              
+                El método <see cref="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet.CreatePropertyPages(Microsoft.Aspnet.Snapin.IPropertySheetCallback,System.IntPtr,Microsoft.Aspnet.Snapin.IDataObject)" /> no agregó páginas de hojas de propiedades.
+              
+            
+            
+              
+                E_UNEXPECTED
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+            
+              
+                E_INVALIDARG
+              
+              
+                Uno o varios parámetros no son válidos.
+              
+            
+          
+        </returns>
+      <param name="lpProvider">
+              Puntero a la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IPropertySheetCallback" />.
+            </param>
+      <param name="handle">
+              Identificador que se utiliza para dirigir el mensaje de notificación a la interfaz <see cref="T:Microsoft.CLRAdmin.IComponent" /> o <see cref="T:Microsoft.CLRAdmin.IComponentData" /> apropiada.
+            </param>
+      <param name="lpIDataObject">
+              Puntero a la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> en el objeto que contiene información de contexto sobre el ámbito o el elemento de resultado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet2.GetWatermarks(Microsoft.Aspnet.Snapin.IDataObject,System.IntPtr@,System.IntPtr@,System.IntPtr@,System.Int32@)">
+      <summary>
+          Recupera la marca de agua y los mapas de bits del encabezado para las hojas del asistente implementadas como asistentes de tipo Asistente 97.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                
+                  <paramref name="etch" />
+                
+              
+              
+                
+                  Es true si la marca de agua y los mapas de bits del encabezado deben estirarse en lugar de colocarse en mosaico; de lo contrario, es false.
+              
+            
+          
+        </returns>
+      <param name="lpIDataObject">
+              <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> en el objeto que contiene información de contexto sobre el ámbito o el elemento de resultado.
+            </param>
+      <param name="lphWatermark">
+              Identificador a un mapa de bits que sirve como marca de agua para las páginas del Asistente 97.
+            </param>
+      <param name="lphHeader">
+              Identificador a un mapa de bits que sirve como encabezado para las páginas del Asistente 97.
+            </param>
+      <param name="lphPalette">
+              Identificador a una paleta utilizada para los mapas de bits especificados por <paramref name="lphWatermark" /> e <paramref name="lphHeader" />.
+            </param>
+      <param name="bStretch">
+              Valor devuelto de <see cref="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet2.GetWatermarks(Microsoft.Aspnet.Snapin.IDataObject,System.IntPtr@,System.IntPtr@,System.IntPtr@,System.Int32@)" />: es true si la marca de agua y los mapas de bits del encabezado deben estirarse en lugar de colocarse en mosaico; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IExtendPropertySheet2.QueryPagesFor(Microsoft.Aspnet.Snapin.IDataObject)">
+      <summary>
+          Determina si el objeto requiere páginas.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                Existen propiedades para este objeto de datos.
+              
+            
+            
+              
+                E_UNEXPECTED 
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+            
+              
+                E_INVALID 
+              
+              
+                El parámetro no es válido.
+              
+            
+            
+              
+                Cualquier otro código de error
+              
+              
+                No se han proporcionado páginas para el objeto de datos.
+              
+            
+          
+        </returns>
+      <param name="lpDataObject">
+              Puntero a la interfaz <see cref="T:Microsoft.Aspnet.Snapin.IDataObject" /> en el objeto que contiene información de contexto sobre el ámbito o el elemento de resultado.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.IPropertySheetCallback">
+      <summary>
+          Agrega las páginas de propiedades del complemento a una hoja de propiedades.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IPropertySheetCallback.AddPage(System.IntPtr)">
+      <summary>
+          Agrega una página a una hoja de propiedades.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                
+                  S_OK
+                
+              
+              
+                El método <see cref="M:Microsoft.Aspnet.Snapin.IPropertySheetCallback.AddPage(System.IntPtr)" /> agregó correctamente la página a la hoja de propiedades.
+              
+            
+            
+              
+                
+                  S_FALSE
+                
+              
+              
+                La hoja de propiedades contiene el número máximo de páginas, que es 255.
+              
+            
+            
+              
+                
+                  E_UNEXPECTED
+                
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+            
+              
+                
+                  E_POINTER
+                
+              
+              
+                
+                  El valor de <paramref name="hPage" /> es null.
+              
+            
+          
+        </returns>
+      <param name="hPage">
+              Identificador de una página que se va a agregar a una hoja de propiedades.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.IPropertySheetCallback.RemovePage(System.IntPtr)">
+      <summary>
+          Quita una página de una hoja de propiedades.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                
+                  S_OK
+                
+              
+              
+                El método <see cref="M:Microsoft.Aspnet.Snapin.IPropertySheetCallback.RemovePage(System.IntPtr)" /> quitó correctamente la página de la hoja de propiedades. 
+                O bien 
+                La hoja de propiedades está vacía.
+              
+            
+            
+              
+                
+                  S_FALSE
+                
+              
+              
+                No se encuentra la página de hoja de propiedades especificada por <paramref name="hPage" />.
+              
+            
+            
+              
+                
+                  E_UNEXPECTED
+                
+              
+              
+                Se ha producido un error inesperado.
+              
+            
+            
+              
+                
+                  E_POINTER
+                
+              
+              
+                
+                  El valor de <paramref name="hPage" /> es null.
+              
+            
+          
+        </returns>
+      <param name="hPage">
+              Identificador de una página que se va a quitar de una hoja de propiedades.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.ISnapinAbout">
+      <summary>
+          Permite a la consola obtener información de copyright y de versión así como imágenes para la carpeta estática de un complemento.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.ISnapinAbout.GetProvider(System.IntPtr@)">
+      <summary>
+          Obtiene el nombre del proveedor del complemento.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El complemento obtuvo correctamente el nombre.
+              
+            
+          
+        </returns>
+      <param name="pName">
+              Valor devuelto que contiene el nombre del proveedor del complemento y que se pasa sin inicializar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.ISnapinAbout.GetSnapinDescription(System.IntPtr@)">
+      <summary>
+          Permite a la consola obtener el texto del cuadro de descripción en la página de propiedades Acerca de del complemento.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El complemento obtuvo correctamente el texto.
+              
+            
+          
+        </returns>
+      <param name="lpDescription">
+              Valor devuelto que contiene el texto para el cuadro de descripción en una página de propiedades Acerca de y que se pasa sin inicializar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.ISnapinAbout.GetSnapinImage(System.IntPtr@)">
+      <summary>
+          Permite a la consola obtener el icono principal que se utiliza en la página de propiedades Acerca de de un complemento.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El complemento obtuvo correctamente el identificador de la imagen.
+              
+            
+          
+        </returns>
+      <param name="hAppIcon">
+              Valor devuelto que contiene el identificador del icono principal del complemento utilizado por la página de propiedades Acerca de y que se pasa sin inicializar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.ISnapinAbout.GetSnapinVersion(System.IntPtr@)">
+      <summary>
+          Permite a la consola obtener el número de versión del complemento.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El complemento obtuvo correctamente el número de versión.
+              
+            
+          
+        </returns>
+      <param name="lpVersion">
+              Valor devuelto que contiene el texto que especifica el número de versión del complemento y que se pasa sin inicializar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Aspnet.Snapin.ISnapinAbout.GetStaticFolderImage(System.IntPtr@,System.IntPtr@,System.IntPtr@,System.Int32@)">
+      <summary>
+          Permite a la consola obtener las imágenes de carpeta estática para los paneles de ámbito y de resultados.
+        </summary>
+      <returns>
+          
+            
+              
+                
+                  Valor devuelto
+                
+                
+                  Descripción
+                
+              
+            
+            
+              
+                S_OK
+              
+              
+                El complemento obtuvo correctamente los mapas de bits.
+              
+            
+          
+        </returns>
+      <param name="hSmallImage">
+              Valor devuelto que contiene el identificador de un icono pequeño (16 x 16 píxeles) en el panel de ámbito o el panel de resultados.
+            </param>
+      <param name="hSmallImageOpen">
+              Valor devuelto que contiene el identificador de un icono pequeño de carpeta abierta (16 x 16 píxeles).
+            </param>
+      <param name="hLargeImage">
+              Valor devuelto que contiene el identificador de un icono grande (32 x 32 píxeles).
+            </param>
+      <param name="cMask">
+              Valor devuelto que contiene una estructura que especifica el color utilizado para generar una máscara.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.MMC_CONTROL_TYPE">
+      <summary>
+          Especifica los tipos de controles que pueden aparecer en la barra de controles.
+        </summary>
+      <returns>
+          <see cref="T:Microsoft.Aspnet.Snapin.MMC_CONTROL_TYPE" />.
+        </returns>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.MMC_CONTROL_TYPE.TOOLBAR">
+      <summary>
+          Control de barra de herramientas.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.MMC_CONTROL_TYPE.MENUBUTTON">
+      <summary>
+          Control de menú desplegable.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.MMC_CONTROL_TYPE.COMBOBOXBAR">
+      <summary>
+          Control de cuadro combinado.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.MMC_LISTPAD_INFO">
+      <summary>
+          Rellenado por el método <see cref="M:Microsoft.CLRAdmin.IExtendTaskPad.GetListPadInfo(System.String,Microsoft.CLRAdmin.MMC_LISTPAD_INFO@)" /> para especificar el texto del título, texto del botón opcional y la identificación de comando de botón opcional para el relleno de tarea de vista de lista.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.MMC_TASK">
+      <summary>
+          Especifica todos los datos necesarios para configurar una tarea individual en un cuadro de tareas.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.MMC_TASK_DISPLAY_OBJECT">
+      <summary>
+          Especifica el tipo de imagen y los datos necesarios para utilizar la imagen con el fin de mostrar una tarea o el fondo en un relleno de tareas.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.MMCBUTTON">
+      <summary>
+          Contiene valores que se utilizan para crear botones en una barra de herramientas.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.PropSheetPageProc">
+      <summary>
+          Especifica una función de devolución de llamada a la que llama una hoja de propiedades cuando se crea una página y cuando la página está a punto de ser destruida.
+        </summary>
+      <returns>
+          Valor de <paramref name="uMsg" />.
+        </returns>
+      <param name="hwnd">
+              Reservado; debe ser null.
+            </param>
+      <param name="uMsg">
+              Indicador de la acción que especifica si se crea una página o un cuadro de diálogo para una página o si se destruye una página.
+            </param>
+      <param name="lParam">
+              Puntero a una estructura que define la página que se va a crear o a destruir.
+            </param>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.RESULTDATAITEM">
+      <summary>
+          Especifica o recibe los atributos de los elementos de resultado en el panel de resultados del complemento.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM">
+      <summary>
+          Especifica los elementos que se van a insertar en el panel de ámbito.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.cChildren">
+      <summary>
+          Especifica el número de elementos enumerados.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.displayname">
+      <summary>
+          Establece un valor MMC_CALLBACK o un puntero a una cadena terminada en null.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.ID">
+      <summary>
+          Especifica un identificador único proporcionado por la consola para esta instancia de la estructura <see cref="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM" />.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.lParam">
+      <summary>
+          Especifica un valor de 32 bits proporcionado por el usuario que se va a asociar a esta instancia de la estructura <see cref="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM" />.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.mask">
+      <summary>
+          Especifica una matriz de indicadores que determinan qué miembros de esta instancia de la estructura <see cref="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM" /> contienen datos válidos.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.nImage">
+      <summary>
+          Especifica el índice de imagen virtual en la lista de imágenes cuando no se selecciona esta instancia de la estructura <see cref="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM" />.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.nOpenImage">
+      <summary>
+          Especifica el índice de imagen virtual en la lista de imágenes cuando se selecciona esta instancia de la estructura <see cref="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM" />.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.nState">
+      <summary>
+          Especifica la máscara de estado del elemento.
+        </summary>
+      <returns>
+          En el método <see cref="M:Microsoft.CLRAdmin.IConsoleNameSpace2.GetItem(Microsoft.CLRAdmin.SCOPEDATAITEM@)" />, el campo <see cref="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.nState" /> devuelve MMC_SCOPE_ITEM_STATE_EXPANDEDONCE si se ha expandido esta instancia de la estructura <see cref="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM" /> al menos una vez; en caso contrario, <see cref="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.nState" /> devuelve 0 (cero) si no se ha expandido el elemento.
+        </returns>
+    </member>
+    <member name="F:Microsoft.Aspnet.Snapin.SCOPEDATAITEM.relativeID">
+      <summary>
+          Identificador de elemento único proporcionado por la consola para esta instancia de la estructura <see cref="T:Microsoft.Aspnet.Snapin.SCOPEDATAITEM" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Aspnet.Snapin.STGMEDIUM">
+      <summary>
+          Proporciona un identificador de memoria global generalizado con el fin de utilizarlo para operaciones de transferencia de datos.
+        </summary>
+    </member>
+  </members>
+</doc>

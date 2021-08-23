@@ -1,0 +1,16 @@
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Release\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Release\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Release\CdgUtilesXML.xml
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\obj\Release\ResolveAssemblyReference.cache
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\obj\Release\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\obj\Release\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Release\OpenNETCF.Desktop.Communication.dll
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\bin\Release\CdgUtiles.dll
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\bin\Release\CdgUtiles.pdb
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\bin\Release\CdgUtilesXML.xml
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\obj\Release\ResolveAssemblyReference.cache
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\obj\Release\CdgUtiles.dll
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\obj\Release\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Release\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Release\OpenNETCF.Desktop.Communication.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Release\CdgUtiles.dll

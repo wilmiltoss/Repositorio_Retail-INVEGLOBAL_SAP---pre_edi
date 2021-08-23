@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>Ficha Información interna de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolInternals01" type="System.String">
+    <value>Información interna de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolInternals02" type="System.String">
+    <value>Describe el funcionamiento interno de la herramienta Administración de sitios Web.</value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>Introducción</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>La herramienta Administración de sitios Web proporciona una interfaz Web para administrar los valores de configuración de un sitio Web individual. Los valores de configuración están almacenados en archivos Web.config, ubicados en la carpeta raíz de un sitio Web. La herramienta Administración de sitios Web modifica el archivo Web.config cuando se realizan cambios en la configuración predeterminada. Si no existe ningún archivo Web.config y se realizan cambios en la herramienta Administración de sitios Web, se crea un archivo de configuración nuevo.</value>
+  </data>
+  <data name="Introduction03" type="System.String">
+    <value>Además de crear y administrar archivos Web.config, la herramienta Administración de sitios Web también configura bases de datos del proveedor del sitio que admiten determinadas características.</value>
+  </data>
+  <data name="Introduction04" type="System.String">
+    <value>Cuando utiliza la herramienta Administración de sitios Web por primera vez, crea un archivo predeterminado Web.config para la aplicación que se va a configurar. La herramienta Administración de sitios Web también crea el proveedor de bases de datos del sitio predeterminado, que es una base de datos local en la carpeta App_Data para el sitio Web.</value>
+  </data>
+  <data name=".NETConfiguration01" type="System.String">
+    <value>Configuración de .NET</value>
+  </data>
+  <data name=".NETConfiguration02" type="System.String">
+    <value>Los valores de configuración de las aplicaciones basadas en Microsoft .NET Framework se almacenan en archivos .config con formato XML, ubicados en la misma carpeta que la aplicación. </value>
+  </data>
+  <data name=".NETConfiguration03" type="System.String">
+    <value>El elemento raíz de un archivo de configuración es el elemento &lt;span class=LanguageKeyword&gt;configuration&lt;/span&gt;. El elemento &lt;span class=LanguageKeyword&gt;configuration&lt;/span&gt; contiene elementos individuales que almacenan valores de configuración con varios propósitos. Por ejemplo, si crea una configuración de la aplicación en el elemento &lt;span class=LanguageKeyword&gt;appSettings&lt;/span&gt;, que es un elemento secundario del elemento &lt;span class=LanguageKeyword&gt;configuration&lt;/span&gt;.</value>
+  </data>
+  <data name=".NETConfiguration04" type="System.String">
+    <value>Los archivos de configuración existen dentro de una jerarquía. Los valores de configuración para un sitio Web individual se heredan de archivos de configuración que existen por encima de éstos dentro de la jerarquía. La raíz de la jerarquía del sistema de configuración es el archivo machine.config, que almacena los valores de configuración que se aplican al sistema completo y a todas las aplicaciones que se ejecutan en el sistema. No puede cambiar la configuración en el archivo machine.config que utiliza la herramienta Administración de sitios Web; sólo el administrador del servidor Web puede cambiarla.</value>
+  </data>
+  <data name=".NETConfiguration05" type="System.String">
+    <value>La carpeta raíz del servidor Web (por ejemplo, \inetpub\wwwroot) puede contener un archivo Web.config con una configuración que se aplique a todos los sitios Web que se ejecutan en dicho servidor. En el nivel de la aplicación puede que exista otro archivo Web.config que defina la configuración para esa aplicación. También pueden existir otros archivos Web.config en subdirectorios de su aplicación que especifiquen la configuración que se va a aplicar a los recursos contenidos en dichos subdirectorios.</value>
+  </data>
+  <data name=".NETConfiguration06" type="System.String">
+    <value>Cuando utiliza la herramienta Administración de sitios Web, administra la configuración en un archivo Web.config para una única aplicación y sus subdirectorios. La herramienta Administración de sitios Web muestra una configuración heredada de los primeros archivos de configuración de la jerarquía, si procede. Si se ha definido una configuración heredada de tal forma que no puede reemplazarse, la herramienta Administración de sitios Web muestra la configuración como una opción atenuada.</value>
+  </data>
+  <data name="ConfigurationAPI01" type="System.String">
+    <value>API de configuración</value>
+  </data>
+  <data name="ConfigurationAPI02" type="System.String">
+    <value>La herramienta Administración de sitios Web es un sitio Web de ASP.NET, versión 2.0 en C#, que utiliza los espacios de nombres de System.Configuration de forma extensiva. Para obtener más información, vea la API de configuración de ASP.NET.</value>
+  </data>
+  <data name="ConfigurationFileStructure01" type="System.String">
+    <value>Estructura del archivo de configuración</value>
+  </data>
+  <data name="ConfigurationFileStructure02" type="System.String">
+    <value>Para obtener información detallada sobre cómo modifica la herramienta Administración de sitios Web el contenido de la configuración para un área de características específicas, vea Configuración de ASP.NET.</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>Vea también</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>Información general sobre la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>Ficha Seguridad de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>Ficha Aplicación de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>Ficha Proveedor de la herramienta Administración de sitios Web</value>
+  </data>
+</root>

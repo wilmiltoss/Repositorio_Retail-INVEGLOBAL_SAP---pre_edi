@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  
+  <data name="AddAnotherButtonLabel" type="System.String">
+    <value>Agregar otros</value>
+  </data>
+  <data name="Alphabet" type="System.String">
+    <value>A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T;U;V;W;X;Y;Z</value>
+  </data>
+  <data name="All" type="System.String">
+    <value>Todos</value>
+  </data>
+  <data name="BackButtonLabel" type="System.String">
+    <value>Atrás</value>
+  </data>
+  <data name="ErrorHeader" type="System.String">
+    <value>Corrija los siguientes errores:</value>
+  </data>
+  <data name="GenericSuccess" type="System.String">
+    <value>La conexión con la base de datos se estableció correctamente.</value>
+  </data>
+  <data name="GenericFailure" type="System.String">
+    <value>No se pudo establecer una conexión con la base de datos.</value>
+  </data>
+  <data name="NoButtonLabel" type="System.String">
+    <value>No</value>
+  </data>
+  <data name="NonemptyRole" type="System.String">
+    <value>Debe seleccionarse una función.</value>
+  </data>
+  <data name="NonemptyUser" type="System.String">
+    <value>El nombre de usuario no debe estar vacío.</value>
+  </data>
+  <data name="InvalidRuleName" type="System.String">
+    <value>Los nombres de reglas de autorización no pueden contener el carácter '*'</value>
+  </data>
+  <data name="OKButtonLabel" type="System.String">
+    <value>Aceptar</value>
+  </data>
+  <data name="SaveButtonLabel" type="System.String">
+    <value>Guardar</value>
+  </data>
+  <data name="SpecificFailureCreateDB" type="System.String">
+    <value>No se pudo establecer una conexión con la base de datos. &lt;br&gt; Si aún no ha creado la base de datos de servidor SQL Server, cierre la herramienta Administración de sitios Web, con la utilidad de línea de comandos aspnet_regsql cree y configure la base de datos, vuelva a abrir esta herramienta y establezca el proveedor.</value>
+  </data>
+  <data name="YesButtonLabel" type="System.String">
+    <value>Sí</value>
+  </data>
+  <data name="Home" type="System.String">
+    <value>Página principal</value>
+  </data>
+  <data name="Security" type="System.String">
+    <value>Seguridad</value>
+  </data>
+  <data name="Application" type="System.String">
+    <value>Aplicación</value>
+  </data>
+  <data name="Provider" type="System.String">
+    <value>Proveedor</value>
+  </data>
+  <data name="AlphabetInfo" type="System.String">
+    <value>Se admiten los caracteres comodín * y ?</value>
+  </data>
+  <data name="HtmlDirectionality" type="System.String">
+    <value>ltr</value>
+  </data>
+  <data name="ASPXFileIcon" type="System.String">
+    <value>Icono de archivo ASPX</value>
+  </data>
+  <data name="FolderIcon" type="System.String">
+    <value>Icono de carpeta</value>
+  </data>
+  <data name="BrandingFull2Gif" type="System.String">
+    <value>Logotipo de ASP.NET</value>
+  </data>
+  <data name="HelpIconSolidGif" type="System.String">
+    <value>Imagen de signo de interrogación</value>
+  </data>
+  <data name="YellowCornerGif" type="System.String">
+    <value>Imagen de fondo amarillo</value>
+  </data>
+  <data name="UserGif" type="System.String">
+    <value>Usuario</value>
+  </data>
+  <data name="RoleGif" type="System.String">
+    <value>Función</value>
+  </data>
+  <data name="FullTrustRequired" type="System.String">
+    <value>La herramienta Administración de sitios Web requiere que se ejecute como plena confianza. Configure la aplicación de esta herramienta para que se ejecute de esta manera.</value>
+  </data>
+  <data name="ToolTipFormat" type="System.String">
+    <value>{0} [{1}]</value>
+  </data>
+  <data name="PageTitle" type="System.String">
+    <value>Administración de la aplicación Web de ASP.Net</value>
+  </data>
+  <data name="WebAdmin_ConfigurationIsLocalOnly" type="System.String">
+    <value>La herramienta Administración de sitios Web está configurada para ser utilizada sólo desde el equipo local.</value>
+  </data>
+
+</root>

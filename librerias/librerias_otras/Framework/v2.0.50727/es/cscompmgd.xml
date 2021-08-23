@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>cscompmgd</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.CSharp.Compiler">
+      <summary>
+          Contenedor administrado para el compilador de C#.
+        </summary>
+    </member>
+    <member name="M:Microsoft.CSharp.Compiler.Compile(System.String[],System.String[],System.String,System.String[],System.Collections.IDictionary)">
+      <summary>
+          Compila los archivos de código fuente de C# dados en el archivo de destino especificado.
+        </summary>
+      <returns>
+        </returns>
+      <param name="sourceTexts">
+              Matriz de cadenas de tipo, cada una con código de C#. Cada cadena es el equivalente de un solo archivo de código fuente. Debe haber por lo menos un elemento sourceText. 
+            </param>
+      <param name="sourceTextNames">
+              Matriz de cadenas de tipo que contiene los nombres de archivo de cada elemento sourceText. Los nombres de archivo se utilizan para los diagnósticos del compilador y la información de depuración. Esta matriz es necesaria, pero puede ser invalidada localmente mediante la directiva #line. Esta matriz debe tener el mismo número de elementos que el parámetro sourceTexts.
+            </param>
+      <param name="target">
+              Nombre del archivo de resultados. Este argumento es necesario.
+            </param>
+      <param name="imports">
+              Matriz de cadenas de tipo, con archivos de referencia. Equivale a la opción del compilador /reference (Importar metadatos)http://msdn2.microsoft.com/en-us/library/yabyz3h4(VS.71).aspx. Este parámetro puede ser una referencia nula (Nothing en Visual Basic).
+            </param>
+      <param name="options">
+              Interfaz IDictionaryhttp://msdn2.microsoft.com/en-us/library/system.collections.idictionary(VS.71).aspx de las opciones del compilador. La clave es la forma abreviada de la opción del compilador. El valor es el valor deseado de la opción. Este parámetro puede ser una referencia nula (Nothing en Visual Basic). Observe que no se reconocen todas las Opciones del compilador de C#http://msdn2.microsoft.com/en-us/library/2fdbz5xd(VS.71).aspx. Opciones y valores reconocidos:
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+      <param name="&#xD;&#xA;            ">
+            </param>
+    </member>
+    <member name="T:Microsoft.CSharp.CompilerError">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.CSharp.CompilerError.#ctor"></member>
+    <member name="F:Microsoft.CSharp.CompilerError.ErrorLevel"></member>
+    <member name="F:Microsoft.CSharp.CompilerError.ErrorMessage"></member>
+    <member name="F:Microsoft.CSharp.CompilerError.ErrorNumber"></member>
+    <member name="F:Microsoft.CSharp.CompilerError.SourceColumn"></member>
+    <member name="F:Microsoft.CSharp.CompilerError.SourceFile"></member>
+    <member name="F:Microsoft.CSharp.CompilerError.SourceLine"></member>
+    <member name="M:Microsoft.CSharp.CompilerError.ToString"></member>
+    <member name="T:Microsoft.CSharp.ErrorLevel">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.None"></member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.Warning"></member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.Error"></member>
+    <member name="F:Microsoft.CSharp.ErrorLevel.FatalError"></member>
+    <member name="M:Microsoft.CSharp.Compiler.#ctor"></member>
+  </members>
+</doc>

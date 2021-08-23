@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>Pestaña Herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolOverview01" type="System.String">
+    <value>Información general sobre la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolOverview02" type="System.String">
+    <value></value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>Introducción</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>La herramienta Administración de sitios Web permite ver y administrar la configuración del sitio web mediante una interfaz web simple. </value>
+  </data>
+  <data name="TabsandAdditionalInformation01" type="System.String">
+    <value>Pestañas e información adicional</value>
+  </data>
+  <data name="TabsandAdditionalInformation02" type="System.String">
+    <value>Los siguientes vínculos proporcionan más información sobre cómo trabajar con la herramienta Administración de sitios Web:</value>
+  </data>
+  <data name="TabsandAdditionalInformation03" type="System.String">
+    <value>Pestaña Seguridad de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="TabsandAdditionalInformation04" type="System.String">
+    <value>Pestaña Aplicación de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="TabsandAdditionalInformation05" type="System.String">
+    <value>Pestaña Proveedor de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="TabsandAdditionalInformation06" type="System.String">
+    <value>Información interna de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteConfiguration01" type="System.String">
+    <value>Configuración del sitio Web</value>
+  </data>
+  <data name="WebSiteConfiguration02" type="System.String">
+    <value>Los valores de configuración del sitio Web están almacenados en un archivo XML denominado Web.config, que está ubicado en la carpeta raíz del sitio Web. La herramienta Administración de sitios Web permite cambiar la configuración del sitio sin tener que editar manualmente el archivo Web.config. La primera vez que se utiliza la herramienta Administración de sitios Web para cambiar un sitio Web específico, si no existe ningún archivo Web.config, lo creará la herramienta. De forma predeterminada, la herramienta Administración de sitios Web crea también una base de datos en la carpeta App_Data del sitio Web para almacenar datos de los servicios de la aplicación, como la información de pertenencia y de los roles. En la mayoría de las configuraciones, los cambios realizados en la herramienta Administración de sitios Web se aplican inmediatamente y se reflejan en el archivo Web.config.</value>
+  </data>
+  <data name="InheritedSettings01" type="System.String">
+    <value>Configuraciones heredadas</value>
+  </data>
+  <data name="InheritedSettings02" type="System.String">
+    <value>Las configuraciones predeterminadas de un sitio Web se heredan automáticamente de cualquier archivo de configuración existente para el equipo o para el servidor Web en su totalidad. Por ejemplo, el servidor Web puede tener una configuración predeterminada que afecte a todos los sitios Web de ese servidor. Utilizando la herramienta Administración de sitios Web, puede crear y modificar las configuraciones de su sitio Web que no se hayan heredado y puede reemplazar las configuraciones heredadas si así lo permite la configuración del sitio. Si la configuración se ha heredado y no puede reemplazarse, aparece atenuada en la herramienta Administración de sitios Web, para indicar que está deshabilitada.</value>
+  </data>
+  <data name="Requirements01" type="System.String">
+    <value>Requisitos</value>
+  </data>
+  <data name="Requirements02" type="System.String">
+    <value>La herramienta Administración de sitios Web se incluye con la herramienta de desarrollo Web Microsoft Visual Web Developer. Para utilizar la herramienta Administración de sitios Web para administrar un sitio Web, las credenciales de usuario de la cuenta de usuario en la que está ejecutando Visual Web Developer deben tener permisos de escritura y de lectura en el archivo Web.config y en la carpeta App_Data de la aplicación que se está administrando. Si no puede administrar la configuración del sitio Web que utiliza la herramienta Administración de sitios Web, póngase en contacto con el administrador del sistema.</value>
+  </data>
+  <data name="Features01" type="System.String">
+    <value>Características</value>
+  </data>
+  <data name="Features02" type="System.String">
+    <value>La herramienta Administración de sitios Web muestra una interfaz con pestañas que agrupa los valores de configuración relacionados en cada pestaña. Las pestañas y la configuración que estas administran se describen en las siguientes secciones.</value>
+  </data>
+  <data name="SecurityTab01" type="System.String">
+    <value>Pestaña Seguridad</value>
+  </data>
+  <data name="SecurityTab02" type="System.String">
+    <value>Use la pestaña &lt;span class=UI&gt;Seguridad&lt;/span&gt; para administrar las reglas de acceso para proteger recursos específicos dentro del sitio web y para administrar las cuentas de usuario y los roles. </value>
+  </data>
+  <data name="SecurityTab03" type="System.String">
+    <value>Puede especificar cómo se usa el sitio web desde Internet (de forma pública) o desde una intranet (en una red de área local). De esta forma se indica el tipo de autenticación que usará el sitio web. Los sitios web de Internet usan el sistema de pertenencia a ASP.NET, donde se definen cuentas de usuario individuales. ASP.NET usa un sistema de seguridad para restringir el acceso a cuentas de usuario específicas o a los roles a los que pertenecen las cuentas de usuario. Los sitios web de la intranet usan la autenticación de Windows, en la que los usuarios se identifican mediante la información de inicio de sesión. </value>
+  </data>
+  <data name="ApplicationTab01" type="System.String">
+    <value>Pestaña Aplicación</value>
+  </data>
+  <data name="ApplicationTab02" type="System.String">
+    <value>Utilizar la pestaña &lt;span class=UI&gt;Aplicación&lt;/span&gt; para administrar varias configuraciones relacionadas con el sitio Web, incluidas las siguientes:</value>
+  </data>
+  <data name="ApplicationTab03" type="System.String">
+    <value>Configuración de la aplicación, que consiste en pares nombre/valor que desea almacenar centralmente y a los que se obtiene acceso mediante código desde cualquier parte del sitio Web.</value>
+  </data>
+  <data name="ApplicationTab04" type="System.String">
+    <value>Configuración SMTP, que determina la forma de enviar correos electrónicos desde su sitio.</value>
+  </data>
+  <data name="ApplicationTab05" type="System.String">
+    <value>Configuración de depuración y de traza.</value>
+  </data>
+  <data name="ApplicationTab06" type="System.String">
+    <value>Configuraciones con conexión y sin ella, que ponen el sitio Web sin conexión (lo apagan) para realizar el mantenimiento o para poner en conexión una nueva base de datos de Microsoft SQL Server Standard.</value>
+  </data>
+  <data name="ProviderTab01" type="System.String">
+    <value>Pestaña Proveedor</value>
+  </data>
+  <data name="ProviderTab02" type="System.String">
+    <value>Utilice la pestaña &lt;span class=UI&gt;Proveedor&lt;/span&gt; para comprobar o asignar proveedores para la administración de pertenencia y roles del sitio Web. Los proveedores de bases de datos son clases a las que se llama para almacenar datos de la aplicación para una característica particular. De forma predeterminada, la herramienta Administración de sitios Web configura y utiliza una base de datos local de SQL Server Express en la carpeta App_Data para el sitio Web. En su lugar, puede elegir utilizar un proveedor diferente, como una base de datos del servidor remoto SQL Server, para almacenar la administración de roles y pertenencia.</value>
+  </data>
+  <data name="HowtoUsetheWebSiteAdministrationTool01" type="System.String">
+    <value>Uso de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="HowtoUsetheWebSiteAdministrationTool02" type="System.String">
+    <value>Utilizar la herramienta Administración de sitios Web es parecido a utilizar otros sitios Web basados en formularios. El procedimiento general consiste en abrir la herramienta Administración de sitios Web, seleccionar la pestaña apropiada y ajustar las configuraciones disponibles en dicha pestaña. La mayoría de los cambios se aplican inmediatamente.</value>
+  </data>
+  <data name="HowtoAccesstheWebSiteAdministrationTool01" type="System.String">
+    <value>Acceso a la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="HowtoAccesstheWebSiteAdministrationTool02" type="System.String">
+    <value>Para obtener acceso a la herramienta Administración de sitios Web, en el menú &lt;span class=UI&gt;Sitio Web&lt;/span&gt;, haga clic en &lt;span class=UI&gt;Configuración de ASP.Net&lt;/span&gt;.</value>
+  </data>
+  <data name="Considerations01" type="System.String">
+    <value>Consideraciones</value>
+  </data>
+  <data name="Considerations02" type="System.String">
+    <value>Las siguientes secciones proporcionan algunas consideraciones para trabajar con la herramienta Administración de sitios Web.</value>
+  </data>
+  <data name="RestartingtheApplicationWhenSaving01" type="System.String">
+    <value>Reiniciando la aplicación al guardar</value>
+  </data>
+  <data name="RestartingtheApplicationWhenSaving02" type="System.String">
+    <value>La mayoría de los cambios a los valores de configuración que realiza en la herramienta Administración de sitios Web se aplican inmediatamente. Esto requiere que se reinicie el sitio Web en el que se aplican los cambios. Las sesiones actualmente activas del sitio Web se cerrarán, por lo que debería efectuar cambios de configuración en una versión intermedia o de desarrollo del sitio Web antes de publicarlos en el servidor de producción.</value>
+  </data>
+  <data name="SavingYourSettings01" type="System.String">
+    <value>Guardando su configuración</value>
+  </data>
+  <data name="SavingYourSettings02" type="System.String">
+    <value>La mayoría de los cambios de los valores de configuración que se realizan en la herramienta Administración de sitios Web se aplican inmediatamente. En el caso de las configuraciones en las que la interfaz de la herramienta Administración de sitios Web tiene un botón &lt;span class=UI&gt;Guardar&lt;/span&gt; dedicado, si deja la herramienta Administración de sitios Web inactiva o permite que se supere el tiempo de espera antes de hacer clic en &lt;span class=UI&gt;Guardar&lt;/span&gt; se perderán los cambios de los valores de configuración.</value>
+  </data>
+  <data name="TimeOut01" type="System.String">
+    <value>Tiempo de espera</value>
+  </data>
+  <data name="TimeOut02" type="System.String">
+    <value>Como medida de seguridad, la herramienta Administración de sitios Web supera el tiempo de espera después de un período de inactividad. Se perderá cualquier configuración que no se haya aplicado inmediatamente o que no se haya guardado. Si la herramienta Administración de sitios Web supera el tiempo de espera, cierre su explorador y vuelva a abrir la herramienta Administración de sitios Web en una ventana nueva.</value>
+  </data>
+  <data name="TimeOut03" type="System.String">
+    <value>La herramienta Administración de sitios Web administra únicamente algunos de los valores de configuración disponibles en el sitio Web. Otras configuraciones requieren la modificación directa de los archivos de configuración, ya sea de forma manual, utilizando el complemento de Microsoft Management Console (MMC) para ASP.NET o mediante programación, utilizando la API de configuración de ASP.NET.</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>Vea también</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>Pestaña Seguridad de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>Pestaña Aplicación de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>Pestaña Proveedor de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>Información interna de la herramienta Administración de sitios Web</value>
+  </data>
+</root>

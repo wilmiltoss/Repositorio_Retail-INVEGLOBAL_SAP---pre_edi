@@ -1,0 +1,7 @@
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\x86\Debug\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\x86\Debug\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\x86\Debug\CdgUtilesXML.xml
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\x86\Debug\OpenNETCF.Desktop.Communication.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\x86\Debug\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\x86\Debug\CdgUtiles.pdb

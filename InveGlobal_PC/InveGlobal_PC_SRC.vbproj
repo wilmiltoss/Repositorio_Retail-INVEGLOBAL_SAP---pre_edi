@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5E59280-45B6-4071-B814-5183C2FF8110}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>InveStock_PC_2.My.MyApplication</StartupObject>
+    <RootNamespace>InveStock_PC_2</RootNamespace>
+    <AssemblyName>InveGlobal_PC</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>InveStock.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ManifestCertificateThumbprint>D03155032CFBD3396186885F43418D3A69B59894</ManifestCertificateThumbprint>
+    <ManifestKeyFile>InveGlobal_PC_SRC_1_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>InveGlobal_2017.snk</AssemblyOriginatorKeyFile>
+    <PublishUrl>\\retailapp7\Aplicaciones.net\InveGlobal\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://soporte/</SupportUrl>
+    <ProductName>InveGlobal_PC</ProductName>
+    <PublisherName>AJSA</PublisherName>
+    <SuiteName>InveGlobal</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>InveGlobal_PC.html</WebPage>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>8.5.8.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>InveGlobal_PC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>InveGlobal_PC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>InveGlobal_PC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>InveGlobal_PC.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>InveGlobal_PC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>InveGlobal_PC.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CdgPersistencia">
+      <HintPath>..\librerias\CdgPersistencia.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenNETCF.Data, Version=2.3.12317.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\INVEGLOBAL_SAP\librerias\OpenNETCF.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\librerias\librerias_otras\sqlite66\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="MVC\controlador\ApControlador.vb" />
+    <Compile Include="MVC\controlador\clases\ArchivoMaestroCSV.vb" />
+    <Compile Include="MVC\controlador\clases\ArchivosPlanos.vb" />
+    <Compile Include="MVC\controlador\Config.vb" />
+    <Compile Include="MVC\controlador\mods\Archivos_INI.vb" />
+    <Compile Include="MVC\controlador\mods\EMERETAIL.vb" />
+    <Compile Include="MVC\controlador\mods\Principal.vb" />
+    <Compile Include="MVC\modelo\adms\CargasManualesADM.vb" />
+    <Compile Include="MVC\modelo\adms\colectores\ConfiguracionesSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\adms\ExistenciasVwADM_SAP.vb" />
+    <Compile Include="MVC\modelo\adms\colectores\LetrasSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\adms\colectores\LocacionesSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\adms\colectores\MaestroSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\adms\colectores\SectoresSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\adms\colectores\SoportesSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\adms\colectores\UsuariosSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\adms\ConfiguracionesADM.vb" />
+    <Compile Include="MVC\modelo\adms\DetallesConteosADM.vb" />
+    <Compile Include="MVC\modelo\adms\DetallesConteosTmpADM.vb" />
+    <Compile Include="MVC\modelo\adms\EmpresasADM.vb" />
+    <Compile Include="MVC\modelo\adms\emeretail\FotosEmeADM.vb" />
+    <Compile Include="MVC\modelo\adms\EntradasColectorasADM.vb" />
+    <Compile Include="MVC\modelo\adms\ExistenciasVwADM.vb" />
+    <Compile Include="MVC\modelo\adms\InventariosADM.vb" />
+    <Compile Include="MVC\modelo\adms\InventariosSectoresADM.vb" />
+    <Compile Include="MVC\modelo\adms\LocacionesADM.vb" />
+    <Compile Include="MVC\modelo\adms\LocalesADM.vb" />
+    <Compile Include="MVC\modelo\adms\NivelesAccesosADM.vb" />
+    <Compile Include="MVC\modelo\adms\ProductosADM.vb" />
+    <Compile Include="MVC\modelo\adms\SectoresADM.vb" />
+    <Compile Include="MVC\modelo\adms\SistemasADM.vb" />
+    <Compile Include="MVC\modelo\adms\SoportesADM.vb" />
+    <Compile Include="MVC\modelo\adms\TmpMaestroArticulosADM.vb" />
+    <Compile Include="MVC\modelo\adms\UsuariosADM.vb" />
+    <Compile Include="MVC\modelo\adms\UsuariosLocalesADM.vb" />
+    <Compile Include="MVC\modelo\adms\VwDetallesConteosADM.vb" />
+    <Compile Include="MVC\modelo\ApModelo.vb" />
+    <Compile Include="MVC\modelo\otds\CargaManualOTD.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\ConfiguracionSQLiteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\ExistenciaVwOTD_SAP.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\LetraSQLiteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\LocacionSQLiteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\MaestroSQLiteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\SectorSQLiteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\SoporteSQLiteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\UsuarioSQLiteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\ColectorOTD.vb" />
+    <Compile Include="MVC\modelo\otds\ConfiguracionOTD.vb" />
+    <Compile Include="MVC\modelo\otds\EmpresaOTD.vb" />
+    <Compile Include="MVC\modelo\otds\emeretail\FotoEmeOTD.vb" />
+    <Compile Include="MVC\modelo\otds\EntradaColectoraOTD.vb" />
+    <Compile Include="MVC\modelo\otds\ExistenciaVwOTD.vb" />
+    <Compile Include="MVC\modelo\otds\InventarioOTD.vb" />
+    <Compile Include="MVC\modelo\otds\InventarioSectorOTD.vb" />
+    <Compile Include="MVC\modelo\otds\LocacionOTD.vb" />
+    <Compile Include="MVC\modelo\otds\LocalOTD.vb" />
+    <Compile Include="MVC\modelo\otds\NivelAccesoOTD.vb" />
+    <Compile Include="MVC\modelo\otds\ProductoOTD.vb" />
+    <Compile Include="MVC\modelo\otds\SectorOTD.vb" />
+    <Compile Include="MVC\modelo\otds\SistemaOTD.vb" />
+    <Compile Include="MVC\modelo\otds\SoporteOTD.vb" />
+    <Compile Include="MVC\modelo\otds\TmpMaestroArticuloOTD.vb" />
+    <Compile Include="MVC\modelo\otds\UsuarioLocalOTD.vb" />
+    <Compile Include="MVC\modelo\otds\UsuarioOTD.vb" />
+    <Compile Include="MVC\modelo\otds\VwDetalleConteoOTD.vb" />
+    <Compile Include="MVC\modelo\Procedimientos.vb" />
+    <Compile Include="MVC\modelo\ApModeloSQLite.vb" />
+    <Compile Include="MVC\modelo\tbls\CargasManualesTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\ConfiguracionesSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\otds\colectores\LecturasSQLiteADM.vb" />
+    <Compile Include="MVC\modelo\tbls\ExistenciasVwTBL_SAP.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\LecturasSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\LetrasSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\LocacionesSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\MaestroSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\SectoresSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\SoportesSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\colectores\UsuariosSQLiteTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\ConfiguracionesTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\DetallesConteosTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\DetallesConteosTmpTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\EmpresasTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\EntradasColectorasTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\ExistenciasVwTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\InventarioProductoSectoresTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\InventarioProductosTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\InventariosSectoresTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\InventariosTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\LocacionesTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\LocalesTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\NivelesAccesosTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\ProductosTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\SectoresTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\SistemasTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\SoportesTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\TmpMaestroArticulosTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\UsuariosLocalesTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\UsuariosTBL.vb" />
+    <Compile Include="MVC\modelo\tbls\VwDetallesConteosTBL.vb" />
+    <Compile Include="MVC\vista\frms\FrmListaLocales.Designer.vb">
+      <DependentUpon>FrmListaLocales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmListaLocales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_abm_soportes.Designer.vb">
+      <DependentUpon>frm_abm_soportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_abm_soportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmAbmUsuarios.Designer.vb">
+      <DependentUpon>FrmAbmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmAbmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmInfoActual.Designer.vb">
+      <DependentUpon>FrmInfoActual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmInfoActual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_aso_local_soporte.Designer.vb">
+      <DependentUpon>frm_aso_local_soporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_aso_local_soporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmCargaManual.Designer.vb">
+      <DependentUpon>FrmCargaManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmCargaManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmDatosInventario.Designer.vb">
+      <DependentUpon>FrmDatosInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmDatosInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmVerExistencias.Designer.vb">
+      <DependentUpon>FrmVerExistencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmVerExistencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_colectores.Designer.vb">
+      <DependentUpon>frm_colectores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_colectores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_despliega_maestro.Designer.vb">
+      <DependentUpon>frm_despliega_maestro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_despliega_maestro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_despliega_reportes.Designer.vb">
+      <DependentUpon>frm_despliega_reportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_despliega_reportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmDetallesUbicaciones.Designer.vb">
+      <DependentUpon>FrmDetallesUbicaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmDetallesUbicaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmEntradasColectores.Designer.vb">
+      <DependentUpon>FrmEntradasColectores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmEntradasColectores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmModificarConteo.Designer.vb">
+      <DependentUpon>FrmModificarConteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmModificarConteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_nueva_asociacion.Designer.vb">
+      <DependentUpon>frm_nueva_asociacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_nueva_asociacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmOpciones.Designer.vb">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmOpciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmSectores.Designer.vb">
+      <DependentUpon>FrmSectores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmSectores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmSectoresCubiertos.Designer.vb">
+      <DependentUpon>FrmSectoresCubiertos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmSectoresCubiertos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmSeleccionLocal.Designer.vb">
+      <DependentUpon>FrmSeleccionLocal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\FrmSeleccionLocal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_soportes.Designer.vb">
+      <DependentUpon>frm_soportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MVC\vista\frms\frm_soportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVC\controlador\mods\CSV.vb" />
+    <Compile Include="MVC\controlador\mods\SICS.vb" />
+    <Compile Include="MVC\controlador\mods\SISTEMAS.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MVC\modelo\adms\colectores\LecturasSQLiteADM.vb">
+      <SubType>Code</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmListaLocales.resx">
+      <DependentUpon>FrmListaLocales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\frm_abm_soportes.resx">
+      <DependentUpon>frm_abm_soportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmAbmUsuarios.resx">
+      <DependentUpon>FrmAbmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmInfoActual.resx">
+      <DependentUpon>FrmInfoActual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\frm_aso_local_soporte.resx">
+      <DependentUpon>frm_aso_local_soporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmCargaManual.resx">
+      <DependentUpon>FrmCargaManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmDatosInventario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDatosInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmVerExistencias.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVerExistencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\frm_colectores.resx">
+      <DependentUpon>frm_colectores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\frm_despliega_maestro.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm_despliega_maestro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\frm_despliega_reportes.resx">
+      <DependentUpon>frm_despliega_reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmDetallesUbicaciones.resx">
+      <DependentUpon>FrmDetallesUbicaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmEntradasColectores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmEntradasColectores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmModificarConteo.resx">
+      <DependentUpon>FrmModificarConteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\frm_nueva_asociacion.resx">
+      <DependentUpon>frm_nueva_asociacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmOpciones.resx">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmSectores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSectores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmSectoresCubiertos.resx">
+      <DependentUpon>FrmSectoresCubiertos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\FrmSeleccionLocal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSeleccionLocal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVC\vista\frms\frm_soportes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm_soportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InveGlobal_2017.snk" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BDATOS\InveStock.sqlite">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="CUBOS\CUBOS.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MVC\vista\imgs\buscar.gif" />
+    <None Include="MVC\vista\imgs\excel.png" />
+    <None Include="MVC\vista\imgs\Estante.png" />
+    <Content Include="config.sqlite">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InveStock.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="montarUnidad.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="My Project\app.manifest" />
+    <None Include="PYTHON\library.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PYTHON\py.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MVC\vista\imgs\agregar.png" />
+    <None Include="MVC\vista\imgs\cancelar.png" />
+    <None Include="MVC\vista\imgs\aceptar.png" />
+    <None Include="MVC\vista\imgs\eliminar.png" />
+    <Content Include="MVC\vista\imgs\inve.png" />
+    <Content Include="MVC\vista\imgs\InveStock.ico" />
+    <None Include="MVC\vista\imgs\inve_max.png" />
+    <Content Include="MVC\vista\imgs\Sesion.jpg" />
+    <Content Include="oci.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="orannzsbb10.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oraocci10.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oraociicus10.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PYTHON\MaestroASQLite.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PYTHON\MaestroASQLite.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PYTHON\python26.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PYTHON\w9xpopen.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLite.Interop.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSV\" />
+    <Folder Include="MVC\vista\rpts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CdgUtiles\CdgUtiles\CdgUtiles.csproj">
+      <Project>{384bfaf3-6f7c-4655-83de-08ab2b8adc81}</Project>
+      <Name>CdgUtiles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

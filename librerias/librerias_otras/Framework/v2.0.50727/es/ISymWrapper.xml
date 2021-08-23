@@ -1,0 +1,1231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ISymWrapper</name>
+  </assembly>
+  <members>
+    <member name="T:System.Diagnostics.SymbolStore.SymBinder">
+      <summary>
+          Representa un enlazador de símbolos de código administrado.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymBinder" />. 
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.{dtor}">
+      <summary>
+          Este método es sólo para uso interno.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.Finalize">
+      <summary>
+          Libera los recursos mantenidos por la instancia actual.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.GetReader(System.Int32,System.String,System.String)">
+      <summary>
+          Obtiene la interfaz del lector de símbolos para el archivo actual, utilizando el puntero de entero de 32 bits a una interfaz de metadatos, el nombre de archivo y la ruta de búsqueda que se hayan especificado.
+        </summary>
+      <returns>
+          Interfaz <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader" /> que lee los símbolos de depuración.
+        </returns>
+      <param name="importer">
+              Entero de 32 bits que señala a la interfaz de importación de metadatos. 
+            </param>
+      <param name="filename">
+              Nombre del archivo para el que se precisa la interfaz del lector. 
+            </param>
+      <param name="searchPath">
+              Ruta de búsqueda utilizada para localizar el archivo de símbolos. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.GetReader(System.IntPtr,System.String,System.String)">
+      <summary>
+          Obtiene la interfaz del lector de símbolos para el archivo actual, utilizando el puntero a una interfaz de metadatos, el nombre de archivo y la ruta de búsqueda que se hayan especificado.
+        </summary>
+      <returns>
+          Interfaz <see cref="T:System.Diagnostics.SymbolStore.ISymbolReader" /> que lee los símbolos de depuración.
+        </returns>
+      <param name="importer">
+              Estructura <see cref="T:System.IntPtr" /> que señala a la interfaz de importación de metadatos. 
+            </param>
+      <param name="filename">
+              Nombre del archivo para el que se precisa la interfaz del lector. 
+            </param>
+      <param name="searchPath">
+              Ruta de búsqueda utilizada para localizar el archivo de símbolos. 
+            </param>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymDocument">
+      <summary>
+          Representa un documento al que hace referencia un almacén de símbolos.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymDocument" /> utilizando el puntero especificado a un objeto ISymUnmanagedDocument no administrado.
+        </summary>
+      <param name="pDocument">
+              Puntero a la interfaz ISymUnmanagedDocument.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.{dtor}">
+      <summary>
+          Este método es sólo para uso interno.
+        </summary>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.CheckSumAlgorithmId">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.DocumentType">
+      <summary>
+          Obtiene el tipo del documento actual.
+        </summary>
+      <returns>
+          Tipo del documento actual.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.Finalize">
+      <summary>
+          Libera los recursos no administrados y realiza otras operaciones de limpieza antes de que la recolección de elementos no utilizados reclame el objeto <see cref="T:System.Diagnostics.SymbolStore.SymReader" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.FindClosestLine(System.Int32)">
+      <summary>
+          Devuelve el número de la línea más próxima que sea un punto de secuencia, respecto de una línea especificada en el documento actual que puede ser o no un punto de secuencia.
+        </summary>
+      <returns>
+          Número de línea del punto de secuencia más cercano a la línea especificada.
+        </returns>
+      <param name="line">
+              Línea especificada del documento. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.GetCheckSum">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.GetSourceRange(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <param name="startLine">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="startColumn">
+              Este parámetro no se utiliza. 
+            </param>
+      <param name="endLine">
+              Este parámetro no se utiliza. 
+            </param>
+      <param name="endColumn">
+              Este parámetro no se utiliza. 
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.GetUnmanaged">
+      <summary>
+          Obtiene un puntero a la interfaz ISymUnmanagedDocument no administrada y sin formato para esta instancia de <see cref="T:System.Diagnostics.SymbolStore.SymDocument" />.
+        </summary>
+      <returns>
+          Puntero a la interfaz ISymUnmanagedDocument no administrada y sin formato para esta instancia de <see cref="T:System.Diagnostics.SymbolStore.SymDocument" />.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.HasEmbeddedSource">
+      <summary>
+          Indica si el código fuente del documento actual está almacenado en el almacén de símbolos.
+        </summary>
+      <returns>
+          
+            true si el código fuente del documento actual está almacenado en el almacén de símbolos; en caso contrario, false.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.Language">
+      <summary>
+          Obtiene el lenguaje del documento actual.
+        </summary>
+      <returns>
+          <see cref="T:System.Guid" /> que representa el lenguaje del documento actual.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.LanguageVendor">
+      <summary>
+          Obtiene el proveedor de lenguaje del documento actual.
+        </summary>
+      <returns>
+          <see cref="T:System.Guid" /> que representa el proveedor de lenguaje del documento actual.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.SourceLength">
+      <summary>
+          Obtiene la longitud, en bytes, del código fuente incrustado.
+        </summary>
+      <returns>
+          Longitud del código fuente del documento actual.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymDocument.URL">
+      <summary>
+          Obtiene la dirección URL del documento actual.
+        </summary>
+      <returns>
+          Dirección URL del documento actual.
+        </returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymDocumentWriter">
+      <summary>
+          Proporciona los métodos para escribir en un documento al que hace referencia un almacén de símbolos.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocumentWriter*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" />. 
+        </summary>
+      <param name="pDocumentWriter">
+              Puntero al sistema de escritura del documento no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.{dtor}">
+      <summary>
+          Este método es sólo para uso interno.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.Finalize">
+      <summary>
+          Libera recursos no administrados y realiza otras operaciones de limpieza antes de que la recolección de elementos no utilizados reclame la clase <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.GetUnmanaged">
+      <summary>
+          Obtiene el sistema de escritura del documento no administrado para la instancia actual.
+        </summary>
+      <returns>
+          Sistema de escritura del documento no administrado para la instancia <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" /> actual.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.SetCheckSum(System.Guid,System.Byte[])">
+      <summary>
+          Produce una excepción <see cref="T:System.NotImplementedException" /> en todos los casos
+        </summary>
+      <param name="algorithmId">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="source">
+              Este parámetro no se utiliza.
+            </param>
+      <exception cref="T:System.NotImplementedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.SetSource(System.Byte[])">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos
+        </summary>
+      <param name="source">
+              Este parámetro no se utiliza.
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymMethod">
+      <summary>
+          Representa un método dentro de un almacén de símbolos.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedMethod*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> a partir de un puntero sin formato a una interfaz no administrada. 
+        </summary>
+      <param name="pMethod">
+              Puntero sin formato al objeto ISymUnmanagedMethod COM no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.{dtor}">
+      <summary>
+          Este método es sólo para uso interno.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.Finalize">
+      <summary>
+          Libera los recursos no administrados y realiza otras operaciones de limpieza antes de que la recolección de elementos no utilizados reclame el objeto <see cref="T:System.Diagnostics.SymbolStore.SymMethod" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetNamespace">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetOffset(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)">
+      <summary>
+          Obtiene el desplazamiento del lenguaje intermedio de Microsoft (MSIL) dentro del método correspondiente a la posición especificada.
+        </summary>
+      <returns>
+          Desplazamiento IL, dentro del método actual, de la ubicación especificada en el documento.
+        </returns>
+      <param name="document">
+              Documento del que se solicita el desplazamiento. 
+            </param>
+      <param name="line">
+              Línea del documento para la que se solicita el desplazamiento. 
+            </param>
+      <param name="column">
+              Columna del documento para la que se solicita el desplazamiento. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetParameters">
+      <summary>
+          Obtiene los parámetros del método actual.
+        </summary>
+      <returns>
+          Matriz de parámetros del método actual.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetRanges(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)">
+      <summary>
+          Obtiene una matriz de pares de desplazamiento inicial y final que corresponden a los intervalos de los desplazamientos del lenguaje intermedio de Microsoft (MSIL) que cubre una posición especificada dentro de este método.
+        </summary>
+      <returns>
+          Matriz de pares de desplazamiento IL inicial y final.
+        </returns>
+      <param name="document">
+              Documento para el que se solicitan los intervalos de desplazamiento IL. 
+            </param>
+      <param name="line">
+              Línea del documento para la que se solicitan los intervalos de desplazamiento IL. 
+            </param>
+      <param name="column">
+              Columna del documento para la que se solicitan los intervalos de desplazamiento IL. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetScope(System.Int32)">
+      <summary>
+          Devuelve el ámbito léxico más envolvente que corresponde a un desplazamiento dentro de un método.
+        </summary>
+      <returns>
+          Ámbito léxico más envolvente para el desplazamiento IL determinado dentro del método.
+        </returns>
+      <param name="offset">
+              Desplazamiento IL dentro del método que se va a buscar. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetSequencePoints(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])">
+      <summary>
+          Obtiene los puntos de secuencia para el método actual y almacena la información en las matrices especificadas.
+        </summary>
+      <param name="offsets">
+              Matriz en la que se almacenan los desplazamientos IL desde el principio del método para los puntos de secuencia. 
+            </param>
+      <param name="documents">
+              Matriz en la que se almacenan los documentos en los que se ubican los puntos de secuencia. 
+            </param>
+      <param name="lines">
+              Matriz en la que se almacenan las líneas de los documentos en las que se ubican los puntos de secuencia. 
+            </param>
+      <param name="columns">
+              Matriz en la que se almacenan las columnas de los documentos en las que se ubican los puntos de secuencia. 
+            </param>
+      <param name="endLines">
+              Matriz de líneas de los documentos en las que finalizan los puntos de secuencia. 
+            </param>
+      <param name="endColumns">
+              Matriz de columnas de los documentos en las que finalizan los puntos de secuencia. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.GetSourceStartEnd(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[])">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <param name="docs">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="lines">
+              Este parámetro no se utiliza. 
+            </param>
+      <param name="columns">
+              Este parámetro no se utiliza. 
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymMethod.RootScope">
+      <summary>
+          Obtiene el ámbito léxico raíz del método actual. Este ámbito engloba todo el método.
+        </summary>
+      <returns>
+          Ámbito léxico raíz que engloba todo el método.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.RootScopeInternal">
+      <summary>
+          Obtiene el ámbito léxico raíz del método actual. Este ámbito engloba todo el método.
+        </summary>
+      <returns>
+          Ámbito léxico raíz que engloba todo el método.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymMethod.SequencePointCount">
+      <summary>
+          Obtiene un recuento de los puntos de secuencia del método.
+        </summary>
+      <returns>
+          Recuento de los puntos de secuencia del método.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymMethod.Token">
+      <summary>
+          Obtiene el <see cref="T:System.Diagnostics.SymbolStore.SymbolToken" /> que contiene los metadatos del método actual.
+        </summary>
+      <returns>
+          Símbolo (token) de metadatos del método actual.
+        </returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymReader">
+      <summary>
+          Proporciona acceso a los documentos, métodos y variables incluidos en un almacén de símbolos.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedReader*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> mediante el puntero especificado a un objeto ISymUnmanagedReader no administrado. 
+        </summary>
+      <param name="pReader">
+              Puntero a un objeto ISymUnmanagedReader no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.{dtor}">
+      <summary>
+          Este método es sólo para uso interno. 
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.Finalize">
+      <summary>
+          Libera los recursos no administrados y realiza otras operaciones de limpieza antes de que la recolección de elementos no utilizados reclame el objeto <see cref="T:System.Diagnostics.SymbolStore.SymReader" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetDocument(System.String,System.Guid,System.Guid,System.Guid)">
+      <summary>
+          Obtiene el documento que especifica la dirección URL para dicho documento y, opcionalmente, su lenguaje, proveedor de lenguaje y tipo.
+        </summary>
+      <returns>
+          Documento con la dirección URL especificada, si se encuentra en el almacén de símbolos, o null si el documento no existe.
+        </returns>
+      <param name="url">
+              Dirección URL que identifica el documento. 
+            </param>
+      <param name="language">
+              Lenguaje del documento. Para este parámetro se puede especificar <see cref="F:System.Guid.Empty" /> de modo que indique cualquier lenguaje. 
+            </param>
+      <param name="languageVendor">
+              Identidad del proveedor del lenguaje del documento. Para este parámetro se puede especificar <see cref="F:System.Guid.Empty" /> de modo que indique cualquier proveedor.
+            </param>
+      <param name="documentType">
+              Tipo del documento. Para este parámetro se puede especificar <see cref="F:System.Guid.Empty" /> de modo que indique cualquier tipo de documento.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetDocuments">
+      <summary>
+          Obtiene una matriz de todos los documentos definidos en el almacén de símbolos.
+        </summary>
+      <returns>
+          Matriz de todos los documentos definidos en el almacén de símbolos.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetGlobalVariables">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetMethod(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>
+          Obtiene un objeto de método del lector de símbolos cuando se especifica el identificador de un método.
+        </summary>
+      <returns>
+          Objeto de método del lector de símbolos para el identificador de método especificado.
+        </returns>
+      <param name="method">
+              Símbolo (token) de metadatos del método. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetMethod(System.Diagnostics.SymbolStore.SymbolToken,System.Int32)">
+      <summary>
+          Obtiene un objeto de método del lector de símbolos cuando se especifica el identificador de un método y su versión de edición y continuación.
+        </summary>
+      <returns>
+          Objeto de método del lector de símbolos para la versión y el identificador del método especificados.
+        </returns>
+      <param name="method">
+              Símbolo (token) de metadatos del método. 
+            </param>
+      <param name="version">
+              Versión de edición y continuación del método. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetMethodFromDocumentPosition(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32)">
+      <summary>
+          Obtiene un objeto de método del lector de símbolos que contiene una posición especificada en un documento.
+        </summary>
+      <returns>
+          Objeto de método del lector de símbolos para la posición especificada en el documento.
+        </returns>
+      <param name="document">
+              Documento en el que está ubicado el método. 
+            </param>
+      <param name="line">
+              Posición de la línea dentro del documento. Las líneas se numeran, comenzando por 1. 
+            </param>
+      <param name="column">
+              Posición de la columna dentro del documento. Las columnas se numeran, comenzando por 1. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetNamespaces">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String)">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <param name="parent">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="name">
+              Este parámetro no se utiliza.
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.GetVariables(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <returns>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </returns>
+      <param name="parent">
+              Este parámetro no se utiliza.
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.ReplaceSymbolStore(System.String,System.IntPtr)">
+      <summary>
+          Reemplaza el almacén de símbolos existente con un almacén de símbolos de delta. 
+        </summary>
+      <param name="fileName">
+              Nombre del archivo que contiene el almacén de símbolos o null si se utiliza un almacén en memoria.
+            </param>
+      <param name="stream">
+              Puntero a la secuencia de entrada para el almacén de símbolos o <see cref="F:System.IntPtr.Zero" /> si se utiliza un almacén en disco.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.UpdateSymbolStore(System.String,System.IntPtr)">
+      <summary>
+          Actualiza el almacén de símbolos existente con un almacén de símbolos de delta. 
+        </summary>
+      <param name="fileName">
+              Nombre del archivo que contiene el almacén de símbolos o null si se utiliza un almacén en memoria.
+            </param>
+      <param name="stream">
+              Puntero a la secuencia de entrada para el almacén de símbolos o <see cref="F:System.IntPtr.Zero" /> si se utiliza un almacén en disco.
+            </param>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymReader.UserEntryPoint">
+      <summary>
+          Obtiene el símbolo (token) de metadatos del método especificado como punto de entrada del usuario para el módulo, en caso de que haya alguno.
+        </summary>
+      <returns>
+          Símbolo (token) de metadatos del método que constituye el punto de entrada para el módulo.
+        </returns>
+      <exception cref="T:System.Runtime.InteropServices.COMException">
+              No se ha encontrado un punto de entrada.
+            </exception>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymScope">
+      <summary>
+          Representa un ámbito léxico dentro de <see cref="T:System.Diagnostics.SymbolStore.SymMethod" />, que proporciona acceso a los desplazamientos inicial y final del ámbito, así como al ámbito principal y a los ámbitos secundarios.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedScope*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymScope" /> utilizando el puntero especificado a un objeto ISymUnmanagedScope no administrado.
+        </summary>
+      <param name="pScope">
+              Puntero a un objeto ISymUnmanagedScope no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.{dtor}">
+      <summary>
+          Este método es sólo para uso interno.
+        </summary>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.EndOffset">
+      <summary>
+          Obtiene el desplazamiento final del ámbito léxico actual.
+        </summary>
+      <returns>
+          La última posición de desplazamiento de IL. El desplazamiento se produce desde el principio del método del ámbito léxico actual.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.Finalize">
+      <summary>
+          Libera los recursos no administrados y realiza otras operaciones de limpieza antes de que la recolección de elementos no utilizados reclame <see cref="T:System.Diagnostics.SymbolStore.SymScope" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.GetChildren">
+      <summary>
+          Obtiene los ámbitos léxicos secundarios del ámbito léxico actual.
+        </summary>
+      <returns>
+          Los ámbitos léxicos incluidos dentro del ámbito léxico actual.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.GetLocals">
+      <summary>
+          Obtiene las variables locales dentro del ámbito léxico actual.
+        </summary>
+      <returns>
+          Variables locales dentro del ámbito léxico actual.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.GetNamespaces">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos
+        </summary>
+      <returns>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.Method">
+      <summary>
+          Obtiene el método que contiene el ámbito léxico actual.
+        </summary>
+      <returns>
+          Método que contiene el ámbito léxico actual.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.Parent">
+      <summary>
+          Obtiene el ámbito léxico principal del ámbito actual.
+        </summary>
+      <returns>
+          El ámbito léxico que incluye el ámbito actual.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymScope.StartOffset">
+      <summary>
+          Obtiene el desplazamiento inicial del ámbito léxico actual.
+        </summary>
+      <returns>
+          La posición de desplazamiento inicial de IL. El desplazamiento se produce desde el principio del método del ámbito léxico actual.
+        </returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymVariable">
+      <summary>
+          Representa una variable dentro de un almacén de símbolos.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedVariable*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymVariable" /> utilizando el puntero especificado a un objeto ISymUnmanagedVariable no administrado. 
+        </summary>
+      <param name="pVariable">
+              Puntero al objeto ISymUnmanagedVariable no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.{dtor}">
+      <summary>
+          Este método es sólo para uso interno.
+        </summary>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressField1">
+      <summary>
+          Obtiene la primera dirección de una variable.
+        </summary>
+      <returns>
+          Primera dirección de la variable.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressField2">
+      <summary>
+          Obtiene la segunda dirección de una variable.
+        </summary>
+      <returns>
+          Segunda dirección de la variable.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressField3">
+      <summary>
+          Obtiene la tercera dirección de una variable.
+        </summary>
+      <returns>
+          Tercera dirección de la variable.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.AddressKind">
+      <summary>
+          Obtiene el valor de tipo <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" /> que describe el tipo de la dirección.
+        </summary>
+      <returns>
+          Tipo de la dirección. Uno de los valores de <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" />.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.Attributes">
+      <summary>
+          Obtiene los atributos de la variable.
+        </summary>
+      <returns>
+          Atributos de la variable.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.EndOffset">
+      <summary>
+          Obtiene el desplazamiento final de una variable dentro del ámbito de la variable.
+        </summary>
+      <returns>
+          Desplazamiento final de la variable.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.Finalize">
+      <summary>
+          Libera los recursos no administrados y realiza otras operaciones de limpieza antes de que la recolección de elementos no utilizados reclame <see cref="T:System.Diagnostics.SymbolStore.SymVariable" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.GetSignature">
+      <summary>
+          Obtiene la firma de la variable.
+        </summary>
+      <returns>
+          Firma de la variable en forma de objeto binario opaco.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.Name">
+      <summary>
+          Obtiene el nombre de la variable.
+        </summary>
+      <returns>
+          Nombre de la variable.
+        </returns>
+    </member>
+    <member name="P:System.Diagnostics.SymbolStore.SymVariable.StartOffset">
+      <summary>
+          Obtiene el desplazamiento inicial de la variable dentro del ámbito de la variable.
+        </summary>
+      <returns>
+          Desplazamiento inicial de la variable.
+        </returns>
+    </member>
+    <member name="T:System.Diagnostics.SymbolStore.SymWriter">
+      <summary>
+          Representa un escritor de símbolos de código administrado.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymWriter" />. 
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.#ctor(System.Boolean)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymWriter" />, especificando si se va a crear un escritor de símbolos subyacente.
+        </summary>
+      <param name="noUnderlyingWriter">
+              
+                Es true si se va a proporcionar un escritor de símbolos subyacente con una llamada al método <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)" />; es false si, por el contrario, se debe crear un escritor de símbolos subyacente predeterminado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.{dtor}">
+      <summary>
+          Este método es exclusivamente para uso interno.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.Close">
+      <summary>
+          Cierra el objeto <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> y asigna los símbolos al almacén de símbolos.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.CloseMethod">
+      <summary>
+          Cierra el método actual.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.CloseNamespace">
+      <summary>
+          Cierra el espacio de nombres más reciente.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.CloseScope(System.Int32)">
+      <summary>
+          Cierra el ámbito léxico actual.
+        </summary>
+      <param name="endOffset">
+              Desplazamiento IL situado justo tras la última instrucción del ámbito.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineDocument(System.String,System.Guid,System.Guid,System.Guid)">
+      <summary>
+          Define un documento de código fuente.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Diagnostics.SymbolStore.ISymbolDocumentWriter" /> que representa el documento.
+        </returns>
+      <param name="url">
+              Dirección URL que identifica el documento. 
+            </param>
+      <param name="language">
+              Lenguaje del documento. Este parámetro puede ser <see cref="F:System.Guid.Empty" />. 
+            </param>
+      <param name="languageVendor">
+              Identidad del proveedor del lenguaje del documento. Este parámetro puede ser <see cref="F:System.Guid.Empty" />.
+            </param>
+      <param name="documentType">
+              Tipo del documento. Este parámetro puede ser <see cref="F:System.Guid.Empty" />.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineField(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <param name="parent">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="name">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="attributes">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="signature">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addrKind">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr1">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr2">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr3">
+              Este parámetro no se utiliza.
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineGlobalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <param name="name">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="attributes">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="signature">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addrKind">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr1">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr2">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr3">
+              Este parámetro no se utiliza.
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineLocalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+          Define una única variable en el ámbito léxico actual.
+        </summary>
+      <param name="name">
+              Nombre de la variable local. 
+            </param>
+      <param name="attributes">
+              Atributos de la variable local especificados mediante el enumerador <see cref="T:System.Reflection.FieldAttributes" />. 
+            </param>
+      <param name="signature">
+              Firma de la variable local. 
+            </param>
+      <param name="addrKind">
+              Tipos de dirección de <paramref name="addr1" />, <paramref name="addr2" /> y <paramref name="addr3" /> mediante <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" />. 
+            </param>
+      <param name="addr1">
+              Primera dirección de la especificación de variable local. 
+            </param>
+      <param name="addr2">
+              Segunda dirección de la especificación de variable local. 
+            </param>
+      <param name="addr3">
+              Tercera dirección de la especificación de variable local. 
+            </param>
+      <param name="startOffset">
+              Desplazamiento inicial de la variable. Si es cero, este parámetro se pasa por alto y la variable se define en todo el ámbito. Si es distinto de cero, el parámetro se incluye dentro de los desplazamientos del ámbito actual. 
+            </param>
+      <param name="endOffset">
+              Desplazamiento final de la variable. Si es cero, este parámetro se pasa por alto y la variable se define en todo el ámbito. Si es distinto de cero, el parámetro se incluye dentro de los desplazamientos del ámbito actual. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineParameter(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <param name="name">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="attributes">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="sequence">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addrKind">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr1">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr2">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="addr3">
+              Este parámetro no se utiliza.
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.DefineSequencePoints(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])">
+      <summary>
+          Define un grupo de puntos de secuencia dentro del método actual.
+        </summary>
+      <param name="document">
+              Objeto de documento para el que se definen los puntos de secuencia. 
+            </param>
+      <param name="offsets">
+              Desplazamiento IL de los puntos de secuencia medido desde el principio del método.
+            </param>
+      <param name="lines">
+              Números de línea inicial de los puntos de secuencia. 
+            </param>
+      <param name="columns">
+              Números de columna inicial de los puntos de secuencia. 
+            </param>
+      <param name="endLines">
+              Números de línea final de los puntos de secuencia. 
+            </param>
+      <param name="endColumns">
+              Números de columna final de los puntos de secuencia. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.Finalize">
+      <summary>
+          Libera los recursos no administrados y realiza otras operaciones de limpieza antes de que la recolección de elementos no utilizados reclame el objeto <see cref="T:System.Diagnostics.SymbolStore.SymWriter" />.
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.GetWriter">
+      <summary>
+          Obtiene el escritor de símbolos no administrado subyacente.
+        </summary>
+      <returns>
+          Puntero sin formato al escritor de símbolos no administrado subyacente.
+        </returns>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.Initialize(System.IntPtr,System.String,System.Boolean)">
+      <summary>
+          Establece la interfaz emisora de metadatos que se va a asociar a este escritor.
+        </summary>
+      <param name="emitter">
+              Interfaz emisora de metadatos. 
+            </param>
+      <param name="filename">
+              Nombre del archivo para el que se escriben los símbolos de depuración. Algunos escritores precisan un nombre de archivo, mientras que otros no. Si se especifica un nombre de archivo para un escritor que no utiliza nombres de archivo, se pasa por alto este parámetro. 
+            </param>
+      <param name="fFullBuild">
+              
+                true indica que se trata de una regeneración completa; false indica que se trata de una compilación incremental. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.InitWriter(System.Boolean)">
+      <summary>
+          Inicializa el escritor de símbolos. No se debe llamar directamente a este método; el constructor se ocupa de hacerlo.
+        </summary>
+      <param name="noUnderlyingWriter">
+              
+                Es true si se va a proporcionar un escritor de símbolos subyacente con una llamada al método <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)" />; es false si, por el contrario, se debe crear un escritor de símbolos subyacente predeterminado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.OpenMethod(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>
+          Abre un método en el que colocar la información del símbolo.
+        </summary>
+      <param name="method">
+              Símbolo (token) de metadatos para el método que se va a abrir. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.OpenNamespace(System.String)">
+      <summary>
+          Abre un nuevo espacio de nombres.
+        </summary>
+      <param name="name">
+              Nombre del nuevo espacio de nombres. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)">
+      <summary>
+          Abre un nuevo ámbito léxico en el método actual.
+        </summary>
+      <returns>
+          Identificador de ámbito opaco que puede utilizarse con el método <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)" /> para definir los desplazamientos inicial y final de un ámbito en un momento posterior. En este caso, los desplazamientos pasados a los métodos <see cref="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)" /> y <see cref="M:System.Diagnostics.SymbolStore.SymWriter.CloseScope(System.Int32)" /> se pasan por alto. Un identificador de ámbito sólo es válido en el método actual.
+        </returns>
+      <param name="startOffset">
+              Desplazamiento IL en bytes desde el principio del método hasta la primera instrucción del ámbito léxico. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32)">
+      <summary>
+          Produce una excepción <see cref="T:System.NotSupportedException" /> en todos los casos.
+        </summary>
+      <param name="startDoc">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="startLine">
+              Este parámetro no se utiliza. 
+            </param>
+      <param name="startColumn">
+              Este parámetro no se utiliza. 
+            </param>
+      <param name="endDoc">
+              Este parámetro no se utiliza. 
+            </param>
+      <param name="endLine">
+              Este parámetro no se utiliza.
+            </param>
+      <param name="endColumn">
+              Este parámetro no se utiliza. 
+            </param>
+      <exception cref="T:System.NotSupportedException">
+              En todos los casos.
+            </exception>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)">
+      <summary>
+          Define el intervalo de desplazamiento del ámbito léxico especificado.
+        </summary>
+      <param name="scopeID">
+              Identificador del ámbito léxico devuelto por el método <see cref="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)" />.
+            </param>
+      <param name="startOffset">
+              Desplazamiento IL del principio del ámbito léxico. 
+            </param>
+      <param name="endOffset">
+              Desplazamiento IL del final del ámbito léxico. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[])">
+      <summary>
+          Define un atributo cuando se especifican el nombre y el valor del atributo.
+        </summary>
+      <param name="parent">
+              Símbolo (token) de metadatos para el que se define el atributo. 
+            </param>
+      <param name="name">
+              Nombre del atributo. 
+            </param>
+      <param name="data">
+              Valor del atributo. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)">
+      <summary>
+          Establece la interfaz ISymUnmanagedWriter subyacente (la API no administrada correspondiente) que un <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> administrado utiliza para emitir símbolos.
+        </summary>
+      <param name="underlyingWriter">
+              Puntero de tipo <see cref="T:System.IntPtr" /> al código que constituye el escritor subyacente. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.SetUserEntryPoint(System.Diagnostics.SymbolStore.SymbolToken)">
+      <summary>
+          Identifica el método definido por el usuario como punto de entrada del módulo actual.
+        </summary>
+      <param name="entryMethod">
+              Símbolo (token) de metadatos del método que constituye el punto de entrada del usuario. 
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.UsingNamespace(System.String)">
+      <summary>
+          Indica que el nombre completo del espacio de nombres especificado se utiliza dentro del ámbito léxico abierto.
+        </summary>
+      <param name="fullName">
+              Nombre completo del espacio de nombres. 
+            </param>
+    </member>
+    <member name="T:_GUID">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:IStream">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedBinder">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedDocument">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedDocumentWriter">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedMethod">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedReader">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedScope">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedVariable">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:ISymUnmanagedWriter">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:IUnknown">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:tagPROPVARIANT">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:tagVARIANT">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymBinder.__dtor"></member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.#ctor(ISymUnmanagedDocument*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymDocument" /> utilizando el puntero especificado a un objeto ISymUnmanagedDocument no administrado.
+        </summary>
+      <param name="pDocument">
+              Puntero a la interfaz ISymUnmanagedDocument.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocument.__dtor"></member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.#ctor(ISymUnmanagedDocumentWriter*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymDocumentWriter" />. 
+        </summary>
+      <param name="pDocumentWriter">
+              Puntero al sistema de escritura del documento no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymDocumentWriter.__dtor"></member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.#ctor(ISymUnmanagedMethod*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymMethod" /> a partir de un puntero sin formato a una interfaz no administrada. 
+        </summary>
+      <param name="pMethod">
+              Puntero sin formato al objeto ISymUnmanagedMethod COM no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymMethod.__dtor"></member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.#ctor(ISymUnmanagedReader*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> mediante el puntero especificado a un objeto ISymUnmanagedReader no administrado. 
+        </summary>
+      <param name="pReader">
+              Puntero a un objeto ISymUnmanagedReader no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymReader.__dtor"></member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.#ctor(ISymUnmanagedScope*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymScope" /> mediante el puntero especificado a un objeto ISymUnmanagedScope no administrado.
+        </summary>
+      <param name="pScope">
+              Puntero a un objeto ISymUnmanagedScope no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymScope.__dtor"></member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.#ctor(ISymUnmanagedVariable*)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Diagnostics.SymbolStore.SymVariable" /> utilizando el puntero especificado a un objeto ISymUnmanagedVariable no administrado. 
+        </summary>
+      <param name="pVariable">
+              Puntero al objeto ISymUnmanagedVariable no administrado.
+            </param>
+    </member>
+    <member name="M:System.Diagnostics.SymbolStore.SymVariable.__dtor"></member>
+    <member name="M:System.Diagnostics.SymbolStore.SymWriter.__dtor"></member>
+  </members>
+</doc>

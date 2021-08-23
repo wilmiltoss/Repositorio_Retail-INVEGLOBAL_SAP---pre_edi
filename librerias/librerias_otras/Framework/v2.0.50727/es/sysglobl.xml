@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>sysglobl</name>
+  </assembly>
+  <members>
+    <member name="T:System.Globalization.CultureAndRegionInfoBuilder">
+      <summary>
+          Define una referencia cultural personalizada nueva o que está basada en otra referencia cultural y país o región ya existentes. La referencia cultural personalizada se puede instalar en un equipo y posteriormente ser utilizada por cualquier aplicación que se ejecute en ese equipo. Esta clase no se puede heredar. 
+        </summary>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.#ctor(System.String,System.Globalization.CultureAndRegionModifiers)">
+      <summary>
+          Inicializa una instancia nueva de la clase <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />. 
+        </summary>
+      <param name="cultureName">
+              Nombre de una referencia cultural.
+            </param>
+      <param name="flags">
+              Uno de los valores de <see cref="T:System.Globalization.CultureAndRegionModifiers" /> que especifica si el nuevo objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> es una referencia cultural neutra, reemplaza una referencia cultural y un país o región ya existentes o es una referencia cultural nueva. 
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="cultureName" /> es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              
+                <paramref name="cultureName" /> es una cadena vacía ("").
+              O bien
+              
+                <paramref name="cultureName" /> contiene caracteres que no son números comprendidos entre "0" y "9", caracteres de "a" a "z" o de "A" a "Z", un guión (-) o un carácter de subrayado (_).
+              O bien
+              
+                <paramref name="cultureName" /> contiene guiones (-) para delimitar los componentes, pero están ausentes uno o varios de los componentes <paramref name="prefix" />, <paramref name="language" />, <paramref name="region" /> o <paramref name="suffix" />. Es decir, hay dos o más guiones adyacentes.
+              O bien
+              
+                <paramref name="cultureName" /> tiene más de 84 caracteres.
+              O bien
+              
+                <paramref name="cultureName" /> contiene guiones para delimitar los componentes, pero uno o más de los componentes tiene más de 8 caracteres de longitud.
+              O bien
+              
+                <paramref name="cultureName" /> contiene un guión (-) o un carácter subrayado (_) inicial o final.
+              O bien
+              
+                <paramref name="cultureName" /> especifica una referencia cultural de reemplazo de ordenación alternativa en lugar de una referencia cultural de .NET Framework. Por ejemplo, <paramref name="culturenName" /> es "de-de_phoneb", una referencia cultural que ordena las cadenas como aparecerían en una guía telefónica alemana, en lugar de "de-DE", la referencia cultural Alemán (Alemania).
+              O bien
+              
+                <paramref name="flags" /> contiene una combinación no válida de valores de <see cref="T:System.Globalization.CultureAndRegionModifiers" />.
+              O bien
+              
+                <paramref name="flags" /> contiene <see cref="F:System.Globalization.CultureAndRegionModifiers.Replacement" /> o <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" /> y <paramref name="cultureName" /> especifica una referencia cultural que no se encuentra.
+              O bien
+              
+                <paramref name="flags" /> contiene <see cref="F:System.Globalization.CultureAndRegionModifiers.Replacement" /> y <paramref name="cultureName" /> especifica una referencia cultural personalizada creada por el usuario que no reemplaza a una referencia cultural distribuida con .NET Framework.
+              O bien
+              
+                <paramref name="flags" /> contiene <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" /> y <paramref name="cultureName" /> especifica una referencia cultural que no es neutra.
+              O bien
+              
+                <paramref name="flags" /> contiene <see cref="F:System.Globalization.CultureAndRegionModifiers.Neutral" /> y <paramref name="cultureName" /> especifica una referencia cultural personalizada creada por el usuario que reemplaza a una referencia cultural distribuida con .NET Framework.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars">
+      <summary>
+          Obtiene o establece una matriz de calendarios admitidos por este objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />.
+        </summary>
+      <returns>
+          Una matriz de calendarios.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              En una operación de establecimiento, la matriz asignada es null o un elemento de la matriz asignada es null.
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              Esta propiedad no es compatible con las referencias culturales neutras.
+              O bien
+              En una operación de establecimiento, la matriz asignada contiene <see cref="T:System.Globalization.PersianCalendar" />, <see cref="T:System.Globalization.TaiwanLunisolarCalendar" />, <see cref="T:System.Globalization.KoreanLunisolarCalendar" />, <see cref="T:System.Globalization.JapaneseLunisolarCalendar" />, <see cref="T:System.Globalization.ChineseLunisolarCalendar" /> o <see cref="T:System.Globalization.JulianCalendar" />.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo">
+      <summary>
+          Obtiene o establece el objeto <see cref="T:System.Globalization.CompareInfo" /> que define el modo en que se comparan las cadenas para la referencia cultural.
+        </summary>
+      <returns>
+          El objeto <see cref="T:System.Globalization.CompareInfo" /> que define el modo en que se comparan las cadenas en la referencia cultural.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              En una operación de establecimiento, el valor asignado es null.
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              Esta referencia cultural personalizada es un reemplazo de una referencia cultural integrada.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture">
+      <summary>
+          Obtiene o establece una referencia cultural de la interfaz de usuario alternativa apta para las aplicaciones de consola cuando la referencia cultural de la interfaz gráfica de usuario predeterminada no es apropiada.
+        </summary>
+      <returns>
+          Una referencia cultural neutra alternativa que se utiliza para leer y mostrar texto en la consola.
+        </returns>
+      <exception cref="T:System.ArgumentException">
+              En una operación de establecimiento donde la referencia cultural especificada no es null, la propiedad <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ConsoleFallbackUICulture" /> de la referencia cultural especificada no es igual que la referencia cultural especificada. 
+            </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.CreateFromLdml(System.String)">
+      <summary>
+          Reconstituye un objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> a partir de un archivo XML especificado que contiene una representación del objeto.
+        </summary>
+      <returns>
+          Un objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> nuevo que es equivalente a la información almacenada en el parámetro <paramref name="xmlFileName" />.
+        </returns>
+      <param name="xmlFileName">
+              Un nombre de archivo que contiene la representación XML de un objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />.
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="xmlFileName" /> es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              
+                <paramref name="xmlFileName" /> es una cadena vacía ("") o un nombre de archivo o de ruta no válido.
+            </exception>
+      <exception cref="T:System.Xml.XmlException">
+              Los datos de <paramref name="xmlFileName" /> no tienen un formato XML válido.
+              O bien
+              Error de E/S durante el acceso al parámetro <paramref name="xmlFileName" />.
+            </exception>
+      <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">
+              Los datos de <paramref name="xmlFileName" /> no tienen un formato LDML válido.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName">
+      <summary>
+          Obtiene o establece el nombre de la referencia cultural en inglés.
+        </summary>
+      <returns>
+          El nombre de la referencia cultural en inglés.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 0 y 79 caracteres.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureName">
+      <summary>
+          Obtiene el nombre de la referencia cultural que se crea.
+        </summary>
+      <returns>
+          Nombre de la referencia cultural del objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </returns>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName">
+      <summary>
+          Obtiene o establece el nombre de la referencia cultural en el formato e idioma que la referencia cultural tiene configurados para mostrar en pantalla.
+        </summary>
+      <returns>
+          El nombre de la referencia cultural en el formato e idioma que la referencia cultural tiene configurados para mostrar en pantalla.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 0 y 79 caracteres.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CultureTypes">
+      <summary>
+          Obtiene el valor <see cref="T:System.Globalization.CultureTypes" /> que describe la referencia cultural representada por el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </summary>
+      <returns>
+          Uno de los valores de <see cref="T:System.Globalization.CultureTypes" />.
+        </returns>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName">
+      <summary>
+          Obtiene o establece el nombre, en inglés, de la moneda utilizada en el país o la región representada por el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </summary>
+      <returns>
+          Nombre, en inglés, de la moneda utilizada en la región.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor en una operación de conjunto es la cadena vacía ("").
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              El objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual es una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyNativeName">
+      <summary>
+          Obtiene o establece el nombre nativo de la moneda utilizada en el país o la región representada por el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </summary>
+      <returns>
+          El nombre de la moneda utilizada en el país o la región representada por el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual, con el formato del idioma asociado al código ISO 3166 de país o región de la región. 
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor en una operación de conjunto es la cadena vacía ("").
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              El objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual es una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.GeoId">
+      <summary>
+          Obtiene o establece un número de identificación único para un país, región, ciudad o ubicación geográfica.
+        </summary>
+      <returns>
+          Número de 32 bits con signo que identifica de manera única una ubicación geográfica.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              El objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual define una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.GregorianDateTimeFormat">
+      <summary>
+          Obtiene o establece un objeto <see cref="T:System.Globalization.DateTimeFormatInfo" /> que define el formato de fecha y hora según el calendario gregoriano.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Globalization.DateTimeFormatInfo" />. 
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              Una propiedad del valor en una operación de conjunto devolvió un valor de propiedad no válido.
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              El objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual es una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.IetfLanguageTag">
+      <summary>
+          Obtiene o establece un nombre de referencia cultural con un formato según el estándar RFC 4646, "Tags for the Identification of Languages".
+        </summary>
+      <returns>
+          Un nombre de referencia cultural con formato RFC 4646.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              En una operación de establecimiento, el valor es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              En una operación de conjunto, la longitud del valor no está comprendida entre 1 y 84 caracteres.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              En una operación de conjunto, un componente del nombre especificado en el valor está vacío o tiene más de 8 caracteres, no es un carácter alfanumérico o un guión (-) o el nombre contiene un guión inicial o final. 
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.IsMetric">
+      <summary>
+          Obtiene o establece un valor que indica si el país o la región utilizan el sistema métrico para las medidas.
+        </summary>
+      <returns>
+          
+            true si el país o la región utilizan el sistema métrico para las medidas; en caso contrario, false.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              Esta operación no es válida para una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ISOCurrencySymbol">
+      <summary>
+          Obtiene o establece el símbolo de moneda ISO 4217 de tres caracteres asociado al país o región.
+        </summary>
+      <returns>
+          Símbolo de moneda ISO 4217 de tres caracteres asociado al país o región.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              Ésta es una referencia cultural neutra.
+            </exception>
+      <exception cref="T:System.ArgumentNullException">
+              En una operación de establecimiento, el valor es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              En una operación de conjunto, el valor no está comprendido entre 0 y 8 caracteres.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.IsRightToLeft">
+      <summary>
+          Obtiene o establece la dirección predominante de las líneas de texto en el sistema de escritura asociado al objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual. 
+        </summary>
+      <returns>
+          
+            Es true si la dirección predominante de las líneas de texto en el sistema de escritura actual es de derecha a izquierda; de lo contrario, es false.
+        </returns>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.KeyboardLayoutId">
+      <summary>
+          Obtiene o establece el identificador de configuración regional de entrada activo.
+        </summary>
+      <returns>
+          Un número de 32 bits con signo que especifica un identificador de configuración regional de entrada.
+        </returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              En una operación de conjunto, el valor es cero.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.LCID">
+      <summary>
+          Obtiene el identificador de referencia cultural del objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </summary>
+      <returns>
+          El identificador de referencia cultural del objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </returns>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromCultureInfo(System.Globalization.CultureInfo)">
+      <summary>
+          Establece las propiedades del objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual con las propiedades correspondientes del objeto <see cref="T:System.Globalization.CultureInfo" /> especificado.
+        </summary>
+      <param name="culture">
+              Un objeto <see cref="T:System.Globalization.CultureInfo" /> que se lee.
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="culture" /> es null.
+            </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.LoadDataFromRegionInfo(System.Globalization.RegionInfo)">
+      <summary>
+          Establece las propiedades del objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual con las propiedades correspondientes del objeto <see cref="T:System.Globalization.RegionInfo" /> especificado.
+        </summary>
+      <param name="region">
+              Un objeto <see cref="T:System.Globalization.RegionInfo" /> que se lee.
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="region" /> es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              No se puede establecer la información del país o región porque el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual especifica una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat">
+      <summary>
+          Obtiene o establece un objeto <see cref="T:System.Globalization.NumberFormatInfo" /> que define el formato de presentación de números, moneda y porcentaje apropiado para la referencia cultural.
+        </summary>
+      <returns>
+          Un objeto <see cref="T:System.Globalization.NumberFormatInfo" /> que define el formato de presentación de números, moneda y porcentaje apropiado para la referencia cultural.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              Esta operación no es válida para una referencia cultural neutra.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La especificación para una propiedad numérica, de moneda o de porcentaje para esta referencia cultural contiene demasiados dígitos o está fuera de intervalo.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.Parent">
+      <summary>
+          Obtiene o establece el objeto <see cref="T:System.Globalization.CultureInfo" /> que representa la referencia cultural principal de la referencia cultural personalizada actual.
+        </summary>
+      <returns>
+          El objeto <see cref="T:System.Globalization.CultureInfo" /> que representa la referencia cultural principal de la referencia cultural personalizada actual.
+        </returns>
+      <exception cref="T:System.InvalidOperationException">
+              En una operación de conjunto, no se puede encontrar el valor de la referencia cultural. Posiblemente, el valor asignado es una referencia cultural personalizada no registrada.
+            </exception>
+      <exception cref="T:System.ArgumentNullException">
+              En una operación de establecimiento, el valor es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              En una operación de conjunto que recorre los predecesores de la referencia cultural actual, la referencia cultural invariable no se encuentra en 10 generaciones de predecesores. 
+              O bien 
+              En una operación de conjunto se descubre una referencia circular: el valor asignado es un predecesor de la referencia cultural personalizada actual. 
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName">
+      <summary>
+          Obtiene o establece el nombre completo del país o región en inglés.
+        </summary>
+      <returns>
+          Obtiene el nombre completo del país o región en inglés.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              Esta operación no es válida para una referencia cultural neutra.
+            </exception>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 0 y 79 caracteres.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.RegionName">
+      <summary>
+          Obtiene el nombre del país/región para el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </summary>
+      <returns>
+          El nombre del país/región para el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              Esta operación no es válida para una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.RegionNativeName">
+      <summary>
+          Obtiene o establece el nombre completo del país/región como lo conocen las personas de esta referencia cultural personalizada.
+        </summary>
+      <returns>
+          El nombre local del país o región.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              Esta operación no es válida para una referencia cultural neutra.
+            </exception>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 1 y 79 caracteres.
+            </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.Register">
+      <summary>
+          Almacena el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual como una referencia cultural personalizada en el equipo local y pone esa referencia cultural a disposición de las aplicaciones. Requiere privilegios de administrador.
+        </summary>
+      <exception cref="T:System.InvalidOperationException">
+              La referencia cultural personalizada ya está registrada.
+              O bien
+              El objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual tiene una propiedad que debe estar establecida para poder registrar la referencia cultural. Todas las referencias culturales, neutras o específicas, deben tener establecidas las propiedades <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TextInfo" /> y <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CompareInfo" />. Las referencias culturales específicas también deben tener establecidas <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.NumberFormat" />, <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.GregorianDateTimeFormat" /> y <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.AvailableCalendars" />.
+              Este método también produce la excepción <see cref="T:System.InvalidOperationException" /> si no se han definido las siguientes propiedades:
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CultureEnglishName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CultureNativeName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.CurrencyNativeName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ISOCurrencySymbol" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.Parent" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.RegionEnglishName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.RegionNativeName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISOLanguageName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsLanguageName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsRegionName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISOLanguageName" />
+              
+              
+                <see cref="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName" />
+              
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              El valor de una propiedad del objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> rebasa su longitud o valor máximo.
+            </exception>
+      <exception cref="T:System.UnauthorizedAccessException">
+              El usuario no tiene privilegios de administrador.
+            </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.Save(System.String)">
+      <summary>
+          Escribe una representación XML del objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual en el archivo especificado.
+        </summary>
+      <param name="filename">
+              El nombre de un archivo que debe contener la representación XML de esta referencia cultural personalizada.
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="filename" /> es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              
+                <paramref name="filename" /> es una cadena vacía ("").
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              El valor de una propiedad de un objeto <see cref="T:System.Globalization.DateTimeFormatInfo" />, <see cref="T:System.Globalization.TextInfo" /> o <see cref="T:System.Globalization.NumberFormatInfo" /> incluido en el objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" /> actual no es válido.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.TextInfo">
+      <summary>
+          Obtiene o establece el objeto <see cref="T:System.Globalization.TextInfo" /> que define el sistema de escritura asociado a esta referencia cultural personalizada.
+        </summary>
+      <returns>
+          El objeto <see cref="T:System.Globalization.TextInfo" /> que define el sistema de escritura asociado a esta referencia cultural personalizada.
+        </returns>
+      <exception cref="T:System.NotSupportedException">
+              Esta operación no se admite para las referencias culturales de reemplazo.
+            </exception>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              El número de caracteres en un separador de lista no tiene entre 0 y 3 caracteres.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISOLanguageName">
+      <summary>
+          Obtiene o establece el código ISO 639-2 de tres letras para el idioma de esta referencia cultural personalizada.
+        </summary>
+      <returns>
+          El código ISO 639-2 de tres letras del idioma del objeto <see cref="T:System.Globalization.CultureInfo" /> actual.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 1 y 8 caracteres. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor de una operación de establecimiento contiene un carácter que no está comprendido en el intervalo "a" a "z", "A" a "Z" ni "0" a "9".
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterISORegionName">
+      <summary>
+          Obtiene o establece el código de tres letras definido en ISO 3166 para el país o región.
+        </summary>
+      <returns>
+          Código de tres letras definido en ISO 3166 para el país o región.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 1 y 8 caracteres. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor de una operación de establecimiento contiene un carácter que no está comprendido en el intervalo "a" a "z", "A" a "Z" ni "0" a "9".
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsLanguageName">
+      <summary>
+          Obtiene o establece el código de tres letras del idioma tal como se ha definido en la API de Windows.
+        </summary>
+      <returns>
+          Código de tres letras del idioma tal como se ha definido en la API de Windows.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 1 y 8 caracteres.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor de una operación de establecimiento contiene un carácter que no está comprendido en el intervalo "a" a "z", "A" a "Z" ni "0" a "9".
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              En una operación de conjunto, la referencia cultural personalizada actual es una referencia cultural de reemplazo.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.ThreeLetterWindowsRegionName">
+      <summary>
+          Obtiene o establece el código de tres letras asignado por Windows al país o región representado por la referencia cultural actual.
+        </summary>
+      <returns>
+          El código de tres letras asignado por Windows al país o región representado por este objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 1 y 8 caracteres.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor de una operación de establecimiento contiene un carácter que no está comprendido en el intervalo "a" a "z", "A" a "Z" ni "0" a "9".
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              En una operación de conjunto, la referencia cultural personalizada actual es una referencia cultural de reemplazo o neutra.
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISOLanguageName">
+      <summary>
+          Obtiene o establece el código ISO 639-1 de dos letras del idioma del objeto <see cref="T:System.Globalization.CultureInfo" /> actual.
+        </summary>
+      <returns>
+          El código ISO 639-1 de dos letras del idioma del objeto <see cref="T:System.Globalization.CultureInfo" /> actual.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 1 y 8 caracteres. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor de una operación de establecimiento contiene un carácter que no está comprendido en el intervalo "a" a "z", "A" a "Z" ni "0" a "9".
+            </exception>
+    </member>
+    <member name="P:System.Globalization.CultureAndRegionInfoBuilder.TwoLetterISORegionName">
+      <summary>
+          Obtiene o establece el código de dos letras definido en ISO 3166 para el país o región.
+        </summary>
+      <returns>
+          Código de dos letras definido en ISO 3166 para el país o región.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor en una operación de conjunto es null.
+            </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+              La longitud del valor en una operación de conjunto no está comprendida entre 1 y 8 caracteres.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El valor de una operación de establecimiento contiene un carácter que no está comprendido en el intervalo "a" a "z", "A" a "Z" ni "0" a "9".
+            </exception>
+      <exception cref="T:System.NotSupportedException">
+              En una operación de conjunto, la referencia cultural personalizada actual es una referencia cultural neutra.
+            </exception>
+    </member>
+    <member name="M:System.Globalization.CultureAndRegionInfoBuilder.Unregister(System.String)">
+      <summary>
+          Elimina una referencia cultural personalizada del equipo local.
+        </summary>
+      <param name="cultureName">
+              El nombre de una referencia cultural personalizada.
+            </param>
+      <exception cref="T:System.InvalidOperationException">
+              
+                <paramref name="cultureName" /> es una referencia cultural principal o de interfaz de usuario de reserva de consola de una referencia cultural dependiente.
+            </exception>
+      <exception cref="T:System.UnauthorizedAccessException">
+              La aplicación no tiene privilegios de administrador.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              
+                <paramref name="cultureName" /> especifica una referencia cultural que no se encuentra.
+            </exception>
+    </member>
+    <member name="T:System.Globalization.CultureAndRegionModifiers">
+      <summary>
+          Especifica constantes que definen un objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />. 
+        </summary>
+    </member>
+    <member name="F:System.Globalization.CultureAndRegionModifiers.None">
+      <summary>
+          Una referencia cultural personalizada complementaria concreta.
+        </summary>
+    </member>
+    <member name="F:System.Globalization.CultureAndRegionModifiers.Neutral">
+      <summary>
+          Una referencia cultural personalizada neutra.
+        </summary>
+    </member>
+    <member name="F:System.Globalization.CultureAndRegionModifiers.Replacement">
+      <summary>
+          Referencia cultural personalizada que reemplaza una referencia cultural existente de .NET Framework o una configuración regional de Windows.
+        </summary>
+    </member>
+  </members>
+</doc>

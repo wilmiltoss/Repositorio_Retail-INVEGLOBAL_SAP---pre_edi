@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>IEHost</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.IE.Manager">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.Manager.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.Manager.AreOnTheSameSite(System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="pURL1">
+            </param>
+      <param name="pURL2">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.AreTheSame(System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="pURL1">
+            </param>
+      <param name="pURL2">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.CanonizeURL(System.String,Microsoft.IE.Manager.URL_CANONFLAGS)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="pURL">
+            </param>
+      <param name="flags">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.DecodeDomainId(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="hexString">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetClassFactory(System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="assemblyName">
+            </param>
+      <param name="className">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetCodeBase(System.String,System.String@,System.String@)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="pURL">
+            </param>
+      <param name="codeBase">
+            </param>
+      <param name="application">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetConfigurationFile(System.String,System.String@,System.String@)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="pURL">
+            </param>
+      <param name="path">
+            </param>
+      <param name="file">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="flags">
+            </param>
+      <param name="zone">
+            </param>
+      <param name="site">
+            </param>
+      <param name="uniqueIdString">
+            </param>
+      <param name="fileHashString">
+            </param>
+      <param name="assemblyName">
+            </param>
+      <param name="typeName">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetSiteName(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="pURL">
+            </param>
+    </member>
+    <member name="F:Microsoft.IE.Manager.INTERNET_MAX_PATH_LENGTH">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.INTERNET_MAX_SCHEME_LENGTH">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.INTERNET_MAX_URL_LENGTH">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.Manager.IsValidURL(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="pURL">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.Manager.MakeFullLink(System.String,System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="link">
+            </param>
+      <param name="CodeBase">
+            </param>
+      <param name="Application">
+            </param>
+    </member>
+    <member name="T:Microsoft.IE.Manager.URL_CANONFLAGS">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_UNESCAPE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_UNSAFE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_PLUGGABLE_PROTOCOL">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_WININET_COMPATIBILITY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_ESCAPE_EXTRA_INFO">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_UNESCAPE_EXTRA_INFO">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_BROWSER_MODE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_SPACES_ONLY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_DONT_SIMPLIFY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_NO_META">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_UNESCAPE_INPLACE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_CONVERT_IF_DOSPATH">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_UNESCAPE_HIGH_ANSI_ONLY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_INTERNAL_PATH">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_FILE_USE_PATHURL">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_PERCENT">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_CANONFLAGS.URL_ESCAPE_SEGMENT_ONLY">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.IE.Manager.URL_IS">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_URL">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_OPAQUE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_NOHISTORY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_FILEURL">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_APPLIABLE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_DIRECTORY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_IS.URLIS_HASQUERY">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.IE.Manager.URL_PART">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.NONE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.SCHEME">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.HOSTNAME">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.USERNAME">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.PASSWORD">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.PORT">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.Manager.URL_PART.QUERY">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.IE.SecureFactory">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.SecureFactory.CreateInstanceWithSecurity(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="dwFlag">
+            </param>
+      <param name="dwZone">
+            </param>
+      <param name="pURL">
+            </param>
+      <param name="uniqueIdString">
+            </param>
+      <param name="link">
+            </param>
+      <param name="licenses">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.SecureFactory.CreateInstanceWithSecurity2(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.IE.SecureFactory.RemoteCreateInstance(System.Guid,System.Object@)">
+      <summary>
+        </summary>
+      <param name="riid">
+            </param>
+      <param name="ppvObject">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.SecureFactory.RemoteLockServer(System.Int32)">
+      <summary>
+        </summary>
+      <param name="fLock">
+            </param>
+    </member>
+    <member name="T:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.NORMAL_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.COOKIE_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.URLHISTORY_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.TRACK_OFFLINE_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.TRACK_ONLINE_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.STICKY_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.WININET_CACHE_ENTRY.SPARSE_CACHE_ENTRY">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.CORIESECURITY_SITE">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.IE.SecureFactory.CORIESECURITY_ZONE">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.Manager.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String)"></member>
+  </members>
+</doc>

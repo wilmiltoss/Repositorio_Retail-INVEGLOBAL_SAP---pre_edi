@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="InveGlobal">
+</Property><Property Name="Archivo de la solución" Value="E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_STP\InveGlobal.sln">
+</Property><Property Name="Archivo de opciones de usuario" Value="E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_STP\InveGlobal.suo">
+</Property><Property Name="Date" Value="viernes, 13 de julio de 2018">
+</Property><Property Name="Time" Value="11:42">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="InveGlobal.sln" Description="La copia E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_STP\Backup\InveGlobal.sln del archivo se ha realizado correctamente">
+</Event><Event ErrorLevel="0" Project="" Source="InveGlobal.suo" Description="La copia E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_STP\Backup\InveGlobal.suo del archivo se ha realizado correctamente">
+</Event><Event ErrorLevel="0" Project="" Source="InveGlobal.sln" Description="La solución se convirtió correctamente">
+</Event><Event ErrorLevel="3" Project="" Source="InveGlobal.sln" Description="Converted">
+</Event></UpgradeLog>

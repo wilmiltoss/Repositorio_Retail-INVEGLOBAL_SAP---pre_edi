@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>IIEHost</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.IE.IHostEx">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.IHostEx.GetClassFactory(System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="className">
+            </param>
+      <param name="fileName">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.IHostEx.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="dwIdentityFlags">
+            </param>
+      <param name="dwZone">
+            </param>
+      <param name="lpSite">
+            </param>
+      <param name="pbSecurityId">
+            </param>
+      <param name="lpHash">
+            </param>
+      <param name="className">
+            </param>
+      <param name="fileName">
+            </param>
+    </member>
+    <member name="T:Microsoft.IE.IHostStub">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.IE.IHostStubClass">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.IHostStubClass.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.IHostStubClass.GetClassFactory(System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="className">
+            </param>
+      <param name="fileName">
+            </param>
+    </member>
+    <member name="M:Microsoft.IE.IHostStubClass.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="dwIdentityFlags">
+            </param>
+      <param name="dwZone">
+            </param>
+      <param name="lpSite">
+            </param>
+      <param name="pbSecurityId">
+            </param>
+      <param name="lpHash">
+            </param>
+      <param name="className">
+            </param>
+      <param name="fileName">
+            </param>
+    </member>
+    <member name="T:Microsoft.IE.ISecureFactory">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.ISecureFactory.CreateInstanceWithSecurity(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="dwIdentityFlag">
+            </param>
+      <param name="dwZone">
+            </param>
+      <param name="lpSite">
+            </param>
+      <param name="lpId">
+            </param>
+      <param name="lpLink">
+            </param>
+      <param name="lpLicenses">
+            </param>
+    </member>
+    <member name="T:Microsoft.IE.ISecureFactory2">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.ISecureFactory2.CreateInstanceWithSecurity(System.Int32,System.Int32,System.String,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.IE.ISecureFactory2.CreateInstanceWithSecurity2(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)"></member>
+    <member name="T:Microsoft.IE.IHost">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.IE.IHost.GetClassFactory(System.String,System.String)"></member>
+    <member name="M:Microsoft.IE.IHost.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.IE.IHostStubClass.GetSecuredClassFactory(System.Int32,System.Int32,System.String,System.String,System.String,System.String)"></member>
+  </members>
+</doc>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="ConfirmationText" type="System.String">
+        <value>Se guardó la configuración de la página de error predeterminada.</value>
+    </data>
+    <data name="DefaultErrorLabel" type="System.String">
+        <value>Utilizar el mensaje de error predeterminado</value>
+    </data>
+    <data name="ErrorPageInstructions" type="System.String">
+        <value>Cualquier página Web puede utilizarse como página de error predeterminada. Seleccione una del control de árbol de sitios y haga clic en Guardar.</value>
+    </data>
+    <data name="ErrorPageLabel" type="System.String">
+        <value>Especifique una dirección URL como página de error predeterminada</value>
+    </data>
+    <data name="ErrorPageNotSetError" type="System.String">
+        <value>Debe configurarse una página de error predeterminada en el control de árbol</value>
+    </data>
+    <data name="ErrorPageWarningLabel" type="System.String">
+        <value>La configuración actual no puede agregarse al control de árbol porque la página de error predeterminada no está en el directorio de la aplicación: </value>
+    </data>
+    <data name="Instructions" type="System.String">
+        <value>Utilice las páginas de error predeterminadas para informar de errores .aspx o utilice una página .aspx personalizada para este fin.</value>
+    </data>
+    <data name="SelectCustomErrorPageTitle" type="System.String">
+        <value>Seleccionar la página de error personalizada</value>
+    </data>
+    <data name="Title" type="System.String">
+        <value>Definir página de errores predeterminada</value>
+    </data>
+    <data name="TitleForSite" type="System.String">
+        <value>Definir la página de errores predeterminada para el sitio: {0}</value>
+    </data>
+    <data name="ErrorPageWarningErrorsNotEnabled" type="System.String">
+        <value>Advertencia: el modo de errores personalizados está desactivado. Actívelo para que vuelva a aplicarse la página de error personalizada.</value>
+    </data>
+</root>

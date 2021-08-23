@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="InveGlobal_MBL_SRC">
+</Property><Property Name="Archivo de la solución" Value="E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\InveGlobal_MBL_SRC.sln">
+</Property><Property Name="Date" Value="viernes, 13 de julio de 2018">
+</Property><Property Name="Time" Value="11:43:43">
+</Property><Property Name="Número de registro" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="InveGlobal_MBL_SRC.csproj" Description="Se realizó correctamente la copia de seguridad del archivo de proyecto E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\InveGlobal_MBL_SRC.csproj">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="InveGlobal_MBL_SRC.csproj.user" Description="La copia de seguridad E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\InveGlobal_MBL_SRC.csproj.user del archivo se ha creado correctamente">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="CLASES\InputBox.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\CLASES\InputBox.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="MODS\LeeIni.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\MODS\LeeIni.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="MODS\SqliteDB.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\MODS\SqliteDB.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="MODS\texto_a_archivo.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\MODS\texto_a_archivo.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="frm_principal.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\frm_principal.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="frm_principal.Designer.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\frm_principal.Designer.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="Program.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="Properties\AssemblyInfo.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="Properties\Resources.Designer.cs" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="BDATOS\investock.sqlite" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\BDATOS\investock.sqlite">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="InveGlobal.lnkx" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\InveGlobal.lnkx">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="config.ini" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\config.ini">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="DLLS\sqlite3.dll" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\DLLS\sqlite3.dll">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="InveStock.ico" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\InveStock.ico">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="SQLite.Interop.DLL" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\SQLite.Interop.DLL">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="frm_principal.resx" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\frm_principal.resx">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="Properties\Resources.resx" Description="Se realizó correctamente la copia de seguridad del archivo E:\CDGS\PROYECTOS_JFP_VS\DOTNET\MOBILE\INVEGLOBAL_SLN\InveGlobal_MBL_SRC\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="InveGlobal_MBL_SRC.csproj" Description="Proyecto convertido correctamente">
+</Event><Event ErrorLevel="3" Project="InveGlobal_MBL_SRC" Source="InveGlobal_MBL_SRC.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="frm_principal.resx" Description="Archivo convertido correctamente">
+</Event><Event ErrorLevel="3" Project="InveGlobal_MBL_SRC" Source="frm_principal.resx" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="Properties\Resources.resx" Description="Archivo convertido correctamente">
+</Event><Event ErrorLevel="3" Project="InveGlobal_MBL_SRC" Source="Properties\Resources.resx" Description="Converted">
+</Event><Event ErrorLevel="0" Project="InveGlobal_MBL_SRC" Source="InveGlobal_MBL_SRC.csproj" Description="Examen completo: no es necesario actualizar los archivos de proyecto.">
+</Event></UpgradeLog>

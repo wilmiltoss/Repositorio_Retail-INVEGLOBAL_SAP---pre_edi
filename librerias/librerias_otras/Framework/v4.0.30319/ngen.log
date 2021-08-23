@@ -1,0 +1,27 @@
+﻿To learn about increasing the verbosity of the NGen log files please see http://go.microsoft.com/fwlink/?linkid=210113
+08/21/2019 18:37:05.267 [5800]: Command line: C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe uninstall C:\WINDOWS\assembly\NativeImages_v2.0.50727_32\WindowsBase\f3bfafdbcce4d1f039fed45494e43eb6\WindowsBase.ni.dll /noroot /LegacyServiceBehavior 
+08/21/2019 18:37:05.557 [5800]: Native image used by one or more roots, cannot be uninstalled
+08/21/2019 18:37:05.574 [5800]: ngen returning 0x00000000
+08/21/2019 18:37:05.600 [13032]: Command line: C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe uninstall C:\WINDOWS\assembly\NativeImages_v2.0.50727_32\WindowsFormsIntegra#\53154acf079d00f11d9e0fa249848388\WindowsFormsIntegration.Package.ni.dll /noroot /LegacyServiceBehavior 
+08/21/2019 18:37:05.917 [13032]: Native image used by one or more roots, cannot be uninstalled
+08/21/2019 18:37:05.933 [13032]: ngen returning 0x00000000
+08/21/2019 18:37:05.958 [3544]: Command line: C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe uninstall C:\WINDOWS\assembly\NativeImages_v2.0.50727_32\WindowsFormsIntegra#\55b9c9cc2f68b69c011f2f3e95b3e2ea\WindowsFormsIntegration.Design.ni.dll /noroot /LegacyServiceBehavior 
+08/21/2019 18:37:06.248 [3544]: Native image used by one or more roots, cannot be uninstalled
+08/21/2019 18:37:06.265 [3544]: ngen returning 0x00000000
+08/21/2019 18:37:06.291 [19528]: Command line: C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe uninstall C:\WINDOWS\assembly\NativeImages_v2.0.50727_32\WPFToolkit\41be91f9345596c1a5469e6c4569da35\WPFToolkit.ni.dll /noroot /LegacyServiceBehavior 
+08/21/2019 18:37:06.581 [19528]: Native image used by one or more roots, cannot be uninstalled
+08/21/2019 18:37:06.598 [19528]: ngen returning 0x00000000
+08/21/2019 18:37:07.044 [13676]: NGen task completed successfully
+08/22/2019 18:10:40.689 [113968]: NGen Task starting, command line: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\NGenTask.exe" /RuntimeWide /StopEvent:464
+08/22/2019 18:10:40.803 [113968]: Attempting to acquire task lock.
+08/22/2019 18:10:40.807 [113968]: Acquired task lock.
+08/22/2019 18:10:40.879 [110404]: Command line: C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe RemoveTaskDelayStartTrigger /LegacyServiceBehavior 
+08/22/2019 18:10:41.054 [110404]: ngen returning 0x00000000
+08/22/2019 18:10:46.068 [113968]: Executing high priority queued items
+08/22/2019 18:10:46.094 [101116]: Command line: C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe ExecuteQueuedItems 2 /LegacyServiceBehavior 
+08/22/2019 18:10:46.528 [101116]: All compilation targets are up to date.
+08/22/2019 18:10:46.529 [101116]: ngen returning 0x00000000
+08/22/2019 18:10:46.533 [113968]: Finished high priority work.  Checking for new work added after we started
+08/22/2019 18:10:46.555 [117796]: Command line: C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe RemoveTaskBootTrigger /LegacyServiceBehavior 
+08/22/2019 18:10:46.699 [117796]: ngen returning 0x00000000
+08/22/2019 18:10:46.707 [113968]: High-priority NGen task completed successfully

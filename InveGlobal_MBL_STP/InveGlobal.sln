@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "InveGlobal", "InveGlobal.vddproj", "{CD3D2183-444E-445D-9D21-4A223B0BCDB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD3D2183-444E-445D-9D21-4A223B0BCDB3}.Debug|Default.ActiveCfg = Debug
+		{CD3D2183-444E-445D-9D21-4A223B0BCDB3}.Debug|Default.Build.0 = Debug
+		{CD3D2183-444E-445D-9D21-4A223B0BCDB3}.Release|Default.ActiveCfg = Release
+		{CD3D2183-444E-445D-9D21-4A223B0BCDB3}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

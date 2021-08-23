@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileList Redist="Business Objects Crystal Reports Basic Runtime files" >
+<File AssemblyName="CrystalDecisions.CrystalReports.Engine" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.KeyCode" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.DataSetConversion" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportSource" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.Shared" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.Web" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.Windows.Forms" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+
+<File AssemblyName="CrystalDecisions.ReportAppServer.ClientDoc" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.CommLayer" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.CommonControls" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.CommonObjectModel" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.Controllers" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.DataDefModel" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.ObjectFactory" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.ReportDefModel" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.ReportAppServer.XmlSerialize" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" ProcessorArchitecture="MSIL" InGAC="true" IsRedistRoot="false" />
+
+<File AssemblyName="CrystalDecisions.Enterprise.Framework" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.Enterprise.InfoStore" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.Enterprise.PluginManager" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.Enterprise.Desktop.Report" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" InGAC="true" IsRedistRoot="false" />
+<File AssemblyName="CrystalDecisions.Enterprise.Viewing.ReportSource" Version="10.5.3700.0" PublicKeyToken="692FBEA5521E1304" Culture="neutral" InGAC="true" IsRedistRoot="false" />
+</FileList>

@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Accessibility</name>
+  </assembly>
+  <members>
+    <member name="T:Accessibility.__MIDL_IWinTypes_0009">
+      <summary>
+          <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz de accesibilidad del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="F:Accessibility.__MIDL_IWinTypes_0009.hInproc">
+      <summary>
+          <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz de accesibilidad del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="F:Accessibility.__MIDL_IWinTypes_0009.hRemote">
+      <summary>
+          <see cref="T:Accessibility.__MIDL_IWinTypes_0009" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz de accesibilidad del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="T:Accessibility._RemotableHandle">
+      <summary>
+          <see cref="T:Accessibility.IAccessibleHandler" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz de accesibilidad del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="F:Accessibility._RemotableHandle.fContext">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Accessibility._RemotableHandle.u">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Accessibility.AnnoScope">
+      <summary>
+          <see cref="T:Accessibility.AnnoScope" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz de accesibilidad del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="F:Accessibility.AnnoScope.ANNO_THIS">
+      <summary>
+          Anotación con ámbito en el objeto inmediato.
+        </summary>
+    </member>
+    <member name="F:Accessibility.AnnoScope.ANNO_CONTAINER">
+      <summary>
+          Anotación con ámbito en el objeto contenedor.
+        </summary>
+    </member>
+    <member name="T:Accessibility.CAccPropServices">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Accessibility.CAccPropServicesClass">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearHmenuProps(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearHwndProps(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ClearProps(System.Byte@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHmenuIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="ppIDString">
+            </param>
+      <param name="pdwIDStringLen">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.ComposeHwndIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="ppIDString">
+            </param>
+      <param name="pdwIDStringLen">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.DecomposeHmenuIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="phmenu">
+            </param>
+      <param name="pidChild">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.DecomposeHwndIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@,System.UInt32@)">
+      <summary>
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="phwnd">
+            </param>
+      <param name="pidObject">
+            </param>
+      <param name="pidChild">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuProp(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="var">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuPropServer(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+      <param name="pServer">
+            </param>
+      <param name="AnnoScope">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHmenuPropStr(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.String)">
+      <summary>
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="str">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndProp(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="var">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndPropServer(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+      <param name="pServer">
+            </param>
+      <param name="AnnoScope">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetHwndPropStr(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.String)">
+      <summary>
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="str">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetPropServer(System.Byte@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+      <param name="pServer">
+            </param>
+      <param name="AnnoScope">
+            </param>
+    </member>
+    <member name="M:Accessibility.CAccPropServicesClass.SetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="var">
+            </param>
+    </member>
+    <member name="T:Accessibility.IAccessible">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="P:Accessibility.IAccessible.accChild(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Objeto.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accChildCount">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Entero que representa el recuento.
+        </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accDefaultAction(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Cadena que representa la acción.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accDescription(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Cadena que representa la descripción.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accDoDefaultAction(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accFocus">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accHelp(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Cadena.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accHelpTopic(System.String@,System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Entero.
+        </returns>
+      <param name="pszHelpFile">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accHitTest(System.Int32,System.Int32)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Objeto.
+        </returns>
+      <param name="xLeft">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="yTop">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accKeyboardShortcut(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Cadena.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accLocation(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="pxLeft">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="pyTop">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="pcxWidth">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="pcyHeight">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accName(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Cadena.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accNavigate(System.Int32,System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+        </returns>
+      <param name="navDir">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="varStart">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accParent">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Objeto.
+        </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accRole(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Objeto.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccessible.accSelect(System.Int32,System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="flagsSelect">
+              Esta parámetro sólo es para uso interno.
+            </param>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accSelection">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Objeto.
+        </returns>
+    </member>
+    <member name="P:Accessibility.IAccessible.accState(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Objeto.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="P:Accessibility.IAccessible.accValue(System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccessible" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessible del Modelo de objetos componentes (COM).
+        </summary>
+      <returns>
+          Cadena.
+        </returns>
+      <param name="varChild">
+              Esta parámetro sólo es para uso interno.
+            </param>
+    </member>
+    <member name="T:Accessibility.IAccessibleHandler">
+      <summary>
+          <see cref="T:Accessibility.IAccessibleHandler" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessibleHandler del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="M:Accessibility.IAccessibleHandler.AccessibleObjectFromID(System.Int32,System.Int32,Accessibility.IAccessible@)">
+      <summary>
+          <see cref="T:Accessibility.IAccessibleHandler" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccessibleHandler del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="lObjectID">
+            </param>
+      <param name="pIAccessible">
+            </param>
+    </member>
+    <member name="T:Accessibility.IAccIdentity">
+      <summary>
+          <see cref="T:Accessibility.IAccIdentity" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccIdentity del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="M:Accessibility.IAccIdentity.GetIdentityString(System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+          <see cref="T:Accessibility.IAccIdentity" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccIndentity del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="dwIDChild">
+            </param>
+      <param name="ppIDString">
+            </param>
+      <param name="pdwIDStringLen">
+            </param>
+    </member>
+    <member name="T:Accessibility.IAccPropServer">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServer" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServer del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="M:Accessibility.IAccPropServer.GetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object@,System.Int32@)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServer" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServer del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="pvarValue">
+            </param>
+      <param name="pfHasProp">
+            </param>
+    </member>
+    <member name="T:Accessibility.IAccPropServices">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearHmenuProps(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearHwndProps(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ClearProps(System.Byte@,System.UInt32,System.Guid@,System.Int32)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ComposeHmenuIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="ppIDString">
+            </param>
+      <param name="pdwIDStringLen">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.ComposeHwndIdentityString(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="ppIDString">
+            </param>
+      <param name="pdwIDStringLen">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.DecomposeHmenuIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="phmenu">
+            </param>
+      <param name="pidChild">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.DecomposeHwndIdentityString(System.Byte@,System.UInt32,System.IntPtr,System.UInt32@,System.UInt32@)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="phwnd">
+            </param>
+      <param name="pidObject">
+            </param>
+      <param name="pidChild">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuProp(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="var">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuPropServer(Accessibility._RemotableHandle@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+      <param name="pServer">
+            </param>
+      <param name="AnnoScope">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHmenuPropStr(Accessibility._RemotableHandle@,System.UInt32,System.Guid,System.String)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hmenu">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="str">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndProp(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="var">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndPropServer(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+      <param name="pServer">
+            </param>
+      <param name="AnnoScope">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetHwndPropStr(Accessibility._RemotableHandle@,System.UInt32,System.UInt32,System.Guid,System.String)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="hwnd">
+            </param>
+      <param name="idObject">
+            </param>
+      <param name="idChild">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="str">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetPropServer(System.Byte@,System.UInt32,System.Guid@,System.Int32,Accessibility.IAccPropServer,Accessibility.AnnoScope)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="paProps">
+            </param>
+      <param name="cProps">
+            </param>
+      <param name="pServer">
+            </param>
+      <param name="AnnoScope">
+            </param>
+    </member>
+    <member name="M:Accessibility.IAccPropServices.SetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object)">
+      <summary>
+          <see cref="T:Accessibility.IAccPropServices" /> y todos sus miembros expuestos forman parte de un contenedor administrado de la interfaz IAccPropServices del Modelo de objetos componentes (COM).
+        </summary>
+      <param name="pIDString">
+            </param>
+      <param name="dwIDStringLen">
+            </param>
+      <param name="idProp">
+            </param>
+      <param name="var">
+            </param>
+    </member>
+  </members>
+</doc>

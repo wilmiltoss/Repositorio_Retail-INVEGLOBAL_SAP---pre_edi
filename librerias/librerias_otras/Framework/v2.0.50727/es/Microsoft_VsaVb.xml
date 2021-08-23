@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft_VsaVb</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft_VsaVb.VsaDTEngine">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft_VsaVb.VsaDTEngineClass">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaDTEngineClass.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaDTEngineClass.AttachDebugger(System.Boolean)">
+      <summary>
+        </summary>
+      <param name="isAttach">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaDTEngineClass.GetIDE">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaDTEngineClass.InitCompleted">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaDTEngineClass.TargetURL">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft_VsaVb.VsaEngine">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft_VsaVb.VsaEngineClass">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.Assembly">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.Close">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.Compile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.Evidence">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.GenerateDebugInfo">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.GetOption(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="Name">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.InitNew">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.IsCompiled">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.IsDirty">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.IsRunning">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.IsValidIdentifier(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="identifier">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.Items">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.Language">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.LCID">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.LoadSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+        </summary>
+      <param name="Site">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.Name">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.Reset">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.RevokeCache">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.RootMoniker">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.RootNamespace">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.Run">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.SaveCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>
+        </summary>
+      <param name="pe">
+               
+            </param>
+      <param name="pdb">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.SaveSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+        </summary>
+      <param name="Site">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft_VsaVb.VsaEngineClass.SetOption(System.String,System.Object)">
+      <summary>
+        </summary>
+      <param name="Name">
+               
+            </param>
+      <param name="value">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.Site">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft_VsaVb.VsaEngineClass.Version">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+  </members>
+</doc>

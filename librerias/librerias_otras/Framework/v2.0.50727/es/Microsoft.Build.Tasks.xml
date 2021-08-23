@@ -1,0 +1,4589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Build.Tasks</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Build.Tasks.AL">
+      <summary>
+          Implementa la tarea de AL. Utilice el elemento AL del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea AL (Assembly Linker, Tarea).
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension.Log">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.AspNetCompiler">
+      <summary>
+          Implementa la tarea de AspNetCompiler. Utilice el elemento AspNetCompiler del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea AspNetCompiler (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AssignCulture.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignCulture.AssignedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignCulture.AssignedFilesWithCulture">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignCulture.AssignedFilesWithNoCulture">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignCulture.CultureNeutralAssignedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AssignCulture.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignCulture.Files">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.AssignProjectConfiguration">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AssignTargetPath.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignTargetPath.AssignedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.AssignTargetPath.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignTargetPath.Files">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.AssignTargetPath.RootFolder">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.CallTarget">
+      <summary>
+          Implementa la tarea de CallTarget. Utilice el elemento CallTarget del archivo del proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea CallTarget (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CombinePath.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CombinePath.BasePath">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CombinePath.CombinedPaths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CombinePath.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CombinePath.Paths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CommandLineBuilderExtension.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" />. 
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ConvertToAbsolutePath.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ConvertToAbsolutePath.AbsolutePaths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ConvertToAbsolutePath.Execute">
+      <summary>
+          
+          
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ConvertToAbsolutePath.Paths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Copy.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Copy.CopiedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Copy.DestinationFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Copy.DestinationFolder">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Copy.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Copy.SkipUnchangedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Copy.SourceFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateCSharpManifestResourceName.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateCSharpManifestResourceName.CreateManifestName(System.String,System.String,System.String,System.String,System.IO.Stream)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="fileName">
+            </param>
+      <param name="linkFileName">
+            </param>
+      <param name="rootNamespace">
+            </param>
+      <param name="dependentUponFileName">
+            </param>
+      <param name="binaryStream">
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateCSharpManifestResourceName.IsSourceFile(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="fileName">
+            </param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.CreateItem">
+      <summary>
+          Implementa la tarea de CreateItem. Utilice el elemento CreateItem del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea CreateItem (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateManifestResourceName.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.CreateManifestResourceName" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateManifestResourceName.CreateManifestName(System.String,System.String,System.String,System.String,System.IO.Stream)">
+      <summary>
+          Cuando se reemplaza en una clase derivada, crea el nombre de los recursos del manifiesto.
+        </summary>
+      <returns>
+          Nombre de los recursos del manifiesto.
+        </returns>
+      <param name="fileName">
+              Nombre del archivo dependiente.
+            </param>
+      <param name="linkFileName">
+              Nombre del archivo especificado por el atributo Link.
+            </param>
+      <param name="rootNamespaceName">
+              Espacio de nombres raíz. Este parámetro puede ser una referencia nula (Nothing en Visual Basic).
+            </param>
+      <param name="dependentUponFileName">
+              Nombre del archivo del elemento primario de esta dependencia. Este parámetro puede ser una referencia nula (Nothing).
+            </param>
+      <param name="binaryStream">
+              Contenido de la secuencia binaria del archivo. Este parámetro puede ser una referencia nula (Nothing).
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateManifestResourceName.Execute">
+      <summary>
+          Ejecuta la tarea.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateManifestResourceName.IsSourceFile(System.String)">
+      <summary>
+          Cuando se reemplaza en una clase derivada, indica si el archivo especificado es un archivo de código fuente válido.
+        </summary>
+      <returns>
+          
+            Es true si el archivo es un archivo de código fuente válido; de lo contrario, es false.
+        </returns>
+      <param name="fileName">
+              Nombre del archivo.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier(System.String)">
+      <summary>
+          Crea un identificador válido para su uso con Visual Studio 2003.
+        </summary>
+      <returns>
+          Identificador que se va a usar con Visual Studio 2003.
+        </returns>
+      <param name="name">
+              Nombre del archivo.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames">
+      <summary>
+          Obtiene los nombres de los recursos del manifiesto creado.
+        </summary>
+      <returns>
+          Nombres de los recursos del manifiesto creado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles">
+      <summary>
+          Obtiene o establece los archivos de recursos dependientes.
+        </summary>
+      <returns>
+          Archivos de recursos dependientes.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace">
+      <summary>
+          Obtiene o establece el espacio de nombres raíz que se va a utilizar para asignar nombres.
+        </summary>
+      <returns>
+          Espacio de nombres raíz que se va a usar para asignar nombres.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateProperty.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateProperty.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateProperty.Value">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateProperty.ValueSetByTask">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateTemporaryVCProject.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateTemporaryVCProject.Configuration">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.CreateTemporaryVCProject.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateTemporaryVCProject.OutputProjectFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateTemporaryVCProject.ProjectFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateTemporaryVCProject.ReferenceAssemblies">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateTemporaryVCProject.ReferenceGuids">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.CreateTemporaryVCProject.ReferenceImportLibraries">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.CreateVisualBasicManifestResourceName">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+        </summary>
+      <param name="commandLine">
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.AllowUnsafeBlocks">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.BaseAddress">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.CallHostObjectToExecute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.CheckForOverflowUnderflow">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.DisabledWarnings">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.DocumentationFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.ErrorReport">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.GenerateFullPaths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.GenerateFullPathToTool">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Csc.InitializeHostObject">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.LangVersion">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.ModuleAssemblyName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.NoStandardLib">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.PdbFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.Platform">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.ToolName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.UseHostCompilerIfAvailable">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.WarningLevel">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.WarningsAsErrors">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Csc.WarningsNotAsErrors">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Delete">
+      <summary>
+          Implementa la tarea de Delete. Utilice el elemento Delete del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea Delete (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Error.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Error.Code">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Error.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Error.HelpKeyword">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Error.Text">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Exec">
+      <summary>
+          Implementa la tarea de Exec. Utilice el elemento Exec del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea Exec (Tarea).
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ExtractedClassName.IsInsideConditionalBlock">
+      <summary>
+          Obtiene o establece un valor que indica si el nombre de clase extraído existe en un bloque de código compilado condicionalmente.
+        </summary>
+      <returns>
+          
+            Es true para indicar que el nombre de clase extraído existe en un bloque de código compilado condicionalmente; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ExtractedClassName.Name">
+      <summary>
+          Obtiene o establece el nombre de clase extraído.
+        </summary>
+      <returns>
+          Nombre de clase extraído.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FindUnderPath.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FindUnderPath.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.Files">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.InPath">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.OutOfPath">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.Path">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FindUnderPath.UpdateToAbsolutePaths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FormatUrl.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FormatUrl.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatUrl.InputUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatUrl.OutputUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FormatVersion.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.FormatVersion.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatVersion.FormatType">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatVersion.OutputVersion">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatVersion.Revision">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.FormatVersion.Version">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateApplicationManifest.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ClrVersion">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ConfigFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Dependencies">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.Files">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.IconFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.IsolatedComReferences">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.ManifestType">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.OSVersion">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateApplicationManifest.TrustInfoFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateBootstrapper.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.ApplicationUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperComponentFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperItems">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.BootstrapperKeyFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.ComponentsLocation">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.ComponentsUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.CopyComponents">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.Culture">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateBootstrapper.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.FallbackCulture">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.OutputPath">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.Path">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.SupportUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateBootstrapper.Validate">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateDeploymentManifest.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.DeploymentUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.DisallowUrlActivation">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Install">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.MapFileExtensions">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.MinimumRequiredVersion">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Product">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.Publisher">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.SupportUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.TrustUrlParameters">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateEnabled">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateInterval">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateMode">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateDeploymentManifest.UpdateUnit">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GenerateManifestBase">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GenerateResource">
+      <summary>
+          Implementa la tarea de GenerateResource. Utilice el elemento GenerateResource del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea GenerateResource (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateTrustInfo.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.ApplicationDependencies"></member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.BaseManifest">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.ExcludedPermissions">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GenerateTrustInfo.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.TargetZone">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GenerateTrustInfo.TrustInfoFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.GetAssemblyIdentity">
+      <summary>
+          Implementa la tarea de GetAssemblyIdentity. Utilice el elemento GetAssemblyIdentity del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea GetAssemblyIdentity (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkPath.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkPath.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GetFrameworkPath.Path">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.GetFrameworkSdkPath.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.GetFrameworkSdkPath.Path">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.LC.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.LC.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+        </summary>
+      <param name="commandLine">
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.LC.GenerateFullPathToTool">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.LC.LicenseTarget">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.LC.NoLogo">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.LC.OutputDirectory">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.LC.OutputLicense">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.LC.ReferencedAssemblies">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.LC.Sources">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.LC.ToolName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.LC.ValidateParameters">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.MakeDir.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.MakeDir.Directories">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.MakeDir.DirectoriesCreated">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.MakeDir.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.ManagedCompiler" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+          Llena el <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> especificado con los modificadores y la información adicional que no puedan estar en un archivo de respuesta.
+        </summary>
+      <param name="commandLine">
+              <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> que se va a llenar con los modificadores y la información adicional que no puedan estar en un archivo de respuesta.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.AdditionalLibPaths">
+      <summary>
+          Obtiene o establece las carpetas adicionales en las que buscar los ensamblados.
+        </summary>
+      <returns>
+          Carpetas adicionales en las que buscar los ensamblados.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.AddModules">
+      <summary>
+          Obtiene o establece los módulos para que el compilador los ponga a disposición del proyecto que se está compilando actualmente.
+        </summary>
+      <returns>
+          Módulos para que el compilador los ponga a disposición del proyecto que se está compilando actualmente.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+          Llena el <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> especificado con los modificadores y la información adicional que puedan estar en un archivo de respuesta.
+        </summary>
+      <param name="commandLine">
+              <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> que se va a llenar con modificadores e información adicional.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.CheckAllReferencesExistOnDisk">
+      <summary>
+          Comprueba si existen todas las referencias especificadas en el disco.
+        </summary>
+      <returns>
+          
+            Es true si todas las referencias existen en el disco; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.CheckHostObjectSupport(System.String,System.Boolean)">
+      <summary>
+          Registra un mensaje si el parámetro especificado no es compatible con el compilador del host.
+        </summary>
+      <param name="parameterName">
+              Nombre del parámetro que se va a establecer en el compilador del host.
+            </param>
+      <param name="resultFromHostObjectSetOperation">
+              
+                Es true si el compilador del host es compatible con <paramref name="parameterName" />; en caso contrario, es false
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.CodePage">
+      <summary>
+          Obtiene o establece la página de códigos que se va a utilizar para todos los archivos de código fuente de la compilación.
+        </summary>
+      <returns>
+          Página de códigos que se va a utilizar para todos los archivos de código fuente de la compilación.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.DebugType">
+      <summary>
+          Obtiene o establece el tipo de depuración.
+        </summary>
+      <returns>
+          Tipo de depuración.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.DefineConstants">
+      <summary>
+          Obtiene o establece las constantes condicionales del compilador.
+        </summary>
+      <returns>
+          Constantes condicionales de compilador.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.DelaySign">
+      <summary>
+          Obtiene o establece un valor que indica si la clave pública se coloca en el ensamblado.
+        </summary>
+      <returns>
+          
+            Es true si la clave pública se coloca en el ensamblado; es false si el ensamblado está totalmente firmado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.EmitDebugInformation">
+      <summary>
+          Obtiene o establece un valor que indica si el compilador genera información de depuración.
+        </summary>
+      <returns>
+          
+            Es true si se genera información de depuración; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.FileAlignment">
+      <summary>
+          Obtiene o establece un valor que indica dónde alinear las secciones del archivo de salida.
+        </summary>
+      <returns>
+          Valor que indica dónde alinear las secciones del archivo de salida.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.HandleTaskExecutionErrors">
+      <summary>
+          Controla el código de valor devuelto del compilador.
+        </summary>
+      <returns>
+          
+            Es true si se controló correctamente el código de valor devuelto; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.HostCompilerSupportsAllParameters">
+      <summary>
+          Obtiene o establece un valor que indica si el compilador del host admite todos los parámetros de la tarea.
+        </summary>
+      <returns>
+          
+            Es true si el compilador del host admite todos los parámetros de la tarea; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.KeyContainer">
+      <summary>
+          Obtiene o establece el nombre del contenedor de claves criptográficas.
+        </summary>
+      <returns>
+          Nombre del contenedor de claves criptográficas.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.KeyFile">
+      <summary>
+          Obtiene o establece el nombre del archivo que contiene la clave criptográfica.
+        </summary>
+      <returns>
+          Nombre del archivo que contiene la clave criptográfica.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.LinkResources">
+      <summary>
+          Obtiene o establece los archivos de recursos de .NET Framework que se van a vincular al archivo de salida.
+        </summary>
+      <returns>
+          Archivos de recursos de .NET Framework que se van a vincular al archivo de salida.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.ListHasNoDuplicateItems(Microsoft.Build.Framework.ITaskItem[],System.String)">
+      <summary>
+          Determina si cualquier elemento duplicado existe en el parámetro de la tarea especificada.
+        </summary>
+      <returns>
+          
+            Es true si la lista de elementos no contiene duplicados; en caso contrario, es false.
+        </returns>
+      <param name="itemList">
+              Lista de elementos en la que buscar duplicados.
+            </param>
+      <param name="parameterName">
+              El nombre del parámetro que contiene <paramref name="itemList" />.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.MainEntryPoint">
+      <summary>
+          Obtiene o establece la clase o el módulo que contiene el punto de entrada principal.
+        </summary>
+      <returns>
+          Clase o módulo que contiene el punto de entrada principal.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.NoConfig">
+      <summary>
+          Obtiene o establece un valor que indica si el compilador debe utilizar el archivo de respuesta predeterminado.
+        </summary>
+      <returns>
+          
+            Es true si el compilador no está utilizando el archivo de respuesta predeterminado; de lo contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.NoLogo">
+      <summary>
+          Obtiene o establece un valor que indica si se suprime la pantalla de bienvenida del compilador.
+        </summary>
+      <returns>
+          
+            Es true para suprimir la pantalla de bienvenida del compilador; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Optimize">
+      <summary>
+          Obtiene o establece un valor que indica si se van a habilitar las optimizaciones del compilador.
+        </summary>
+      <returns>
+          
+            Es true para habilitar las optimizaciones del compilador; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.OutputAssembly">
+      <summary>
+          Obtiene o establece el nombre del archivo de resultados.
+        </summary>
+      <returns>
+          Nombre del archivo de resultados.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.References">
+      <summary>
+          Obtiene o establece los elementos desde los que el compilador importará la información de tipo pública.
+        </summary>
+      <returns>
+          Elementos desde los que el compilador importará la información de tipo pública.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Resources">
+      <summary>
+          Obtiene o establece los recursos de .NET Framework que van a incrustarse en el archivo de resultados.
+        </summary>
+      <returns>
+          Recursos de .NET Framework que van a incrustarse en el archivo de resultados.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.ResponseFiles">
+      <summary>
+          Obtiene o establece los archivos de respuesta que contienen los comandos de la tarea.
+        </summary>
+      <returns>
+          Archivos de respuesta que contienen los comandos de la tarea.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Sources">
+      <summary>
+          Obtiene o establece los archivos de resultados que se van a compilar.
+        </summary>
+      <returns>
+          Archivos de resultados que se van a compilar.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.StandardOutputEncoding">
+      <summary>
+          Obtiene o establece la codificación de la secuencia de salida estándar de la tarea capturada.
+        </summary>
+      <returns>
+          Codificación de la secuencia de salida estándar de la tarea capturada.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.TargetType">
+      <summary>
+          Obtiene o establece el formato de archivo del archivo de resultados.
+        </summary>
+      <returns>
+          Formato del archivo de resultados.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.TreatWarningsAsErrors">
+      <summary>
+          Obtiene o establece un valor que indica si las advertencias se tratan como errores.
+        </summary>
+      <returns>
+          
+            Es true si las advertencias se tratan como errores; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Utf8Output">
+      <summary>
+          Obtiene o establece un valor que indica si el resultado del compilador se registra mediante la codificación UTF-8.
+        </summary>
+      <returns>
+          
+            Es true si el resultado del compilador se registra mediante la codificación UTF-8; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ManagedCompiler.ValidateParameters">
+      <summary>
+          Valida los parámetros de la tarea.
+        </summary>
+      <returns>
+          
+            Es true si son válidos todos los parámetros; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Win32Icon">
+      <summary>
+          Obtiene o establece el nombre del archivo de iconos.
+        </summary>
+      <returns>
+          Nombre del archivo de iconos.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ManagedCompiler.Win32Resource">
+      <summary>
+          Obtiene o establece un archivo de recursos (.res) de Win32 que se va a insertar en el archivo de resultados.
+        </summary>
+      <returns>
+          Archivo de recursos (.res) de Win32 que se va a insertar en el archivo de resultados.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Message.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Message.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Message.Importance">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Message.Text">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.MSBuild">
+      <summary>
+          Implementa la tarea de MSBuild. Utilice el elemento MSBuild del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea MSBuild (Tarea).
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ReadLinesFromFile">
+      <summary>
+          Implementa la tarea de ReadLinesFromFile. Utilice el elemento ReadLinesFromFile del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea ReadLinesFromFile (Tarea).
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.RegisterAssembly">
+      <summary>
+          Implementa la tarea de RegisterAssembly. Utilice el elemento RegisterAssembly del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea RegisterAssembly (Tarea).
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.RemoveDir">
+      <summary>
+          Implementa la tarea de RemoveDir. Utilice el elemento RemoveDir del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea RemoveDir (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RemoveDuplicates.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.RemoveDuplicates.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RemoveDuplicates.Filtered">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.RemoveDuplicates.Inputs">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveAssemblyReference.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedAssemblyExtensions">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AllowedRelatedFileExtensions">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AppConfigFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.Assemblies">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AssemblyFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.AutoUnify">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.CandidateAssemblyFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.CopyLocalFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveAssemblyReference.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FilesWritten">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindDependencies">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindRelatedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindSatellites">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.FindSerializationAssemblies">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.InstalledAssemblyTables">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.RelatedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedDependencyFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.ResolvedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.SatelliteFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.ScatterFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.SearchPaths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.SerializationAssemblyFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.Silent">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.StateFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.SuggestedRedirects">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetFrameworkDirectories">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveAssemblyReference.TargetProcessorArchitecture">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveComReference.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.DelaySign">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveComReference.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.KeyContainer">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.KeyFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.NoClassMembers">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedAssemblyReferences">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.ResolvedModules">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.StateFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.TypeLibFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.TypeLibNames">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveComReference.WrapperOutputDirectory">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveKeySource">
+      <summary>
+          Implementa la tarea de ResolveKeySource. Utilice el elemento ResolveKeySource del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea ResolveKeySource (Tarea).
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveManifestFiles">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveNativeReference.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.AdditionalSearchPaths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedComComponents">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseEtcFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseTlbFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedPrerequisiteAssemblies">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainedTypeLibraries">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.ContainingReferenceFiles">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ResolveNativeReference.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ResolveNativeReference.NativeReferences">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveNonMSBuildProjectOutput">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveProjectBase">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.ResolveVCProjectOutput">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SGen.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.BuildAssemblyName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.BuildAssemblyPath">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.DelaySign">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SGen.GenerateCommandLineCommands">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SGen.GenerateFullPathToTool">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.KeyContainer">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.KeyFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.References">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.SerializationAssembly">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.SerializationAssemblyName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.ShouldGenerateSerializer">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SGen.SkipTaskExecution">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.ToolName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SGen.UseProxyTypes">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SGen.ValidateParameters">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SignFile.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SignFile.CertificateThumbprint">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.SignFile.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SignFile.SigningTarget">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.SignFile.TimestampUrl">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.TaskExtension">
+      <summary>
+          Contiene las propiedades para ayudar a extender una tarea. Esta clase admite la infraestructura de MSBuild y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ToolTaskExtension.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+          Llena el <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> especificado con los modificadores y la información adicional que la herramienta de la línea de comandos debe ejecutar directamente desde la línea de comandos y no de un archivo de respuesta.
+        </summary>
+      <param name="commandLine">
+              <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> que se va a rellenar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ToolTaskExtension.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+          Llena el <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> especificado con los modificadores y la información adicional que la herramienta de la línea de comandos puede ejecutar desde un archivo de respuesta.
+        </summary>
+      <param name="commandLine">
+              <see cref="T:Microsoft.Build.Tasks.CommandLineBuilderExtension" /> que se va a rellenar.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag">
+      <summary>
+          Obtiene la colección de parámetros utilizada por la clase de la tarea derivada.
+        </summary>
+      <returns>
+          Colección de parámetros utilizada por la clase de la tarea derivada.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ToolTaskExtension.GenerateCommandLineCommands">
+      <summary>
+          Obtiene los modificadores y la información adicional que la herramienta de la línea de comandos debe ejecutar directamente desde la línea de comandos y no desde un archivo de respuesta.
+        </summary>
+      <returns>
+          Cadena que contiene los modificadores y la información adicional que la herramienta de la línea de comandos debe ejecutar directamente desde la línea de comandos y no desde un archivo de respuesta.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ToolTaskExtension.GenerateResponseFileCommands">
+      <summary>
+          Obtiene el modificador utilizado por la herramienta de la línea de comandos para especificar el archivo de respuesta.
+        </summary>
+      <returns>
+          Modificador utilizado por la herramienta de la línea de comandos para especificar el archivo de respuesta.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ToolTaskExtension.GetBoolParameterWithDefault(System.String,System.Boolean)">
+      <summary>
+          Obtiene el valor del parámetro booleano especificado.
+        </summary>
+      <returns>
+          Valor del parámetro.
+        </returns>
+      <param name="parameterName">
+              Nombre del parámetro que se va a devolver.
+            </param>
+      <param name="defaultValue">
+              Valor que se devuelve si <paramref name="parameterName" /> no existe en <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.ToolTaskExtension.GetIntParameterWithDefault(System.String,System.Int32)">
+      <summary>
+          Obtiene el valor del parámetro del número entero especificado.
+        </summary>
+      <returns>
+          Valor del parámetro.
+        </returns>
+      <param name="parameterName">
+              Nombre del parámetro que se va a devolver.
+            </param>
+      <param name="defaultValue">
+              Valor que se devuelve si <paramref name="parameterName" /> no existe en <see cref="P:Microsoft.Build.Tasks.ToolTaskExtension.Bag" />.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.ToolTaskExtension.Log">
+      <summary>
+          Obtiene una instancia de una clase <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> que contiene métodos de registro de tareas.
+        </summary>
+      <returns>
+          Instancia de una clase <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> que contiene los métodos de registro de las tareas.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Touch">
+      <summary>
+          Implementa la tarea de Touch. Utilice el elemento Touch del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea Touch (Tarea).
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.UnregisterAssembly">
+      <summary>
+          Implementa la tarea de UnregisterAssembly. Utilice el elemento UnregisterAssembly del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea UnregisterAssembly (Tarea).
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.UpdateManifest">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Vbc">
+      <summary>
+          Implementa la tarea de Vbc. Utilice el elemento Vbc del archivo de proyecto para crear y ejecutar esta tarea. Para obtener información sobre el uso y los parámetros, vea Vbc (Tarea).
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.VCBuild.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.VCBuild.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)">
+      <summary>
+        </summary>
+      <param name="commandLine">
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.AdditionalLibPaths">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.AdditionalLinkLibraryPaths"></member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.AdditionalOptions">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.Clean">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.Configuration">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.EnvironmentOverride">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.VCBuild.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.VCBuild.GenerateFullPathToTool">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.Override">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.Platform">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.Projects">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.Rebuild">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.SolutionFile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.ToolName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.UseEnvironment"></member>
+    <member name="P:Microsoft.Build.Tasks.VCBuild.UserEnvironment">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.VCBuild.ValidateParameters">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Warning.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Warning.Code">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Warning.Execute">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Warning.HelpKeyword">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Warning.Text">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.WriteLinesToFile">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder">
+      <summary>
+          Objeto de nivel superior del sistema del programa previo.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage.HelpId">
+      <summary>
+          Obtiene el id. de la Ayuda de MSBuild para el IDE del host.
+        </summary>
+      <returns>
+          Valor entero que representa el identificador de la ayuda.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage.HelpKeyword">
+      <summary>
+          Obtiene la palabra clave de la ayuda asociada a la tecla F1 de MSBuild para el IDE del host o el valor null.
+        </summary>
+      <returns>
+          Cadena que representa la palabra clave de la ayuda asociada a la tecla F1.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage.Message">
+      <summary>
+          Obtiene los detalles del mensaje de generación.
+        </summary>
+      <returns>
+          Cadena de texto que describe los detalles del mensaje de generación.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage.Severity">
+      <summary>
+          Obtiene la gravedad del mensaje de generación.
+        </summary>
+      <returns>
+          La gravedad del mensaje de generación de la forma definida por la clase <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity" />.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity">
+      <summary>
+          Esta enumeración proporciona tres niveles de importancia para los mensajes de generación.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity.Info">
+      <summary>
+          Indica que el mensaje corresponde a la información de generación.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity.Warning">
+      <summary>
+          Indica que el mensaje corresponde a una advertencia de generación.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity.Error">
+      <summary>
+          Indica que el mensaje corresponde a un error de generación.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.ComponentFiles">
+      <summary>
+          Obtiene las rutas de acceso del instalador de los componentes copiados.
+        </summary>
+      <returns>
+          Matriz de cadena que contiene las rutas de acceso de los archivos del instalador de los componentes copiados.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.KeyFile">
+      <summary>
+          Obtiene la ruta de acceso al principal archivo de programa previo generado.
+        </summary>
+      <returns>
+          Cadena que representa la ruta de acceso al principal archivo de programa previo generado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Messages">
+      <summary>
+          Obtiene los mensajes de generación generados a partir de una generación del programa previo.
+        </summary>
+      <returns>
+          Matriz de mensajes <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage" /> de la generación del programa previo.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults.Succeeded">
+      <summary>
+          Obtiene un valor booleano que indica si el programa previo se ha generado correctamente.
+        </summary>
+      <returns>
+          Valor booleano que indica si la generación del programa previo fue correcta. Devuelve true si el programa previo se ha generado correctamente; de lo contrario, devuelve false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings" />.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationFile">
+      <summary>
+          Obtiene o establece el archivo que se va a instalar después de que el arranque instale los componentes necesarios.
+        </summary>
+      <returns>
+          El nombre del archivo que se va a instalar una vez instalados los componentes necesarios.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationName">
+      <summary>
+          Obtiene o establece el nombre de la aplicación que se va a instalar después de que el arranque instale todos los componentes necesarios.
+        </summary>
+      <returns>
+          El nombre de la aplicación que se va a instalar una vez instalados los componentes necesarios.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ApplicationUrl">
+      <summary>
+          Obtiene o establece la ubicación de origen esperada cuando el programa previo se publique en un sitio Web.
+        </summary>
+      <returns>
+          Una dirección URL que representa la ubicación de origen esperada cuando el arranque se publique en un sitio Web.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation">
+      <summary>
+          Obtiene o establece la ubicación de la instalación de los componentes del programa previo.
+        </summary>
+      <returns>
+          La ubicación de instalación <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation" /> de los componentes del arranque.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsUrl">
+      <summary>
+          Obtiene o establece la ubicación en la que el programa previo copiará los componentes si el valor de <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> se establece en <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" />.
+        </summary>
+      <returns>
+          La ubicación en que el arranque copiará los componentes si el valor de <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ComponentsLocation" /> se establece en <see cref="F:Microsoft.Build.Tasks.Deployment.Bootstrapper.ComponentsLocation.Absolute" />.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.CopyComponents">
+      <summary>
+          Obtiene o establece un valor que indica si los componentes del arranque se copiarán en el directorio de resultados de la compilación.
+        </summary>
+      <returns>
+          
+            true si los componentes del arranque se copiarán en el directorio de resultados de la compilación; de lo contrario, false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.FallbackLCID">
+      <summary>
+          Obtiene o establece el identificador de referencia cultural que se va a utilizar si el identificador de LCID no está disponible.
+        </summary>
+      <returns>
+          Un valor entero que representa el identificador de referencia cultural que se va a utilizar si el identificador de LCID no está disponible.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.LCID">
+      <summary>
+          Obtiene o establece el identificador de referencia cultural que especifica la referencia cultural para la que se genera el programa previo.
+        </summary>
+      <returns>
+          Un valor entero que representa el identificador de referencia cultural que especifica la referencia cultural para la que se genera el arranque.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.OutputPath">
+      <summary>
+          Obtiene o establece la ubicación del archivo en la que se van a copiar los archivos de resultados.
+        </summary>
+      <returns>
+          Una cadena que representa la ubicación del archivo en que se van a copiar los archivos de resultados.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.ProductBuilders">
+      <summary>
+          Obtiene o establece los generadores del producto que se van a utilizar para generar el programa previo.
+        </summary>
+      <returns>
+          Una colección de compiladores del producto (<see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection" />) que se va a utilizar para generar el arranque.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.SupportUrl">
+      <summary>
+          Obtiene o establece la dirección URL del sitio Web que contiene la información de compatibilidad del arranque.
+        </summary>
+      <returns>
+          La dirección URL del sitio Web que contiene la información de compatibilidad del arranque.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings.Validate">
+      <summary>
+          Obtiene o establece un valor que indica si el arranque realiza validación de XML en los manifiestos de los componentes.
+        </summary>
+      <returns>
+          
+            true si el arranque realiza validación de XML en los manifiestos de los componentes lo contrario, false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Build(Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildSettings)">
+      <summary>
+          Genera un programa previo basado en la configuración especificada.
+        </summary>
+      <returns>
+          Objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildResults" /> que representa los resultados de la generación del programa previo.
+        </returns>
+      <param name="settings">
+              Propiedades que se usan para crear el programa previo.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path">
+      <summary>
+          Obtiene o establece la ubicación de los archivos necesarios del programa previo.
+        </summary>
+      <returns>
+          Valor de cadena que representa la ubicación de los archivos necesarios del programa previo.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Products">
+      <summary>
+          Obtiene todos los productos disponibles en la actual ruta de acceso del programa previo.
+        </summary>
+      <returns>
+          Objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection" /> que representa todos los productos disponibles en el actual valor de la propiedad <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBootstrapperBuilder.Path" /> del programa previo.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.HelpId">
+      <summary>
+          Obtiene el id. de la Ayuda de MSBuild para el IDE del host.
+        </summary>
+      <returns>
+          Entero que representa el identificador de la ayuda de MSBuild para el IDE del host.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.HelpKeyword">
+      <summary>
+          Obtiene la palabra clave de la Ayuda de la tecla F1 de MSBuild del IDE del host.
+        </summary>
+      <returns>
+          Palabra clave de la ayuda asociada a la tecla F1 de MSBuild para el IDE del host.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.Message">
+      <summary>
+          Obtiene una descripción de los detalles del mensaje de generación.
+        </summary>
+      <returns>
+          Cadena de texto que describe los detalles del mensaje de generación.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildMessage.Severity">
+      <summary>
+          Obtiene la gravedad del mensaje de generación.
+        </summary>
+      <returns>
+          Objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessageSeverity" /> que representa la gravedad del mensaje de generación.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.ComponentFiles">
+      <summary>
+          Obtiene las rutas de acceso del archivo a los archivos del instalador de los componentes copiados.
+        </summary>
+      <returns>
+          Devuelve una matriz de cadenas que contienen las rutas de acceso del archivo a los archivos del instalador de los componente copiados.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.KeyFile">
+      <summary>
+          Obtiene la ruta de acceso al archivo de programa previo principal generado.
+        </summary>
+      <returns>
+          Devuelve una cadena que representa la ruta de acceso del archivo al archivo de programa previo principal generado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Messages">
+      <summary>
+          Obtiene los mensajes de generación generados a partir de la generación del programa previo.
+        </summary>
+      <returns>
+          Devuelve una matriz de objetos <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BuildMessage" /> que representan los mensajes de generación generados a partir de la generación de un programa previo.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildResults.Succeeded">
+      <summary>
+          Indica si la generación del programa previo se llevó a cabo correctamente.
+        </summary>
+      <returns>
+          Devuelve un valor booleano que indica si la generación del programa previo fue correcta. Devuelve true si dicha generación fue correcta y false, en caso contrario.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IBuildSettings">
+      <summary>
+          Define los valores de la operación de compilación del programa previo.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProduct">
+      <summary>
+          Representa un producto que <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> encuentra en la propiedad <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilder">
+      <summary>
+          Representa una versión generable de un objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductBuilderCollection">
+      <summary>
+          Contiene una colección de objetos <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.IProductCollection">
+      <summary>
+          Representa una colección de objetos <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product">
+      <summary>
+          Representa un producto que <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder" /> encuentra en la propiedad <see cref="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.BootstrapperBuilder.Path" />.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder.Product">
+      <summary>
+          Obtiene el objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> que corresponde a este objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" />.
+        </summary>
+      <returns>
+          Devuelve el objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> que corresponde a este objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" />.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection.Add(Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder)">
+      <summary>
+          Agrega un objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" /> a la colección del generador de productos.
+        </summary>
+      <param name="builder">
+              Objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilder" /> que se va a agregar a la colección.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductBuilderCollection.GetEnumerator">
+      <summary>
+          Devuelve un enumerador que puede recorrer en iteración la colección del generador de productos.
+        </summary>
+      <returns>
+          Enumerador que puede recorrer en iteración la colección del generador de productos.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.Count">
+      <summary>
+          Obtiene el número de elementos contenidos en la colección de productos.
+        </summary>
+      <returns>
+          Entero que indica el número de elementos contenidos en la colección de productos.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.GetEnumerator">
+      <summary>
+          Devuelve un enumerador que puede recorrer en iteración la colección de productos.
+        </summary>
+      <returns>
+          Enumerador que puede recorrer en iteración la colección de productos.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.Item(System.Int32)">
+      <summary>
+          Recupera el producto en el índice especificado.
+        </summary>
+      <returns>
+          Objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> que representa el producto en el índice especificado.
+        </returns>
+      <param name="index">
+              Índice de base cero del elemento que se va a obtener.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.Bootstrapper.ProductCollection.Product(System.String)">
+      <summary>
+          Recupera el producto con el código de producto especificado.
+        </summary>
+      <returns>
+          Objeto <see cref="T:Microsoft.Build.Tasks.Deployment.Bootstrapper.Product" /> con el código de producto especificado. Devuelve null si no se encuentra el código de producto especificado.
+        </returns>
+      <param name="productCode">
+              El identificador único del producto que se va a obtener.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.#ctor(System.String,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity,Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity" />.
+        </summary>
+      <param name="url">
+              La dirección URL del proveedor de implementación para el manifiesto de implementación de ClickOnce.
+            </param>
+      <param name="deployManifestIdentity">
+              La identidad del ensamblado del manifiesto de implementación de ClickOnce.
+            </param>
+      <param name="applicationManifestIdentity">
+              La identidad del ensamblado del manifiesto de la aplicación ClickOnce.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.#ctor(System.String,System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity" />.
+        </summary>
+      <param name="url">
+              La dirección URL del proveedor de implementación para el manifiesto de implementación de ClickOnce.
+            </param>
+      <param name="deployManifestPath">
+              Ruta de acceso al manifiesto de implementación de ClickOnce. La identidad del ensamblado se obtendrá del archivo especificado.
+            </param>
+      <param name="applicationManifestPath">
+              Ruta de acceso al manifiesto de la aplicación ClickOnce. La identidad del ensamblado se obtendrá del archivo especificado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationIdentity.ToString">
+      <summary>
+          Devuelve la identidad de la aplicación ClickOnce.
+        </summary>
+      <returns>
+          Cadena que contiene la identidad de la aplicación ClickOnce.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest">
+      <summary>
+          Describe ClickOnce o el manifiesto de la aplicación de Win32 nativo.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" />.
+        </summary>
+      <param name="identity">
+              Especifica otra instancia para duplicar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" />.
+        </summary>
+      <param name="name">
+              Especifica el nombre sencillo del ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" />.
+        </summary>
+      <param name="name">
+              Especifica el nombre sencillo del ensamblado.
+            </param>
+      <param name="version">
+              Especifica la versión del ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String,System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" />.
+        </summary>
+      <param name="name">
+              Especifica el nombre sencillo del ensamblado.
+            </param>
+      <param name="version">
+              Especifica la versión del ensamblado.
+            </param>
+      <param name="publicKeyToken">
+              Especifica el símbolo (token) de clave pública, formado por los últimos 8 bytes del código hash SHA-1 de la clave pública con la que se firma el ensamblado.
+            </param>
+      <param name="culture">
+              Especifica la referencia cultural del ensamblado. Una cadena vacía indica la referencia cultural invariable.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" />.
+        </summary>
+      <param name="name">
+              Especifica el nombre sencillo del ensamblado.
+            </param>
+      <param name="version">
+              Especifica la versión del ensamblado.
+            </param>
+      <param name="publicKeyToken">
+              Especifica el símbolo (token) de clave pública, formado por los últimos 8 bytes del código hash SHA-1 de la clave pública con la que se firma el ensamblado.
+            </param>
+      <param name="culture">
+              Especifica la referencia cultural del ensamblado. Una cadena vacía indica la referencia cultural invariable.
+            </param>
+      <param name="processorArchitecture">
+              Especifica la arquitectura del procesador del ensamblado. Los valores válidos son msil, x86, ia64, amd64.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity" />.
+        </summary>
+      <param name="name">
+              Especifica el nombre sencillo del ensamblado.
+            </param>
+      <param name="version">
+              Especifica la versión del ensamblado.
+            </param>
+      <param name="publicKeyToken">
+              Especifica el símbolo (token) de clave pública, formado por los últimos 8 bytes del código hash SHA-1 de la clave pública con la que se firma el ensamblado.
+            </param>
+      <param name="culture">
+              Especifica la referencia cultural del ensamblado. Una cadena vacía indica la referencia cultural invariable.
+            </param>
+      <param name="processorArchitecture">
+              Especifica la arquitectura del procesador del ensamblado. Los valores válidos son msil, x86, ia64, amd64.
+            </param>
+      <param name="type">
+              Especifica el atributo de tipo del ensamblado. Los valores válidos son win32 o una cadena en blanco.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Culture">
+      <summary>
+          Obtiene o establece la referencia cultural del ensamblado.
+        </summary>
+      <returns>
+          Cadena que indica la referencia cultural del ensamblado. Una cadena vacía indica la referencia cultural invariable.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromAssemblyName(System.String)">
+      <summary>
+          Analiza la cadena para obtener una identidad del ensamblado. Devuelve null si no se pudo obtener la identidad.
+        </summary>
+      <returns>
+          Identidad del ensamblado resultante.
+        </returns>
+      <param name="assemblyName">
+              Nombre completo del ensamblado, también conocido como nombre para mostrar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromFile(System.String)">
+      <summary>
+          Obtiene la identidad del ensamblado especificado. El archivo puede ser un PE con un manifiesto xml incrustado, un archivo de manifiesto xml independiente o un ensamblado .NET. Devuelve null si no se pudo obtener la identidad.
+        </summary>
+      <returns>
+          Identidad del ensamblado del archivo especificado.
+        </returns>
+      <param name="path">
+              Nombre del archivo del que se va a obtener la identidad.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromManagedAssembly(System.String)">
+      <summary>
+          Obtiene la identidad del ensamblado .NET especificado. El archivo debe ser un ensamblado .NET. Devuelve null si no se pudo obtener la identidad.
+        </summary>
+      <returns>
+          Identidad del ensamblado del archivo especificado.
+        </returns>
+      <param name="path">
+              Nombre del archivo del que se va a obtener la identidad.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromManifest(System.String)">
+      <summary>
+          Obtiene la identidad del archivo de manifiesto especificado. El archivo debe ser un archivo de manifiesto XML independiente. Devuelve null si no se pudo obtener la identidad.
+        </summary>
+      <returns>
+          Identidad del ensamblado del archivo especificado.
+        </returns>
+      <param name="path">
+              Nombre del archivo del que se va a obtener la identidad.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FromNativeAssembly(System.String)">
+      <summary>
+          Obtiene la identidad del ensamblado nativo especificado. El archivo debe ser un PE con un manifiesto XML incrustado o un archivo de manifiesto XML independiente. Devuelve NULL si no se pudo obtener la identidad.
+        </summary>
+      <returns>
+          Identidad del ensamblado del archivo especificado.
+        </returns>
+      <param name="path">
+              Nombre del archivo del que se va a obtener la identidad.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.GetFullName(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.FullNameFlags)">
+      <summary>
+          Devuelve el nombre completo del ensamblado.
+        </summary>
+      <returns>
+          Representación de cadena del nombre completo.
+        </returns>
+      <param name="flags">
+              Especifica los atributos que se van a incluir en el nombre completo.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.IsFrameworkAssembly">
+      <summary>
+          Devuelve True si este ensamblado forma parte de .NET Framework.
+        </summary>
+      <returns>
+          Valor booleano que indica si este ensamblado forma parte de .NET Framework. Es True si este ensamblado forma parte de .NET Framework; en caso contrario, es False.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.IsNeutralPlatform">
+      <summary>
+          Devuelve si la identidad del ensamblado representa un ensamblado de plataforma neutro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la identidad del ensamblado representa un ensamblado de plataforma neutro. Es True si la identidad del ensamblado es un ensamblado de plataforma neutro; en caso contrario, es False.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.IsStrongName">
+      <summary>
+          Devuelve si la identidad del ensamblado es un nombre seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la identidad de ensamblado es un nombre seguro. Es True si la identidad de ensamblado es un nombre seguro; en caso contrario, es False.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Name">
+      <summary>
+          Obtiene o establece el nombre sencillo del ensamblado.
+        </summary>
+      <returns>
+          Cadena que indica el nombre sencillo del ensamblado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.ProcessorArchitecture">
+      <summary>
+          Obtiene o establece la arquitectura del procesador del ensamblado.
+        </summary>
+      <returns>
+          Cadena que representa la arquitectura del procesador del ensamblado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.PublicKeyToken">
+      <summary>
+          Obtiene o establece el símbolo (token) de clave pública, formado por los últimos 8 bytes del código hash SHA-1 de la clave pública con la que se firma el ensamblado.
+        </summary>
+      <returns>
+          Cadena que indica el símbolo (token) de clave pública del ensamblado.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.ToString">
+      <summary>
+          Devuelve la identidad del ensamblado completo de ClickOnce.
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Type">
+      <summary>
+          Obtiene o establece el atributo de tipo del ensamblado.
+        </summary>
+      <returns>
+          Cadena que indica el atributo de tipo del ensamblado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.Version">
+      <summary>
+          Obtiene o establece la versión del ensamblado.
+        </summary>
+      <returns>
+          Cadena que indica la versión del ensamblado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlCulture">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlProcessorArchitecture">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlPublicKeyToken">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlType">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity.XmlVersion">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest">
+      <summary>
+          Describe un manifiesto de ensamblado de Win32.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference">
+      <summary>
+          Describe una referencia de ensamblado de manifiesto.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Add(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference)">
+      <summary>
+          Agrega la referencia del ensamblado especificando a la colección.
+        </summary>
+      <returns>
+          Devuelve la instancia de la referencia del ensamblado agregado.
+        </returns>
+      <param name="assembly">
+              Referencia del ensamblado que se va a agregar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Add(System.String)">
+      <summary>
+          Agrega la referencia del ensamblado especificando a la colección.
+        </summary>
+      <returns>
+          Devuelve la instancia de la referencia del ensamblado agregado.
+        </returns>
+      <param name="path">
+              Ruta de acceso del ensamblado que se va a agregar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Clear">
+      <summary>
+          Quita todos los objetos de la colección.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Count">
+      <summary>
+          Obtiene el número de objetos de la colección.
+        </summary>
+      <returns>
+          Entero que indica el número de objetos de la colección.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Find(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyIdentity)">
+      <summary>
+          Busca una referencia del ensamblado en la colección por la identidad del ensamblado especificado.
+        </summary>
+      <returns>
+          Devuelve la referencia del ensamblado encontrado.
+        </returns>
+      <param name="identity">
+              Identidad del ensamblado especificado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Find(System.String)">
+      <summary>
+          Busca una referencia del ensamblado en la colección por nombre sencillo.
+        </summary>
+      <returns>
+          Devuelve la referencia del ensamblado encontrado.
+        </returns>
+      <param name="name">
+              Nombre sencillo del ensamblado especificado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.FindTargetPath(System.String)">
+      <summary>
+          Busca la referencia de un ensamblado en la colección por la ruta de acceso de destino especificada.
+        </summary>
+      <returns>
+          Devuelve la referencia del ensamblado encontrado.
+        </returns>
+      <param name="targetPath">
+              Ruta de destino especificada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.GetEnumerator">
+      <summary>
+          Devuelve un enumerador que puede recorrer en iteración la colección.
+        </summary>
+      <returns>
+          Devuelve un enumerador (<see cref="T:System.Collections.IEnumerator" />).
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Item(System.Int32)">
+      <summary>
+          Obtiene el elemento en el índice especificado.
+        </summary>
+      <returns>
+          Devuelve la instancia de la referencia del ensamblado.
+        </returns>
+      <param name="index">
+              Índice de base cero de la entrada que se va a obtener.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReferenceCollection.Remove(Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyReference)">
+      <summary>
+          Quita la referencia del ensamblado especificado de la colección.
+        </summary>
+      <param name="assemblyReference">
+              Referencia del ensamblado especificado que se va a quitar.
+            </param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.BaseReference">
+      <summary>
+          Describe la funcionalidad básica común tanto para las referencias del archivo como para las referencias del ensamblado.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest">
+      <summary>
+          Representa un manifiesto de implementación ClickOnce.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference" />.
+        </summary>
+      <param name="path">
+              Ruta de acceso especificada del archivo.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.ComClasses">
+      <summary>
+          Devuelve el conjunto de las clases COM al que hace referencia el manifiesto para aplicaciones aisladas y COM sin registro.
+        </summary>
+      <returns>
+          Matriz de objetos <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ComClass" /> que representan el conjunto de las clases COM a las que hace referencia el manifiesto para aplicaciones aisladas y COM sin registro.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.IsDataFile">
+      <summary>
+          Obtiene o establece si el archivo es un archivo de datos.
+        </summary>
+      <returns>
+          Valor booleano que indica si el archivo es un archivo de datos.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.ProxyStubs">
+      <summary>
+          Devuelve el conjunto de código auxiliar del proxy al que hace referencia el manifiesto para aplicaciones aisladas y COM sin registro.
+        </summary>
+      <returns>
+          Matriz de objetos <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub" /> que representan el conjunto de código auxiliar del proxy al que hace referencia el manifiesto para aplicaciones aisladas y COM sin registro.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.TypeLibs">
+      <summary>
+          Devuelve el conjunto de bibliotecas de tipos al que hace referencia el manifiesto.
+        </summary>
+      <returns>
+          Matriz de objetos <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib" /> que representan el conjunto de las bibliotecas de tipos a las que hace referencia el manifiesto.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlComClasses">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlProxyStubs">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlTypeLibs">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference.XmlWriteableType">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Add(Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference)">
+      <summary>
+          Agrega la referencia del archivo especificando a la colección.
+        </summary>
+      <returns>
+          Devuelve el objeto de referencia del archivo agregado.
+        </returns>
+      <param name="file">
+              Referencia del archivo especificado que se va a agregar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Add(System.String)">
+      <summary>
+          Agrega la referencia del archivo especificando a la colección.
+        </summary>
+      <returns>
+          Devuelve el objeto de referencia del archivo agregado.
+        </returns>
+      <param name="path">
+              Ruta de acceso de la referencia del archivo especificado que se va a agregar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Clear">
+      <summary>
+          Quita todos los objetos de la colección.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Count">
+      <summary>
+          Devuelve el número de objetos de la colección.
+        </summary>
+      <returns>
+          El número de objetos de la colección.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.FindTargetPath(System.String)">
+      <summary>
+          Busca una referencia de archivo en la colección mediante la ruta de acceso de destino especificada.
+        </summary>
+      <returns>
+          Devuelve la referencia del archivo encontrado.
+        </returns>
+      <param name="targetPath">
+              Ruta de destino especificada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.GetEnumerator">
+      <summary>
+          Devuelve un enumerador que puede recorrer en iteración la colección.
+        </summary>
+      <returns>
+          Interfaz <see cref="T:System.Collections.IEnumerator" /> que representa un enumerador que puede recorrer en iteración la colección.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Item(System.Int32)">
+      <summary>
+          Devuelve el elemento en el índice especificado.
+        </summary>
+      <returns>
+          Devuelve el objeto de referencia del archivo.
+        </returns>
+      <param name="index">
+              Índice de base cero de la entrada que se va a obtener.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReferenceCollection.Remove(Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileReference)">
+      <summary>
+          Quita la referencia del archivo especificado de la colección.
+        </summary>
+      <param name="file">
+              Referencia del archivo especificado que se va a quitar.
+            </param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest">
+      <summary>
+          Esta clase representa la funcionalidad básica común a todos los tipos de manifiestos compatibles.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.IO.Stream,System.Boolean)">
+      <summary>
+          Lee el XML del manifiesto especificado y devuelve una representación de objeto.
+        </summary>
+      <returns>
+          Representación del objeto <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> del manifiesto. Se puede convertir en <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" /> o <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> para tener acceso a funcionalidad más específica.
+        </returns>
+      <param name="input">
+              Especifica una secuencia de entrada.
+            </param>
+      <param name="preserveStream">
+              Especifica si se conserva la secuencia de entrada en la propiedad <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> del objeto de manifiesto resultante. <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> lo utiliza para reconstituir una entrada que no está representada en la representación del objeto.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.String,System.Boolean)">
+      <summary>
+          Lee el XML del manifiesto especificado y devuelve una representación de objeto.
+        </summary>
+      <returns>
+          Representación del objeto <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> del manifiesto. Se puede convertir en <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" /> o <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> para tener acceso a funcionalidad más específica.
+        </returns>
+      <param name="path">
+              Nombre de la ruta de acceso del archivo de entrada.
+            </param>
+      <param name="preserveStream">
+              Especifica si se conserva la secuencia de entrada en la propiedad <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> del objeto de manifiesto resultante. <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> lo utiliza para reconstituir una entrada que no está representada en la representación del objeto.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.String,System.IO.Stream,System.Boolean)">
+      <summary>
+          Lee el XML del manifiesto especificado y devuelve una representación de objeto.
+        </summary>
+      <returns>
+          Representación del objeto <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> del manifiesto. Se puede convertir en <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" /> o <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> para tener acceso a funcionalidad más específica.
+        </returns>
+      <param name="manifestType">
+              Especifica el tipo esperado del manifiesto. Los valores válidos son AssemblyManifest, ApplicationManifest o DeployManifest.
+            </param>
+      <param name="input">
+              Especifica una secuencia de entrada.
+            </param>
+      <param name="preserveStream">
+              Especifica si se conserva la secuencia de entrada en la propiedad <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> del objeto de manifiesto resultante. <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> lo utiliza para reconstituir una entrada que no está representada en la representación del objeto.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestReader.ReadManifest(System.String,System.String,System.Boolean)">
+      <summary>
+          Lee el XML del manifiesto especificado y devuelve una representación de objeto.
+        </summary>
+      <returns>
+          Representación del objeto <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest" /> del manifiesto. Se puede convertir en <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest" />, <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ApplicationManifest" /> o <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.DeployManifest" /> para tener acceso a funcionalidad más específica.
+        </returns>
+      <param name="manifestType">
+              Especifica el tipo esperado del manifiesto. Los valores válidos son AssemblyManifest, ApplicationManifest o DeployManifest.
+            </param>
+      <param name="path">
+              Nombre de la ruta de acceso del archivo de entrada.
+            </param>
+      <param name="preserveStream">
+              Especifica si se conserva la secuencia de entrada en la propiedad <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.Manifest.InputStream" /> del objeto de manifiesto resultante. <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter" /> lo utiliza para reconstituir una entrada que no está representada en la representación del objeto.
+            </param>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ManifestWriter">
+      <summary>
+          Escribe una representación del objeto de un manifiesto en XML.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.GetArguments">
+      <summary>
+          Devuelve la matriz de una cadena de argumentos del mensaje.
+        </summary>
+      <returns>
+          Devuelve la matriz de una cadena de argumentos del mensaje.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Name">
+      <summary>
+          Devuelve un identificador del mensaje.
+        </summary>
+      <returns>
+          Cadena que indica el nombre del mensaje.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Text">
+      <summary>
+          Devuelve el texto del mensaje.
+        </summary>
+      <returns>
+          Cadena que indica el texto del mensaje.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessage.Type">
+      <summary>
+          Devuelve si el mensaje es un error, una advertencia o un mensaje informativo.
+        </summary>
+      <returns>
+          Objeto <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType" /> que indica el tipo de mensaje.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection.Clear">
+      <summary>
+          Quita todos los objetos de la colección.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection.ErrorCount">
+      <summary>
+          Obtiene el número de mensajes de error de la colección.
+        </summary>
+      <returns>
+          Número de los mensajes de error de la colección.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection.GetEnumerator">
+      <summary>
+          Devuelve un enumerador que puede recorrer en iteración la colección.
+        </summary>
+      <returns>
+          Devuelve un objeto <see cref="T:System.Collections.IEnumerator" /> que puede recorrer en iteración la colección.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection.Item(System.Int32)">
+      <summary>
+          Obtiene el elemento en el índice especificado.
+        </summary>
+      <returns>
+          Devuelve la instancia de la referencia del archivo.
+        </returns>
+      <param name="index">
+              Índice de base cero de la entrada que se va a obtener.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageCollection.WarningCount">
+      <summary>
+          Obtiene el número de advertencias de error de la colección.
+        </summary>
+      <returns>
+          Número de los mensajes de advertencia de la colección.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType">
+      <summary>
+          Especifica el tipo de mensaje de salida como error, advertencia o informativo.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Info">
+      <summary>
+          Indica un mensaje informativo.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Warning">
+      <summary>
+          Indica una advertencia.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.OutputMessageType.Error">
+      <summary>
+          Indica un error.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.BaseInterface">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.IID">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.Name">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.NumMethods">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.TlbId">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlBaseInterface">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlIID">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlNumMethods">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.ProxyStub.XmlTlbId">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities">
+      <summary>
+          Proporciona un conjunto de funciones de utilidades para manipular conjuntos de permisos de seguridad y firmarlos.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Clear">
+      <summary>
+          Restablece el objeto <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo" /> a su estado predeterminado de plena confianza.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.HasUnmanagedCodePermission">
+      <summary>
+          Determina si la aplicación tiene permiso para llamar al código no administrado.
+        </summary>
+      <returns>
+          Valor booleano que indica si la aplicación tiene permiso para llamar al código no administrado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.IsFullTrust">
+      <summary>
+          Determina si la aplicación es de plena confianza o de confianza parcial.
+        </summary>
+      <returns>
+          Valor booleano que indica si la aplicación es de plena confianza o de confianza parcial.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet">
+      <summary>
+          Obtiene o establece el objeto del conjunto de permisos para la confianza de la aplicación.
+        </summary>
+      <returns>
+          Objeto <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet" /> para la confianza de la aplicación.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PreserveFullTrustPermissionSet">
+      <summary>
+          Obtiene o establece si se conserva el permiso de confianza parcial cuando se establece el indicador de plena confianza.
+        </summary>
+      <returns>
+          Valor booleano que indica si se conserva el permiso de confianza parcial cuando se establece el indicador de plena confianza.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read(System.IO.Stream)">
+      <summary>
+          Lee el nivel de confianza de la aplicación en un archivo XML.
+        </summary>
+      <param name="input">
+              Especifica una secuencia de entrada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Read(System.String)">
+      <summary>
+          Lee el nivel de confianza de la aplicación en un archivo XML.
+        </summary>
+      <param name="path">
+              Nombre del archivo de entrada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.IO.Stream)">
+      <summary>
+          Lee el nivel de confianza de la aplicación en un manifiesto de la aplicación ClickOnce.
+        </summary>
+      <param name="input">
+              Especifica una secuencia de entrada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest(System.String)">
+      <summary>
+          Lee el nivel de confianza de la aplicación en un manifiesto de la aplicación ClickOnce.
+        </summary>
+      <param name="path">
+              Nombre del archivo de entrada.
+            </param>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.SameSiteAccess">
+      <summary>
+          Obtiene o establece el nivel de acceso al mismo sitio permitido y se especifica si la aplicación tiene permiso para comunicarse con el servidor desde el que se implementó.
+        </summary>
+      <returns>
+          Cadena que indica el nivel de acceso al mismo sitio permitido. Los valores pueden ser site o none.
+          
+            site especifica que la aplicación puede llamar a los servicios Web en la misma dirección URL desde la que se implementó; si se implementa desde un recurso compartido, la aplicación tiene el permiso de lectura de los archivos de ese recurso compartido.
+          
+            none especifica que la aplicación no puede tener acceso ni a los servicios Web desde la misma dirección URL desde la que se implementó ni a los archivos del recurso compartido desde el que se implementó.
+          "Application" hace referencia a la aplicación para la que se lee el manifiesto (mediante <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ReadManifest" />).
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.ToString">
+      <summary>
+          Devuelve toda la información del objeto de confianza de seguridad de la aplicación como cadena.
+        </summary>
+      <returns>
+          Cadena que contiene la información del objeto de confianza de seguridad de la aplicación.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write(System.IO.Stream)">
+      <summary>
+          Escribe el nivel de confianza de la aplicación en un archivo XML.
+        </summary>
+      <param name="output">
+              Especifica una secuencia de salida.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.Write(System.String)">
+      <summary>
+          Escribe el nivel de confianza de la aplicación en un archivo XML.
+        </summary>
+      <param name="path">
+              Nombre del archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.IO.Stream)">
+      <summary>
+          Escribe el nivel de confianza de la aplicación en un nuevo manifiesto de plantilla de la aplicación ClickOnce.
+        </summary>
+      <param name="output">
+              Especifica una secuencia de salida en la que escribir el archivo manifiesto actualizado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.IO.Stream,System.IO.Stream)">
+      <summary>
+          Actualiza un manifiesto de aplicación ClickOnce existente con el nivel de confianza especificado.
+        </summary>
+      <param name="input">
+              Especifica una secuencia de entrada que contiene el manifiesto que se va a actualizar.
+            </param>
+      <param name="output">
+              Especifica una secuencia de salida en la que escribir el archivo manifiesto actualizado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.WriteManifest(System.String)">
+      <summary>
+          Escribe el nivel de confianza de la aplicación en un manifiesto de la aplicación ClickOnce.
+        </summary>
+      <param name="path">
+              Nombre del archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.Flags">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.HelpDirectory">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.ResourceId">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.TlbId">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.Version">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlFlags">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlHelpDirectory">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlResourceId">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlTlbId">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TypeLib.XmlVersion">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode">
+      <summary>
+          Especifica la forma en la que la aplicación busca actualizaciones.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode.Background">
+      <summary>
+          Busque las actualizaciones en segundo plano, después de que se inicie la aplicación.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Build.Tasks.Deployment.ManifestUtilities.UpdateMode.Foreground">
+      <summary>
+          Busque las actualizaciones en primer plano, antes de que se inicie la aplicación.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.WindowClass">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.BeginInitialization">
+      <summary>
+          Comienza la inicialización de <see cref="T:Microsoft.Build.Tasks.Hosting.ICscHostObject" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.Compile">
+      <summary>
+          Compila el proyecto.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.EndInitialization(System.String@,System.Int32@)">
+      <summary>
+          Finaliza la inicialización de <see cref="T:Microsoft.Build.Tasks.Hosting.ICscHostObject" /> con el mensaje de error y código especificados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="errorMessage">
+              Mensaje de error.
+            </param>
+      <param name="errorCode">
+              Código de error.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.IsDesignTime">
+      <summary>
+          Devuelve un valor que indica si el entorno de desarrollo integrado (IDE) está actualmente en modo en tiempo de diseño.
+        </summary>
+      <returns>
+          
+            Es true si el entorno IDE está en modo en tiempo de diseño; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.IsUpToDate">
+      <summary>
+          Devuelve un valor que indica si el proyecto compilado está actualizado.
+        </summary>
+      <returns>
+          
+            Es true si el proyecto compilado está actualizado; de lo contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAdditionalLibPaths(System.String[])">
+      <summary>
+          Especifica directorios adicionales para buscar referencias.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="additionalLibPaths">
+              Matriz de directorios para buscar referencias.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAddModules(System.String[])">
+      <summary>
+          Especifica uno o varios módulos que van a formar parte del ensamblado.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="addModules">
+              Matriz de módulos que van a formar parte del ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAllowUnsafeBlocks(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va permitir código que utiliza la palabra clave unsafe para compilar.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="allowUnsafeBlocks">
+              
+                Es true para permitir código que utiliza la palabra clave unsafe para compilar; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetBaseAddress(System.String)">
+      <summary>
+          Especifica la dirección base preferida donde se va a cargar un archivo DLL.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="baseAddress">
+              Dirección base preferida donde se va a cargar un archivo DLL.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCheckForOverflowUnderflow(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si la aritmética de enteros que desborda los límites del tipo de datos genera una excepción en tiempo de ejecución.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="checkForOverflowUnderflow">
+              
+                Es true para que se inicie una excepción cuando la aritmética de enteros desborda los límites del tipo de datos; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCodePage(System.Int32)">
+      <summary>
+          Especifica la página de códigos que se va a utilizar para todos los archivos de código fuente en la compilación.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="codePage">
+              Página de códigos que se va a utilizar para todos los archivos de código fuente en la compilación.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDebugType(System.String)">
+      <summary>
+          Especifica el tipo de depuración.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="debugType">
+              Tipo de depuración, que puede ser full o pdbonly.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDefineConstants(System.String)">
+      <summary>
+          Especifica los símbolos del preprocesador que se van a definir.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="defineConstants">
+              Símbolos del preprocesador que se van a definir.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDelaySign(System.Boolean,System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a crear un ensamblado totalmente firmado.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="delaySignExplicitlySet">
+              
+                Es true si se establece explícitamente el valor de DelaySign; en caso contrario, es false.
+            </param>
+      <param name="delaySign">
+              
+                Es true si se desea crear un ensamblado totalmente firmado; es false si sólo se desea colocar la clave pública en el ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDisabledWarnings(System.String)">
+      <summary>
+          Especifica la lista de advertencias que se van a deshabilitar.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="disabledWarnings">
+              Lista de advertencias que se van a deshabilitar. Si hay varias advertencias, están separadas con una coma.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDocumentationFile(System.String)">
+      <summary>
+          Especifica el archivo XML en el que se van guardar los comentarios de documentación procesados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="documentationFile">
+              Cadena que contiene el nombre del archivo en el que se van a guardar los comentarios de documentación procesados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetEmitDebugInformation(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a generar información de depuración y se va a colocar en un archivo de la base de datos de programas (.pdb).
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="emitDebugInformation">
+              
+                Es true para generar información de depuración y colocarla en un archivo .pdb; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetErrorReport(System.String)">
+      <summary>
+          Especifica un valor que indica cómo se envían los errores internos del compilador a Microsoft.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="errorReport">
+              Valor que especifica cómo se envían los errores internos del compilador a Microsoft. Este valor puede ser prompt, send o none.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetFileAlignment(System.Int32)">
+      <summary>
+          Especifica el tamaño de las secciones en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="fileAlignment">
+              Tamaño de las secciones en el archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetGenerateFullPaths(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a especificar la ruta de acceso absoluta al archivo en el resultado del compilador.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="generateFullPaths">
+              
+                Es true para especificar la ruta de acceso absoluta al archivo en el resultado del compilador; es false para especificar sólo el nombre del archivo en el resultado del compilador.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyContainer(System.String)">
+      <summary>
+          Especifica el nombre del contenedor de claves criptográficas.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="keyContainer">
+              Nombre del contenedor de claves criptográficas.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyFile(System.String)">
+      <summary>
+          Especifica el nombre de archivo que contiene la clave criptográfica.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="keyFile">
+              Nombre del archivo que contiene la clave criptográfica.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLangVersion(System.String)">
+      <summary>
+          Especifica la versión de idioma que se va utilizar.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="langVersion">
+              Versión de idioma que se va utilizar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLinkResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Crea vínculos a los recursos de .NET Framework especificados en el archivo de resultados; los archivos de recursos no se colocan en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="linkResources">
+              Recursos de .NET Framework que se van a vincular al archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetMainEntryPoint(System.String,System.String)">
+      <summary>
+          Especifica la ubicación del método Main.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="targetType">
+              Formato del archivo de resultados. Este valor puede ser library, exe, module o winexe.
+            </param>
+      <param name="mainEntryPoint">
+              Ubicación del método Main.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetModuleAssemblyName(System.String)">
+      <summary>
+          Especifica un ensamblado a cuyos tipos no públicos puede obtener acceso un módulo de .NET.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="moduleAssemblyName">
+              Ensamblado a cuyos tipos no públicos puede obtener acceso un módulo de .NET.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoConfig(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a evitar que el compilador compile con el archivo csc.rsp.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="noConfig">
+              
+                Es true para evitar que el compilador compile con el archivo csc.rsp; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoStandardLib(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a evitar la importación de mscorlib.dll.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="noStandardLib">
+              
+                Es true para evitar la importación de mscorlib.dll; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOptimize(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se van a habilitar las optimizaciones.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="optimize">
+              
+                Es true para habilitar las optimizaciones; en caso contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOutputAssembly(System.String)">
+      <summary>
+          Especifica el nombre del archivo de salida.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="outputAssembly">
+              Nombre del archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPdbFile(System.String)">
+      <summary>
+          Especifica el archivo de la base de datos de programas (.pdb) en el que se va a colocar la información de depuración generada.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="pdbFile">
+              Archivo .pdb en el que se va a colocar la información de depuración generada.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPlatform(System.String)">
+      <summary>
+          Especifica la plataforma del procesador de destino del archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="platform">
+              Plataforma del procesador de destino del archivo de resultados. Este valor puede ser x86, x64 o anycpu.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetReferences(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica los elementos desde los que se va a importar la información de tipos públicos al proyecto actual.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="references">
+              Elementos desde los que se va a importar la información de tipos públicos al proyecto actual.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica los recursos de .NET Framework que se van a incrustar en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="resources">
+              Recursos de .NET Framework que se van a incrustar en el archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResponseFiles(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica los archivos de respuesta que contienen comandos para el compilador.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="responseFiles">
+              Archivos de respuesta que contienen comandos para el compilador.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetSources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica uno o varios archivos de código fuente de Visual C#.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="sources">
+              Uno o varios archivos de código fuente de Visual C#.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTargetType(System.String)">
+      <summary>
+          Especifica el formato del archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="targetType">
+              Formato del archivo de resultados. Este valor puede ser library, exe, module o winexe.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTreatWarningsAsErrors(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se van a tratar todas las advertencias como errores.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="treatWarningsAsErrors">
+              
+                Es true para tratar todas las advertencias como errores; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningLevel(System.Int32)">
+      <summary>
+          Especifica el nivel de advertencia, de 0 a 4.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="warningLevel">
+              Nivel de advertencia, de 0 a 4.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsAsErrors(System.String)">
+      <summary>
+          Especifica una lista de advertencias que se van a tratar como errores.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="warningsAsErrors">
+              Lista de advertencias que se van a tratar como errores.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsNotAsErrors(System.String)">
+      <summary>
+          Especifica una lista de advertencias que no se van a tratar como errores.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="warningsNotAsErrors">
+              Lista de advertencias que no se van a tratar como errores.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Icon(System.String)">
+      <summary>
+          Especifica un archivo .ico que se va a insertar en el ensamblado.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="win32Icon">
+              Archivo .ico que se va a insertar en el ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Resource(System.String)">
+      <summary>
+          Especifica un archivo de recursos (.res) de Win32 que se va a insertar en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="win32Resource">
+              Archivo de recursos (.res) de Win32 que se va a insertar en el archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.BeginInitialization">
+      <summary>
+          Comienza la inicialización de <see cref="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.Compile">
+      <summary>
+          Compila el proyecto.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.EndInitialization">
+      <summary>
+          Finaliza la inicialización de <see cref="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.IsDesignTime">
+      <summary>
+          Devuelve un valor que indica si el entorno de desarrollo integrado (IDE) está actualmente en modo en tiempo de diseño.
+        </summary>
+      <returns>
+          
+            Es true si el entorno IDE está en modo en tiempo de diseño; en caso contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.IsUpToDate">
+      <summary>
+          Devuelve un valor que indica si el proyecto compilado está actualizado.
+        </summary>
+      <returns>
+          
+            Es true si el proyecto compilado está actualizado; de lo contrario, es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetAdditionalLibPaths(System.String[])">
+      <summary>
+          Especifica directorios adicionales para buscar referencias.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="additionalLibPaths">
+              Matriz de directorios para buscar referencias.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetAddModules(System.String[])">
+      <summary>
+          Especifica uno o varios módulos que van a formar parte del ensamblado.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="addModules">
+              Matriz de módulos que van a formar parte del ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetBaseAddress(System.String,System.String)">
+      <summary>
+          Especifica la dirección base preferida donde se va a cargar un archivo DLL.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="targetType">
+              Formato del archivo de resultados. Este valor puede ser library, exe, module o winexe.
+            </param>
+      <param name="baseAddress">
+              Dirección base preferida donde se va a cargar un archivo DLL.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetCodePage(System.Int32)">
+      <summary>
+          Especifica la página de códigos que se va a utilizar para todos los archivos de código fuente en la compilación.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="codePage">
+              Página de códigos que se va a utilizar para todos los archivos de código fuente en la compilación.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDebugType(System.Boolean,System.String)">
+      <summary>
+          Especifica el tipo de depuración.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="emitDebugInformation">
+              
+                Es true para generar información de depuración y colocarla en un archivo .pdb; de lo contrario, es false.
+            </param>
+      <param name="debugType">
+              Tipo de depuración, que puede ser full o pdbonly.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDefineConstants(System.String)">
+      <summary>
+          Especifica los símbolos del preprocesador que se van a definir.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="defineConstants">
+              Símbolos del preprocesador que se van a definir.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDelaySign(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a crear un ensamblado totalmente firmado.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="delaySign">
+              
+                Es true si se desea crear un ensamblado totalmente firmado; es false si sólo se desea colocar la clave pública en el ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDisabledWarnings(System.String)">
+      <summary>
+          Especifica la lista de advertencias que se van a deshabilitar.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="disabledWarnings">
+              Lista de advertencias que se van a deshabilitar. Si hay varias advertencias, están separadas con una coma.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetDocumentationFile(System.String)">
+      <summary>
+          Especifica el archivo XML en el que se van guardar los comentarios de documentación procesados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="documentationFile">
+              Cadena que contiene el nombre del archivo en el que se van a guardar los comentarios de documentación procesados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetErrorReport(System.String)">
+      <summary>
+          Especifica un valor que indica cómo se envían los errores internos del compilador a Microsoft.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="errorReport">
+              Valor que especifica cómo se envían los errores internos del compilador a Microsoft. Este valor puede ser prompt, send o none.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetFileAlignment(System.Int32)">
+      <summary>
+          Especifica el tamaño de las secciones en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="fileAlignment">
+              Tamaño de las secciones en el archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetGenerateDocumentation(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a generar documentación y se va a colocar en un archivo XML con el nombre del archivo ejecutable o de la biblioteca que está creando el compilador.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="generateDocumentation">
+              
+                Es true para generar un archivo de documentación; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetImports(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica los espacios de nombres que se van a importar.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="importsList">
+              Espacios de nombres que se van a importar.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetKeyContainer(System.String)">
+      <summary>
+          Especifica el nombre del contenedor de claves criptográficas.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="keyContainer">
+              Nombre del contenedor de claves criptográficas.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetKeyFile(System.String)">
+      <summary>
+          Especifica el nombre de archivo que contiene la clave criptográfica.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="keyFile">
+              Nombre del archivo que contiene la clave criptográfica.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetLinkResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Crea vínculos a los recursos de .NET Framework especificados en el archivo de resultados; los archivos de recursos no se colocan en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="linkResources">
+              Recursos de .NET Framework que se van a vincular al archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetMainEntryPoint(System.String)">
+      <summary>
+          Especifica la clase o el módulo que contiene la ubicación del procedimiento Sub Main.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="mainEntryPoint">
+              Clase o módulo que contiene la ubicación del procedimiento Sub Main.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoConfig(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a evitar que el compilador compile con el archivo vbc.rsp.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="noConfig">
+              
+                Es true para evitar que el compilador compile con el archivo vbc.rsp; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoStandardLib(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a evitar la importación de mscorlib.dll.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="noStandardLib">
+              
+                Es true para evitar la importación de mscorlib.dll; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetNoWarnings(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si el compilador suprime todas las advertencias.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="noWarnings">
+              
+                Es true para suprimir todas las advertencias; en caso contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptimize(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se van a habilitar las optimizaciones.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="optimize">
+              
+                Es true para habilitar las optimizaciones; en caso contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionCompare(System.String)">
+      <summary>
+          Especifica un valor que indica cómo el compilador realiza las comparaciones de cadenas.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="optionCompare">
+              Valor que indica cómo el compilador realiza las comparaciones de cadenas. El valor debe ser binary o text.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionExplicit(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se requiere la declaración explícita de las variables.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="optionExplicit">
+              
+                Es true si se requiere la declaración explícita de las variables; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionStrict(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si el compilador impone la semántica estricta de tipos para restringir las conversiones implícitas de los tipos.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="optionStrict">
+              
+                Es true para imponer la semántica estricta de tipos y restringir las conversiones implícitas de los tipos; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOptionStrictType(System.String)">
+      <summary>
+          Especifica que el compilador debe advertir cuando no se respeta la semántica estricta del lenguaje.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="optionStrictType">
+              Cadena pasada al parámetro OptionStrictType.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetOutputAssembly(System.String)">
+      <summary>
+          Especifica el nombre del archivo de salida.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="outputAssembly">
+              Nombre del archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetPlatform(System.String)">
+      <summary>
+          Especifica la plataforma del procesador de destino del archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="platform">
+              Plataforma del procesador de destino del archivo de resultados. Este valor puede ser x86, x64, Itanium o anycpu.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetReferences(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica los elementos desde los que se va a importar la información de tipos públicos al proyecto actual.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="references">
+              Elementos desde los que se va a importar la información de tipos públicos al proyecto actual.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetRemoveIntegerChecks(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se van deshabilitar las comprobaciones de los errores de desbordamiento de enteros.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="removeIntegerChecks">
+              
+                Es true para quitar las comprobaciones de los errores de desbordamiento de enteros; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetResources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica los recursos de .NET Framework que se van a incrustar en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="resources">
+              Recursos de .NET Framework que se van a incrustar en el archivo de resultados.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetResponseFiles(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica los archivos de respuesta que contienen comandos para el compilador.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="responseFiles">
+              Archivos de respuesta que contienen comandos para el compilador.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetRootNamespace(System.String)">
+      <summary>
+          Especifica el espacio de nombres raíz para todas las declaraciones de tipo.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="rootNamespace">
+              Espacio de nombres raíz para todas las declaraciones de tipo.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetSdkPath(System.String)">
+      <summary>
+          Especifica la ubicación de mscorlib.dll y microsoft.visualbasic.dll.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="sdkPath">
+              Ubicación de mscorlib.dll y microsoft.visualbasic.dll.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetSources(Microsoft.Build.Framework.ITaskItem[])">
+      <summary>
+          Especifica uno o varios archivos de código fuente de Visual Basic.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="sources">
+              Uno o varios archivos de código fuente de Visual Basic.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTargetCompactFramework(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se va a establecer el destino de .NET Compact Framework.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="targetCompactFramework">
+              
+                Es true para establecer el destino de .NET Compact Framework; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTargetType(System.String)">
+      <summary>
+          Especifica el formato del archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="targetType">
+              Formato del archivo de resultados. Este valor puede ser library, exe, module o winexe.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetTreatWarningsAsErrors(System.Boolean)">
+      <summary>
+          Especifica un valor que indica si se van a tratar todas las advertencias como errores.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="treatWarningsAsErrors">
+              
+                Es true para tratar todas las advertencias como errores; de lo contrario, es false.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWarningsAsErrors(System.String)">
+      <summary>
+          Especifica una lista de advertencias que se van a tratar como errores.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="warningsAsErrors">
+              Lista de advertencias que se van a tratar como errores.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWarningsNotAsErrors(System.String)">
+      <summary>
+          Especifica una lista de advertencias que no se van a tratar como errores.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="warningsNotAsErrors">
+              Lista de advertencias que no se van a tratar como errores.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWin32Icon(System.String)">
+      <summary>
+          Especifica un archivo .ico que se va a insertar en el ensamblado.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="win32Icon">
+              Archivo .ico que se va a insertar en el ensamblado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject.SetWin32Resource(System.String)">
+      <summary>
+          Especifica un archivo de recursos (.res) de Win32 que se va a insertar en el archivo de resultados.
+        </summary>
+      <returns>
+          
+            Es true si el método se ha realizado correctamente, en caso contrario, es false.
+        </returns>
+      <param name="win32Resource">
+              Archivo de recursos (.res) de Win32 que se va a insertar en el archivo de resultados.
+            </param>
+    </member>
+  </members>
+</doc>

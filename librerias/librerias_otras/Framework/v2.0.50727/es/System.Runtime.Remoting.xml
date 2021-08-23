@@ -1,0 +1,2668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.Remoting</name>
+  </assembly>
+  <members>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSink">
+      <summary>
+          Proporciona la implementación de un receptor del formateador de cliente que utiliza el objeto <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.#ctor(System.Runtime.Remoting.Channels.IClientChannelSink)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSink" />.
+        </summary>
+      <param name="nextSink">
+              Siguiente <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" /> en la cadena de receptores. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)">
+      <summary>
+          Procesa el mensaje proporcionado de manera asincrónica.
+        </summary>
+      <returns>
+          <see cref="T:System.Runtime.Remoting.Messaging.IMessageCtrl" /> que proporciona una manera de controlar el mensaje asincrónico una vez que se ha enviado.
+        </returns>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+      <param name="replySink">
+              Receptor que recibirá la respuesta al mensaje proporcionado. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.AsyncProcessRequest(System.Runtime.Remoting.Channels.IClientChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>
+          Solicita el procesamiento asincrónico de una llamada a un método en el receptor actual.
+        </summary>
+      <param name="sinkStack">
+              Pila de receptores de canal que llama al receptor actual. 
+            </param>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a agregar al encabezado del mensaje que se envía al servidor. 
+            </param>
+      <param name="stream">
+              Secuencia dirigida al receptor de transporte. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>
+          Solicita el procesamiento asincrónico de una respuesta a una llamada a un método en el receptor actual.
+        </summary>
+      <param name="sinkStack">
+              Pila de receptores que ha llamado al receptor actual. 
+            </param>
+      <param name="state">
+              Información asociada al receptor actual, generada en la solicitud y necesaria en la respuesta. 
+            </param>
+      <param name="headers">
+              Encabezados recuperados a partir de la secuencia de respuesta del servidor. 
+            </param>
+      <param name="stream">
+              Secuencia que devuelve el receptor de transporte. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.GetRequestStream(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>
+          Devuelve el objeto <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje especificado.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje especificado.
+        </returns>
+      <param name="msg">
+              <see cref="T:System.Runtime.Remoting.Messaging.IMethodCallMessage" /> que contiene información detallada sobre la llamada al método. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a agregar al encabezado del mensaje que se envía al servidor. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.NextChannelSink">
+      <summary>
+          Obtiene el siguiente <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" /> en la cadena de receptores.
+        </summary>
+      <returns>
+          Siguiente <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" /> en la cadena de receptores.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.NextSink">
+      <summary>
+          Obtiene el siguiente <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" /> en la cadena de receptores.
+        </summary>
+      <returns>
+          Siguiente <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" /> en la cadena de receptores.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.ProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>
+          Solicita el procesamiento de mensajes del receptor actual.
+        </summary>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+      <param name="requestHeaders">
+              Encabezados que se van a agregar al encabezado del mensaje que se envía al servidor. 
+            </param>
+      <param name="requestStream">
+              Secuencia dirigida al receptor de transporte. 
+            </param>
+      <param name="responseHeaders">
+              El resultado que devuelve este método contiene una interfaz <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> que aloja los encabezados devueltos por el servidor. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseStream">
+              Cuando este método finaliza, contiene un objeto <see cref="T:System.IO.Stream" /> devuelto por el receptor de transporte. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.Properties">
+      <summary>
+          Obtiene una <see cref="T:System.Collections.IDictionary" /> de las propiedades del receptor de canal actual.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Collections.IDictionary" /> de propiedades del receptor de canales actual.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)">
+      <summary>
+          Procesa el mensaje proporcionado de manera sincrónica.
+        </summary>
+      <returns>
+          Respuesta al mensaje procesado.
+        </returns>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider">
+      <summary>
+          Proporciona la implementación para el proveedor de receptores de formateador de cliente binario.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" /> con valores predeterminados.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" /> con las propiedades y datos del proveedor especificados.
+        </summary>
+      <param name="properties">
+              Interfaz <see cref="T:System.Collections.IDictionary" /> de propiedades de configuración que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" />. 
+            </param>
+      <param name="providerData">
+              Interfaz <see cref="T:System.Collections.ICollection" /> de objetos <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> que contienen datos del proveedor que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelSender,System.String,System.Object)">
+      <summary>
+          Crea una cadena de receptores.
+        </summary>
+      <returns>
+          Primer receptor de la cadena de receptores de canal recién formada o null, que indica que este proveedor no puede o no podrá proporcionar una conexión para este extremo.
+        </returns>
+      <param name="channel">
+              Canal para el que se construye esta cadena de receptores. 
+            </param>
+      <param name="url">
+              Dirección URL del objeto al que conectarse o dirección URI de canal para el objeto de destino. 
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos de canal que describe un canal del servidor remoto. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryClientFormatterSinkProvider.Next">
+      <summary>
+          Obtiene o establece la siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> de la cadena de proveedores de receptores.
+        </summary>
+      <returns>
+          Siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> de la cadena de proveedores de receptores.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink">
+      <summary>
+          Proporciona la implementación de un receptor de formateador del servidor que utiliza <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.#ctor(System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol,System.Runtime.Remoting.Channels.IServerChannelSink,System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" />.
+        </summary>
+      <param name="protocol">
+              <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol" /> que se utilizará con la instancia actual de <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" />. 
+            </param>
+      <param name="nextSink">
+              Siguiente receptor de la cadena de receptores de canal. 
+            </param>
+      <param name="receiver">
+              Indica el canal que recibirá los mensajes serializados mediante la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>
+          Solicita el procesamiento de la respuesta desde una llamada de método enviada de forma asincrónica.
+        </summary>
+      <param name="sinkStack">
+              Pila de receptores que se dirige de vuelta al receptor de transporte de servidor. 
+            </param>
+      <param name="state">
+              Información asociada al receptor actual, generada en la solicitud y necesaria en la respuesta. 
+            </param>
+      <param name="msg">
+              Mensaje de respuesta. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a agregar al mensaje devuelto que se dirige al cliente. 
+            </param>
+      <param name="stream">
+              Secuencia que se devuelve al receptor de transporte. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>
+          Devuelve <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje de respuesta proporcionado.
+        </summary>
+      <returns>
+          <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje de respuesta proporcionado.
+        </returns>
+      <param name="sinkStack">
+              Pila de receptores que se dirige de vuelta al receptor de transporte de servidor. 
+            </param>
+      <param name="state">
+              Información asociada al receptor actual, generada en la solicitud y necesaria en la respuesta. 
+            </param>
+      <param name="msg">
+              Mensaje de respuesta que se va a serializar. 
+            </param>
+      <param name="headers">
+              Encabezados que van a poner en la secuencia de respuesta al cliente. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.NextChannelSink">
+      <summary>
+          Obtiene el siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> en la cadena de receptores.
+        </summary>
+      <returns>
+          Siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> en la cadena de receptores.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>
+          Solicita el procesamiento de mensajes del receptor actual.
+        </summary>
+      <returns>
+          Valor de estado de <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> que proporciona información sobre cómo se procesa el mensaje.
+        </returns>
+      <param name="sinkStack">
+              Pila de receptores de canal que llama al receptor actual. 
+            </param>
+      <param name="requestMsg">
+              Mensaje que contiene la solicitud. 
+            </param>
+      <param name="requestHeaders">
+              Encabezados que se recuperan del mensaje entrante del cliente. 
+            </param>
+      <param name="requestStream">
+              Secuencia que necesita procesarse y pasarse al receptor de deserialización. 
+            </param>
+      <param name="responseMsg">
+              El resultado que devuelve este método contiene un <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> con el mensaje de respuesta. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseHeaders">
+              Cuando este método devuelve, contiene <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> con los encabezados que se van a agregar al mensaje devuelto que se dirige al cliente. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseStream">
+              Cuando este método finaliza, contiene un <see cref="T:System.IO.Stream" /> dirigido al receptor de transporte. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Properties">
+      <summary>
+          Obtiene una <see cref="T:System.Collections.IDictionary" /> de las propiedades del receptor de canal actual.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Collections.IDictionary" /> con las propiedades del receptor de canal actual.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.TypeFilterLevel">
+      <summary>
+          Obtiene o establece el valor de TypeFilterLevel de la deserialización automática que realiza BinaryServerFormatterSink.
+        </summary>
+      <returns>
+          El objeto TypeFilterLevel que representa el nivel actual de deserialización automática.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol">
+      <summary>
+          Especifica el protocolo que se va a utilizar con la clase <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSink" />.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol.Http">
+      <summary>
+          Indica que el receptor de formateador actual utiliza el protocolo HTTP y, por lo tanto, requiere un procesamiento especial.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.BinaryServerFormatterSink.Protocol.Other">
+      <summary>
+          Indica que con el receptor de formateador actual se utiliza un protocolo que no es HTTP.
+        </summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider">
+      <summary>
+          Proporciona la implementación para el proveedor de receptores de canal de formateador de servidor que utiliza <see cref="T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" /> con valores predeterminados.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" /> con propiedades y datos del proveedor especificados.
+        </summary>
+      <param name="properties">
+              <see cref="T:System.Collections.IDictionary" /> de las propiedades de configuración que se va a usar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" />. 
+            </param>
+      <param name="providerData">
+              <see cref="T:System.Collections.ICollection" /> de <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> que se va a usar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>
+          Crea una cadena de receptores.
+        </summary>
+      <returns>
+          Primer receptor de la cadena de receptores de canal recién formada.
+        </returns>
+      <param name="channel">
+              Canal para el que se va a crear la cadena de receptores de canal. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)">
+      <summary>
+          Devuelve los datos de canal del canal al que está asociado el receptor actual.
+        </summary>
+      <param name="channelData">
+              Objeto <see cref="T:System.Runtime.Remoting.Channels.IChannelDataStore" /> en el que se van a devolver los datos del canal. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.Next">
+      <summary>
+          Obtiene o establece el siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> de la cadena de proveedores de receptores.
+        </summary>
+      <returns>
+          Siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> de la cadena de proveedores de receptores.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider.TypeFilterLevel">
+      <summary>
+          Obtiene o establece el valor de TypeFilterLevel de la deserialización automática que realiza BinaryServerFormatterSink.
+        </summary>
+      <returns>
+          El objeto TypeFilterLevel que representa el nivel actual de deserialización automática.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.CommonTransportKeys">
+      <summary>
+          Claves de transporte asociadas a los valores habituales que utilizan los canales.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.CommonTransportKeys.#ctor"></member>
+    <member name="F:System.Runtime.Remoting.Channels.CommonTransportKeys.ConnectionId">
+      <summary>
+          Clave de transporte asociada a un identificador único asignado a cada conexión del socket de entrada.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.CommonTransportKeys.IPAddress">
+      <summary>
+          Clave de transporte asociada a la dirección IP desde la que llegó una solicitud de entrada.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.CommonTransportKeys.RequestUri">
+      <summary>
+          Clave de transporte asociada a la dirección URI que realizó la solicitud.
+        </summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection">
+      <summary>
+          La interfaz <see cref="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" /> proporciona métodos que indican si el cliente está autorizado para conectarse en el canal actual basándose en la dirección de red del cliente y la identidad del usuario.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingEndPointAuthorized(System.Net.EndPoint)">
+      <summary>
+          Obtiene un valor booleano que indica si la dirección de red del cliente está autorizada para conectarse en el canal actual.
+        </summary>
+      <returns>
+          
+            Es true si la dirección de red del cliente está autorizada; en caso contrario, es false.
+        </returns>
+      <param name="endPoint">
+              <see cref="T:System.Net.EndPoint" /> que identifica la dirección de red del cliente.
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingIdentityAuthorized(System.Security.Principal.IIdentity)">
+      <summary>
+          Obtiene un valor booleano que indica si la identidad de usuario del cliente está autorizada para conectarse en el canal actual.
+        </summary>
+      <returns>
+          
+            Es true si la identidad de usuario del cliente está autorizada; en caso contrario, es false.
+        </returns>
+      <param name="identity">
+              <see cref="T:System.Security.Principal.IIdentity" /> que representa la identidad de usuario del cliente.
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapClientFormatterSink">
+      <summary>
+          Proporciona la implementación de un receptor del formateador de cliente que utiliza el objeto <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.#ctor(System.Runtime.Remoting.Channels.IClientChannelSink)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSink" />.
+        </summary>
+      <param name="nextSink">
+              Siguiente receptor de la cadena de receptores de canal. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.AsyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Messaging.IMessageSink)">
+      <summary>
+          Procesa el mensaje proporcionado de manera asincrónica.
+        </summary>
+      <returns>
+          <see cref="T:System.Runtime.Remoting.Messaging.IMessageCtrl" /> que proporciona una manera de controlar el mensaje asincrónico una vez que se ha enviado.
+        </returns>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+      <param name="replySink">
+              Receptor que recibirá la respuesta al mensaje proporcionado. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.AsyncProcessRequest(System.Runtime.Remoting.Channels.IClientChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>
+          Solicita el procesamiento asincrónico de una llamada a un método en el receptor actual.
+        </summary>
+      <param name="sinkStack">
+              Pila de receptores de canal que llama al receptor actual. 
+            </param>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a agregar al encabezado del mensaje que se envía al servidor. 
+            </param>
+      <param name="stream">
+              Secuencia dirigida al receptor de transporte. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>
+          Solicita el procesamiento asincrónico de una respuesta a una llamada a un método en el receptor actual.
+        </summary>
+      <param name="sinkStack">
+              Pila de receptores que ha llamado al receptor actual. 
+            </param>
+      <param name="state">
+              Estado asociado al receptor actual. 
+            </param>
+      <param name="headers">
+              Encabezados recuperados de la secuencia de respuesta del servidor. 
+            </param>
+      <param name="stream">
+              Secuencia que devuelve el receptor de transporte. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.GetRequestStream(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>
+          Devuelve el objeto <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje especificado.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje especificado.
+        </returns>
+      <param name="msg">
+              <see cref="T:System.Runtime.Remoting.Messaging.IMethodCallMessage" /> que contiene información detallada sobre la llamada al método. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a agregar al encabezado del mensaje que se envía al servidor. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSink.NextChannelSink">
+      <summary>
+          Obtiene el siguiente <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" /> en la cadena de receptores.
+        </summary>
+      <returns>
+          Siguiente <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSink" /> en la cadena de receptores.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSink.NextSink">
+      <summary>
+          Obtiene el siguiente <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" /> en la cadena de receptores.
+        </summary>
+      <returns>
+          Siguiente <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" /> en la cadena de receptores.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.ProcessMessage(System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>
+          Solicita el procesamiento de mensajes del receptor actual.
+        </summary>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+      <param name="requestHeaders">
+              Encabezados que se van a agregar al encabezado del mensaje que se envía al servidor. 
+            </param>
+      <param name="requestStream">
+              Secuencia dirigida al receptor de transporte. 
+            </param>
+      <param name="responseHeaders">
+              El resultado que devuelve este método contiene una interfaz <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> que aloja los encabezados devueltos por el servidor. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseStream">
+              Cuando este método finaliza, contiene un objeto <see cref="T:System.IO.Stream" /> devuelto por el receptor de transporte. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSink.Properties">
+      <summary>
+          Obtiene una <see cref="T:System.Collections.IDictionary" /> de las propiedades del receptor de canal actual.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Collections.IDictionary" /> con las propiedades del receptor de canales actual.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSink.SyncProcessMessage(System.Runtime.Remoting.Messaging.IMessage)">
+      <summary>
+          Procesa el mensaje proporcionado de manera sincrónica.
+        </summary>
+      <returns>
+          Respuesta al mensaje procesado.
+        </returns>
+      <param name="msg">
+              Mensaje que se va a procesar. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider">
+      <summary>
+          Proporciona la implementación para el proveedor de receptores de formato de cliente.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> con valores predeterminados.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" /> con las propiedades y datos del proveedor especificados.
+        </summary>
+      <param name="properties">
+              Interfaz <see cref="T:System.Collections.IDictionary" /> de propiedades de configuración que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />. 
+            </param>
+      <param name="providerData">
+              Interfaz <see cref="T:System.Collections.ICollection" /> de datos del proveedor que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelSender,System.String,System.Object)">
+      <summary>
+          Crea una cadena de receptores.
+        </summary>
+      <returns>
+          Primer receptor de la cadena de receptores de canal recién formada o null, que indica que este proveedor no puede o no podrá proporcionar una conexión para este extremo.
+        </returns>
+      <param name="channel">
+              Canal para el que se construye esta cadena de receptores. 
+            </param>
+      <param name="url">
+              Dirección URL del objeto al que conectarse o dirección URI de canal para el objeto de destino. 
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos de canal que describe un canal del servidor remoto. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider.Next">
+      <summary>
+          Obtiene o establece la siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> de la cadena de proveedores de receptores.
+        </summary>
+      <returns>
+          Siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> de la cadena de proveedores de receptores.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink">
+      <summary>
+          Proporciona la implementación de un receptor del formateador del servidor que utiliza el objeto <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.#ctor(System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol,System.Runtime.Remoting.Channels.IServerChannelSink,System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />.
+        </summary>
+      <param name="protocol">
+              Enumeración <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol" /> que se utilizará con la instancia actual de <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />. 
+            </param>
+      <param name="nextSink">
+              Siguiente receptor de la cadena de receptores de canal. 
+            </param>
+      <param name="receiver">
+              Indica el canal que recibirá los mensajes serializados mediante la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>
+          Solicita que el receptor actual procese la respuesta de una llamada a un método enviada de forma asincrónica.
+        </summary>
+      <param name="sinkStack">
+              Pila de receptores dirigida de vuelta al receptor de transporte de servidor. 
+            </param>
+      <param name="state">
+              Información asociada al receptor actual, generada en la solicitud y necesaria en la respuesta. 
+            </param>
+      <param name="msg">
+              Mensaje de respuesta. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a agregar al encabezado del mensaje devuelto al cliente. 
+            </param>
+      <param name="stream">
+              Secuencia que se devuelve al receptor de transporte. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>
+          Devuelve <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje de respuesta proporcionado.
+        </summary>
+      <returns>
+          <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje de respuesta proporcionado.
+        </returns>
+      <param name="sinkStack">
+              Pila de receptores dirigida de vuelta al receptor de transporte de servidor. 
+            </param>
+      <param name="state">
+              Información asociada al receptor actual, generada en la solicitud y necesaria en la respuesta. 
+            </param>
+      <param name="msg">
+              Mensaje de respuesta que se va a serializar. 
+            </param>
+      <param name="headers">
+              Encabezados que van a poner en la secuencia de respuesta al cliente. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.NextChannelSink">
+      <summary>
+          Obtiene la siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> de la cadena de receptores.
+        </summary>
+      <returns>
+          Siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> de la cadena de receptores.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>
+          Solicita el procesamiento de mensajes del receptor actual.
+        </summary>
+      <returns>
+          Valor de estado de <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> que proporciona información sobre cómo se procesa el mensaje.
+        </returns>
+      <param name="sinkStack">
+              Pila de receptores que transporta el mensaje. 
+            </param>
+      <param name="requestMsg">
+              Mensaje que contiene la solicitud. 
+            </param>
+      <param name="requestHeaders">
+              Encabezados recuperados del mensaje de entrada del cliente. 
+            </param>
+      <param name="requestStream">
+              Secuencia que necesita procesarse y pasarse al receptor de deserialización. 
+            </param>
+      <param name="responseMsg">
+              Cuando este método finaliza, contiene una interfaz <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> con el mensaje de respuesta. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseHeaders">
+              Cuando este método finaliza, contiene una interfaz <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> con los encabezados que se van a agregar al encabezado del mensaje devuelto al cliente. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseStream">
+              Cuando este método finaliza, contiene <see cref="T:System.IO.Stream" /> que se dirige de vuelta al receptor de transporte. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Properties">
+      <summary>
+          Obtiene una interfaz <see cref="T:System.Collections.IDictionary" /> de propiedades del receptor de canal actual.
+        </summary>
+      <returns>
+          Interfaz <see cref="T:System.Collections.IDictionary" /> de propiedades del receptor de canal actual. Para obtener más información, vea Channel and Formatter Configuration Properties.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSink.TypeFilterLevel">
+      <summary>
+          Obtiene o establece el valor TypeFilterLevel de la deserialización automática realizada por SoapServerFormatterSink.
+        </summary>
+      <returns>
+          Objeto TypeFilterLevel que representa el nivel actual de deserialización automática.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol">
+      <summary>
+          Especifica el protocolo que se va a utilizar con la clase <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSink" />.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol.Http">
+      <summary>
+          Indica que el receptor de formateador actual utiliza el protocolo HTTP y, por lo tanto, requiere un procesamiento especial.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SoapServerFormatterSink.Protocol.Other">
+      <summary>
+          Indica que con el receptor de formateador actual se utiliza un protocolo que no es HTTP.
+        </summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider">
+      <summary>
+          Proporciona la implementación para el proveedor de receptores del canal de formateadores del servidor que utiliza <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" /> con valores predeterminados.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider" /> con las propiedades y datos del proveedor especificados.
+        </summary>
+      <param name="properties">
+              Interfaz <see cref="T:System.Collections.IDictionary" /> de propiedades de configuración que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />. 
+            </param>
+      <param name="providerData">
+              Interfaz <see cref="T:System.Collections.ICollection" /> de datos del proveedor que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.SoapClientFormatterSinkProvider" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>
+          Crea una cadena de receptores.
+        </summary>
+      <returns>
+          Primer receptor de la cadena de receptores de canal recién formada.
+        </returns>
+      <param name="channel">
+              Canal para el que se va a crear la cadena de receptores de canal. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)">
+      <summary>
+          Devuelve los datos de canal del canal al que está asociado el receptor actual.
+        </summary>
+      <param name="channelData">
+              Interfaz <see cref="T:System.Runtime.Remoting.Channels.IChannelDataStore" /> donde se van a devolver los datos del canal. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.Next">
+      <summary>
+          Obtiene o establece la siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> de la cadena del proveedor de receptores.
+        </summary>
+      <returns>
+          Siguiente interfaz <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> de la cadena de proveedores de receptores.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.SoapServerFormatterSinkProvider.TypeFilterLevel">
+      <summary>
+          Obtiene o establece el valor TypeFilterLevel de la deserialización automática realizada por SoapServerFormatterSink.
+        </summary>
+      <returns>
+          Objeto TypeFilterLevel que representa el nivel actual de deserialización automática.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.SocketCachePolicy">
+      <summary>
+          Especifica la directiva para eliminar clientes de la caché que mantienen los clientes remotos.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SocketCachePolicy.Default">
+      <summary>
+          Quitar un socket de la caché transcurrido un período fijo después de la última vez que se utilizó.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Channels.SocketCachePolicy.AbsoluteTimeout">
+      <summary>
+          Quitar un socket de la caché transcurrido un período fijo después de su creación.
+        </summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpChannel">
+      <summary>
+          Implementa un canal de cliente para llamadas remotas que utiliza el protocolo HTTP para transmitir los mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> con las propiedades de configuración y receptores especificados.
+        </summary>
+      <param name="properties">
+              Colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que los canales de cliente y servidor van a utilizar. 
+            </param>
+      <param name="clientSinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> que va a utilizar el canal de cliente. 
+            </param>
+      <param name="serverSinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal de servidor.
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Se ha aplicado un formato incorrecto a una propiedad de configuración. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.#ctor(System.Int32)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> con un canal de servidor que realiza la escucha en el puerto especificado.
+        </summary>
+      <param name="port">
+              El puerto donde el canal de servidor realiza la escucha.
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.AddHookChannelUri(System.String)">
+      <summary>
+          Agrega el URI en el que el enlace del canal debe permanecer a la escucha.
+        </summary>
+      <param name="channelUri">
+              Siempre debería ser una referencia null (Nothing en Visual Basic) para <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelData">
+      <summary>
+          Obtiene los datos específicos del canal.
+        </summary>
+      <returns>
+          Datos del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Entero que representa la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelScheme">
+      <summary>
+          Obtiene el tipo de agente de escucha que se va a enlazar (por ejemplo, "http").
+        </summary>
+      <returns>
+          Tipo de agente de escucha que se va a enlazar.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.ChannelSinkChain">
+      <summary>
+          Obtiene la cadena de receptores de canal que utiliza el canal actual.
+        </summary>
+      <returns>
+          Cadena de receptores de canal que utiliza el canal actual.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>
+          Devuelve un receptor de mensajes de canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </summary>
+      <returns>
+          Receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </returns>
+      <param name="url">
+              Dirección URL a la que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos del canal del host remoto al que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una dirección URI del nuevo receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.GetUrlsForUri(System.String)">
+      <summary>
+          Devuelve una matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> actual.
+        </summary>
+      <returns>
+          Matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> actual.
+        </returns>
+      <param name="objectURI">
+              URI del objeto para el que se requiere la dirección URL. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.IsSecured">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el canal actual es seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la instancia actual es segura.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.Item(System.Object)">
+      <summary>
+          Devuelve la propiedad de canal especificada.
+        </summary>
+      <returns>
+          <see cref="T:System.Object" /> que representa la propiedad de canal especificada por <paramref name="key" />.
+        </returns>
+      <param name="key">
+              Clave de la propiedad de canal que se va a recuperar.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.Keys">
+      <summary>
+          Obtiene una <see cref="T:System.Collections.ICollection" /> de claves a la que se asocian las propiedades del canal.
+        </summary>
+      <returns>
+          <see cref="T:System.Collections.ICollection" /> de claves a la que se asocian las propiedades del canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal actual o null si la dirección URL especificada no es una dirección URL de HTTP.
+        </returns>
+      <param name="url">
+              Dirección URL de la que se extrae la dirección URI del objeto conocido remoto. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene un objeto <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.Properties">
+      <summary>
+          Obtiene una interfaz <see cref="T:System.Collections.IDictionary" /> de las propiedades del canal asociadas al canal actual.
+        </summary>
+      <returns>
+          <see cref="T:System.Collections.IDictionary" /> de las propiedades del canal asociadas al canal actual.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.StartListening(System.Object)">
+      <summary>
+          Indica al canal actual que inicie la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Siempre debería ser una referencia null (Nothing en Visual Basic) para <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpChannel.StopListening(System.Object)">
+      <summary>
+          Indica al canal actual que detenga la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              URI del canal en el que el enlace del canal permanece a la escucha.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpChannel.WantsToListen">
+      <summary>
+          Obtiene un valor booleano que indica si la instancia actual debe enlazarse al servicio del agente de escucha externo.
+        </summary>
+      <returns>
+          Valor booleano que indica si <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> se desea enlazar al servicio del agente de escucha externo.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel">
+      <summary>
+          Implementa un canal de cliente para llamadas remotas que utiliza el protocolo HTTP para transmitir los mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" /> con las propiedades de configuración y receptor especificados.
+        </summary>
+      <param name="properties">
+              Colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que va a utilizar el canal. 
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Se ha aplicado un formato incorrecto a una propiedad de configuración. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.#ctor(System.String,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" /> con el nombre y receptor especificados.
+        </summary>
+      <param name="name">
+              Nombre de la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.Http.HttpClientChannel" />. 
+            </param>
+      <param name="sinkProvider">
+              <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Entero que representa la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>
+          Devuelve un receptor de mensajes de canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </summary>
+      <returns>
+          Receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </returns>
+      <param name="url">
+              Dirección URL a la que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos del canal del host remoto al que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una dirección URI del nuevo receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.IsSecured">
+      <summary>
+          Obtiene o establece si el canal de cliente está protegido.
+        </summary>
+      <returns>
+          
+            Es true si el canal de cliente está protegido; de lo contrario, es false.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Item(System.Object)">
+      <summary>
+          Devuelve la propiedad de canal especificada.
+        </summary>
+      <returns>
+          <see cref="T:System.Object" /> que representa la propiedad de canal especificada por <paramref name="key" />.
+        </returns>
+      <param name="key">
+              Clave de la propiedad de canal que se va a recuperar.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Keys">
+      <summary>
+          Obtiene una <see cref="T:System.Collections.ICollection" /> de claves a la que se asocian las propiedades del canal.
+        </summary>
+      <returns>
+          <see cref="T:System.Collections.ICollection" /> de claves a la que se asocian las propiedades del canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpClientChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal actual o null si la dirección URL especificada no es una dirección URL de HTTP.
+        </returns>
+      <param name="url">
+              Dirección URL de la que se extrae la dirección URI del objeto conocido remoto. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene un objeto <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler">
+      <summary>
+          Implementa un controlador ASP.NET que envía solicitudes al canal HTTP remoto.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> con valores predeterminados.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.#ctor(System.Type,System.Object)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> con valores predeterminados. 
+        </summary>
+      <param name="type">
+              El constructor omite el parámetro <paramref name="type" />.
+            </param>
+      <param name="srvID">
+              El constructor omite el parámetro <paramref name="srvID" />.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.IsReusable">
+      <summary>
+          Obtiene un valor booleano que indica si otra solicitud puede utilizar el objeto <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />.
+        </summary>
+      <returns>
+          
+            Es true en todas las instancias de <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler.ProcessRequest(System.Web.HttpContext)">
+      <summary>
+          Permite el procesamiento de solicitudes Web HTTP por parte de la instancia actual.
+        </summary>
+      <param name="context">
+              Objeto <see cref="T:System.Web.HttpContext" /> que proporciona referencias a los objetos de servidor intrínsecos (por ejemplo, Request, Response, Session y Server) que se utilizan para atender solicitudes HTTP. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory">
+      <summary>
+          Inicializa nuevas instancias de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.#ctor"></member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.GetHandler(System.Web.HttpContext,System.String,System.String,System.String)">
+      <summary>
+          Devuelve una instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" />.
+        </summary>
+      <returns>
+          Nuevo objeto <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> que procesa la solicitud.
+        </returns>
+      <param name="context">
+              Instancia de la clase <see cref="T:System.Web.HttpContext" /> que proporciona referencias a objetos de servidor intrínsecos (por ejemplo, Request, Response, Session y Server) utilizados para atender las solicitudes HTTP. 
+            </param>
+      <param name="verb">
+              Método de transferencia de datos HTTP (GET o POST) que utiliza el cliente. 
+            </param>
+      <param name="url">
+              <see cref="P:System.Web.HttpRequest.RawUrl" /> del recurso solicitado. 
+            </param>
+      <param name="filePath">
+              <see cref="P:System.Web.HttpRequest.PhysicalApplicationPath" /> del recurso solicitado. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory.ReleaseHandler(System.Web.IHttpHandler)">
+      <summary>
+          Permite a un generador volver a utilizar el objeto <see cref="T:System.Runtime.Remoting.Channels.Http.HttpRemotingHandler" /> especificado.
+        </summary>
+      <param name="handler">
+              <see cref="T:System.Web.IHttpHandler" /> que se va a liberar. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel">
+      <summary>
+          Implementa un canal de servidor para llamadas remotas que utiliza el protocolo HTTP para transmitir los mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> con las propiedades de canal y el receptor especificados.
+        </summary>
+      <param name="properties">
+              <see cref="T:System.Collections.IDictionary" /> de las propiedades del canal que contiene la información de configuración del canal actual. 
+            </param>
+      <param name="sinkProvider">
+              Interfaz <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" />. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Se ha aplicado un formato incorrecto a una propiedad de configuración. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.Int32)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> que escucha en el puerto especificado.
+        </summary>
+      <param name="port">
+              El puerto donde el canal realiza la escucha. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.String,System.Int32)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> con el nombre indicado y que realiza la escucha en el puerto especificado.
+        </summary>
+      <param name="name">
+              Nombre del canal. 
+            </param>
+      <param name="port">
+              El puerto donde el canal realiza la escucha. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.#ctor(System.String,System.Int32,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Http.HttpServerChannel" /> en el puerto especificado con el nombre indicado, que realiza la escucha en el puerto especificado y utiliza el receptor especificado.
+        </summary>
+      <param name="name">
+              Nombre del canal. 
+            </param>
+      <param name="port">
+              El puerto donde el canal realiza la escucha. 
+            </param>
+      <param name="sinkProvider">
+              <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.AddHookChannelUri(System.String)">
+      <summary>
+          Agrega la dirección URI en la que el enlace del canal debe permanecer a la escucha.
+        </summary>
+      <param name="channelUri">
+              URI en la que el enlace del canal permanecerá a la escucha. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelData">
+      <summary>
+          Obtiene los datos específicos del canal.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> que contiene los datos específicos del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Entero que representa la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelScheme">
+      <summary>
+          Obtiene el tipo de agente de escucha que se va a enlazar (por ejemplo, "http").
+        </summary>
+      <returns>
+          Tipo de agente de escucha que se va a enlazar.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.ChannelSinkChain">
+      <summary>
+          Obtiene la cadena de receptores de canal que utiliza el canal actual.
+        </summary>
+      <returns>
+          Cadena de receptores de canal que utiliza el canal actual.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetChannelUri">
+      <summary>
+          Devuelve la dirección URI del canal actual.
+        </summary>
+      <returns>
+          URI del canal actual.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.GetUrlsForUri(System.String)">
+      <summary>
+          Devuelve una matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> actual.
+        </summary>
+      <returns>
+          Matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" /> actual.
+        </returns>
+      <param name="objectUri">
+              URI del objeto para el que se requieren direcciones URL. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Item(System.Object)">
+      <summary>
+          Devuelve la propiedad de canal especificada.
+        </summary>
+      <returns>
+          <see cref="T:System.Object" /> que representa la propiedad de canal especificada por <paramref name="key" />.
+        </returns>
+      <param name="key">
+              Clave de la propiedad de canal que se va a recuperar.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Keys">
+      <summary>
+          Obtiene una <see cref="T:System.Collections.ICollection" /> de claves a la que se asocian las propiedades del canal.
+        </summary>
+      <returns>
+          <see cref="T:System.Collections.ICollection" /> de claves a la que se asocian las propiedades del canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal.
+        </returns>
+      <param name="url">
+              Dirección URL a partir de la cual se van a extraer las direcciones URI. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene un objeto <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StartListening(System.Object)">
+      <summary>
+          Indica al canal actual que inicie la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Debe ser siempre null para <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Http.HttpServerChannel.StopListening(System.Object)">
+      <summary>
+          Indica al canal actual que detenga la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Debe ser siempre null para <see cref="T:System.Runtime.Remoting.Channels.Http.HttpChannel" />. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Http.HttpServerChannel.WantsToListen">
+      <summary>
+          Obtiene un valor booleano que indica si <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> se desea enlazar al servicio del agente de escucha externo.
+        </summary>
+      <returns>
+          Valor booleano que indica si <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> se desea enlazar al servicio del agente de escucha externo.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel">
+      <summary>
+          Proporciona una implementación de canal que utiliza el protocolo IPC para transmitir mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> activando únicamente un canal del cliente, y no un canal del servidor.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> con las propiedades de configuración y receptores especificados.
+        </summary>
+      <param name="properties">
+              Colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que los canales de cliente y servidor van a utilizar. 
+            </param>
+      <param name="clientSinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> que va a utilizar el canal de cliente. 
+            </param>
+      <param name="serverSinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal de servidor. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> con un canal de servidor que realiza la escucha en el puerto IPC especificado.
+        </summary>
+      <param name="portName">
+              Nombre del puerto IPC.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelData">
+      <summary>
+          Obtiene los datos específicos del canal.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> que contiene los datos específicos del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Entero que representa la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>
+          Devuelve un receptor de mensajes de canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </summary>
+      <returns>
+          Receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </returns>
+      <param name="url">
+              Dirección URL a la que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos del canal del host remoto al que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una dirección URI del nuevo receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.GetUrlsForUri(System.String)">
+      <summary>
+          Devuelve una matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> actual.
+        </summary>
+      <returns>
+          Matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> actual.
+        </returns>
+      <param name="objectURI">
+              URI del objeto para el que se requieren direcciones URL. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.IsSecured">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el canal actual es seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la instancia actual es segura.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal actual.
+        </returns>
+      <param name="url">
+              Dirección URL de la que se extrae la dirección URI del objeto conocido remoto. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene un objeto <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StartListening(System.Object)">
+      <summary>
+          Indica al canal actual que inicie la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Información de inicialización opcional. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StopListening(System.Object)">
+      <summary>
+          Indica al canal actual que detenga la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Información opcional de estado para el canal. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel">
+      <summary>
+          Implementa un canal de cliente para llamadas remotas que utiliza el protocolo IPC para transmitir los mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel" /> con las propiedades de configuración y receptor especificados.
+        </summary>
+      <param name="properties">
+              Una colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que va a utilizar el canal.
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal.
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.#ctor(System.String,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel" /> con el nombre y receptor especificados.
+        </summary>
+      <param name="name">
+              Nombre del canal.
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> que va a utilizar el canal.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Entero que indica la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>
+          Devuelve un receptor de mensajes de canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </summary>
+      <returns>
+          Receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </returns>
+      <param name="url">
+              Dirección URL a la que el nuevo receptor envía mensajes. Este parámetro puede ser null.
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos del canal del host remoto al que el nuevo receptor debe enviar mensajes. Este parámetro puede ser null. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene la dirección URI del nuevo receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados. Este parámetro se pasa sin inicializar.
+            </param>
+      <exception cref="T:System.Runtime.Remoting.RemotingException">
+              El receptor proporcionado no implementa <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" />.
+            </exception>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.IsSecured">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el canal actual es seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la instancia actual es segura.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          <see cref="T:System.String" /> que contiene el URI del canal.
+        </returns>
+      <param name="url">
+              Dirección URL a partir de la cual se va a extraer el URI del objeto.
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, instancia de <see cref="T:System.String" /> que contiene le URI del objeto conocido remoto. Este parámetro se pasa sin inicializar.
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel">
+      <summary>
+          Implementa un canal de servidor para llamadas remotas que utiliza el sistema IPC para transmitir los mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> con las propiedades de canal y el receptor especificados.
+        </summary>
+      <param name="properties">
+              Colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que va a utilizar el canal.
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal.
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider,System.Security.AccessControl.CommonSecurityDescriptor)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> con las propiedades de canal, el receptor y el descriptor de seguridad.
+        </summary>
+      <param name="properties">
+              Colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que va a utilizar el canal.
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal.
+            </param>
+      <param name="securityDescriptor">
+              <see cref="T:System.Security.AccessControl.CommonSecurityDescriptor" /> que va a utilizar el canal.
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> con el número de puerto IPC especificado.
+        </summary>
+      <param name="portName">
+              El nombre del puerto IPC que el canal va a utilizar.
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> con el nombre de canal y el nombre de puerto IPC especificados.
+        </summary>
+      <param name="name">
+              Nombre del canal.
+            </param>
+      <param name="portName">
+              El nombre del puerto IPC que el canal va a utilizar.
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.#ctor(System.String,System.String,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel" /> con el nombre de canal, el nombre de puerto IPC y el receptor especificados.
+        </summary>
+      <param name="name">
+              Nombre del canal.
+            </param>
+      <param name="portName">
+              El nombre del puerto IPC que el canal va a utilizar.
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelData">
+      <summary>
+          Obtiene los datos específicos del canal.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> que contiene los datos específicos del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Entero que indica la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetChannelUri">
+      <summary>
+          Devuelve la dirección URI del canal actual.
+        </summary>
+      <returns>
+          <see cref="T:System.String" /> que contiene la dirección URI del canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.GetUrlsForUri(System.String)">
+      <summary>
+          Devuelve una matriz de todas las direcciones URL del objeto con la dirección URI especificada, incluidas en la instancia de <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> actual.
+        </summary>
+      <returns>
+          Matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en la instancia de <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> actual.
+        </returns>
+      <param name="objectUri">
+              URI del objeto para el que se requieren direcciones URL.
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.IsSecured">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el canal actual es seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la instancia actual es segura.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal actual.
+        </returns>
+      <param name="url">
+              Dirección URL de la que se extrae la dirección URI del objeto conocido remoto.
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una instancia de <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StartListening(System.Object)">
+      <summary>
+          Indica al canal actual que inicie la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Objeto que especifica un estado de inicialización o null, si no desea pasar un estado concreto al canal.
+            </param>
+      <exception cref="T:System.Exception">
+              No está disponible el puerto de escucha especificado. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel.StopListening(System.Object)">
+      <summary>
+          Indica al canal actual que detenga la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Objeto que especifica un estado de inicialización o null, si no desea pasar un estado concreto al canal.
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel">
+      <summary>
+          Proporciona una implementación de canal que utiliza el protocolo TCP para transmitir mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> activando únicamente un canal del cliente, y no un canal del servidor.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> con las propiedades de configuración y receptores especificados.
+        </summary>
+      <param name="properties">
+              Colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que los canales de cliente y servidor van a utilizar. 
+            </param>
+      <param name="clientSinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> que va a utilizar el canal de cliente. 
+            </param>
+      <param name="serverSinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal de servidor. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Una de las propiedades del canal especificadas tenía un formato incorrecto. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.#ctor(System.Int32)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> con un canal de servidor que realiza la escucha en el puerto especificado.
+        </summary>
+      <param name="port">
+              El puerto donde el canal de servidor realiza la escucha. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelData">
+      <summary>
+          Obtiene los datos específicos del canal.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> que contiene los datos específicos del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Entero que representa la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>
+          Devuelve un receptor de mensajes de canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </summary>
+      <returns>
+          Receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </returns>
+      <param name="url">
+              Dirección URL a la que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos del canal del host remoto al que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una dirección URI del nuevo receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.GetUrlsForUri(System.String)">
+      <summary>
+          Devuelve una matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> actual.
+        </summary>
+      <returns>
+          Matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en el <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> actual.
+        </returns>
+      <param name="objectURI">
+              URI del objeto para el que se requieren direcciones URL. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpChannel.IsSecured">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el canal actual es seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la instancia actual es segura.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal actual.
+        </returns>
+      <param name="url">
+              Dirección URL de la que se extrae la dirección URI del objeto conocido remoto. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene un objeto <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.StartListening(System.Object)">
+      <summary>
+          Indica al canal actual que inicie la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Información de inicialización opcional. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpChannel.StopListening(System.Object)">
+      <summary>
+          Indica al canal actual que detenga la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Información opcional de estado para el canal. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel">
+      <summary>
+          Para llamadas remotas, implementa un canal de cliente que utiliza el protocolo TCP para transmitir mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel" /> con las propiedades de configuración y receptor especificados.
+        </summary>
+      <param name="properties">
+              Una colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que va a utilizar el canal. 
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Se ha aplicado un formato incorrecto a una propiedad de configuración. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.#ctor(System.String,System.Runtime.Remoting.Channels.IClientChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel" /> con el nombre y receptor especificados.
+        </summary>
+      <param name="name">
+              Nombre del canal. 
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Un entero que representa la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.CreateMessageSink(System.String,System.Object,System.String@)">
+      <summary>
+          Devuelve un receptor de mensajes de canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </summary>
+      <returns>
+          Receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados.
+        </returns>
+      <param name="url">
+              Dirección URL a la que el nuevo receptor envía mensajes. Puede ser null. 
+            </param>
+      <param name="remoteChannelData">
+              Objeto de datos del canal del host remoto al que el nuevo receptor debe enviar mensajes. Puede ser null. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una dirección URI del nuevo receptor de mensajes del canal que envía mensajes a la dirección URL o al objeto de datos del canal especificados. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.IsSecured">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el canal actual es seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la instancia actual es segura.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal.
+        </returns>
+      <param name="url">
+              Dirección URL a partir de la cual se van a extraer las direcciones URI. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una instancia de <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel">
+      <summary>
+          Implementa un canal del servidor para llamadas remotas que utiliza el protocolo TCP para transmitir los mensajes.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> con las propiedades de canal y el receptor especificados.
+        </summary>
+      <param name="properties">
+              Colección de <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que va a utilizar el canal. 
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Una de las propiedades del canal especificadas tenía un formato incorrecto. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IServerChannelSinkProvider,System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> con las propiedades de canal, el receptor y el proveedor de autorización especificados.
+        </summary>
+      <param name="properties">
+              Una colección <see cref="T:System.Collections.IDictionary" /> que especifica valores para las propiedades de configuración que va a utilizar el canal. 
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+      <param name="authorizeCallback">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" /> que va a utilizar el canal.
+            </param>
+      <exception cref="T:System.ArgumentException">
+              Una de las propiedades del canal especificadas tenía un formato incorrecto. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.Int32)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> que escucha en el puerto especificado.
+        </summary>
+      <param name="port">
+              El puerto donde el canal realiza la escucha. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.String,System.Int32)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> con el nombre indicado y que realiza la escucha en el puerto especificado.
+        </summary>
+      <param name="name">
+              Nombre del canal. 
+            </param>
+      <param name="port">
+              El puerto donde el canal realiza la escucha. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.#ctor(System.String,System.Int32,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel" /> con el nombre de pila indicado, que realiza la escucha en el puerto especificado y utiliza el receptor especificado.
+        </summary>
+      <param name="name">
+              Nombre del canal. 
+            </param>
+      <param name="port">
+              El puerto donde el canal realiza la escucha. 
+            </param>
+      <param name="sinkProvider">
+              Implementación de <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> que va a utilizar el canal. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.ChannelData">
+      <summary>
+          Obtiene los datos específicos del canal.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> que contiene los datos específicos del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.ChannelName">
+      <summary>
+          Obtiene el nombre del canal actual.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.String" /> que contiene el nombre del canal.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.ChannelPriority">
+      <summary>
+          Obtiene la prioridad del canal actual.
+        </summary>
+      <returns>
+          Un entero que representa la prioridad asignada al canal.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.GetChannelUri">
+      <summary>
+          Devuelve la dirección URI del canal actual.
+        </summary>
+      <returns>
+          URI del canal actual.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.GetUrlsForUri(System.String)">
+      <summary>
+          Devuelve una matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en la instancia de <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> actual.
+        </summary>
+      <returns>
+          Matriz de todas las direcciones URL de un objeto con la dirección URI especificada, incluidas en la instancia de <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> actual.
+        </returns>
+      <param name="objectUri">
+              URI del objeto para el que se requieren direcciones URL. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.IsSecured">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el canal actual es seguro.
+        </summary>
+      <returns>
+          Valor booleano que indica si la instancia actual es segura.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.Parse(System.String,System.String@)">
+      <summary>
+          Extrae la dirección URI del canal y la dirección URI del objeto conocido remoto de la dirección URL especificada.
+        </summary>
+      <returns>
+          URI del canal actual.
+        </returns>
+      <param name="url">
+              Dirección URL de la que se extrae la dirección URI del objeto conocido remoto. 
+            </param>
+      <param name="objectURI">
+              Cuando este método finaliza, contiene una instancia de <see cref="T:System.String" /> con la dirección URI del objeto conocido remoto. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(System.Object)">
+      <summary>
+          Indica al canal actual que inicie la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Información de inicialización opcional. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StopListening(System.Object)">
+      <summary>
+          Indica al canal actual que detenga la escucha de solicitudes.
+        </summary>
+      <param name="data">
+              Información opcional de estado para el canal. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.MetaData">
+      <summary>
+          Proporciona métodos que permiten trabajar con esquemas XML.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.#ctor"></member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertCodeSourceFileToAssemblyFile(System.String,System.String,System.String)">
+      <summary>
+          Compila el archivo de código fuente en un archivo de ensamblado en tiempo de ejecución.
+        </summary>
+      <param name="codePath">
+              Ruta de acceso del archivo que contiene el código fuente. 
+            </param>
+      <param name="assemblyPath">
+              Ubicación donde se genera el nuevo ensamblado en tiempo de ejecución. 
+            </param>
+      <param name="strongNameFilename">
+              Nombre seguro con el que se compila el nuevo ensamblado. Puede ser <see cref="F:System.String.Empty" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertCodeSourceStreamToAssemblyFile(System.Collections.ArrayList,System.String,System.String)">
+      <summary>
+          Compila las secuencias de código fuente en un archivo de ensamblado en tiempo de ejecución.
+        </summary>
+      <param name="outCodeStreamList">
+              <see cref="T:System.Collections.ArrayList" /> de secuencias con el código fuente. 
+            </param>
+      <param name="assemblyPath">
+              Ubicación donde se genera el nuevo ensamblado en tiempo de ejecución. 
+            </param>
+      <param name="strongNameFilename">
+              Nombre seguro con el que se compila el nuevo ensamblado. Puede ser <see cref="F:System.String.Empty" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList)">
+      <summary>
+          Convierte la definición del esquema especificado en código fuente del proxy en C#.
+        </summary>
+      <param name="clientProxy">
+              Indica el tipo de proxy que se va a generar. Si es true, genera un proxy simple (también se denomina proxy ajustado) que carga automáticamente los canales, expone todos los métodos del objeto remoto y proporciona acceso a las propiedades de los canales. Si es false, genera un proxy transparente que expone todos los métodos del objeto remoto. 
+            </param>
+      <param name="outputDirectory">
+              Directorio en el que se crean los nuevos archivos de código fuente en C# con el proxy. 
+            </param>
+      <param name="inputStream">
+              Secuencia de entrada que contiene la definición de esquema en formato WSDL (Lenguaje de descripción de servicios Web). 
+            </param>
+      <param name="outCodeStreamList">
+              Lista de nombres de archivos para las secuencias de código que se generan. Tenga en cuenta que el método <see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> puede crear varias secuencias de código fuente. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String)">
+      <summary>
+          Convierte la definición del esquema especificado en código fuente del proxy en C# para un objeto remoto ubicado en la dirección URL especificada.
+        </summary>
+      <param name="clientProxy">
+              Indica el tipo de proxy que se va a generar. Si es true, genera un proxy simple (también se denomina proxy ajustado) que carga automáticamente los canales, expone todos los métodos del objeto remoto y proporciona acceso a las propiedades de los canales. Si es false, genera un proxy transparente que expone todos los métodos del objeto remoto. 
+            </param>
+      <param name="outputDirectory">
+              Directorio en el que se crean los nuevos archivos de código fuente en C# con el proxy. 
+            </param>
+      <param name="inputStream">
+              Secuencia de entrada que contiene la definición de esquema en formato WSDL (Lenguaje de descripción de servicios Web). 
+            </param>
+      <param name="outCodeStreamList">
+              Lista de nombres de archivos para las secuencias de código que se generan. Tenga en cuenta que el método <see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> puede crear varias secuencias de código fuente. 
+            </param>
+      <param name="proxyUrl">
+              Dirección URL en la que se ubicará el objeto remoto de destino representado por el proxy nuevo. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)">
+      <summary>
+          Convierte la definición de esquema especificada en código fuente del proxy en C# para un objeto remoto ubicado en la dirección URL especificada y en el espacio de nombres de clase proporcionado.
+        </summary>
+      <param name="clientProxy">
+              Indica el tipo de proxy que se va a generar. Si es true, genera un proxy simple (también se denomina proxy ajustado) que carga automáticamente los canales, expone todos los métodos del objeto remoto y proporciona acceso a las propiedades de los canales. Si es false, genera un proxy transparente que expone todos los métodos del objeto remoto. 
+            </param>
+      <param name="outputDirectory">
+              Directorio en el que se crean los nuevos archivos de código fuente en C# con el proxy. 
+            </param>
+      <param name="inputStream">
+              Secuencia de entrada que contiene la definición de esquema en formato WSDL (Lenguaje de descripción de servicios Web). 
+            </param>
+      <param name="outCodeStreamList">
+              Lista de nombres de archivos para las secuencias de código que se generan. Tenga en cuenta que el método <see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> puede crear varias secuencias de código fuente. 
+            </param>
+      <param name="proxyUrl">
+              Dirección URL en la que se ubicará el objeto remoto de destino representado por el proxy nuevo. 
+            </param>
+      <param name="proxyNamespace">
+              Espacio de nombres del proxy recién creado. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToFile(System.Runtime.Remoting.MetadataServices.ServiceType[],System.Runtime.Remoting.MetadataServices.SdlType,System.String)">
+      <summary>
+          Convierte los tipos de servicio especificados en un esquema XML y lo escribe en un archivo especificado por nombre.
+        </summary>
+      <param name="types">
+              Instancias de <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> que se van a convertir en un esquema XML. 
+            </param>
+      <param name="sdlType">
+              Tipo de lenguaje de descripción de servicios que se utiliza en el esquema XML. 
+            </param>
+      <param name="path">
+              Ruta de acceso del archivo XML. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToFile(System.Type[],System.Runtime.Remoting.MetadataServices.SdlType,System.String)">
+      <summary>
+          Convierte los tipos de objeto especificados a esquema XML y lo escribe en un archivo especificado mediante el nombre.
+        </summary>
+      <param name="types">
+              Tipos de objeto que se van a convertir en un esquema XML. 
+            </param>
+      <param name="sdlType">
+              Tipo de lenguaje de descripción de servicios que se utiliza en el esquema XML. 
+            </param>
+      <param name="path">
+              Ruta de acceso del archivo XML. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToStream(System.Runtime.Remoting.MetadataServices.ServiceType[],System.Runtime.Remoting.MetadataServices.SdlType,System.IO.Stream)">
+      <summary>
+          Convierte los tipos de servicio especificados en un esquema XML, y lo escribe en una secuencia especificada.
+        </summary>
+      <param name="serviceTypes">
+              Instancias de <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> que se van a convertir en un esquema XML. 
+            </param>
+      <param name="sdlType">
+              Tipo de lenguaje de descripción de servicios que se utiliza en el esquema XML. 
+            </param>
+      <param name="outputStream">
+              <see cref="T:System.IO.Stream" /> en el que se escribe el esquema. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToStream(System.Type[],System.Runtime.Remoting.MetadataServices.SdlType,System.IO.Stream)">
+      <summary>
+          Convierte los tipos de objetos especificados en un esquema XML, y lo escribe en la secuencia especificada.
+        </summary>
+      <param name="types">
+              Tipos de objeto que se van a convertir en un esquema XML. 
+            </param>
+      <param name="sdlType">
+              Tipo de lenguaje de descripción de servicios que se utiliza en el esquema XML. 
+            </param>
+      <param name="outputStream">
+              <see cref="T:System.IO.Stream" /> en el que se escribe el esquema. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.RetrieveSchemaFromUrlToFile(System.String,System.String)">
+      <summary>
+          Descarga el esquema XML de una dirección URL, y lo escribe en el archivo especificado.
+        </summary>
+      <param name="url">
+              Dirección URL donde se encuentra el esquema XML. 
+            </param>
+      <param name="path">
+              Ruta de acceso del archivo en que se va a escribir el esquema. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.RetrieveSchemaFromUrlToStream(System.String,System.IO.Stream)">
+      <summary>
+          Descarga el esquema XML de una dirección URL, y lo escribe en la secuencia especificada.
+        </summary>
+      <param name="url">
+              Dirección URL donde se encuentra el esquema XML. 
+            </param>
+      <param name="outputStream">
+              <see cref="T:System.IO.Stream" /> en el que se escribe el esquema. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.MetaData.SaveStreamToFile(System.IO.Stream,System.String)">
+      <summary>
+          Guarda la secuencia de entrada en un archivo con el nombre especificado.
+        </summary>
+      <param name="inputStream">
+              Secuencia en la que se va a escribir el archivo especificado. 
+            </param>
+      <param name="path">
+              Archivo en el que se escribe la secuencia de entrada. 
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink">
+      <summary>
+          Proporciona la implementación para un receptor de canal de servidor que genera Lenguaje de descripción de servicios Web (WSDL) dinámicamente en el servidor.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.#ctor(System.Runtime.Remoting.Channels.IChannelReceiver,System.Runtime.Remoting.Channels.IServerChannelSink)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" />.
+        </summary>
+      <param name="receiver">
+              Indica el canal que recibirá los mensajes serializados mediante la nueva instancia de <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" />. 
+            </param>
+      <param name="nextSink">
+              Siguiente receptor en la cadena de receptores. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+      <summary>
+          Solicita que el receptor actual procese la respuesta de una llamada a un método enviada de forma asincrónica.
+        </summary>
+      <param name="sinkStack">
+              Pila de receptores dirigida de vuelta al receptor de transporte de servidor. 
+            </param>
+      <param name="state">
+              Información asociada al receptor actual, generada en la solicitud y necesaria en la respuesta. 
+            </param>
+      <param name="msg">
+              Mensaje de respuesta. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a agregar al encabezado del mensaje devuelto al cliente. 
+            </param>
+      <param name="stream">
+              Secuencia que se devuelve al receptor de transporte. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+      <summary>
+          Devuelve <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje de respuesta proporcionado.
+        </summary>
+      <returns>
+          <see cref="T:System.IO.Stream" /> donde se va a serializar el mensaje de respuesta proporcionado.
+        </returns>
+      <param name="sinkStack">
+              Pila de receptores dirigida de vuelta al receptor de transporte de servidor. 
+            </param>
+      <param name="state">
+              Información asociada al receptor actual, generada en la solicitud y necesaria en la respuesta. 
+            </param>
+      <param name="msg">
+              Mensaje de respuesta que se va a serializar. 
+            </param>
+      <param name="headers">
+              Encabezados que se van a poner en la secuencia de respuesta al cliente. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.SdlChannelSink.NextChannelSink">
+      <summary>
+          Obtiene el siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> en la cadena de receptores.
+        </summary>
+      <returns>
+          Siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSink" /> en la cadena de receptores.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+      <summary>
+          Solicita el procesamiento de mensajes del receptor actual.
+        </summary>
+      <returns>
+          Valor de estado de <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> que proporciona información sobre cómo se procesa el mensaje.
+        </returns>
+      <param name="sinkStack">
+              Pila de receptores de canal que llama al receptor actual. 
+            </param>
+      <param name="requestMsg">
+              Mensaje que contiene la solicitud. 
+            </param>
+      <param name="requestHeaders">
+              Encabezados recuperados del mensaje entrante del cliente. 
+            </param>
+      <param name="requestStream">
+              Secuencia que necesita procesarse y pasarse al receptor de deserialización. 
+            </param>
+      <param name="responseMsg">
+              El resultado que devuelve este método contiene un <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> con el mensaje de respuesta. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseHeaders">
+              El resultado que devuelve este método contiene <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> con los encabezados que se van a agregar al encabezado del mensaje devuelto al cliente. Este parámetro se pasa sin inicializar. 
+            </param>
+      <param name="responseStream">
+              Cuando este método finaliza, contiene un <see cref="T:System.IO.Stream" /> dirigido al receptor de transporte. Este parámetro se pasa sin inicializar. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.SdlChannelSink.Properties">
+      <summary>
+          Obtiene una <see cref="T:System.Collections.IDictionary" /> de las propiedades del receptor de canal actual.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Collections.IDictionary" /> con las propiedades del receptor de canales actual.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider">
+      <summary>
+          Proporciona la implementación para el proveedor de receptores de canal de servidor que crea instancias de <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" />.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider" /> con valores predeterminados.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.#ctor(System.Collections.IDictionary,System.Collections.ICollection)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider" /> con propiedades y datos del proveedor especificados.
+        </summary>
+      <param name="properties">
+              <see cref="T:System.Collections.IDictionary" /> de las propiedades de configuración que se va a usar con la nueva instancia de <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider" />. 
+            </param>
+      <param name="providerData">
+              <see cref="T:System.Collections.ICollection" /> de las instancias de <see cref="T:System.Runtime.Remoting.Channels.SinkProviderData" /> que se van a usar con la nueva instancia de <see cref="T:System.Runtime.Remoting.Channels.BinaryServerFormatterSinkProvider" />. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)">
+      <summary>
+          Crea una cadena de receptores.
+        </summary>
+      <returns>
+          Primer receptor de la cadena de receptores de canal recién formada.
+        </returns>
+      <param name="channel">
+              Canal para el que se va a crear la cadena de receptores de canal. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)">
+      <summary>
+          Devuelve los datos de canal del canal al que está asociado el receptor actual.
+        </summary>
+      <param name="localChannelData">
+              Objeto <see cref="T:System.Runtime.Remoting.Channels.IChannelDataStore" /> en el que se van a devolver los datos del canal. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.SdlChannelSinkProvider.Next">
+      <summary>
+          Obtiene o establece el siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> de la cadena del proveedor de receptores.
+        </summary>
+      <returns>
+          El siguiente <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> de la cadena del proveedor de receptores.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SdlType">
+      <summary>
+          Especifica un tipo de esquema que se usa para describir los servicios proporcionados por una aplicación.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.MetadataServices.SdlType.Sdl">
+      <summary>
+          Indica que el Lenguaje de descripción de servicios (SDL, Services Description Language) básico se usa para describir los servicios proporcionados por una aplicación. Este valor está obsoleto.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.MetadataServices.SdlType.Wsdl">
+      <summary>
+          Indica que el Lenguaje de descripción de servicios Web (WSDL, Web Services Description Language) se usa para describir los servicios proporcionados por una aplicación.
+        </summary>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.ServiceType">
+      <summary>
+          Asocia un tipo de objeto conocido que se pasa al generador del Lenguaje de descripción de servicios Web (WSDL) con un extremo remoto que puede procesar los mensajes que se envían a un método en el tipo.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.ServiceType.#ctor(System.Type)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> con el objeto <see cref="T:System.Type" /> que se pasa al generador de Lenguaje de descripción de servicios Web (WSDL).
+        </summary>
+      <param name="type">
+              Objeto <see cref="T:System.Type" /> que se pasa al generador WSDL. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.ServiceType.#ctor(System.Type,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> con la dirección URL y el <see cref="T:System.Type" /> de un objeto que se pasa al generador de Lenguaje de descripción de servicios Web (WSDL).
+        </summary>
+      <param name="type">
+              Objeto <see cref="T:System.Type" /> que se pasa al generador WSDL. 
+            </param>
+      <param name="url">
+              Extremo conocido que puede procesar los mensajes que se envían a un método en el tipo de objeto que se especifica en el parámetro <paramref name="type" />. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.ServiceType.ObjectType">
+      <summary>
+          Obtiene el objeto <see cref="T:System.Type" /> que se pasa al generador de Lenguaje de descripción de servicios Web (WSDL).
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Type" /> para el que se ha creado el <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> actual.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.MetadataServices.ServiceType.Url">
+      <summary>
+          Obtiene la dirección URL de un objeto <see cref="T:System.Type" /> que se pasa al generador de Lenguaje de descripción de servicios Web (WSDL).
+        </summary>
+      <returns>
+          Dirección URL de un objeto <see cref="T:System.Type" /> para el que se ha creado el <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> actual.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException">
+      <summary>
+          Excepción que se produce si se produce un error durante la generación del Lenguaje de descripción de servicios Web (WSDL).
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.MetadataServices.SUDSGeneratorException" />.
+        </summary>
+      <param name="info">
+              <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contiene los datos serializados del objeto que hacen referencia a la excepción que se va a producir.
+            </param>
+      <param name="context">
+              <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contiene información contextual sobre el origen o el destino.
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.MetadataServices.SUDSParserException">
+      <summary>
+          Excepción que se produce si se produce un error durante el análisis de Lenguaje de descripción de servicios Web (WSDL).
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.MetadataServices.SUDSParserException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Remoting.MetadataServices.SUDSParserException" />.
+        </summary>
+      <param name="info">
+              <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contiene los datos serializados del objeto que hacen referencia a la excepción que se va a producir.
+            </param>
+      <param name="context">
+              <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contiene información contextual sobre el origen o el destino.
+            </param>
+    </member>
+    <member name="T:System.Runtime.Remoting.Services.RemotingClientProxy">
+      <summary>
+          Clase base abstracta para los servidores proxy de objetos conocidos generados por Soapsuds Tool (Soapsuds.exe).
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingClientProxy.#ctor"></member>
+    <member name="F:System.Runtime.Remoting.Services.RemotingClientProxy._tp">
+      <summary>
+          El servidor proxy transparente dentro del objeto de servidor proxy de cliente de comunicación remota.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Services.RemotingClientProxy._type">
+      <summary>
+          Indica el tipo del objeto que el servidor proxy actual representa.
+        </summary>
+    </member>
+    <member name="F:System.Runtime.Remoting.Services.RemotingClientProxy._url">
+      <summary>
+          Indica la dirección URL del objeto que el servidor proxy actual representa.
+        </summary>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.AllowAutoRedirect">
+      <summary>
+          Obtiene o establece un valor que indica si el control automático de las redirecciones del servidor está habilitado.
+        </summary>
+      <returns>
+          Valor booleano que indica si el control automático de las redirecciones del servidor está habilitado.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingClientProxy.ConfigureProxy(System.Type,System.String)">
+      <summary>
+          Interno. Configura automáticamente el servidor proxy cargando los canales, si aún no se han cargado y creando el servidor proxy.
+        </summary>
+      <param name="type">
+              Tipo de la clase <see cref="T:System.Type" /> del objeto que el servidor proxy actual representa. 
+            </param>
+      <param name="url">
+              La dirección URL del objeto que el servidor proxy actual representa. 
+            </param>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingClientProxy.ConnectProxy">
+      <summary>
+          Interno. Conecta el servidor proxy al canal de comunicación remota especificado por la propiedad <see cref="P:System.Runtime.Remoting.Services.RemotingClientProxy.Url" />.
+        </summary>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Cookies">
+      <summary>
+          Esta propiedad no está implementada actualmente. La propiedad devuelve null (Nothing en Visual Basic).
+        </summary>
+      <returns>
+          Cookies del proxy actual.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Domain">
+      <summary>
+          Obtiene o establece el nombre de dominio que se utiliza para la autenticación básica e implícita.
+        </summary>
+      <returns>
+          Nombre de dominio que se utiliza para la autenticación básica e implícita.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.EnableCookies">
+      <summary>
+          Esta propiedad no está implementada actualmente. La propiedad produce una excepción <see cref="T:System.NotSupportedException" />.
+        </summary>
+      <returns>
+          Valor booleano que indica si está habilitado el control de las cookies recibidas del servidor.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Password">
+      <summary>
+          Obtiene o establece la contraseña que se utiliza para la autenticación básica e implícita.
+        </summary>
+      <returns>
+          Contraseña que se utiliza para la autenticación básica e implícita.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Path">
+      <summary>
+          Obtiene o establece la dirección URL base del servidor que se va a utilizar para las solicitudes.
+        </summary>
+      <returns>
+          Dirección URL base del servidor que se va a utilizar para las solicitudes.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.PreAuthenticate">
+      <summary>
+          Obtiene o establece un valor que indica si la autenticación previa de solicitudes está habilitada.
+        </summary>
+      <returns>
+          Valor booleano que indica si la autenticación previa de solicitudes está habilitada.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.ProxyName">
+      <summary>
+          Obtiene o establece el nombre del servidor proxy que se va a utilizar para las solicitudes.
+        </summary>
+      <returns>
+          Nombre del servidor proxy que se va a utilizar para las solicitudes.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.ProxyPort">
+      <summary>
+          Obtiene o establece el número de puerto del servidor proxy que se va a utilizar para las solicitudes.
+        </summary>
+      <returns>
+          Número de puerto del servidor proxy que se va a utilizar para las solicitudes.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Timeout">
+      <summary>
+          Obtiene o establece el tiempo de espera, expresado en milisegundos, que se va a utilizar para las llamadas sincrónicas.
+        </summary>
+      <returns>
+          Tiempo de espera, expresado en milisegundos, que se va a utilizar para las llamadas sincrónicas.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Url">
+      <summary>
+          Obtiene o establece la dirección URL base del servidor que se va a utilizar para las solicitudes.
+        </summary>
+      <returns>
+          Dirección URL base del servidor que se va a utilizar para las solicitudes.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.UserAgent">
+      <summary>
+          Obtiene o establece el encabezado HTTP del agente de usuario para la solicitud.
+        </summary>
+      <returns>
+          Encabezado HTTP del agente de usuario para la solicitud.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingClientProxy.Username">
+      <summary>
+          Obtiene o establece el nombre de usuario que se envía para la autenticación básica e implícita.
+        </summary>
+      <returns>
+          Nombre de usuario que se envía para la autenticación básica e implícita.
+        </returns>
+    </member>
+    <member name="T:System.Runtime.Remoting.Services.RemotingService">
+      <summary>
+          Proporciona la implementación base para servicios Web XML remotos.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Remoting.Services.RemotingService.#ctor"></member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Application">
+      <summary>
+          Obtiene una referencia al objeto de aplicación para la solicitud HTTP actual.
+        </summary>
+      <returns>
+          Referencia al objeto de aplicación para la solicitud HTTP actual.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Context">
+      <summary>
+          Obtiene el contexto actual específico de HTTP que el servidor HTTP utiliza para procesar solicitudes Web.
+        </summary>
+      <returns>
+          Obtiene el contexto actual específico de HTTP que el servidor HTTP utiliza para procesar solicitudes Web.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Server">
+      <summary>
+          Obtiene el objeto <see cref="T:System.Web.HttpServerUtility" /> para la solicitud actual.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Web.HttpServerUtility" /> de la solicitud actual.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.Session">
+      <summary>
+          Obtiene el objeto <see cref="T:System.Web.SessionState.HttpSessionState" /> para la solicitud actual.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.Web.SessionState.HttpSessionState" /> de la solicitud actual.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Remoting.Services.RemotingService.User">
+      <summary>
+          Obtiene el contexto de seguridad del usuario en nombre del que se ejecuta el código, incluida la identidad del usuario y las funciones a las que pertenece el usuario.
+        </summary>
+      <returns>
+          Contexto de seguridad del usuario.
+        </returns>
+    </member>
+  </members>
+</doc>

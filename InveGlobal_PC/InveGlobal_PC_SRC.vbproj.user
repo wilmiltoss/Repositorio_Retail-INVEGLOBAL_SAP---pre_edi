@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ReferencePath>C:\Program Files\Business Objects\Common\2.8\managed\C:\Archivos de programa\Business Objects\Common\2.8\managed\C:\Archivos de programa\Archivos comunes\Business Objects\2.7\Managed\</ReferencePath>
+    <PublishUrlHistory>\\retailapp7\Aplicaciones.net\InveGlobal\|\\10.67.1.75\Aplicaciones.NET\INVEGLOBAL_SAP\|\\10.67.1.75\archivo\INVEGLOBAL_SAP\|\\retailapp7\Aplicaciones.net\Inve\|\\retailapp7\Aplicaciones.net\</PublishUrlHistory>
+    <InstallUrlHistory>
+    </InstallUrlHistory>
+    <SupportUrlHistory>http://soporte/</SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <ErrorReportUrlHistory>
+    </ErrorReportUrlHistory>
+    <FallbackCulture>es-ES</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <StartAction>Project</StartAction>
+    <RemoteDebugMachine>10.75.2.208</RemoteDebugMachine>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <RemoteDebugMachine>10.75.2.208</RemoteDebugMachine>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <RemoteDebugMachine>10.75.2.208</RemoteDebugMachine>
+  </PropertyGroup>
+</Project>

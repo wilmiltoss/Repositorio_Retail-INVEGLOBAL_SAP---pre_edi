@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>Pestaña Proveedor de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolProviderTab01" type="System.String">
+    <value>Pestaña Proveedor de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolProviderTab02" type="System.String">
+    <value>Utilice la pestaña &lt;span class=UI&gt;Proveedor&lt;/span&gt; de la herramienta Administración de sitios Web para administrar el modo de ASP.NET de almacenar datos para las características de la aplicación, como cuentas de usuario, roles y otros valores de configuración.</value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>Introducción</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>ASP.NET utiliza clases de proveedores para administrar el almacenamiento de los datos para varias características, como la administración de pertenencia y de roles. Una clase de proveedor es un componente que expone una funcionalidad ASP.NET específica, como la administración de la pertenencia de las cuentas de usuario. Todas estas características de la aplicación requieren el almacenamiento de los datos. Aunque todas las clases de proveedores realizan las mismas características de la aplicación, cada proveedor puede almacenar datos de un modo distinto. Por ejemplo, las distintas clases de proveedor para la pertenencia a ASP.NET pueden almacenar información de la cuenta de usuario de los siguientes modos:</value>
+  </data>
+  <data name="Introduction03" type="System.String">
+    <value>En una base de datos de Microsoft SQL Server. </value>
+  </data>
+  <data name="Introduction04" type="System.String">
+    <value>En el servicio del directorio Microsoft Windows Active Directory.</value>
+  </data>
+  <data name="Introduction05" type="System.String">
+    <value>En una base de datos de usuario personalizada.</value>
+  </data>
+  <data name="Introduction06" type="System.String">
+    <value>Todas estas clases de proveedor realizan el mismo grupo de tareas principales para administrar cuentas de usuario y usted interactúa con las clases de proveedor de su aplicación del mismo modo.</value>
+  </data>
+  <data name="ConfiguringProvidersintheWebSiteAdministrationTool01" type="System.String">
+    <value>Configurando Proveedores en la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="ConfiguringProvidersintheWebSiteAdministrationTool02" type="System.String">
+    <value>La herramienta Administración de sitios Web le permite utilizar clases de proveedor diferentes para las características de la aplicación, como pertenencia y roles. ASP.NET está instalado con varias clases de proveedor para cada tipo de característica de la aplicación. Por ejemplo, ASP.NET tiene una clase de proveedor para la pertenencia que almacena información en una base de datos de SQL Server (&lt;span class=LanguageKeyword&gt;AspNetSqlMembershipProvider&lt;/span&gt;), y otra que almacena la información de pertenencia en Active Directory.</value>
+  </data>
+  <data name="ManagingProviderSettings01" type="System.String">
+    <value>Administrando la configuración del proveedor</value>
+  </data>
+  <data name="ManagingProviderSettings02" type="System.String">
+    <value>Use la herramienta Administración de sitios Web para cambiar y comprobar los proveedores del sitio web. La aplicación puede usar un mismo proveedor para las características de aplicación o varios proveedores distintos. </value>
+  </data>
+  <data name="ManagingProviderSettings03" type="System.String">
+    <value>De forma predeterminada, la herramienta Administración de sitios Web usa el proveedor &lt;span class=LanguageKeyword&gt;AspNetSqlProvider&lt;/span&gt; para todas las características de la aplicación. </value>
+  </data>
+  <data name="ManagingProviderSettings04" type="System.String">
+    <value>Utilizar la herramienta Administración de sitios Web para administrar los proveedores para el sitio Web de la siguiente manera:</value>
+  </data>
+  <data name="ManagingProviderSettings05" type="System.String">
+    <value>Cambie del proveedor predeterminado &lt;span class=LanguageKeyword&gt;AspNetSqlRoleProvider&lt;/span&gt; al proveedor alternativo &lt;span class=LanguageKeyword&gt;AspNetWindowsTokenRoleProvider&lt;/span&gt;, si prefiere utilizar grupos Windows locales para la autorización de roles.</value>
+  </data>
+  <data name="ManagingProviderSettings06" type="System.String">
+    <value>Especifique si va a utilizar el mismo proveedor para todas las características de la aplicación o si va a utilizar un proveedor diferente para cada característica de la aplicación. Normalmente, se seleccionan proveedores individuales únicamente si desea un control preciso en el que almacenar la información o si tiene que utilizar un proveedor diferente para una única característica, como los roles.</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders01" type="System.String">
+    <value>Seleccionando un proveedor simple vs. distintos proveedores</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders02" type="System.String">
+    <value>Puede configurar el sitio web para que use el mismo proveedor para todas las características de la aplicación. En este caso, todos los datos para la pertenencia, los roles etc. se almacenan en un almacén de datos único (normalmente una única base de datos). También puede seleccionar un proveedor diferente para cada característica de la aplicación. </value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders03" type="System.String">
+    <value>En la herramienta Administración de sitios Web, en la pestaña &lt;span class=UI&gt;Proveedor&lt;/span&gt;, la primera opción es si desea utilizar el mismo proveedor para todas las características o si desea seleccionar un proveedor de forma individual para cada característica de la aplicación. Puede elegir las siguientes opciones:</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders04" type="System.String">
+    <value>Para especificar un proveedor único para todas las características de la aplicación, haga clic en &lt;span class=UI&gt;Seleccionar un solo proveedor para todos los datos de administración del sitio&lt;/span&gt;.</value>
+  </data>
+  <data name="SelectingaSingleProvidervs.DifferentProviders05" type="System.String">
+    <value>Para especificar proveedores para características específicas de la aplicación, haga clic en &lt;span class=UI&gt;Seleccionar un proveedor distinto para cada característica (avanzado)&lt;/span&gt; y a continuación seleccione un proveedor para cada característica de la aplicación.</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider01" type="System.String">
+    <value>Configurando el proveedor de SQL Server</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider02" type="System.String">
+    <value>Si desea utilizar el proveedor de SQL Server para almacenar los datos de una característica de la aplicación en una base de datos de SQL Server, debe configurar primero SQL Server creando la base de datos apropiada. ASP.NET incluye una utilidad de línea de comandos denominada aspnet_regsql.exe que realiza esta tarea.</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider03" type="System.String">
+    <value>El archivo ejecutable aspnet_regsql.exe está ubicado en la carpeta WINDOWS\Microsoft.NET\Framework\versionNumber en el servidor Web. La utilidad aspnet_regsql.exe se utiliza tanto para crear la base de datos de SQL Server como para agregar o quitar opciones de una base de datos existente.</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider04" type="System.String">
+    <value>Puede ejecutar el archivo ejecutable aspnet_regsql.exe sin ningún argumento de línea de comandos para ejecutar un asistente que le ayudará a especificar la información de conexión para SQL Server y a instalar o quitar elementos de la base de datos para todas las características admitidas. También puede ejecutar el archivo ejecutable aspnet_regsql.exe como una utilidad de línea de comandos para configurar elementos de la base de datos para características individuales.</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider05" type="System.String">
+    <value>Para ejecutar el asistente aspnet_regsql.exe, ejecute el archivo ejecutable aspnet_regsql.exe sin ningún argumento de línea de comandos, como se muestra en el ejemplo siguiente.</value>
+  </data>
+  <data name="ConfiguringtheSQLServerProvider06" type="System.String">
+    <value>Para ver la Ayuda en línea para opciones adicionales disponibles en la utilidad aspnet_regsql.exe, utilice la opción /?.</value>
+  </data>
+  <data name="BehindtheScenes01" type="System.String">
+    <value>En segundo plano</value>
+  </data>
+  <data name="BehindtheScenes02" type="System.String">
+    <value>La pestaña &lt;span class=UI&gt;Proveedor&lt;/span&gt; administra los valores de configuración que se almacenan en el archivo Web.config para la aplicación. Concretamente, las configuraciones administradas mediante la pestaña &lt;span class=UI&gt;Proveedor&lt;/span&gt; en las secciones &amp;lt;membership&amp;gt; y &amp;lt;roleManager&amp;gt; del archivo de configuración. </value>
+  </data>
+  <data name="BehindtheScenes03" type="System.String">
+    <value>El código siguiente está en el archivo Web.config generado en la herramienta Administración de sitios Web después de especificar que el proveedor &lt;span class=LanguageKeyword&gt;AspNetWindowsTokenRoleProvider&lt;/span&gt; se utilice para la administración de roles.</value>
+  </data>
+  <data name="MoreInformation01" type="System.String">
+    <value>Más información</value>
+  </data>
+  <data name="MoreInformation02" type="System.String">
+    <value>Para obtener más información, vea las siguientes secciones en la referencia de clase de .NET Framework y en el esquema de configuración de ASP.NET:</value>
+  </data>
+  <data name="MoreInformation03" type="System.String">
+    <value>Elemento membership (Esquema de configuración de ASP.NET)</value>
+  </data>
+  <data name="MoreInformation04" type="System.String">
+    <value>Elemento profile (Esquema de configuración de ASP.NET)</value>
+  </data>
+  <data name="MoreInformation05" type="System.String">
+    <value>Elemento roleManager (Esquema de configuración de ASP.NET)</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>Vea también</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>Información general sobre la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>Pestaña Seguridad de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>Pestaña Aplicación de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>Información interna de la herramienta Administración de sitios Web</value>
+  </data>
+</root>

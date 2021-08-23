@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>IEExecRemote</name>
+  </assembly>
+  <members>
+    <member name="T:IEHost.Execute.IEExecuteRemote">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:IEHost.Execute.IEExecuteRemote.Exception">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.ExecuteAsAssembly(System.String,System.Security.Policy.Evidence,System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="file">
+              
+              
+            </param>
+      <param name="evidence">
+              
+              
+            </param>
+      <param name="hash">
+              
+              
+            </param>
+      <param name="id">
+              
+              
+            </param>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.ExecuteAsDll(System.String,System.Security.Policy.Evidence,System.Object)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="file">
+              
+              
+            </param>
+      <param name="evidence">
+              
+              
+            </param>
+      <param name="pars">
+              
+              
+            </param>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.InitializeLifetimeService">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:IEHost.Execute.IEExecuteRemote.ExecuteAsAssembly(System.String,System.Security.Policy.Evidence)"></member>
+  </members>
+</doc>

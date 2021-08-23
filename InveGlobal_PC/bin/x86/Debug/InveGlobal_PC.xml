@@ -1,0 +1,4111 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+InveGlobal_PC
+</name>
+</assembly>
+<members>
+<member name="T:InveStock_PC_2.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:InveStock_PC_2.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:InveStock_PC_2.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:InveStock_PC_2.My.Resources.Resources.aceptar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:InveStock_PC_2.My.Resources.Resources.agregar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:InveStock_PC_2.My.Resources.Resources.cancelar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:InveStock_PC_2.My.Resources.Resources.eliminar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los componentes internos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lIniciar_sesion(InveStock_PC_2.UsuarioOTD)">
+ <summary>
+ Valida el inicio de Sesion del Usuario
+ </summary>
+ <param name="oUsuarioParam">Instancia de Usuario a validar</param>
+ <returns>Lista de Resultado [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lObtener_datos_inventario">
+ <summary>
+ Recupera los datos del ultimo inventario del Local actual
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.pausar_procesos(System.Int32)">
+ <summary>
+ PROCEDIMIENTO DE PAUSA DE PROCESOS ACTUALES
+ </summary>
+ <param name="nSegundos">Cantidad de Segundos a Esperar.</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.cargar_combo_valores(System.Windows.Forms.ComboBox,System.String,System.String)">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE RESULTADO DE CONSULTA A COMBOBOX
+ </summary>
+ <param name="oNombreCombo">Nombre del Combo de Destino de los Items.</param>
+ <param name="cSentenciaSQL">Sentencia SQL que devolvera los Items para el Combo.</param>
+ <param name="cPrimerValor">Primer Valor que aparecera en el Combo. Opcional.</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.cargar_lista_valores(System.Windows.Forms.ListBox,System.String)">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE RESULTADO DE CONSULTA A LISTBOX
+ </summary>
+ <param name="oNombreCombo">Nombre del List de Destino de los Items.</param>
+ <param name="cSentenciaSQL">Sentencia SQL que devolvera los Items para el Combo.</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lValidar_sesion(InveStock_PC_2.UsuarioOTD)">
+ <summary>
+ Ejecuta el procedimiento de validacion de datos de Usuario
+ </summary>
+ <param name="oUsuarioParam">Instancia de la clase de Usuario</param>
+ <returns>Lista de Resultados (int, object)</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lConectar_sistema_gestion">
+ <summary>
+ Abre la conexion al sistem ad e gestion del Local de Inventario
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lGet_foto_eme">
+ <summary>
+ Recupera los items de existencia desde el Sist. EmeRetail para el local actual
+ </summary>
+ <returns>Liusta de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lTransferir_parametros_a_colector">
+ <summary>
+ Ejecuta la transferencia de los datos de parametros desde la db local a la db SQLite
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lTransferir_maestro_a_colector">
+ <summary>
+ Ejecuta la transferencia de los datos del maestro de articulos desde la db local a la db SQLite
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.__lTransferir_locaciones_sqlite">
+ <summary>
+ Ejecuta la transferencia de datos de Locaciones a la BD SQLite
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.__lTransferir_soportes_sqlite">
+ <summary>
+ Ejecuta la transferencia de datos de Soportes a la BD SQLite
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.__lTrasferir_usuarios_sqlite">
+ <summary>
+ Ejecuta la transferencia de datos de Usuarios a la BD SQLite
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.__lTrasferir_sectores_sqlite">
+ <summary>
+ Ejecuta la transferencia de datos de Sectores a la BD SQLite
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lTransferir_bd_a_colector">
+ <summary>
+ Ejecuta la transferencia del archivo SQLite de la PC al colector
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lTransferir_archivo_x_USB(System.String,System.String,InveStock_PC_2.ApControlador.OperacionesArchivos)">
+ <summary>
+ Ejecuta la transmisión del archivo de origen al destino, en el colector, por medio de la conexion USB
+ </summary>
+ <param name="cPathOrigen">Directorio, absoluto, del archivo de origen en la PC local</param>
+ <param name="cPathDestino">Directorio, absoluto, de destino del archivo en colector</param>
+ <param name="eOperacion">Tipo de Operación a ejecutar</param>
+ <returns>Lista de resultado [Integer, Object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lTransferir_archivo_x_FTP(System.String,System.String,InveStock_PC_2.ApControlador.OperacionesArchivos)">
+ <summary>
+ Ejecuta la transmisión del archivo de origen al destino, en el colector, por medio de la conexion WIFI
+ </summary>
+ <param name="cPathOrigen">Directorio, absoluto, del archivo de origen en la PC local</param>
+ <param name="cPathDestino">Directorio, absoluto, de destino del archivo en colector</param>
+ <param name="eOperacion">Tipo de Operación a ejecutar</param>
+ <returns>Lista de resultado [Integer, Object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.lDescargar_lecturas">
+ <summary>
+ Ejecuta la transferencia del archivo de Lecturas desde el Colector a la PC
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.notificar_stop(System.String,System.String)">
+ <summary>
+ Despliega el mensaje de evento con observaciones con el formato correspondiente
+ </summary>
+ <param name="cMensaje">Mensaje a desplegar</param>
+ <param name="cTitulo">Titulo del cuadro de mensajes</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.notificar_error(System.String,System.String)">
+ <summary>
+ Despliega el mensaje de error con el formato correspondiente
+ </summary>
+ <param name="cMensaje">Mensaje a desplegar</param>
+ <param name="cTitulo">Titulo del cuadro de mensajes</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.notificar_exito(System.String,System.String)">
+ <summary>
+ Despliega el mensaje de evento existoso con el formato correspondiente
+ </summary>
+ <param name="cMensaje">Mensaje a desplegar</param>
+ <param name="cTitulo">Titulo del cuadro de mensajes</param>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Principal_frm">
+ <summary>
+ Devuelve o establece la instancia del formulario Principal de la aplicacion
+ </summary>
+ <value>Nueva instancia del Formulario Principal</value>
+ <returns>Instancia del Formulario Principal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_login_frm">
+ <summary>
+ Devuelve una instancia del formulario de Login de la aplicacion
+ </summary>
+ <value></value>
+ <returns>Instancia del Formulario de Login</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_datosInventario_frm">
+ <summary>
+ Devuelve una instancia del formulario de Datos de Inventario Actual
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Datos de Inventario Actual</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_sectores_frm">
+ <summary>
+ Devuelve una instancia del formulario de Seleccion de Sectores
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Seleccion de Sectores</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_detalles_x_ubicacion_frm">
+ <summary>
+ Devuelve una instancia del formulario de Visualizacion de Detalles x Ubicaciones fisicas
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Visualizacion de Detalles x Ubicaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_carga_manual_frm">
+ <summary>
+ Devuelve una instancia del formulario de Carga Manual de Conteos
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Carga Manual de Conteos</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_entrada_colectores_frm">
+ <summary>
+ Devuelve una instancia del formulario de Visualizacion de Entradas de Lecturas
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Visualizacion de Entradas de Lecturas</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_opciones_frm">
+ <summary>
+ Devuelve una instancia del formulario de Visualizacion de Opciones del Inventario
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Visualizacion de Opciones del Inventario</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_ver_existencias_frm">
+ <summary>
+ Devuelve una instancia del formulario de Visualizacion de Existencias
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Visualizacion de Existencias</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_sectores_cubiertos_frm">
+ <summary>
+ Devuelve una instancia del formulario de Visualizacion de Sectores Cubiertos
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Visualizacion de Sectores Cubiertos</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_info_actual_frm">
+ <summary>
+ Devuelve una instancia del formulario de Visualizacion de Info de Inventario actual
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Visualizacion de Info de Inventario actual</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_abm_usuarios_frm">
+ <summary>
+ Devuelve una instancia del formulario de ABM de Usuarios
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de ABM de Usuarios</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.Get_mod_conteo_frm">
+ <summary>
+ Devuelve una instancia del formulario de Modificacion de Conteo
+ </summary>
+ <value></value>
+ <returns>Instancia del formulario de Modificacion de Conteo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApControlador.log">
+ <summary>
+ Devuelve una instancia del manejador de logs de la aplicacion
+ </summary>
+ <returns>Instancia del manejador de logs</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApControlador.FrmColectores">
+ <summary>
+ Devuelve la referencia a la instancia del formulario de seleccion de colectores
+ </summary>
+ <value></value>
+ <returns>Referencia a la instancia de FrmColectores</returns>
+ <remarks></remarks>
+</member>
+<member name="T:InveStock_PC_2.ArchivoMaestroCSV">
+ <summary>
+ Manejador de archivos de salida CSV
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ArchivoMaestroCSV.#ctor(System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ArchivoMaestroCSV.Archivo">
+ <summary>
+ Devuelve la instancia del archivo actual
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ArchivoMaestroCSV.Nombre_archivo">
+ <summary>
+ Devuelve el nombre del archivo actual
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ArchivoMaestroCSV.Path_archivo">
+ <summary>
+ Devuelve el path absoluto al archivo actual
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ArchivosPlanos.#ctor">
+ <summary>
+ Constructor por defecto de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ArchivosPlanos.#ctor(System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="strExtensionArchivo">Extension del tipo de Archivo. Ej. [csv|txt|...]</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ArchivosPlanos.bCrear_Archivo">
+ <summary>
+ crea el archivo a escribir
+ </summary>
+ <returns>Devuelve 'True' si se creao correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ArchivosPlanos.bEscribir_Linea(System.String)">
+ <summary>
+ Escribe una linea en el archivo
+ </summary>
+ <param name="strLineaAEscribir">Linea a escribir</param>
+ <returns>Devuelve 'True' si se escribio correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ArchivosPlanos.bAbrir_Archivo">
+ <summary>
+ Abre el Archivo que se esta Trabajando con el Programa Predeterminado. Devuelve Boolean
+ </summary>
+ <returns>Devuvel 'True' si el Archivo se abrio correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ArchivosPlanos.bCerrar_Archivo">
+ <summary>
+ Cierra el Archivo que se esta trabajando
+ </summary>
+ <returns>Devuelve 'True' si cerro correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.Config.__cargar_parametros">
+ <summary>
+ Ejectuca la carga delos parametros de configuracion
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.Config.Get_instancia">
+ <summary>
+ Devuelve una instancia de la clase
+ </summary>
+ <returns>Instancia de la clase</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.Config.get_valor(System.String)">
+ <summary>
+ Devuelve el valor del parametro de configuracion Solicitado
+ </summary>
+ <param name="cParametro">Nombre del Parametro</param>
+ <returns>Valor del Parametro, o en su defecto el nombre de la clase</returns>
+ <remarks></remarks>
+</member>
+<member name="T:InveStock_PC_2.EMERETAIL">
+ <summary>
+ MODULO INTERFACE CON SISTEMA EMERETAIL
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.bCargar_Parametros_Sistema(System.String)">
+ <summary>
+ ASIGNA LOS VALORES DE ATRIBUTOS DEL MODULO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="strID_Sistema">ID del Sistema de Gestion</param>
+ <returns>Devuelve 'True' si se tomaron todos los Valores</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.bConectar_EME">
+ <summary>
+ CONECTA A BD DE EME, DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si la Conexion se Establecio Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.dtObtener_Maestro_Articulos(System.String,System.String)">
+ <summary>
+ CREA Y DEVUELVE UN DATATABLE CON EL MAESTRO DE ARTICULOS DEL LOCAL
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.bEjecutar_Sentencia_SQL(System.String)">
+ <summary>
+ EJECUTA UNA SENTENCIA SQL EN LA BD Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="strSentenciaSQL">Sentencia SQL a Ejecutar</param>
+ <returns>Devuelve 'True' si se Ejecuto Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.dtbEjecutar_ConsultaSQL(System.String)">
+ <summary>
+ EJECUTA UNA CONSULTA SQL Y DEVUELVE UN DATATABLE
+ </summary>
+ <param name="strConsultaSQL">Sentencia SQL de Consulta</param>
+ <returns>Devuelve un DataTable con los Resultados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.dstCrear_DataSet(System.String)">
+ <summary>
+ EJECUTA UNA CONSULTA SQL Y DEVUELVE UN DATASET
+ </summary>
+ <param name="strConsultaSQL">Sentencia de Consulta de Datos para el DataSet.</param>
+ <returns>Devuelve un DataSet con los Datos Devueltos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.pCargar_Combo_Valores(System.Windows.Forms.ComboBox,System.String)">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE RESULTADO DE CONSULTA A COMBOBOX
+ </summary>
+ <param name="cmbNombreCombo">Nombre del Combo de Destino de los Items</param>
+ <param name="strConsultaSQL">Consulta SQL que devolvera los Items para el Combo</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.dtbSeleccionar_Sectores(System.String)">
+ <summary>
+ DEVUELVE UN DATATABLE CON LOS DATOS DE SECTORES CUYOS ID COINCIDEN CON EL PARAMETRO
+ </summary>
+ <param name="strCodigoSector">Codigo Filtro de Sectores</param>
+ <returns>Devuelve un Datatable con los Sectores afectados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.dtbObtener_Sectores">
+ <summary>
+ DEVUELVE UN DATATABLE CON LOS DATOS DE SECTORES DEL SISTEMA
+ </summary>
+ <returns>Devuelve un Datatable con los Sectores afectados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.bAplicar_Ajustes(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ EJECUTA EL SP DE AJUSTE DE INVENTARIO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="sLocal_ID">ID del Local en el Sistema de Gestion</param>
+ <param name="sFecha">Fecha del Inventario</param>
+ <param name="sScanning">Scanning del Articulo</param>
+ <param name="sCantidadAjuste">Cantidad a Ajustar</param>
+ <param name="sCosto">Costo del Articulo</param>
+ <returns>Devuelve 'True' si se Ejecuto Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EMERETAIL.pDesconectar_EME">
+ <summary>
+ PROCEDIMIENTO DE DESCONEXION DE BD EME
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:InveStock_PC_2.principal">
+ <summary>
+ MODULO PRINCIPAL DEL SISTEMA
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.main">
+ <summary>
+PROCEDIMIENTO DE CARGA DE DATOS Y CONFIGURACIONES DEL SISTEMA
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.pMontar_Unidad_De_Red">
+ <summary>
+ EJECUTA EL BAT DE CONEXION DE UNIDAD DE RED
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.bConectar_A_BD">
+ <summary>
+ FUNCION DE CONEXION A LA BD 
+ </summary>
+ <returns name="T/F">Devuelve 'True' si la Conexion se pudo Realizar.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.dtEjecutar_ConsultaSQL(System.String)">
+ <summary>
+ FUNCION QUE EJECUTA UNA SENTENCIA SQL Y DEVUELVE UN DATATABLE
+ </summary>
+ <param name="cConsultaSQL">Consulta SQL a Ejecutar.</param>
+ <returns>Devuelve un DataTable con los Resultados de la Sentencia.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.bEjecutar_SentenciaSQL(System.String)">
+ <summary>
+ FUNCION QUE EJECUTA UNA SENTENCIA SQL Y DEVUELVE UN BOOLEANO
+ </summary>
+ <param name="cSentenciaSQL"></param>
+ <returns>Devuelve 'True' si la Sentencia se Ejecuto Correctamente.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.cEjecutar_Consulta_Escalar(System.String)">
+ <summary>
+ EJECUTA UNA CONSULTA SQL Y DEVUELVE EL VALOR DEL PRIMER CAMPO DE LA PRIMERA FILA DE RESULTADOS
+ </summary>
+ <param name="cConsultaSQL">Consulta SQL a Ejecutar</param>
+ <returns>Devuelve el Resultado como String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.bEjecutar_Procedimiento(System.String)">
+ <summary>
+ FUNCION QUE EJECUTA UN PROCEDIMIENTO ALMACENADO EN LA BD Y DEVUELVE UN BOOLEANO
+ </summary>
+ <param name="cNombreProcedimientoAlmacenado"> Nombre del Procedimiento Almacenado a Ejecutar.</param>
+ <returns>Devuelve 'True' si el Procedimiento de ejecuto Correctamente.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.dsCrear_DataSet(System.String)">
+ <summary>
+ FUNCION QUE EJECUTA UNA SENTENCIA SQL Y DEVUELVE UN DATASET
+ </summary>
+ <param name="cSentenciaSQL">Sentencia que recupera los Datos para el DataSet.</param>
+ <returns>Devuelve un DataSet con los Datos Devueltos por la Sentencia.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.bDesconectar_BD">
+ <summary>
+ FUNCION DE CIERRE DE CONEXION A LA BD, DEVUELVE UN BOOLEANO
+ </summary>
+ <returns>Devuelve 'True' si todo salio bien.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.arlstSepararCampos(System.String,System.Char)">
+ <summary>
+ SEPARA EN CAMPOS UNA CADENA Y DEVUELVE UN ARRAY DE LOS MISMOS
+ </summary>
+ <param name="strCadenaCampos">Secuencia de Campos a Separar</param>
+ <param name="chrSeparador">Caracter Separador</param>
+ <returns>Devuelve un Array de los Campos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.cConsulta_Unico_Resultado(System.String)">
+ <summary>
+ EJECUTA UNA CONSULTA SQL Y DEVUELVE EL VALOR DEL PRIMER CAMPO DE LA PRIMERA FILA ENCONTRADA
+ </summary>
+ <param name="cConsultaSQL">Consulta SQL a Ejecutar</param>
+ <returns>Devuelve un String con el Valor del Campo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.cObtener_Tipo_Dato_DeCampo(System.String,System.String)">
+ <summary>
+ DEVUELVE EL TIPO DE DATOS DEL CAMPO DE LA TABLA SOLICITADA
+ </summary>
+ <param name="cNombreTabla">Nombre de la Tabla o Vista</param>
+ <param name="cNombreCampo">Nombre del Campo</param>
+ <returns>Devuelve un String con el Nombre del Tipo de Dato</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.bCargar_Parametros_Sistema(System.String,System.String)">
+ <summary>
+ CARGA LOS PARAMETROS DEL SISTEMA, DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="strNombre_Sistema">Nombre del Sistema</param>
+ <param name="strID_Sistema">ID del Sistema</param>
+ <returns>Devuelve 'True' si se Cargaron Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.principal.bEliminar_Cabecera_Inventario">
+ <summary>
+ ELIMINA UN REGISTRO DE CABECERA DE DATOS DE INVENTARIO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Elimino Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CargasManualesADM.#ctor(InveStock_PC_2.ApModelo)">
+ <summary>
+ Constructor de la clase 
+ </summary>
+ <param name="ApModeloParam">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CargasManualesADM.lTomar_conteos(InveStock_PC_2.InventarioOTD,System.String)">
+ <summary>
+ Ejecuta el procedimiento de transferencia de los datos de conteos manuales 
+ a la tabla de detalles de conteos
+ </summary>
+ <param name="oInventarioParam">Instancia del Inventario actual</param>
+ <param name="cNombreEquipo">Nombre del Equipo desde el que se estan cargando los datos</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ConfiguracionesSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LetrasSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocacionesSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.MaestroSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectoresSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SoportesSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuariosSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.DetallesConteosTmpADM.lCrear_tablas(InveStock_PC_2.InventarioOTD)">
+ <summary>
+ Ejecuta la creacion de las tablas de detalles de conteos temporales
+ </summary>
+ <param name="oInventarioParam">Instancia de inventario actual</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FotosEmeADM.lGet_foto_inventario(InveStock_PC_2.LocalOTD)">
+ <summary>
+ Ejecuta el procedimiento de recuperacion de cantidades teoricas por articulo
+ </summary>
+ <param name="oLocalParam">Instancia de LocalOTD</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EntradasColectorasADM.#ctor(InveStock_PC_2.ApModelo)">
+ <summary>
+ Constructor de la clase 
+ </summary>
+ <param name="ApModeloParam">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EntradasColectorasADM.lCargar_entradas(InveStock_PC_2.InventarioOTD,System.String)">
+ <summary>
+ Ejecuta la insercion de los registros desde el archivo CSV de entrada
+ </summary>
+ <param name="oInventario">Instancia del inventario actual</param>
+ <param name="cPathArchivoCsv">Path absoluto del archivo de entrada</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EntradasColectorasADM.lGet_vista_datos(InveStock_PC_2.InventarioOTD,System.String)">
+ <summary>
+ Devuelve una tabla con los detalles de los datos de lecturas desde el colector
+ </summary>
+ <param name="oInventario">Instancia del Inventario actual</param>
+ <param name="cNombreColector">Nombre del Colector</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EntradasColectorasADM.lTomar_entradas(InveStock_PC_2.InventarioOTD,System.String,System.Int32)">
+ <summary>
+ Ejecuta la transferencia delos datos de lecturas a la tabla de detalles de conteos
+ para hacer que pasen a formar parte del inventario
+ </summary>
+ <param name="oInventario">Instancia del inventario actual</param>
+ <param name="cNombreColector">Nombre del colector</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ProductosADM.lGet_maestro_inventario(InveStock_PC_2.InventarioOTD)">
+ <summary>
+ Ejecuta una consulta especifica y devuelve el maestro de articulos del
+ inventario
+ </summary>
+ <param name="oInventarioParam">Instancia de Invnetario cuyo maestro recuperar</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectoresADM.lGet_sectores_sqlite">
+ <summary>
+ Devuelve la tabla de sectores para la bd sqlite
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.TmpMaestroArticulosADM.lCarga_masiva(System.String,InveStock_PC_2.InventarioOTD)">
+ <summary>
+ Ejecuta la carga masiva del Archivo CSV a la tabla TMP_MAESTRO_ARTICULOS
+ Ojo, el archivo debe existir en el directorio donde el SP lo va a buscar
+ </summary>
+ <param name="cNombreArchivo">Nombre del Archivo a Localizar y Cargar</param>
+ <param name="oInventarioParam">Instancia del Inventario actual</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.TmpMaestroArticulosADM.lActualizacion_masiva(System.String,InveStock_PC_2.InventarioOTD)">
+ <summary>
+ Ejecuta la carga masiva del Archivo CSV a la tabla TMP_MAESTRO_ARTICULOS
+ Pero no reemplaza los registros de la tabla de Existencias, sólo actualiza el campo TEORICO
+ </summary>
+ <param name="cNombreArchivo">Nombre del Archivo a Localizar y Cargar</param>
+ <param name="oInventarioParam">Instancia del Inventario actual</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuariosADM.lValidar_usuario(InveStock_PC_2.UsuarioOTD)">
+ <summary>
+ Valida el inicio de sesion del Usuario parametro
+ </summary>
+ <param name="oUsuarioParam">Instancia de Usuario OTD a validar</param>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.VwDetallesConteosADM.#ctor(InveStock_PC_2.ApModelo,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="ApModeloParam">Instancia del modelo de datos de la aplicacion</param>
+ <param name="cNombreVistaParam">Nombre de la Vista Creada a administrar</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModelo.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModelo.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los componentes internos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModelo.lCargar_archivo_colectores">
+ <summary>
+ Ejecutala lectura del archivo de datos de Colectores en el equipo local
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModelo.Get_instancia">
+ <summary>
+ Devuelve una instancia de la clase
+ </summary>
+ <returns>Devuelve una instancia de la clase</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModelo.Get_conector">
+ <summary>
+ Devuelve una instancia de la utileria de Conexion a la Base de Datos
+ </summary>
+ <returns>instancia de la utileria de Conexion</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Get_conexion_oracle">
+ <summary>
+ Devuelve o establece la instancia de conexion a la BD Oracle
+ </summary>
+ <value>Instancia de Oracle Utiles</value>
+ <returns>Instancia de Oracle Utiles</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Usuarios_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla USUARIOS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Locales_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla LOCALES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Inventarios_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla DATOS_INVENTARIOS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Empresas_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla EMPRESAS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Sistemas_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla SISTEMAS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Sectores_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla SISTEMAS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.InventariosSectores_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla INVENTARIO_SECTORES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Configuraciones_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla CONFIGURACIONES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.FotosEme_ADM">
+ <summary>
+ Devuelve una instancia del administrador de 
+ obtencion de Foto de Inventario desde
+ Foto de Inventario desde EmeRetail
+ </summary>
+ <returns>Instancia del administrador</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.TmpMaestro_ADM">
+ <summary>
+ Devuelve una instancia del administrador de
+ operaciones sobre la tabla TMP_MAESTRO_ARTICULOS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Locaciones_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla LOCACIONES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Soportes_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla SOPORTES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.Productos_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla PRODUCTOS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.DetallesConteosTmp_ADM">
+ <summary>
+ Devuelve una instancia del administrador de 
+ operaciones sobre la tabla DETALLES_CONTEOS TEMPORALES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.VwDetallesConteos_ADM">
+ <summary>
+ Devuelve o establece la instancia del administrador de operaciones 
+ sobre la Vista temporal de DETALLES de CONTEOS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.CargasManuales_ADM">
+ <summary>
+ Devuelve o establece la instancia del administrador de operaciones 
+ sobre la tabla CARGA_MANUAL
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.EntradasColectorasADM">
+ <summary>
+ Devuelve o establece la instancia del administrador de operaciones 
+ sobre la tabla ENTRADAS_COLECTORAS
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.ExistenciasVwADM">
+ <summary>
+ Devuelve o establece la instancia del administrador de operaciones 
+ sobre la VISTA VW_EXISTENCIAS_TOTALES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.ExistenciasVwADM_SAP">
+ <summary>
+ Devuelve o establece la instancia del administrador de operaciones 
+ sobre la VISTA VW_EXISTENCIAS_TOTALES_SAP
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.NivelesAccesosADM">
+ <summary>
+ Devuelve o establece la instancia del administrador de operaciones 
+ sobre la tabla NIVELES_ACCESO
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModelo.UsuariosLocalesADM">
+ <summary>
+ Devuelve o establece la instancia del administrador de operaciones 
+ sobre la tabla USUARIOS_LOCALES
+ </summary>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CargaManualOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CargaManualOTD.#ctor(System.String,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Double,System.Int64)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="cColectorParam">Nombre del Dispositivo Colector</param>
+ <param name="nIdInventarioParam">Identificador del inventario</param>
+ <param name="nIdLocacionParam">Identificador de la locacion</param>
+ <param name="nNroConteoParam">Nro. de conteo realizado</param>
+ <param name="nIdSoporteParam">Identificador del soporte</param>
+ <param name="nNroSoporteParam">Nro. del soporte</param>
+ <param name="nIdLetraSoporteParam">Identificador de la letra del soporte</param>
+ <param name="nNivelParam">Nivel</param>
+ <param name="nMetroParam">Metro</param>
+ <param name="cScanningParam">Codigo de barras del articulo</param>
+ <param name="nCantidadParam">Cantidad registrada</param>
+ <param name="nIdUsuarioParam">Identificador del usuario que carga los datos</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ConfiguracionSQLiteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD_SAP.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD_SAP.#ctor(System.Int64,System.DateTime,System.String,System.String,System.String,System.String,System.Double,System.String,System.Double,System.Double,System.Double,System.Double,System.Boolean,System.Boolean,System.Double,System.Int64,System.Int64,System.Double,System.Double,System.Double)">
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD_SAP.cGet_csv(System.Char)">
+ <summary>
+ Devuelve una cadena de valores para los datos, separados por el caracter indicado
+ </summary>
+ <param name="cSeparador">Separador de valores</param>
+ <returns>Cadena de valores separados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD_SAP.cGet_titulos_csv(System.Char)">
+ <summary>
+ Devuelve una cadena de valores para el titulo, separados por el caracter indicado
+ </summary>
+ <param name="cSeparador">Separador de valores</param>
+ <returns>Cadena de valores separados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD_SAP.nGet_conteo_final">
+ <summary>
+ Devuelve la cantidad a tomar como conteo final
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD_SAP.cGet_string_ibm_vasto_sap">
+ <summary>
+ Devuelve una cadena de valores para los datos para el SAP
+ , separados por el caracter indicado
+ </summary>
+ <returns>Cadena de valores separados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LetraSQLiteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LetraSQLiteOTD.#ctor(System.Int64,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del objeto</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocacionSQLiteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocacionSQLiteOTD.#ctor(System.Int64,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del objeto</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.MaestroSQLiteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.MaestroSQLiteOTD.#ctor(System.String,System.String,System.String,System.Char,System.Double,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="cScanningParam">Codigo EAN del Articulo</param>
+ <param name="cDescripcionParam">Descripcion del Articulo</param>
+ <param name="cDetalleParam">Detalles del articulo</param>
+ <param name="cPesableParam">Si es Pesable 'P' o 'N' si no lo es</param>
+ <param name="nCostoParam">Costo del Articulo</param>
+ <param name="cIdSectorParam">Identificador del Sector al que pertenece (dos digitos)</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectorSQLiteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectorSQLiteOTD.#ctor(System.Int64,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del objeto</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SoporteSQLiteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SoporteSQLiteOTD.#ctor(System.Int64,System.String,System.Int32)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del objeto</param>
+ <param name="bSubDivisibleParam">Si es subdivisible o no [0|1] (metros y niveles)</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuarioSQLiteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuarioSQLiteOTD.#ctor(System.Int64,System.String,System.Int32,System.Byte[])">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Nombre del Usuario</param>
+ <param name="nNivelAccesoParam">Nivel de acceso del usuario</param>
+ <param name="aContrasenaParam">Contrasena de acceso</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ColectorOTD.#ctor">
+ <summary>
+ Constructor por defecto
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ColectorOTD.#ctor(System.Int32,System.String,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nId">Identificador de la instancia</param>
+ <param name="cNombreColector">Nombre del Dispositivo</param>
+ <param name="cDireccionIP">Direccion IP del Dispositivo</param>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ColectorOTD.NombreColector">
+ <summary>
+ Devuelve o establece el Nombre asignado al Equipo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ColectorOTD.DireccionIP">
+ <summary>
+ Devuelve o establece la Direccion IP del Equipo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ColectorOTD.Id">
+ <summary>
+ Devuelve o establece el Identificador del Equipo
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ConfiguracionOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EmpresaOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EmpresaOTD.#ctor(System.Int32,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Nombre del local</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FotoEmeOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FotoEmeOTD.#ctor(System.Int64,System.String,System.Double,System.String,System.Double,System.String,System.Char)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del articulo</param>
+ <param name="nCostoParam">Costo del articulo</param>
+ <param name="cDetalleParam">Detalles del articulo</param>
+ <param name="nTeoricoParam">Cantidad teorica en el sistema</param>
+ <param name="cIdSectorParam">Identificador del sector al que pertenece</param>
+ <param name="cPesableParam">Marca de producto pesable ['P'|'N']</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EntradaColectoraOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EntradaColectoraOTD.#ctor(System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Double,System.String,System.Int64)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdInventarioParam">Identificador del inventario</param>
+ <param name="nIdLocacionParam">Identificador de la locacion</param>
+ <param name="nNroConteoParam">Nro. de conteo realizado</param>
+ <param name="nIdSoporteParam">Identificador del soporte</param>
+ <param name="nNroSoporteParam">Nro. del soporte</param>
+ <param name="nIdLetraSoporteParam">Identificador de la letra del soporte</param>
+ <param name="cScanningParam">Codigo de barras del articulo</param>
+ <param name="nNivelParam">Nivel</param>
+ <param name="nMetroParam">Metro</param>
+ <param name="nCantidadParam">Cantidad registrada</param>
+ <param name="cColectorParam">Nombre del Dispositivo Colector</param>
+ <param name="nIdUsuarioParam">Identificador del usuario que carga los datos</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD.#ctor(System.Int64,System.DateTime,System.String,System.String,System.String,System.String,System.Double,System.String,System.Double,System.Double,System.Double,System.Double,System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdInventarioParam">Identificador del inventario</param>
+ <param name="dFechaInventarioParam">Fecha del inventario</param>
+ <param name="cIdSectorParam">Identificador del sector del articulo</param>
+ <param name="cNombreSectorParam">Nombre del sector</param>
+ <param name="cScanningParam">Codigo de barras del articulo</param>
+ <param name="cDescripcionParam">Descripcion del articulo</param>
+ <param name="nCostoParam">Costo del articulo</param>
+ <param name="nCantidadTeoricaParam">Cantidad teorica del articulo</param>
+ <param name="nConteo1Param">Cantidad en primer conteo</param>
+ <param name="nConteo2Param">Cantidad en segundo conteo</param>
+ <param name="nConteo3Param">Cantidad en tercer conteo</param>
+ <param name="nCantidadAjusteParam">Cantidad de ajuste de diferencias</param>
+ <param name="bAjustarParam">Si se va a ajustar o no el registro</param>
+ <param name="bAjustadoParam">Si ya esta ajustado o no el registro</param>
+ <param name="bPesableParam">Si el producto es pesable o no</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD.cGet_csv(System.Char)">
+ <summary>
+ Devuelve una cadena de valores para los datos, separados por el caracter indicado
+ </summary>
+ <param name="cSeparador">Separador de valores</param>
+ <returns>Cadena de valores separados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD.cGet_titulos_csv(System.Char)">
+ <summary>
+ Devuelve una cadena de valores para el titulo, separados por el caracter indicado
+ </summary>
+ <param name="cSeparador">Separador de valores</param>
+ <returns>Cadena de valores separados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD.nGet_conteo_final">
+ <summary>
+ Devuelve la cantidad a tomar como conteo final
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciaVwOTD.cGet_string_ibm_vasto">
+ <summary>
+ Devuelve una cadena de valores para los datos para el Eme
+ , separados por el caracter indicado
+ </summary>
+ <returns>Cadena de valores separados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.InventarioOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.InventarioSectorOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.InventarioSectorOTD.#ctor(System.Int64,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdInventarioParam">Identificador del Inventario</param>
+ <param name="cIdSectorParam">Identificador del Sector</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocacionOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocacionOTD.#ctor(System.Int64,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del objeto</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocalOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocalOTD.#ctor(System.Int32,System.String,InveStock_PC_2.SistemaOTD,System.Int32,System.Int32,InveStock_PC_2.EmpresaOTD,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Nombre del local</param>
+ <param name="oSistemaParam">Instancia del Sistema de Gestion asociado</param>
+ <param name="nIdEnSistemaParam">Identificador del local en el sistema de gestion</param>
+ <param name="nIdTipoLocalPAram">Identificador de tipo de local</param>
+ <param name="oEmpresaParam">Instancia de Empresa a la que pertenece el local</param>
+ <param name="cNombreClaveParam">Nombre clave del local para otros usos</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.NivelAccesoOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.NivelAccesoOTD.#ctor(System.String,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Nombre del Nivel</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ProductoOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ProductoOTD.#ctor(System.String,System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del producto</param>
+ <param name="cScanningParam">Codigo de barras</param>
+ <param name="cDetalleParam">Detalles del producto</param>
+ <param name="bPesableParam">Si es pesable o no</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectorOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectorOTD.#ctor(System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="cIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Nombre del Sector</param>
+ <param name="nNivelParam">Nivel de Sectorizacion</param>
+ <param name="cIdSectorPadreParam">Identificador del Sector Padre</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SistemaOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SistemaOTD.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Nombre del Sistema</param>
+ <param name="cUsuarioParam">Usuario de conexion a sistema</param>
+ <param name="cIpParam">Ip del Servidor</param>
+ <param name="cServicioParam">Nombre del servicio</param>
+ <param name="nPuertoParam">Puerto de Escucha</param>
+ <param name="cPasswordParam">Contrasena de acceso</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SoporteOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SoporteOTD.#ctor(System.Int64,System.String,System.Boolean)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Descripcion del objeto</param>
+ <param name="bSubDivisibleParam">Si es subdivisible o no (metros y niveles)</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.TmpMaestroArticuloOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.TmpMaestroArticuloOTD.#ctor(System.Int64,System.String,System.Int64,System.Double,System.String,System.Double,System.String,System.Char)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdInventarioParam">Identificador del inventario asociado</param>
+ <param name="cDescripcionParam">Descripcion del articulo</param>
+ <param name="nScanningParam">Codigo de barras del articulo</param>
+ <param name="nCostoParam">Costo del articulo</param>
+ <param name="cDetalleParamm">Detalle del articulo</param>
+ <param name="nTeoricoParam">Cantidad teorica en existencia</param>
+ <param name="cIdSectorParam">Identificador del sector asociado</param>
+ <param name="cPesableParam">Si es pesable o no ['P', 'N']</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuarioLocalOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuarioLocalOTD.#ctor(System.Int32,InveStock_PC_2.UsuarioOTD,InveStock_PC_2.LocalOTD)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="oUsuarioParam">Instancia de UsuarioOTD</param>
+ <param name="oLocalParam">Instancia de LocalOTD</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuarioOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuarioOTD.#ctor(System.Int64,System.String,System.Byte[],InveStock_PC_2.NivelAccesoOTD,System.Boolean)">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <param name="nIdParam">Identificador del objeto</param>
+ <param name="cDescripcionParam">Nombre del usuario</param>
+ <param name="aContrasenaParam">Contrasena de acceso</param>
+ <param name="oNivelAccesoParam">Instancia de Nivel de Acceso asociado</param>
+ <param name="bHabilitadoParam">Si esta habilitado o no</param>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.UsuarioOTD.Id">
+ <summary>
+ Devuelve o establece el identificador del objeto
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.UsuarioOTD.Descripcion">
+ <summary>
+ Devuelve o establece el nombre del usuario
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.UsuarioOTD.Contrasena">
+ <summary>
+ Devuelve o establece la contrasena del usuario
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.UsuarioOTD.NivelAcceso">
+ <summary>
+ Devuelve o establece el nivel de acceso del usuario
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.UsuarioOTD.Habilitado">
+ <summary>
+ Devuelve o establece el estado de habilitacion del usuario
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.VwDetalleConteoOTD.#ctor">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.VwDetalleConteoOTD.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.String,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Constructor de la clase 
+ </summary>
+ <param name="cNombreLocalParam">Nombre del Local</param>
+ <param name="cLocacionParam">Descripcion de la locacion</param>
+ <param name="cSoporteParam">Descripcion del soporte</param>
+ <param name="nMetroParam">Metro</param>
+ <param name="nNivelParam">Nivel</param>
+ <param name="cScanningParam">Codigo de barras del articulo</param>
+ <param name="cArticuloParam">Descripcion del articulo</param>
+ <param name="nConteo1Param">Cantidad en primer conteo</param>
+ <param name="nConteo2Param">Cantidad en segundo conteo</param>
+ <param name="nDiferencia12Param">Diferencia entre los primeros dos conteos</param>
+ <param name="nConteo3Param">Cantidad en tercer conteo</param>
+ <param name="cNombreUsuarioParam">Nombre del Usuario</param>
+ <param name="nIdInventarioParam">Identificador del inventario</param>
+ <param name="nIdLocacionParam">Identificador de la locacion</param>
+ <param name="nIdSoporteParam">Identificador del soporte</param>
+ <param name="nNroSoporteParam">Nro. de Soporte</param>
+ <param name="nIdLetraSoporteParam">Identificador de la letra del soporte</param>
+ <param name="cIdSectorParam">Identificador del sector del articulo</param>
+ <param name="nCostoParam">Costo del Articulo</param>
+ <param name="nPrueba1Param">Conteo de Prueba numero 1</param>
+ <param name="nPrueba2Param">Conteo de Prueba numero 2</param>
+ <param name="nPrueba3Param">Conteo de Prueba numero 3</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModeloSQLite.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModeloSQLite.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los componentes internos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModeloSQLite.lResetear_tablas">
+ <summary>
+ Ejecuta la eliminacion y creacion de las tablas mas grandes de la bd
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModeloSQLite.Get_instancia">
+ <summary>
+ Devuelve una instancia de la clase
+ </summary>
+ <returns>Devuelve una instancia de la clase</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ApModeloSQLite.Get_conector">
+ <summary>
+ Devuelve una instancia de la Utileria de Conexion a la BD
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Get_path_sqlite">
+ <summary>
+ Devuelve el path absoluto al archivo SQLite
+ </summary>
+ <value></value>
+ <returns>Path absoluto al archivo</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Configuraciones_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla CONFIGURACIONES
+ </summary>
+ <value>Nothing</value>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Locaciones_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla LOCACIONES
+ </summary>
+ <value>Nothing</value>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Soportes_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla SOPORTES
+ </summary>
+ <value>Nothing</value>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Sectores_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla SECTORES
+ </summary>
+ <value>Nothing</value>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Usuarios_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla USUARIOS
+ </summary>
+ <value>Nothing</value>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Maestro_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla MAESTRO de articulos
+ </summary>
+ <value>Nothing</value>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="P:InveStock_PC_2.ApModeloSQLite.Lecturas_ADM">
+ <summary>
+ Devuelve una instancia del administrador de operaciones sobre la tabla LECTURAS
+ </summary>
+ <value>Nothing</value>
+ <returns>Instancia del administrador de operaciones</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CargasManualesTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.ConfiguracionesSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.ConfiguracionesSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ConfiguracionesSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LecturasSQLiteADM.lCrear_tabla">
+ <summary>
+ Ejecuta la creacion de la tabla administrada
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciasVwTBL_SAP.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.LecturasSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.LecturasSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LecturasSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.LetrasSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.LetrasSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LetrasSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.LocacionesSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.LocacionesSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocacionesSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.MaestroSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.MaestroSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.MaestroSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.SectoresSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Devuelve el comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.SectoresSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Devuelve el comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectoresSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.SoportesSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Devuelve el comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.SoportesSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Devuelve el comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SoportesSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.UsuariosSQLiteTBL.SQL_DROP_TABLA">
+ <summary>
+ Comando de eliminacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.UsuariosSQLiteTBL.SQL_CREAR_TABLA">
+ <summary>
+ Comando de creacion de la tabla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuariosSQLiteTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ConfiguracionesTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.DetallesConteosTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.DetallesConteosTmpTBL.SP_CREAR_TABLA_TMP">
+ <summary>
+ Devuelve el comando que se utiliza para generar las tablas temporales
+ para consulta de datos de conteos detallados x ubicacion
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.DetallesConteosTmpTBL.#ctor(System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EmpresasTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EmpresasTBL.Get_nombre_tabla">
+ <summary>
+ Devuelve el nombre de la tabla
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.EntradasColectorasTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ExistenciasVwTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.InventarioProductoSectoresTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.InventarioProductosTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:InveStock_PC_2.InventariosSectoresTBL.SP_ASIGNAR_TODOS">
+ <summary>
+ Devuelve el comando se ejecucion de Asignacion de todos los sectores
+ al inventario parametro "@id_inventario = {0}"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.InventariosSectoresTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.InventariosTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocacionesTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.LocalesTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.NivelesAccesosTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.ProductosTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SectoresTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SistemasTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SoportesTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.TmpMaestroArticulosTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuariosLocalesTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuariosLocalesTBL.Get_nombre_tabla">
+ <summary>
+ Devuelve el nombre de la tabla
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.UsuariosTBL.#ctor">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.VwDetallesConteosTBL.#ctor(System.String)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="cNombreVistaParam">Nombre de la vista a representar</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmListaLocales.#ctor(System.Collections.Generic.List{InveStock_PC_2.LocalOTD}@)">
+ <summary>
+ Constructor de la Clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmListaLocales.btn_aceptar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el boton [v]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmListaLocales.btn_cancelar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el boton [x]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmListaLocales.lst_locales_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Cuando se hace click en la Lista de Locales
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.frm_abm_soportes_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ CUANDO SE CIERRA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.frm_abm_soportes_Load(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CARGA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.pCargar_Grilla">
+ <summary>
+ CARGA LOS DATOS DE SOPORTES EN LA GRILLA DE VISUALIZACION
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.pMostrar_Primer_Elemento">
+ <summary>
+ CARGA LOS DATOS DEL PRIMER REGISTRO DE LA GRILLA EN LOS CONTROLES DE ABM
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.grd_soportes_CellContentClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK SOBRE EL CONTENIDO DE UNA CELDA
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.txt_id_GotFocus(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO EL CUADRO DE "ID Soporte" GANA EL ENFOQUE
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.cmd_agregar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Agregar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.pHabilitar_Controles_UP">
+ <summary>
+ HABILITA LOS CONTROLES NECESARIOS PARA UNA ACTUALIZACION DE DATOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.nNuevo_ID">
+ <summary>
+ GENERA UN NUEVO ID PARA EL SOPORTE Y LO DEVUELVE COMO RESULTADO
+ </summary>
+ <returns>Devuelve un Entero con el Resultado de la Consulta</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.cmd_cancelar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.pDeshabilitar_Controles_UP">
+ <summary>
+ DESHABILITA LOS CONTROLES NECESARIOS PARA UNA ACTUALIZACION DE DATOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.cmd_modificar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Modificar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.cmd_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Salir]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.cmd_guardar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Guardar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_abm_soportes.pGuardar_Datos_Soporte">
+ <summary>
+ GRABA LOS DATOS DEL SOPORTE EN LA TABLA CORRESPONDIENTE
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.#ctor(InveStock_PC_2.ApControlador)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControlador">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion del resto de los componentes de la clase 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.__cargar_grilla">
+ <summary>
+ CARGA LOS DATOS DE USUARIOS EN LA GRILLA DE VISUALIZACION
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.__cargar_combo_niveles">
+ <summary>
+ CARGA LOS ITEMS EN EL COMBO DE "Nivel"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.__mostrar_primer_elemento">
+ <summary>
+ CARGA LOS DATOS DEL PRIMER REGISTRO DE LA GRILLA EN LOS CONTROLES DE ABM
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.__habilitar_controles_upd">
+ <summary>
+ HABILITA LOS CONTROLES NECESARIOS PARA UNA ACTUALIZACION DE DATOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.__deshabilitar_controles_upd">
+ <summary>
+ DESHABILITA LOS CONTROLES NECESARIOS PARA UNA ACTUALIZACION DE DATOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.__guardar_datos">
+ <summary>
+ GRABA LOS DATOS DEL USUARIO EN LA TABLA CORRESPONDIENTE
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.grd_usuarios_RowHeaderMouseDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ Cuando se hace doble click en la cabecera de una fila
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.cmd_agregar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Agregar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.cmd_cancelar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.cmd_modificar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Modificar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.cmd_guardar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Guardar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.txt_id_LostFocus(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO EL CUADRO DE "ID Usuario" PIERDE EL ENFOQUE
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.cmd_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Salir]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.lst_locales_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ Cuando de hace click en la Lista de Locales
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.btn_agregar_local_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el boton [+]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmAbmUsuarios.btn_quitar_local_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el boton de eliminacion de locales
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmInfoActual.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControlador">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmInfoActual.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmInfoActual.__cargar_info">
+ <summary>
+ Ejecuta la recuperacion de datos del inventario
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmInfoActual.cmd_aceptar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON [Aceptar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.cmd_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Salir]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.cmd_nuevo_soporte_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Nuevo Soporte]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.frm_aso_local_soporte_Load(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CARGA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.pCargar_Combo_Soportes">
+ <summary>
+ CARGA LOS ITEMS EN EL CONTROL COMBOBOX DE "Soportes"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.pCargar_Combo_Locales">
+ <summary>
+ CARGA LOS ITEMS EN EL CONTROL COMBOBOX DE "Tipos de Locales"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.pCargar_Grilla_Tipo_Locales">
+ <summary>
+ CARGA LA GRILLA DE "Tipos de Locales Asociados"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.pCargar_Grilla_Soportes">
+ <summary>
+ CARGA LA GRILLA DE "Soportes Asociados"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.cmb_soportes_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL COMBO DE "Soportes"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.cmb_tipo_locales_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL COMBO DE "Tipos de Locales"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.cmd_asociar_local_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Asociar con Tipo Local]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.cmd_asociar_soporte_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Asociar con Soporte]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.mnu_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Salir"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_aso_local_soporte.mnu_nuevo_soporte_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Nuevo Soporte"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Contructor de la clase
+ </summary>
+ <param name="oApControladorParam">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__cargar_combos">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE VALORES A COMBOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__cargar_grilla">
+ <summary>
+ MUESTRA LOS REGISTROS DE CONTEOS REALIZADOS EN EL EQUIPO CORRESPONDIENTE
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__ocultar_columnas">
+ <summary>
+ Oculta las columnas de la grilla que no son necesarias
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.bSoporte_SubDivisible(System.String)">
+ <summary>
+ EJECUTA LA CONSULTA DE SI EL SOPORTE ES SUBDIVISIBLE, DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="cID_Soporte">ID del Soporte a Consultar</param>
+ <returns>Devuelve 'True' si es SubDivisible</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__buscar_articulo">
+ <summary>
+ DESPLIEGA LOS DATOS DEL ARTICULO CUYO SCANNING FIGURA EN EL CUADRO DE HOMONIMO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__bDatos_validos">
+ <summary>
+ VALIDA LOS IDs DE LOS COMBOS DE UBICACION Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si los Datos son Validos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__desplegar_datos">
+ <summary>
+ Despliega los datos del articulo actual
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__descartar_cargas_manuales">
+ <summary>
+ EJECUTA EL PROCEDIMIENTO DE ELIMINACION DE REGISTROS DE LA TABLA DE [CARGA_MANUAL]
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__validar_conteos">
+ <summary>
+ EJECUTA LA TRANSFERENCIA DE LOS REGISTROS DE CONTEOS MANUALES A DETALLES DE CONTEOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__eliminar_registro">
+ <summary>
+ ELIMINA EL REGISTRO SELECCIONADO DE LA GRILLA DE CARGAS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__guardar_conteo">
+ <summary>
+ GUARDA EL REGISTRO ACTUAL
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.__limpiar_controles">
+ <summary>
+ LIMPIA LOS CONTROLES UTILIZADOS PARA CARGA DE DATOS DE CONTEO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.txt_scanning_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ CUANDO SE PRESIONA UNA TECLA ESTANDO EN EL CUADRO DE "Scanning"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmd_guardar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Guardar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.txt_cantidad_GotFocus(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO EL CUADRO DE "Cantidad" RECIBE EL ENFOQUE
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.txt_cantidad_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ CUANDO SE PRESIONA UNA TECLA EN EL CUADRO DE "Cantidad"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.txt_cantidad_LostFocus(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO EL CUADRO DE "Cantidad" PIERDE EL ENFOQUE
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.txt_cantidad_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL CONTENIDO DEL CUADRO DE "Cantidad"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmd_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Salir]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmd_limpiar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Limpiar Conteo]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.grd_cargas_RowHeaderMouseDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN LA CABECERA DE UNA FILA
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmb_validar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Validar Conteo]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmb_locaciones_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL COMBO DE "Locacion"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmb_soportes_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL COMBO DE "Soporte"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmb_letras_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL COMBO DE "Letra"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.cmd_cancelar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.num_metro_ValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL CONTROL DE "Metro"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmCargaManual.num_nivel_ValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL CONTROL DE "Nivel"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControlador">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes internos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.__lCargar_empresas">
+ <summary>
+ Carga los items del combo de empresas
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.__lCargar_locales">
+ <summary>
+ Carga los items del combo de locales
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.__lObtener_datos_inventario">
+ <summary>
+ PROCEDIMIENTO DE OBTENCION DE DATOS ULTIMO INVENTARIO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.__habilitar_controles">
+ <summary>
+ habilita los controles para ingresar nuevos datos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.__deshabilitar_controles">
+ <summary>
+ Deshabilita los controles de ingresao de datos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.lGuardar_inventario">
+ <summary>
+ Ejecuta la persistencia de los nuevos datos de inventario
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.pGuardar_Sectores_Inventario">
+ <summary>
+ OBTIENE Y GUARDA LOS SECTORES AFECTADOS POR EL INVENTARIO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.lObtener_sectores">
+ <summary>
+ OBTIENE LOS DATOS DE SECTORES DESDE LA BD DEL SISTEMA DE GESTION, DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Obtuvieron Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.EsDeEmpresa(InveStock_PC_2.LocalOTD)">
+ <summary>
+ Metodo de filtrado de lista de locales
+ </summary>
+ <param name="oLocal">Item a Evaluar</param>
+ <returns>True|False segun sea</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.OK_Button_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON [Aceptar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.Cancel_Button_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.mnu_nuevo_inventario_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el menu "Nuevo Inventario"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.mnu_guardar_datos_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU [Guardar Datos]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.cmd_sector_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [...]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.mnu_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Salir"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.cmb_empresa_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Cuando cambia el item seleccionado del combo de "Empresas"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDatosInventario.cmb_local_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se cambia el item seleccionado del combo de "Locales"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControlador">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion del resto de los componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__cargar_grillas_eme">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE DATOS A GRILLAS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__cargar_grillas_sap">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE DATOS A GRILLAS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__cargar_combo_campos">
+ <summary>
+ CARGA LOS ITEMS DEL COMBO DE CAMPOS DE FILTRADO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__crear_arbol_sectores">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE ARBOL DE SECTORES POSIBLES
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__filtrar_registros">
+ <summary>
+ EVALUA Y EJECUTA LA BUSQUEDA DEL ARTICULO CORRESPONDIENTE
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__cGet_condicion_filtrado">
+ <summary>
+ GENERA LA CONDICION DE FILTRADO DE ACUERDO A LOS CRITERIOS SELECCIONADOS
+ </summary>
+ <returns>Devuelve la Cadena con los Criterios de Seleccion</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__aplicar_conteos(System.Int32)">
+ <summary>
+ PROCEDIMIENTO DE APLICACION DE CONTEO
+ </summary>
+ <param name="intNumeroConteo">numero de Conteo a Aplicar[1|2|3]</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.bCerrar_Inventario">
+ <summary>
+ EJECUTA SP DE CIERRE DE INVENTARIO ACTUAL Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Cerro Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__cGet_id_sector">
+ <summary>
+ DEVUELVE EL CODIGO DE SECTOR DE ACUERDO AL NODO SELECCIONADO
+ </summary>
+ <returns>Devuelve el Codigo del Sector Seleccionado</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__desplegar_arbol_sectores">
+ <summary>
+ PROCEDIMIENTO DE DESPLIEGUE DE ARBOL DE SECTORES
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__replegar_arbol_sectores">
+ <summary>
+ PROCEDIMIENTO DE REPLIEGUE DE ARBOL DE SECTORES
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__bloquear_controles">
+ <summary>
+ BLOQUEA LOS CONTROLES DEL FORMULARIO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__desbloquear_controles">
+ <summary>
+ DESBLOQUEA LOS CONTROLES DEL FORMULARIO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__resaltar_diferencias">
+ <summary>
+ MARCA CON COLOR LAS CELDAS DE LA COLUMNA DEL CAMPO [DIFERENCIA_1_2] QUE SEAN DIFERENTES DE CERO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__exportar_datos_a_csv">
+ <summary>
+ Exporta a un archivo CSV los datos de Existencias
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.__exportar_ibm_basto">
+ <summary>
+ Exporta los datos de resumen del inventario al archivo IBM Basto para alimentar 
+ a la foto en el EmeRetail
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.frm_despliega_existencias_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ CUANDO SE ESTA CERRANDO EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.cmb_campos_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO DEL COMBO DE "Filtrar por"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.cmb_comparaciones_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ITEM SELECCIONADO EN EL COMBO DE COMPARACIONES
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.txt_valor_buscado_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ CUANDO SE PRESIONA UNA TECLA SOBRE EL CUADRO DE "Cantidad"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.txt_valor_buscado_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL CUADRO DE "Valor Buscado"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.cmd_filtrar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON DE BUSQUEDA
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.grd_existencias_CellContentDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CUANDO SE HACE DOBLE CLICK SOBRE EL CONTENIDO DE UNA CELDA
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.cmd_excel_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON CON LOGO EXCEL
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.cmd_aplicar_conteo_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON [Aplicar Conteo]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.tvw_arbol_sectores_AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+ <summary>
+ DESPUES DE QUE SE SELECCIONO UN NODO DEL ARBOL DE SECTORES
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.tmr_arbol_Tick(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO OCURRE UN EVENTO "TICK" EN EL TIMER QUE CONTROLA EL ARBOL DE SECTORES
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.grd_detalles_CellContentDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CUANDO SE HACE DOBLE CLICK EN EL CONTENIDO DE UNA CELDA
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.txt_hasta_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL CUADRO "Hasta" DE LOS VALORES BUSCADOS
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.txt_desde_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL CUADRO "Desde" DE LOS VALORES BUSCADOS
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.mnu_exportar_excel_2_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Exportar a Excel"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.mnu_aplicar_conteo_2_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Aplicar Conteo"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.mnu_salir_2_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Salir"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.mnu_desplegar_reporte_2_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Desplegar Reporte"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.mnu_cubo_excel_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO DE HACE CLICK EN EL MENU "Cubo Excel"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.opt_verdadero_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK SOBRE EL RADIO BUTTON "Verdadero"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.opt_falso_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK SOBRE EL RADIO BUTTON "Falso"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.grd_existencias_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN LAS CABECERAS DE LAS COLUMNAS
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks> 
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.PDiferenciasToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU DE "Reporte Diferencias"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmVerExistencias.mnu_ibm_basto_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace lick en el menu "Exportar IBM Basto"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmColectores.#ctor(InveStock_PC_2.ApControlador@,InveStock_PC_2.ApModelo@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControlador">Referencia a la instancia del controlador de la aplicacion</param>
+ <param name="oApModelo">Referencia a la instancia del modelo de datos de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmColectores.btn_aceptar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el boton [Aceptar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmColectores.btn_cancelar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el boton [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="T:InveStock_PC_2.frm_despliega_maestro">
+ <summary>
+ FORMULARIO DE DESPLIEGUE DE DATOS DEL MASTRO DE ARTICULOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_despliega_maestro.OK_Button_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Tomar Maestro]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_despliega_maestro.Cancel_Button_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_despliega_maestro.frm_despliega_maestro_Resize(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA DE TAMANO EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_despliega_maestro.frm_despliega_maestro_Load(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CARGA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControladorParam">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__crear_tablas_temporales">
+ <summary>
+ Ejecuta la creacion de las tablas temporales a utilizar
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__cargar_grilla">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE DATOS A LA GRILLA
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__ocultar_columnas">
+ <summary>
+ Oculta las columnas innecesarias de la grilla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__cargar_combos">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE VALORES A COMBOS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__generar_csv">
+ <summary>
+ PROCEDIMIENTO DE GENERACION DE ARCHIVO CSV
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__escribir_csv(System.String)">
+ <summary>
+ PROCEDIMIENTO DE TRANSCRIPCION DEL CONTENDO DE LA GRILLA AL ARCHIVO CSV
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.__marcar_diferencias">
+ <summary>
+ MARCA CON COLOR LAS CELDAS DE LA COLUMNA DEL CAMPO [DIFERENCIA_1_2] QUE SEAN DIFERENTES DE CERO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.cmd_buscar_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cuando se hace click en el boton de busqueda
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.frm_detalles_ubicaciones_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ CUANDO SE CIERRA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.frm_detalles_ubicaciones_Resize(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL TAMANO DEL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.mnu_planilla_diferencias_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Planilla de Diferencias"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.cmd_excel_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTONO CON EL LOGO DE "Ms Excel"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.grd_detalles_ubicaciones_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK SOBRE LAS CABECERAS DE LAS COLUMNAS
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.mnu_exportar_csv_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Exportar a CSV"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmDetallesUbicaciones.mnu_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Salir"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControladorParam">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.__cargar_combo_campos">
+ <summary>
+ CARGA LOS ITEMS EN EL COMBO DE "Campos de Filtrado"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.__lDescartar_lecturas">
+ <summary>
+ ELIMINA LOS REGISTROS DE LECTURAS REALIZADAS
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.__lTomar_datos_lecturas">
+ <summary>
+ TRANSFIERE LOS REGISTROS DE LA TABLA [ENTRADA_COLECTORAS] A [DETALLES_CONTEOS]
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.frm_entradas_colectores_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ cuando se esta cerrando el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.mnu_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Salir"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.mnu_descartar_datos_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Descartar Datos"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.mnu_tomar_datos_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Tomar Datos"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.txt_valor_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Cuando cambia el valor del cuadro de "Valor Buscado"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmEntradasColectores.chkModoPrueba_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO CAMBIA EL ESTADO DEL CHECKBOX DE [Datos de Prueba]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmModificarConteo.OK_Button_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON [Aceptar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmModificarConteo.Cancel_Button_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmModificarConteo.txt_conteo_1_LostFocus(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO EL CUADRO DE "Conteo 1" PIERDE EL ENFOQUE
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmModificarConteo.txt_conteo_1_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL VALOR DEL CUADRO DE "Conteo 1"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_nueva_asociacion.frm_nueva_asociacion_Load(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CARGA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_nueva_asociacion.cmd_cancelar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_nueva_asociacion.cmd_guardar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Guardar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_nueva_asociacion.bGuardar_Datos">
+ <summary>
+ GUARDA LOS CAMBIOS REALIZADOS EN LA GRILLA EN LA TABLA [TMP_NUEVA_ASOCIACION] Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Guardaron Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_nueva_asociacion.pConfirmar_Asociaciones">
+ <summary>
+ CONFIRMA LAS NUEVAS ASOCIACIONES REALIZADAS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmOpciones.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControlador">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmOpciones.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmOpciones.cmd_aceptar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Aceptar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mostrar_form">
+ <summary>
+ Ejecuta el despliegue de datos de inventarios en el formulario
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mostrar_mensaje_estado(System.String,System.String)">
+ <summary>
+ MUESTRA UN MENSAJE EN LA BARRA DE ESTADO
+ </summary>
+ <param name="cMensajeParam">Mensaje a Desplegar</param>
+ <param name="cEstadoParam">Mensaje de estado a Desplegar en las segunda posicion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.bCargar_Datos_Lecturas(System.String)">
+ <summary>
+  CARGA EN LA BASE DE DATOS LOS REGISTROS DESDE EL ARCHIVO CSV Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="strNombreArchivoCSV">Nombre del Archivo CSV a Cargar</param>
+ <returns>Devuelve 'True' si se Cargo Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.dtbDatos_Cargados">
+ <summary>
+ DESPLIEGUA LOS DATOS DE ENTRADAS LECTURAS Y DEVUELVE UN BOOLEAN
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.tomar_maestro(System.Object@)">
+ <summary>
+ EJECUTA LA ACTUALIZACION DEL MAESTRO DE ARTICULOS Y LAS EXISTENCIAS TEORICAS
+ </summary>
+ <param name="nTipoParam">Tipo de Actualizacion a Realizar [REEMPLAZAR|ACTUALIZAR]</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.frm_principal_Load(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CARGA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.frm_principal_GotFocus(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO EL FORMULARIO GANA EL ENFOQUE
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.frm_principal_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ CUANDO EL FORMULARIO SE ESTA CERRANDO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_datos_inventario_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Datos de Inventario"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_configuracion_inventario_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Configuracion del Inventario"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_obtener_maestro_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Obtener Maestro"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_actualizar_teoricos_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU 'Actualizar Teoricos'
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_carga_manual_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Carga Manual"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param> 
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_detalles_x_ubicaciones_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Detalles x Ubicaciones"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_resumen_inventario_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Resumen de Inventario"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param> 
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Salir"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.cmd_sectores_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL BOTON [Sectores Cubiertos]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.lbl_estado_inventario_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL TEXTO DE LA ETIQUETA DE "Estado Actual"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_cerrar_inventario_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU [CERRAR INVENTARIO]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_maestro_a_colectores_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Copiar Maestro a Colectores"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_actualizar_tablas_parametros_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU DE "Actualizar Tablas de Parametros"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_actualizar_maestro_colectora_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Actualizar Maestro para Colectoras"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_descargar_lecturas_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Descargar Lecturas"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_usuarios_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU DE "Usuarios"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_soportes_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Tipos de Soportes"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_aso_local_soporte_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Asociación Tipo Local - Soportes"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_reportar_problema_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Reportar un Problema"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmPrincipal.mnu_info_actual_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Info Actual"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControlador">Instancia del controlador de la Aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion del resto de los componentes internos
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.__lCrear_arbol_sectores">
+ <summary>
+ Ejecuta la creacion del arbolde sectores de productos
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.post_sector_seleccionado">
+ <summary>
+ Actualiza la vista de la grilla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.marcar_sectores">
+ <summary>
+ Marca los nodos del arbol que aparecen en la lista de sectores a cubrir
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.recargar_sectores(System.String)">
+ <summary>
+ Recarga de datos en grilla
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.cargar_lista_sectores">
+ <summary>
+ Carga la lista de sectores a ser inventariados
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.agregar_nodos_hijos(System.Windows.Forms.TreeNode)">
+ <summary>
+ Recorre los hijos del nodo actual para cargarlos a la lista de sectores seleccionados si corresponde
+ </summary>
+ <param name="oNodo">Instancia de Nodo del Arbol a Recorrer</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.marcar_nodos_padres(System.Windows.Forms.TreeNode@,System.Boolean)">
+ <summary>
+ Marca los nodos padres del Nodo parametro a estado indicado
+ </summary>
+ <param name="oNodoActual">Nodo Actual cuyo Padre sera Marcado|Desmarcado</param>
+ <param name="bEstado">Marca de Estado a Aplicar</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.marcar_nodos_hijos(System.Windows.Forms.TreeNode@)">
+ <summary>
+ MARCA LOS NODOS DE NIVELES HIJOS AL NODO "oNodoActual"
+ </summary>
+ <param name="oNodoActual">Nodo al que se cambiara el Estado</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.desmarcar_nodos_hijos(System.Windows.Forms.TreeNode@)">
+ <summary>
+ DESMARCA LOS NODOS HIJOS DE UN NODO DESMARCADO
+ </summary>
+ <param name="oNodoActual">Nodo cuyos Hijos deben desmarcarse</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.chk_todos_CheckedChanged(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CAMBIA EL ESTADO DEL CHECKBOX "Todos"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.cmd_aceptar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Aceptar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.cmd_cancelar_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Cancelar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.frm_sectores_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ CUANDO SE ESTA CERRANDO EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.tvw_arbol_sectores_AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+ <summary>
+ DESPUES DE HABER SELECCIONADO UN SECTOR
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectores.tvw_arbol_sectores_AfterCheck(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+ <summary>
+ CUANDO SE HA ESTABLECIDO DEL VALOR CHECKED DE UN NODO A FALSO O VERDADERO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectoresCubiertos.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Construtor de la clase
+ </summary>
+ <param name="oApControlador">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectoresCubiertos.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectoresCubiertos.__lRecuperar_sectores">
+ <summary>
+ Recupera la lista de sectores cubiertos por el inventario
+ </summary>
+ <returns>Lista de Resultados [int, object]</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectoresCubiertos.__buscar_sector">
+ <summary>
+ Ejecuta la busqueda del sector en la tabla original
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSectoresCubiertos.txt_buscado_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ Cuando se presiona una tecla en el campo de valor de busqueda
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSeleccionLocal.#ctor(InveStock_PC_2.ApControlador@)">
+ <summary>
+ Constructor de la clase
+ </summary>
+ <param name="oApControladorParam">Instancia del controlador de la aplicacion</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSeleccionLocal.__Inicializar_componentes">
+ <summary>
+ Ejecuta la inicializacion de los demas componentes de la clase
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSeleccionLocal.cargar_combo_locales">
+ <summary>
+ CARGA LOS ITEMS DEL COMBO DE "Local a Trabajar"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSeleccionLocal.pBloquear_Aplicacion">
+ <summary>
+ PROCEDIMIENTO DE BLOQUEO DE APLICACION
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSeleccionLocal.Timer1_Tick(System.Object,System.EventArgs)">
+ <summary>
+ EVENTO DEL TIMER
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSeleccionLocal.cmd_aceptar_click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Aceptar]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.FrmSeleccionLocal.cmd_salir_click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN [Salir]
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.frm_soportes_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ CUANDO EL FORMULARIO SE ESTA CERRANDO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.frm_soportes_Load(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE CARGA EL FORMULARIO
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.pCargar_Lista_Soportes">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE COMBO DE SOPORTES
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.pCargar_Grilla_Soportes">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE LA GRILLA DE SOPORTES
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.pIncluir_Soporte(System.String)">
+ <summary>
+ PROCEDIMIENTO DE INCLUSION DE SOPORTE A INVENTARIO
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.pExcluir_Soporte(System.String)">
+ <summary>
+ PROCEDIMIENTO DE EXCLUSION DE SOPORTE
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.grd_soportes_CellContentDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CUANDO SE HACE DOBLE CLICK SOBRE EL CONTENIDO DE UNA CELDA
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.pIncluir_Todos_Los_Soportes">
+ <summary>
+ PROCEDIMIENTO DE INCLUSION EN INVENTARIO DE TODOS LOS SOPORTES DISPONIBLES
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.pExcluir_Todos_Los_Soportes">
+ <summary>
+ PROCEDIMIENTO DE EXCLUSION DE INVENTARIO DE TODOS LOS SOPORTES DISPONIBLES
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.frm_soportes.mnu_salir_Click(System.Object,System.EventArgs)">
+ <summary>
+ CUANDO SE HACE CLICK EN EL MENU "Salir"
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CSV.bCrearCVS(System.String,System.String)">
+ <summary>
+ CREA UN NUEVO ARCHIVO CSV, DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="cDirectorioCVS">Directorio Absoluto donde Residira el Archivo</param>
+ <param name="cNombreArchivoCVS">Nombre del Archivo CSV a crear</param>
+ <returns>Devuelve 'True' si se Creo el Archivo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CSV.bAbrirCSV">
+ <summary>
+ ABRE EL ARCHIVO CSV Y LO PREPARA PARA ESCRIBIR EN EL, DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Abrio correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CSV.bEscribirEnCSV(System.String)">
+ <summary>
+ ESCRIBE UNA LINEA EN EL ARCHIVO CSV Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="cLineaAEscribir">Cadena a Escribir en el Archivo</param>
+ <returns>Devuelve 'True' si se Escribio Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CSV.bCerrarCSV">
+ <summary>
+ CIERRA EL ARCHIVO CSV Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Cerro Normalmente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.CSV.bCopiarCSV(System.String)">
+ <summary>
+ COPIA EL ARCHIVO CSV AL DIRECTORIO ESPECIFICADO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="cDestinoCSV">Directorio de Destino del CSV</param>
+ <returns>Devuelve 'True' si se Copio Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="T:InveStock_PC_2.SICS">
+ <summary>
+ MODULO INTERFACE CON EL SISTEMA SICS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.bCargar_Parametros_Sistema(System.String)">
+ <summary>
+ ASIGNA LOS VALORES DE ATRIBUTOS DEL MODULO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se tomaron todos los Valores</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.bConectar_SICS">
+ <summary>
+ CONECTA A BD DE SICS, DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si la Conexion se Establecio Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.dtObtener_Maestro_Articulos(System.String,System.String)">
+ <summary>
+ CREA Y DEVUELVE UN DATATABLE CON EL MAESTRO DE ARTICULOS DEL LOCAL
+ </summary>
+ <returns>Devuelve un DataTable con el Maestro de Articulos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.bEjecutar_Sentencia_SQL(System.String)">
+ <summary>
+ EJECUTA UNA SENTENCIA SQL EN LA BD Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="strSentenciaSQL">Sentencia SQL a Ejecutar</param>
+ <returns>Devuelve 'True' si se Ejecuto Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.dtbEjecutar_ConsultaSQL(System.String)">
+ <summary>
+ EJECUTA UNA CONSULTA SQL Y DEVUELVE UN DATATABLE
+ </summary>
+ <param name="strConsultaSQL">Sentencia SQL de Consulta</param>
+ <returns>Devuelve un DataTable con los Resultados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.dstCrear_DataSet(System.String)">
+ <summary>
+ EJECUTA UNA CONSULTA SQL Y DEVUELVE UN DATASET
+ </summary>
+ <param name="strConsultaSQL">Sentencia de Consulta de Datos para el DataSet</param>
+ <returns>Devuelve un DataSet con los Datos Devueltos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.pCargar_Combo_Valores(System.Windows.Forms.ComboBox,System.String)">
+ <summary>
+ PROCEDIMIENTO DE CARGA DE RESULTADO DE CONSULTA A COMBOBOX
+ </summary>
+ <param name="cmbNombreCombo">Nombre del Combo de Destino de los Items</param>
+ <param name="strConsultaSQL">Consulta SQL que devolvera los Items para el Combo</param>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.dtbSeleccionar_Sectores(System.String)">
+ <summary>
+ DEVUELVE UN DATATABLE CON LOS DATOS DE SECTORES CUYOS ID COINCIDEN CON EL PARAMETRO
+ </summary>
+ <param name="strCodigoSector">Codigo Filtro de Sectores</param>
+ <returns>Devuelve un Datatable con los Sectores afectados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.dtbObtener_Sectores">
+ <summary>
+ DEVUELVE UN DATATABLE CON LOS DATOS DE SECTORES DEL SISTEMA
+ </summary>
+ <returns>Devuelve un Datatable con los Sectores afectados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.bAplicar_Ajustes(System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ EJECUTA EL SP DE AJUSTE DE INVENTARIO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <param name="sLocal_ID">ID del Local en el Sistema de Gestion</param>
+ <param name="sFecha">Fecha del Inventario</param>
+ <param name="sScanning">Scanning del Articulo</param>
+ <param name="sCantidadAjuste">Cantidad a Ajustar</param>
+ <param name="sCosto">Costo del Articulo</param>
+ <returns>Devuelve 'True' si se Ejecuto Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SICS.pDesconectar_SICS">
+ <summary>
+ PROCEDIMIENTO DE DESCONEXION DE BD SICS
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.bPreparar_sistema(InveStock_PC_2.SistemaOTD)">
+ <summary>
+ PREPARA EL MODULO DEL SISTEMA CUYO NOMBRE ES PASADO COMO PARAMETRO
+ </summary>
+ <param name="oSistemaParam">Instancia del Sistema a Preparar</param>
+ <returns>True|False segun el resultado</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.oficializar_sistema">
+ <summary>
+ ASIGAN LOS VALROES DE LAS VARIABLES LAS SECUNDARIAS A LAS PRINCIPALES Y DEVUELVE UN BOOLEAN
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.bolPreparar_EME">
+ <summary>
+ PREPARA EL MODULO 'EMERETAIL' PARA SU USO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Procedio Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.bolPreparar_SICS">
+ <summary>
+ PREPARA EL MODULO 'SICS' PARA SU USO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Procedio Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.dtbObtener_Maestro(System.String,System.String)">
+ <summary>
+ CREA UN DATATABLE CON EL MAESTRO DE ARTICULOS
+ </summary>
+ <param name="strID_Local_En_Sistema">ID del Sistema dentro del Sistema de Gestion</param>
+ <returns>Devuelve un DataTable con el Maestro de Articulos</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.dtbObtener_Sectores">
+ <summary>
+ CREA UN DATATABLE CON LOS REGISTROS DE SECTORES
+ </summary>
+ <returns>Devuelte un DataTable con los Resultados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.dtbSeleccionar_Sectores(System.String)">
+ <summary>
+ CREA UN DATATABLE CON LOS SECTORES CUYO ID_SECTOR INICIEN CON EL VALOR DEL PARAMETRO
+ </summary>
+ <param name="strIDSector">ID del/de los Sectores que seran devueltos</param>
+ <returns>Devuelve un DataTable con los Resultados</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.bPreparar_sistema_temporal(InveStock_PC_2.SistemaOTD)">
+ <summary>
+ PREPARA EL MODULO DEL SISTEMA TEMPORAL CUYO NOMBRE y ID SON PASADOS COMO PARAMETROS
+ </summary>
+ <param name="oSistemaParam">Instancia del Sistema a Preparar</param>
+ <returns>Devuelve 'True' si se Cargo Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.bPreparar_eme_temporal">
+ <summary>
+ PREPARA EL MODULO 'EMERETAIL' PARA SU USO TEMPORAL Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Cargo Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.bPreparar_spmo_temporal">
+ <summary>
+ PREPARA EL MODULO 'SICS' PARA SU USO TEMPORAL Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Cargo Correctamente</returns>
+ <remarks></remarks>
+</member>
+<member name="M:InveStock_PC_2.SISTEMAS.bolEjecutar_Ajuste(System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ EJECUTA EL PROCEDIMINETO DE AJUSTE DE INVENTARIO Y DEVUELVE UN BOOLEAN
+ </summary>
+ <returns>Devuelve 'True' si se Ejecuto Correctamente</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

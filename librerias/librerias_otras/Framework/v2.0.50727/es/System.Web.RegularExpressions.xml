@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.RegularExpressions</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.RegularExpressions.AspCodeRegex">
+      <summary>
+          Proporciona una expresión regular para analizar un bloque de código de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspCodeRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.AspCodeRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.AspExprRegex">
+      <summary>
+          Proporciona una expresión regular para analizar un bloque de expresiones de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.AspExprRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.AspExprRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.CommentRegex">
+      <summary>
+          Proporciona una expresión regular para analizar un bloque de comentarios de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.CommentRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.CommentRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DatabindExprRegex">
+      <summary>
+          Proporciona una expresión regular para analizar una expresión de enlace de datos de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DatabindExprRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.DatabindExprRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DataBindRegex">
+      <summary>
+          Proporciona una expresión regular para analizar un enlace de datos de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DataBindRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.DataBindRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.DirectiveRegex">
+      <summary>
+          Proporciona una expresión regular para analizar una directiva de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.DirectiveRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.DirectiveRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.EndTagRegex">
+      <summary>
+          Proporciona una expresión regular para analizar una etiqueta de cierre.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.EndTagRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.EndTagRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.GTRegex">
+      <summary>
+          Proporciona una expresión regular para que coincida con un carácter mayor que (&gt;).
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.GTRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.GTRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.IncludeRegex">
+      <summary>
+          Proporciona una expresión regular para analizar una directiva #include de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.IncludeRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.IncludeRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.LTRegex">
+      <summary>
+          Proporciona una expresión regular que permite buscar un carácter menor que (&lt;).
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.LTRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.LTRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.RunatServerRegex">
+      <summary>
+          Proporciona una expresión regular para analizar un atributo runat de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.RunatServerRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.RunatServerRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.ServerTagsRegex">
+      <summary>
+          Proporciona una expresión regular para analizar etiquetas de servidor ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.ServerTagsRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.ServerTagsRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.SimpleDirectiveRegex">
+      <summary>
+          Proporciona una expresión regular para analizar una directiva de datos de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.SimpleDirectiveRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.SimpleDirectiveRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.TagRegex">
+      <summary>
+          Proporciona una expresión regular para analizar una etiqueta de control de servidor Web de ASP.NET.
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TagRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.TagRegex" />. 
+        </summary>
+    </member>
+    <member name="T:System.Web.RegularExpressions.TextRegex">
+      <summary>
+          Proporciona una expresión regular que se corresponde con todos los caracteres hasta el siguiente carácter menor que (&lt;).
+        </summary>
+    </member>
+    <member name="M:System.Web.RegularExpressions.TextRegex.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Web.RegularExpressions.TextRegex" />. 
+        </summary>
+    </member>
+  </members>
+</doc>

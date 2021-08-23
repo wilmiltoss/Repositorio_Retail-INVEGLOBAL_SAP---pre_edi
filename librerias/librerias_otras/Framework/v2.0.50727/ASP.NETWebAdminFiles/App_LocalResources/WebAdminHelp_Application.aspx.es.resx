@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Title00" type="System.String">
+    <value>Ficha Aplicación de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolApplicationTab01" type="System.String">
+    <value>Ficha Aplicación de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="WebSiteAdministrationToolApplicationTab02" type="System.String">
+    <value>Utilice la ficha &lt;span class=UI&gt;Aplicación&lt;/span&gt; de la herramienta Administración de sitios Web (Herramienta Administración de sitios Web) para administrar los valores de configuración del sitio y la aplicación Web utilizados con frecuencia.</value>
+  </data>
+  <data name="Introduction01" type="System.String">
+    <value>Introducción</value>
+  </data>
+  <data name="Introduction02" type="System.String">
+    <value>Utilizar la ficha &lt;span class=UI&gt;Aplicación&lt;/span&gt; para administrar lo siguiente:</value>
+  </data>
+  <data name="Introduction03" type="System.String">
+    <value>Pares nombre/valor de la configuración de la aplicación. </value>
+  </data>
+  <data name="Introduction04" type="System.String">
+    <value>La configuración de la aplicación consiste en pares nombre/valor que representan el texto de los valores configurables en la aplicación Web. Utilizar las configuraciones de la aplicación para almacenar la información de configuración personalizada, como las rutas de acceso a archivos, las direcciones URL del servicio Web XML, normalmente utilizada como texto, o cualquier información que desee mantener en una ubicación central y que pueda cambiar con facilidad.</value>
+  </data>
+  <data name="Introduction05" type="System.String">
+    <value>Importante   La configuración de la aplicación se almacena en el archivo como texto sin formato. Por lo tanto, debe tomar las medidas de seguridad apropiadas cuando utilice la configuración de la aplicación. No almacene información confidencial como nombres de usuario, contraseñas o cadenas de conexión de la base de datos en la configuración de la aplicación.</value>
+  </data>
+  <data name="Introduction06" type="System.String">
+    <value>Configuración del Protocolo simple de transferencia de correo (SMTP).</value>
+  </data>
+  <data name="Introduction07" type="System.String">
+    <value>Si el sitio Web requiere la capacidad de enviar un correo electrónico (por ejemplo, para enviar una contraseña a los usuarios), debe especificar el servidor SMTP que utiliza su sitio.</value>
+  </data>
+  <data name="Introduction08" type="System.String">
+    <value>Estado de la aplicación.</value>
+  </data>
+  <data name="Introduction09" type="System.String">
+    <value>Puede poner su aplicación fuera de conexión (apagarla) para realizar el mantenimiento o poner en conexión una base de datos nueva de Microsoft SQL Server Express.</value>
+  </data>
+  <data name="Introduction10" type="System.String">
+    <value>Depuración y seguimiento.</value>
+  </data>
+  <data name="Introduction11" type="System.String">
+    <value>La depuración y el seguimiento le permiten diagnosticar y corregir problemas con la aplicación Web, con la intención de utilizarlos durante el desarrollo. Al permitir la depuración, las páginas del sitio Web se compilan con información que los depuradores de .NET Framework o de Microsoft Visual Studio pueden utilizar para recorrer su código. Al permitir el seguimiento se genera información acerca de solicitudes Web individuales, encabezados HTTP que se envían con las solicitudes, el estado de los controles de la página y otros detalles acerca del procesamiento de páginas. </value>
+  </data>
+  <data name="ConfiguringApplicationSettings01" type="System.String">
+    <value>Configurando la aplicación</value>
+  </data>
+  <data name="ConfiguringApplicationSettings02" type="System.String">
+    <value>Cuando cree una configuración de la aplicación, especifique un nombre y un valor para la configuración que va a crear. De este modo obtendrá acceso al valor de la configuración en su aplicación utilizando la propiedad  &lt;span class=LanguageKeyword&gt;AppSettings&lt;/span&gt; de la clase &lt;span class=LanguageKeyword&gt;ConfigurationSettings&lt;/span&gt;. Por ejemplo, si define una configuración de la aplicación denominada AppName con un valor que representa el nombre de su aplicación, debe utilizarlo para establecer el encabezado de una página como se muestra en el siguiente ejemplo de código.</value>
+  </data>
+  <data name="ConfiguringApplicationSettings03" type="System.String">
+    <value>[Visual Basic]</value>
+  </data>
+  <data name="ConfiguringApplicationSettings04" type="System.String">
+    <value></value>
+  </data>
+  <data name="ConfiguringApplicationSettings05" type="System.String">
+    <value>[C#]</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline01" type="System.String">
+    <value>Poniendo las aplicaciones en conexión y fuera de conexión</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline02" type="System.String">
+    <value>Si desea realizar mantenimiento en el sitio Web puede ponerlo fuera de conexión. Así se cierra el proceso que se está ejecutando en el sitio Web de tal modo que el sitio deja de mostrar páginas. Puede editar páginas u otros archivos sin la posibilidad de que se solicite una página mientras la está editando, lo que podría resultar en un error. Poner la aplicación fuera de conexión también puede ser útil, si está trabajando con SQL Server Standard y desea cambiar o agregar un archivo de base de datos .mdf a la aplicación. Si la aplicación se está ejecutando, no se pueden agregar nuevos archivos .mdf.</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline03" type="System.String">
+    <value>Cuando haya terminado de editar los archivos o de agregar o cambiar archivos .mdf, puede volver a conectar la aplicación.</value>
+  </data>
+  <data name="ConfiguringSMTPSettings01" type="System.String">
+    <value>Configurando SMTP</value>
+  </data>
+  <data name="ConfiguringSMTPSettings02" type="System.String">
+    <value>Algunas de las características del sitio Web requieren que su aplicación pueda enviar mensajes de correo electrónico. Para enviar un mensaje, la aplicación debe tener acceso al servidor de protocolo simple de transferencia de correo (SMTP), que reenvía mensajes electrónicos desde su aplicación al destinatario del correo. </value>
+  </data>
+  <data name="ConfiguringSMTPSettings03" type="System.String">
+    <value>IIS) incluye un servidor virtual SMTP, aunque no esté instalado de forma predeterminada. Si desea enviar un mensaje de correo electrónico desde su propio equipo, puede instalar el servidor SMTP utilizando  &lt;span class=UI&gt;Agregar o quitar programas&lt;/span&gt; en el panel de control de Microsoft Windows. El servidor SMTP está disponible como componente de Windows Component, como parte de IIS. Después de que instale el servidor IIS SMTP, puede configurarlo utilizando la consola de administración de Internet Information Services. Para obtener información detallada sobre cómo instalar el servidor virtual IIS SMTP, vea la página de búsqueda Knowledge Base (KB).</value>
+  </data>
+  <data name="ConfiguringSMTPSettings04" type="System.String">
+    <value>Nota   Si instala un servidor SMTP en el equipo, debe tomar medidas de seguridad para asegurarse de que el servidor SMTP no pueda utilizarse como un servidor de correo electrónico no deseado. Para obtener más información sobre cómo proteger el servidor virtual IIS SMTP, vaya a Microsoft.com y busque Seguridad de SMTP.</value>
+  </data>
+  <data name="ConfiguringSMTPSettings05" type="System.String">
+    <value>Si no desea instalar el servidor IIS SMTP o si la aplicación se ejecuta en un equipo diferente, póngase en contacto con el administrador de la red o del servidor Web para obtener información acerca de los valores de configuración para un servidor SMTP.</value>
+  </data>
+  <data name="ConfiguringSMTPSettings06" type="System.String">
+    <value>La tabla siguiente describe las configuraciones de SMTP.</value>
+  </data>
+  <data name="ConfiguringSMTPSettings07" type="System.String">
+    <value>Configuración
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings08" type="System.String">
+    <value>Descripción
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings09" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings10" type="System.String">
+    <value>Nombre de servidor
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings11" type="System.String">
+    <value>Nombre de su servidor SMTP. El valor predeterminado es &lt;span class=code&gt;localhost&lt;/span&gt;, que significa que ASP.NET utilizará un servidor SMTP en el equipo local. Normalmente es el servidor virtual SMTP. Si no, el nombre de un servidor SMTP que esté disponible en la red.
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings12" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings13" type="System.String">
+    <value>Puerto del servidor
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings14" type="System.String">
+    <value>Puerto de su servidor SMTP. El valor predeterminado es 25.
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings15" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings16" type="System.String">
+    <value>De
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings17" type="System.String">
+    <value>Dirección de correo electrónico que aparecerá en el encabezado &lt;span class=UI&gt;From:&lt;/span&gt; de los mensajes de correo electrónico enviados desde el sitio Web.
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings18" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings19" type="System.String">
+    <value>Autenticación
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings20" type="System.String">
+    <value>Tipo de autenticación que utiliza su servidor SMTP, si existe. Si su servidor SMTP utiliza &lt;span class=UI&gt;Autenticación básica&lt;/span&gt;, proporcione el nombre y la contraseña de una cuenta de usuario autorizada para reenviar mensajes de correo electrónico desde el servidor.</value>
+  </data>
+  <data name="ConfiguringSMTPSettings21" type="System.String">
+    <value>El nombre de usuario y la contraseña para la autenticación &lt;span class=UI&gt;Autenticación básica&lt;/span&gt; se almacenan como texto no cifrado en el archivo Web.config.
+</value>
+  </data>
+  <data name="ConfiguringSMTPSettings22" type="System.String">
+    <value>
+</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing01" type="System.String">
+    <value>Configurando la depuración y el seguimiento</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing02" type="System.String">
+    <value>Debe tener credenciales administrativas en el equipo en el que se ejecuta la aplicación Web para cambiar su configuración de depuración y de seguimiento.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing03" type="System.String">
+    <value>Para administrar las características de depuración y de seguimiento, haga clic en &lt;span class=UI&gt;Configure la depuración y el seguimiento&lt;/span&gt; y, a continuación, establezca las siguientes opciones:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing04" type="System.String">
+    <value>Habilitar depuración</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing05" type="System.String">
+    <value>Seleccione esta opción para habilitar la depuración de todas las páginas del sitio Web. </value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing06" type="System.String">
+    <value>Capturar información de seguimiento</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing07" type="System.String">
+    <value>Seleccione esta opción para habilitar el seguimiento de todas las páginas del sitio Web. Si esta casilla está activada, las opciones restantes de la página estarán habilitadas.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing08" type="System.String">
+    <value>Si ha establecido la opción para capturar información de seguimiento, puede elegir las siguientes opciones: </value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing09" type="System.String">
+    <value>Mostrar información de seguimiento de páginas individuales</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing10" type="System.String">
+    <value>Seleccionar esta opción para anexar información de seguimiento en la parte inferior de las páginas Web de su sitio. Si no muestra información de seguimiento acerca de las páginas individuales, la información se seguirá capturando. Para ver la información de seguimiento, puede solicitar la página Trace.axd para el sitio Web, que actúa como visor de información de seguimiento.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing11" type="System.String">
+    <value>Sólo solicitudes locales</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing12" type="System.String">
+    <value>Seleccione esta opción para ver información de seguimiento únicamente si se solicita desde el servidor Web del host (localhost).</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing13" type="System.String">
+    <value>Todas las solicitudes</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing14" type="System.String">
+    <value>Seleccione esta opción para ver información de seguimiento desde cualquier equipo.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing15" type="System.String">
+    <value>En &lt;span class=UI&gt;Seleccionar el criterio de ordenación para los resultados de seguimiento &lt;/span&gt;, especifique cómo desea que se muestre la información de seguimiento, tal y como se indica a continuación:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing16" type="System.String">
+    <value>Por tiempo</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing17" type="System.String">
+    <value>Seleccione esta opción para mostrar la información de seguimiento en el orden en que se captura.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing18" type="System.String">
+    <value>Por categoría</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing19" type="System.String">
+    <value>Seleccione esta opción para mostrar la información de seguimiento alfabéticamente en las categorías definidas por el usuario.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing20" type="System.String">
+    <value>Número de solicitudes de seguimiento de la memoria caché</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing21" type="System.String">
+    <value>Escriba el número de solicitudes de seguimiento que se van a almacenar en el servidor. Puede ver información en caché utilizando el visor de seguimiento (http://server/application/trace.axd). El valor predeterminado es 10. Si no selecciona la opción &lt;span class=UI&gt;Resultados de seguimiento más recientes&lt;/span&gt; y se alcanza el límite, se deshabilita automáticamente el seguimiento.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing22" type="System.String">
+    <value>En &lt;span class=UI&gt;Seleccione los resultados de seguimiento que almacenar en memoria caché&lt;/span&gt;, especifique cómo desea que se muestren los resultados de seguimiento, como se indica a continuación:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing23" type="System.String">
+    <value>Resultados de seguimiento más recientes</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing24" type="System.String">
+    <value>Seleccione esta opción para mostrar los resultados de seguimiento más recientes y para descartar los datos de seguimiento anteriores más allá de los límites indicados por &lt;span class=UI&gt;Número de solicitudes de seguimiento de la memoria caché&lt;/span&gt;.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing25" type="System.String">
+    <value>Resultados del seguimiento más antiguos</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing26" type="System.String">
+    <value>Seleccione esta opción para mostrar los datos de seguimiento de las solicitudes hasta que se alcance &lt;span class=UI&gt;Número de solicitudes de seguimiento de la memoria caché&lt;/span&gt;.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing27" type="System.String">
+    <value>Nota   Cuando haya terminado de resolver problemas del sitio Web, deshabilite la depuración y el seguimiento para obtener un rendimiento máximo desde su aplicación Web.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing28" type="System.String">
+    <value>Nota de seguridad   Cuando el seguimiento está habilitado para una página, la información de seguimiento puede aparecer en cualquier explorador que solicite la página desde el servidor. Dado que el seguimiento muestra información confidencial, como los valores de las variables de servidor, su seguridad puede verse amenazada. Asegúrese de deshabilitar el seguimiento de la página antes de publicar la aplicación Web en un servidor de producción. </value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing29" type="System.String">
+    <value>Para configurar una página de error personalizada para el sitio Web, haga clic en &lt;span class=UI&gt;Definir página de errores predeterminada&lt;/span&gt; y, a continuación, especifique:</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing30" type="System.String">
+    <value>Utilizar el mensaje de error predeterminado</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing31" type="System.String">
+    <value>Seleccione esta opción para utilizar la página de error predeterminada.</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing32" type="System.String">
+    <value>Especifique una dirección URL como página de error predeterminada</value>
+  </data>
+  <data name="ConfiguringDebuggingandTracing33" type="System.String">
+    <value>Seleccione esta opción para utilizar una página de error predeterminada y, a continuación, elija la página que se va a utilizar.</value>
+  </data>
+  <data name="BehindtheScenes01" type="System.String">
+    <value>En segundo plano</value>
+  </data>
+  <data name="BehindtheScenes02" type="System.String">
+    <value>La ficha &lt;span class=UI&gt;Aplicación&lt;/span&gt; proporciona una interfaz Web simple para administrar los valores de configuración almacenados en el archivo Web.config para su aplicación. </value>
+  </data>
+  <data name="ApplicationSettings01" type="System.String">
+    <value>Configuración de la aplicación</value>
+  </data>
+  <data name="ApplicationSettings02" type="System.String">
+    <value>La configuración administrada mediante la característica &lt;span class=UI&gt;Configuración de la aplicación&lt;/span&gt; de la ficha &lt;span class=UI&gt;Aplicación&lt;/span&gt; existe en la sección &amp;lt;appConfiguración&amp;gt; del archivo Web.config para la aplicación Web. Es una sección de configuración predefinida proporcionada por .NET Framework. Las líneas resaltadas en el código siguiente son un ejemplo del archivo de configuración que se genera después de que utilice la herramienta Administración de sitios Web para crear una configuración de aplicación denominada &lt;span class=code&gt;NombreAplicación&lt;/span&gt;.</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline01" type="System.String">
+    <value>Poniendo las aplicaciones en conexión y fuera de conexión</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline02" type="System.String">
+    <value>Las configuraciones fuera de línea existen dentro de la sección &lt;httpRuntime&gt; del archivo Web.config para el sitio Web. Las líneas resaltadas en el código siguiente se generan después de que utilice la herramienta Administración de sitios Web para poner una aplicación fuera de línea.</value>
+  </data>
+  <data name="TakingApplicationsOfflineandOnline03" type="System.String">
+    <value>Mientras la configuración &lt;span class=LanguageKeyword&gt;httpRuntime&lt;/span&gt; esté deshabilitada, ASP.NET no crea un objeto System.AppDomain para su aplicación al recibir una solicitud. De hecho, no puede iniciarse la aplicación Web. </value>
+  </data>
+  <data name="SMTPSettings01" type="System.String">
+    <value>Configuración SMTP</value>
+  </data>
+  <data name="SMTPSettings02" type="System.String">
+    <value>La configuración administrada mediante la característica &lt;span class=UI&gt;Configuración de SMTP&lt;/span&gt; de la ficha &lt;span class=UI&gt;Aplicación&lt;/span&gt; existe dentro de la sección &amp;lt;mailSettings&amp;gt; del archivo Web.config para el sitio Web, que es un elemento secundario del elemento &amp;lt;system.net&amp;gt; (no del elemento &amp;lt;system.web&amp;gt;). Las líneas resaltadas en el código se generan después de utilizar la herramienta Administración de sitios Web para especificar la configuración de SMTP.</value>
+  </data>
+  <data name="DebuggingandTracing01" type="System.String">
+    <value>Depuración y seguimiento</value>
+  </data>
+  <data name="DebuggingandTracing02" type="System.String">
+    <value>Las configuraciones administradas mediante la característica &lt;span class=UI&gt;Depuración y seguimiento&lt;/span&gt; de la ficha &lt;span class=UI&gt;Aplicación&lt;/span&gt; existen dentro de las secciones &amp;lt;trace&amp;gt;, &amp;lt;compilation&amp;gt;, y &amp;lt;customErrors&amp;gt; del archivo Web.config. El código siguiente es un archivo de configuración de ejemplo que se genera después de que utilice la herramienta Administración de sitios Web para habilitar la depuración y el seguimiento y para establecer la página de errores personalizada.</value>
+  </data>
+  <data name="DebuggingandTracing03" type="System.String">
+    <value>En este ejemplo, tanto la depuración como el seguimiento están habilitados, el seguimiento se muestra en las páginas solicitadas únicamente desde el servidor Web, los resultados de seguimiento se ordenan por categoría y los 10 resultados de seguimiento más recientes se almacenan en caché para su visualización. Además, la página de error predeterminada es myErrorPage.aspx.</value>
+  </data>
+  <data name="MoreInformation01" type="System.String">
+    <value>Más información</value>
+  </data>
+  <data name="MoreInformation02" type="System.String">
+    <value>Para obtener más información, en la referencia de clase de .NET Framework y en el esquema de configuración de ASP.NET, vea lo siguiente:</value>
+  </data>
+  <data name="MoreInformation03" type="System.String">
+    <value>System.Configuration.ConfigurationSettings</value>
+  </data>
+  <data name="MoreInformation04" type="System.String">
+    <value>Elemento compilation (Esquema de configuración de ASP.NET)</value>
+  </data>
+  <data name="MoreInformation05" type="System.String">
+    <value>Elemento customErrors (Esquema de configuración de ASP.NET)</value>
+  </data>
+  <data name="MoreInformation06" type="System.String">
+    <value>Elemento trace (Esquema de configuración de ASP.NET)</value>
+  </data>
+  <data name="SeeAlso01" type="System.String">
+    <value>Vea también</value>
+  </data>
+  <data name="SeeAlso02" type="System.String">
+    <value>Información general sobre la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso03" type="System.String">
+    <value>Ficha Seguridad de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso04" type="System.String">
+    <value>Ficha Proveedor de la herramienta Administración de sitios Web</value>
+  </data>
+  <data name="SeeAlso05" type="System.String">
+    <value>Información interna de la herramienta Administración de sitios Web</value>
+  </data>
+</root>

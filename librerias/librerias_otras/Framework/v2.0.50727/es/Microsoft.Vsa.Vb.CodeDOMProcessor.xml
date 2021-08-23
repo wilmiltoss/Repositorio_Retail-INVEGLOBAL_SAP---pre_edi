@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Vsa.Vb.CodeDOMProcessor</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Vsa.Vb.CodeDOM._CodeDOMProcessor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.Vb.CodeDOM._CodeDOMProcessor.CodeDOMFromXML(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="xmlStream">
+               
+            </param>
+    </member>
+    <member name="T:Microsoft.Vsa.Vb.CodeDOM._Location">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM._Location.BeginningColumn">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM._Location.BeginningLine">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM._Location.EndColumn">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM._Location.EndLine">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.Vsa.Vb.CodeDOM.CodeDOMProcessor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.Vb.CodeDOM.CodeDOMProcessor.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.Vb.CodeDOM.CodeDOMProcessor.CodeDOMFromXML(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="xmlStream">
+               
+            </param>
+    </member>
+    <member name="T:Microsoft.Vsa.Vb.CodeDOM.Location">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.Vb.CodeDOM.Location.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM.Location.BeginningColumn">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM.Location.BeginningLine">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM.Location.EndColumn">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.Vb.CodeDOM.Location.EndLine">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+  </members>
+</doc>

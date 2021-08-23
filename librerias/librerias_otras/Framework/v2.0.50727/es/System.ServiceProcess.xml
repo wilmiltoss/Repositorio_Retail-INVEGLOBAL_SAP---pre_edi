@@ -1,0 +1,1714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ServiceProcess</name>
+  </assembly>
+  <members>
+    <member name="T:System.ServiceProcess.PowerBroadcastStatus">
+      <summary>
+          Indica el estado de la alimentación del sistema.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.BatteryLow">
+      <summary>
+          La energía de la batería está baja.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.OemEvent">
+      <summary>
+          Un BIOS de Administrador de programas avanzados (APM, Advanced Program Manager) indicó un evento OEM de APM.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.PowerStatusChange">
+      <summary>
+          Se detectó un cambio en el estado de la alimentación del equipo, como un cambio de la energía de batería a corriente alterna. El sistema difunde también este evento cuando la energía de la batería restante queda por debajo del umbral especificado por el usuario o cuando la energía de la batería cambia en un porcentaje especificado.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.QuerySuspend">
+      <summary>
+          El sistema ha solicitado permiso para suspender el equipo. Una aplicación que concede este permiso tiene que realizar los preparativos para la suspensión antes de volver.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.QuerySuspendFailed">
+      <summary>
+          Se ha denegado al sistema el permiso para suspender el equipo. Este estado se difunde si cualquier aplicación o controlador denegaron un estado QuerySuspend anterior.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.ResumeAutomatic">
+      <summary>
+          El equipo se ha reactivado de forma automática para controlar un evento.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.ResumeCritical">
+      <summary>
+          El sistema reanudó el funcionamiento después de una suspensión grave provocada por un error en la batería.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.ResumeSuspend">
+      <summary>
+          El sistema reanudó el funcionamiento después de haberse suspendido.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.PowerBroadcastStatus.Suspend">
+      <summary>
+          El equipo está a punto de pasar a un estado suspendido. Normalmente, este evento se difunde cuando todas las aplicaciones y los controladores instalables devuelven true a un estado QuerySuspend anterior.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceAccount">
+      <summary>
+          Especifica el contexto de seguridad de un servicio, que define su tipo de inicio de sesión.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.LocalService">
+      <summary>
+          Cuenta que actúa como usuario sin privilegios en el equipo local y presenta credenciales anónimas a cualquier servidor remoto.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.NetworkService">
+      <summary>
+          Cuenta que proporciona amplios privilegios locales y presenta las credenciales del equipo a cualquier servidor remoto.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.LocalSystem">
+      <summary>
+          Una cuenta, utilizada por el administrador de control de servicio, que tiene amplios privilegios en el equipo local y funciona como un equipo de la red.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceAccount.User">
+      <summary>
+          Cuenta definida por un usuario específico en la red. Si se especifica User para el miembro <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Account" />, el sistema pide un nombre de usuario y una contraseña al instalar el servicio, a menos que se establezcan valores para las propiedades <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Username" /> y <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Password" /> de la instancia de <see cref="T:System.ServiceProcess.ServiceProcessInstaller" />.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceBase">
+      <summary>
+          Proporciona una clase base para un servicio que existirá como parte de una aplicación de servicio. Deberá derivarse de <see cref="T:System.ServiceProcess.ServiceBase" /> cuando se cree una nueva clase de servicio.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.#ctor">
+      <summary>
+          Crea una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceBase" />.
+        </summary>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.AutoLog">
+      <summary>
+          Indica si los comandos Iniciar, Detener, Pausar y Continuar deben notificarse en el registro de eventos.
+        </summary>
+      <returns>
+          
+            true para notificar información en el registro de eventos; de lo contrario, false.
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanHandlePowerEvent">
+      <summary>
+          Obtiene o establece un valor que indica si el servicio puede controlar notificaciones de los cambios de estado de la alimentación del equipo.
+        </summary>
+      <returns>
+          
+            true si el servicio controla los cambios de estado de la alimentación del equipo indicados en la clase <see cref="T:System.ServiceProcess.PowerBroadcastStatus" />; de lo contrario, false.
+        </returns>
+      <exception cref="T:System.InvalidOperationException">
+              Esta propiedad se modifica después de haber iniciado el servicio. 
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanHandleSessionChangeEvent">
+      <summary>
+          Obtiene o establece un valor que indica si el servicio puede controlar eventos de cambio de sesión recibidos de una sesión de Terminal Server.
+        </summary>
+      <returns>
+          
+            true si el servicio puede controlar eventos de cambio de sesión de Terminal Server; de lo contrario, false. 
+        </returns>
+      <exception cref="T:System.InvalidOperationException">
+              Esta propiedad se modifica después de haber iniciado el servicio.
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanPauseAndContinue">
+      <summary>
+          Obtiene o establece un valor que indica si se puede pausar y reanudar el servicio.
+        </summary>
+      <returns>
+          
+            true si se puede pausar el servicio; en caso contrario, false.
+        </returns>
+      <exception cref="T:System.InvalidOperationException">
+              Ya se inició el servicio. La propiedad <see cref="P:System.ServiceProcess.ServiceBase.CanPauseAndContinue" /> no puede cambiarse una vez iniciado el servicio. 
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanShutdown">
+      <summary>
+          Obtiene o establece un valor que indica si se debe informar al servicio de que el sistema se está cerrando.
+        </summary>
+      <returns>
+          
+            true si se debe notificar al servicio cuando se está cerrando el sistema; en caso contrario, false.
+        </returns>
+      <exception cref="T:System.InvalidOperationException">
+              Ya se inició el servicio. La propiedad <see cref="P:System.ServiceProcess.ServiceBase.CanShutdown" /> no puede cambiarse una vez iniciado el servicio. 
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.CanStop">
+      <summary>
+          Obtiene o establece un valor que indica si puede detenerse el servicio una vez se ha iniciado.
+        </summary>
+      <returns>
+          
+            true si se puede detener el servicio y llamar al método <see cref="M:System.ServiceProcess.ServiceBase.OnStop" />; en caso contrario, false.
+        </returns>
+      <exception cref="T:System.InvalidOperationException">
+              Ya se inició el servicio. La propiedad <see cref="P:System.ServiceProcess.ServiceBase.CanStop" /> no puede cambiarse una vez iniciado el servicio. 
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Dispose(System.Boolean)">
+      <summary>
+          Se deshace de los recursos (distintos de la memoria) utilizados por <see cref="T:System.ServiceProcess.ServiceBase" />.
+        </summary>
+      <param name="disposing">
+              
+                Es true para liberar tanto recursos administrados como no administrados, y false para liberar únicamente recursos no administrados. 
+            </param>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.EventLog">
+      <summary>
+          Obtiene un registro de eventos que se puede utilizar para escribir la notificación de llamadas de comandos de servicio, como Iniciar y Detener, en el registro de eventos de aplicación.
+        </summary>
+      <returns>
+          Instancia de <see cref="T:System.Diagnostics.EventLog" /> cuyo origen se encuentra registrado en el registro de aplicación.
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" />
+        <IPermission class="System.Diagnostics.EventLogPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.ExitCode">
+      <summary>
+          Obtiene o establece el código de salida para el servicio.
+        </summary>
+      <returns>
+          El código de salida para el servicio.
+        </returns>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceBase.MaxNameLength">
+      <summary>
+          Indica el tamaño máximo de un nombre de servicio.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnContinue">
+      <summary>
+          Si se implementa en una clase derivada, <see cref="M:System.ServiceProcess.ServiceBase.OnContinue" /> se ejecuta cuando el Administrador de control de servicios (SCM, Service Control Manager) envía un comando Continuar al servicio. Especifica las acciones que deben realizarse cuando se reanuda el funcionamiento normal de un servicio después de una pausa.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnCustomCommand(System.Int32)">
+      <summary>
+          Si se implementa en una clase derivada, <see cref="M:System.ServiceProcess.ServiceBase.OnCustomCommand(System.Int32)" /> se ejecuta cuando el Administrador de control de servicios (SCM, Service Control Manager) pasa un comando personalizado al servicio. Especifica las acciones que deben realizarse cuando se ejecuta un comando con el valor de parámetro especificado.
+        </summary>
+      <param name="command">
+              Mensaje de comando enviado al servicio. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnPause">
+      <summary>
+          Si se implementa en una clase derivada, se ejecuta cuando el Administrador de control de servicios (SCM, Service Control Manager) envía un comando Pausar al servicio. Especifica las acciones que deben realizarse cuando un servicio realiza una pausa.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnPowerEvent(System.ServiceProcess.PowerBroadcastStatus)">
+      <summary>
+          Si se implementa en una clase derivada, se ejecuta cuando el estado de la alimentación del equipo cambia. Esto se aplica a equipos portátiles cuando entran en modo suspendido, que no es lo mismo que un cierre de sistema.
+        </summary>
+      <returns>
+          Cuando se implementa en una clase derivada, las necesidades de la aplicación determinan qué valor se debe devolver. Por ejemplo, si se pasa un estado de difusión QuerySuspend, puede hacerse que la aplicación rechace la consulta mediante un valor devuelto false.
+        </returns>
+      <param name="powerStatus">
+              <see cref="T:System.ServiceProcess.PowerBroadcastStatus" /> que indica una notificación del sistema sobre su estado de la alimentación. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnSessionChange(System.ServiceProcess.SessionChangeDescription)">
+      <summary>
+          Se ejecuta cuando se recibe un evento de cambio de una sesión de Terminal Server. 
+        </summary>
+      <param name="changeDescription">
+              Estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" /> que identifica el tipo de cambio.
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnShutdown">
+      <summary>
+          Si se implementa en una clase derivada, se ejecuta cuando el sistema se está cerrando. Especifica lo que tiene que suceder inmediatamente antes de que se cierre el sistema.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnStart(System.String[])">
+      <summary>
+          Si se implementa en una clase derivada, se ejecuta cuando el Administrador de control de servicios (SCM, Service Control Manager) envía un comando Iniciar al servicio o cuando se inicia el sistema operativo (en el caso de un servicio que se inicia de forma automática). Especifica las acciones que deben realizarse cuando se inicia el servicio.
+        </summary>
+      <param name="args">
+              Datos pasados por el comando Iniciar. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.OnStop">
+      <summary>
+          Si se implementa en una clase derivada, se ejecuta cuando el Administrador de control de servicios (SCM, Service Control Manager) envía a un comando Detener al servicio. Especifica las acciones que deben realizarse cuando un servicio deja de ejecutarse.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.RequestAdditionalTime(System.Int32)">
+      <summary>
+          Solicita tiempo adicional para una operación pendiente.
+        </summary>
+      <param name="milliseconds">
+              Tiempo solicitado en milisegundos.
+            </param>
+      <exception cref="T:System.InvalidOperationException">
+              El servicio no está en estado pendiente.
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)">
+      <summary>
+          Registra el ejecutable para un servicio con el Administrador de control de servicios (SCM, Service Control Manager).
+        </summary>
+      <param name="service">
+              <see cref="T:System.ServiceProcess.ServiceBase" /> que indica que va a iniciarse un servicio. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              
+                <paramref name="service" /> es null.
+            </exception>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Intentó iniciar el servicio desde la línea de comandos. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" PathDiscovery="*AllFiles*" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlAppDomain" />
+        <IPermission class="System.Diagnostics.EventLogPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])">
+      <summary>
+          Registra el ejecutable para varios servicios con el Administrador de control de servicios (SCM, Service Control Manager).
+        </summary>
+      <param name="services">
+              Una matriz de instancias de ServiceBase, que indica los servicios que se van a iniciar. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              No proporcionó un servicio para que se inicie. La matriz podría ser null o estar vacía. 
+            </exception>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Intentó iniciar el servicio desde la línea de comandos. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" PathDiscovery="*AllFiles*" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlAppDomain" />
+        <IPermission class="System.Diagnostics.EventLogPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.ServiceHandle">
+      <summary>
+          Obtiene el identificador del control de servicios para el servicio.
+        </summary>
+      <returns>
+          Una estructura <see cref="T:System.IntPtr" /> que contiene el identificador del control de servicios para el servicio.
+        </returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.ServiceMainCallback(System.Int32,System.IntPtr)">
+      <summary>
+          Registra el controlador de comandos e inicia el servicio.
+        </summary>
+      <param name="argCount">
+              Número de argumentos de la matriz de argumentos. 
+            </param>
+      <param name="argPointer">
+              Estructura <see cref="T:System.IntPtr" /> que señala a una matriz de argumentos.
+            </param>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" PathDiscovery="*AllFiles*" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" />
+        <IPermission class="System.Diagnostics.EventLogPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceBase.ServiceName">
+      <summary>
+          Obtiene o establece el nombre corto utilizado para identificar el servicio en el sistema.
+        </summary>
+      <returns>
+          Nombre del servicio. 
+        </returns>
+      <exception cref="T:System.InvalidOperationException">
+              Ya se inició el servicio. La propiedad <see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> no puede cambiarse una vez iniciado el servicio. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              La propiedad <see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> no es válida. 
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceBase.Stop">
+      <summary>
+          Detiene el servicio en ejecución.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceController">
+      <summary>
+          Representa a un servicio de Windows y permite conectarse a un servicio en ejecución o detenido, manipularlo u obtener información acerca del mismo.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceController" /> que no está asociada a un servicio determinado.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceController" /> que está asociada a un servicio existente en el equipo local.
+        </summary>
+      <param name="name">
+              Nombre corto que identifica el servicio ante el sistema. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="name" /> es null o su longitud es cero (0). 
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.#ctor(System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceController" /> que está asociada a un servicio existente en el equipo especificado.
+        </summary>
+      <param name="name">
+              Nombre corto que identifica el servicio ante el sistema. 
+            </param>
+      <param name="machineName">
+              Equipo en el que reside el servicio. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="name" /> es null o su longitud es cero (0).
+              O bien 
+              La sintaxis del parámetro <paramref name="machineName" /> no es válida. 
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.CanPauseAndContinue">
+      <summary>
+          Obtiene un valor que indica si se puede pausar y reanudar el servicio.
+        </summary>
+      <returns>
+          
+            true si se puede pausar el servicio; en caso contrario, false.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.CanShutdown">
+      <summary>
+          Obtiene un valor que indica si se debe notificar al servicio cuando se está cerrando el sistema.
+        </summary>
+      <returns>
+          
+            true si se debe notificar al servicio cuando se está cerrando el sistema; en caso contrario, false.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.CanStop">
+      <summary>
+          Obtiene un valor que indica si el servicio puede detenerse después de haberse iniciado.
+        </summary>
+      <returns>
+          
+            true si se puede detener el servicio y llamar al método <see cref="M:System.ServiceProcess.ServiceBase.OnStop" />; en caso contrario, false.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Close">
+      <summary>
+          Desconecta esta instancia de <see cref="T:System.ServiceProcess.ServiceController" /> desde el servicio y libera todos los recursos que asignó la instancia.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Continue">
+      <summary>
+          Reanuda un servicio después de que se haya dejado en pausa.
+        </summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.InvalidOperationException">
+              No se puede reanudar el servicio. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.DependentServices">
+      <summary>
+          Obtiene el conjunto de servicios que depende del servicio asociado a esta instancia <see cref="T:System.ServiceProcess.ServiceController" />.
+        </summary>
+      <returns>
+          Una matriz de instancias de <see cref="T:System.ServiceProcess.ServiceController" />, cada una de las cuales está asociada a una servicio que depende de este servicio.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.DisplayName">
+      <summary>
+          Obtiene o establece un nombre descriptivo para el servicio.
+        </summary>
+      <returns>
+          Nombre descriptivo del servicio, que se puede utilizar para identificarlo.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor de <see cref="P:System.ServiceProcess.ServiceController.DisplayName" /> es null. 
+            </exception>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Dispose(System.Boolean)">
+      <summary>
+          Libera los recursos no administrados que utiliza <see cref="T:System.ServiceProcess.ServiceController" /> y libera los recursos administrados de forma opcional. 
+        </summary>
+      <param name="disposing">
+              
+                true para liberar tanto los recursos administrados como los no administrados; false para liberar únicamente los recursos no administrados.
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.ExecuteCommand(System.Int32)">
+      <summary>
+          Ejecuta un comando personalizado en el servicio.
+        </summary>
+      <param name="command">
+              Indicador de comandos definido por la aplicación que indica qué comando personalizado se va a ejecutar. 
+            </param>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.InvalidOperationException">
+              El servicio no puede controlar el comando personalizado. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetDevices">
+      <summary>
+          Recupera los servicios del controlador de dispositivos en el equipo local.
+        </summary>
+      <returns>
+          Matriz de tipo <see cref="T:System.ServiceProcess.ServiceController" /> en la que cada elemento está asociado a un servicio de controlador de dispositivos en el equipo local.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetDevices(System.String)">
+      <summary>
+          Recupera los servicios del controlador de dispositivos en el equipo especificado.
+        </summary>
+      <returns>
+          Matriz de tipo <see cref="T:System.ServiceProcess.ServiceController" /> en la que cada elemento está asociado a un servicio de controlador de dispositivos en el equipo especificado.
+        </returns>
+      <param name="machineName">
+              Equipo desde el que se recuperan los servicios del controlador de dispositivos. 
+            </param>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="machineName" /> tiene una sintaxis no válida. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetServices">
+      <summary>
+          Recupera todos los servicios del equipo local, excepto los servicios de controlador de dispositivos.
+        </summary>
+      <returns>
+          Matriz de tipo <see cref="T:System.ServiceProcess.ServiceController" /> en la que cada elemento está asociado a un servicio en el equipo local.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.GetServices(System.String)">
+      <summary>
+          Recupera todos los servicios del equipo especificado, excepto los servicios de controlador de dispositivos.
+        </summary>
+      <returns>
+          Matriz de tipo <see cref="T:System.ServiceProcess.ServiceController" /> en la que cada elemento está asociado a un servicio en el equipo especificado.
+        </returns>
+      <param name="machineName">
+              Equipo desde el que se recuperan los servicios. 
+            </param>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="machineName" /> tiene una sintaxis no válida. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.MachineName">
+      <summary>
+          Obtiene o establece el nombre del equipo en el que reside el servicio.
+        </summary>
+      <returns>
+          Nombre del equipo que está ejecutando el servicio asociado a esta instancia de <see cref="T:System.ServiceProcess.ServiceController" />. El valor predeterminado es el equipo local (".").
+        </returns>
+      <exception cref="T:System.ArgumentException">
+              La sintaxis de <see cref="P:System.ServiceProcess.ServiceController.MachineName" /> no es válida. 
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Pause">
+      <summary>
+          Suspende la operación de un servicio.
+        </summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.InvalidOperationException">
+              No se puede pausar el servicio. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Refresh">
+      <summary>
+          Actualiza los valores de las propiedades restableciéndolas en sus valores actuales.
+        </summary>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServiceHandle">
+      <summary>
+          Obtiene el identificador del servicio.
+        </summary>
+      <returns>
+          Clase <see cref="T:System.Runtime.InteropServices.SafeHandle" /> que contiene el identificador del servicio. 
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServiceName">
+      <summary>
+          Obtiene o establece el nombre que identifica el servicio al que hace referencia esta instancia.
+        </summary>
+      <returns>
+          Nombre que identifica el servicio al que hace referencia esta instancia de <see cref="T:System.ServiceProcess.ServiceController" />. El valor predeterminado es una cadena vacía ("").
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El valor de <see cref="P:System.ServiceProcess.ServiceController.ServiceName" /> es null. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              La sintaxis de la propiedad <see cref="P:System.ServiceProcess.ServiceController.ServiceName" /> no es válida. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServicesDependedOn">
+      <summary>
+          Conjunto de servicios de los que depende este servicio.
+        </summary>
+      <returns>
+          Matriz de instancias de <see cref="T:System.ServiceProcess.ServiceController" />, cada una de las cuales está asociada a un servicio que debe estar en ejecución para que se ejecute este servicio.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.ServiceType">
+      <summary>
+          Obtiene el tipo de servicio al que hace referencia este objeto.
+        </summary>
+      <returns>
+          Uno de los valores de <see cref="T:System.ServiceProcess.ServiceType" /> que se utiliza para indicar el tipo de servicio de red.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Start">
+      <summary>
+          Inicia el servicio sin pasar argumentos.
+        </summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.InvalidOperationException">
+              No se puede iniciar el servicio. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Start(System.String[])">
+      <summary>
+          Inicia un servicio pasando los argumentos especificados.
+        </summary>
+      <param name="args">
+              Matriz de argumentos que se va a pasar al servicio cuando se inicie. 
+            </param>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.InvalidOperationException">
+              No se puede iniciar el servicio. 
+            </exception>
+      <exception cref="T:System.ArgumentNullException">
+              
+                El valor de <paramref name="args" /> es null.
+              O bien
+              Un miembro de la matriz es null.
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceController.Status">
+      <summary>
+          Obtiene el estado del servicio al que hace referencia esta instancia.
+        </summary>
+      <returns>
+          Uno de los valores de <see cref="T:System.ServiceProcess.ServiceControllerStatus" /> que indica si el servicio se está ejecutando, detenido o en pausa, o si hay pendiente un comando iniciar, detener, pausar o continuar.
+        </returns>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.InvalidOperationException">
+              El servicio no existe como servicio instalado.
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.Stop">
+      <summary>
+          Detiene este servicio y todos los servicios que sean dependientes en este servicio.
+        </summary>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              Se ha producido un error al obtener acceso a una API del sistema. 
+            </exception>
+      <exception cref="T:System.InvalidOperationException">
+              No se puede detener el servicio. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus)">
+      <summary>
+          No actúa hasta que el servicio alcanza el estado especificado.
+        </summary>
+      <param name="desiredStatus">
+              Estado al que se espera. 
+            </param>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+              El parámetro <paramref name="desiredStatus" /> no es ninguno de los valores definidos en la enumeración <see cref="T:System.ServiceProcess.ServiceControllerStatus" />. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceController.WaitForStatus(System.ServiceProcess.ServiceControllerStatus,System.TimeSpan)">
+      <summary>
+          Espera a que el servicio alcance el estado especificado o a que venza el tiempo de espera especificado.
+        </summary>
+      <param name="desiredStatus">
+              Estado al que se espera. 
+            </param>
+      <param name="timeout">
+              Objeto <see cref="T:System.TimeSpan" /> que especifica el tiempo que se debe esperar a que el servicio alcance el estado especificado. 
+            </param>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+              El parámetro <paramref name="desiredStatus" /> no es ninguno de los valores definidos en la enumeración <see cref="T:System.ServiceProcess.ServiceControllerStatus" />. 
+            </exception>
+      <exception cref="T:System.ServiceProcess.TimeoutException">
+              El valor especificado para el parámetro <paramref name="timeout" /> caduca. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermission">
+      <summary>
+          Permite el control de los permisos de seguridad de acceso a código para los controladores de servicios.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceControllerPermission" />.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.Security.Permissions.PermissionState)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> con el acceso a los recursos especificado.
+        </summary>
+      <param name="state">
+              Uno de los valores de <see cref="T:System.Security.Permissions.PermissionState" />. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El parámetro <paramref name="state" /> no es un valor válido de <see cref="T:System.Security.Permissions.PermissionState" />. 
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.ServiceProcess.ServiceControllerPermissionAccess,System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> con los niveles de permiso de acceso especificados, el nombre del equipo en el que reside el servicio y el nombre corto que identifica el servicio en el sistema.
+        </summary>
+      <param name="permissionAccess">
+              Uno de los valores de <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" />. 
+            </param>
+      <param name="machineName">
+              Nombre del equipo donde reside el servicio. 
+            </param>
+      <param name="serviceName">
+              Nombre corto que identifica el servicio ante el sistema. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermission.#ctor(System.ServiceProcess.ServiceControllerPermissionEntry[])">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceControllerPermission" /> con las entradas de permisos especificadas.
+        </summary>
+      <param name="permissionAccessEntries">
+              Matriz de objetos <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" />. La propiedad <see cref="P:System.ServiceProcess.ServiceControllerPermission.PermissionEntries" /> se establece en este valor. 
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="permissionAccessEntries " /> es null.
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermission.PermissionEntries">
+      <summary>
+          Obtiene la colección de entradas de permiso para esta solicitud de permisos.
+        </summary>
+      <returns>
+          <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntryCollection" /> que contiene las entradas de permiso para esta solicitud de permisos.
+        </returns>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionAccess">
+      <summary>
+          Define los niveles de acceso que usan las clases de permiso <see cref="T:System.ServiceProcess.ServiceController" />.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerPermissionAccess.None">
+      <summary>
+          <see cref="T:System.ServiceProcess.ServiceController" /> no tiene permisos.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerPermissionAccess.Browse">
+      <summary>
+          <see cref="T:System.ServiceProcess.ServiceController" /> puede conectarse a los servicios existentes, pero no los puede controlar.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerPermissionAccess.Control">
+      <summary>
+          <see cref="T:System.ServiceProcess.ServiceController" /> puede conectarse a los servicios existentes y también los puede controlar.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionAttribute">
+      <summary>
+          Permite comprobaciones declarativas de permiso de controlador de servicios.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceControllerPermissionAttribute" />.
+        </summary>
+      <param name="action">
+              Uno de los valores de <see cref="T:System.Security.Permissions.SecurityAction" />. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionAttribute.CreatePermission">
+      <summary>
+          Crea el permiso basándose en los niveles de acceso solicitados que se establecen mediante la propiedad <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.PermissionAccess" /> del atributo.
+        </summary>
+      <returns>
+          Una interfaz <see cref="T:System.Security.IPermission" /> que representa el permiso creado.
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionAttribute.MachineName">
+      <summary>
+          Obtiene o establece el nombre del equipo en el que reside el servicio.
+        </summary>
+      <returns>
+          Nombre del equipo que está ejecutando el servicio asociado al <see cref="T:System.ServiceProcess.ServiceController" />.
+        </returns>
+      <exception cref="T:System.ArgumentException">
+              La sintaxis de <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.MachineName" /> no es válida. 
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionAttribute.PermissionAccess">
+      <summary>
+          Obtiene o establece los niveles de acceso utilizados en la solicitud de permisos.
+        </summary>
+      <returns>
+          Combinación bit a bit de los valores de <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" />.
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionAttribute.ServiceName">
+      <summary>
+          Obtiene o establece el nombre corto que identifica el servicio en el sistema.
+        </summary>
+      <returns>
+          Nombre del servicio.
+        </returns>
+      <exception cref="T:System.ArgumentNullException">
+              El parámetro <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.ServiceName" /> es null. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              La sintaxis de la propiedad <see cref="P:System.ServiceProcess.ServiceControllerPermissionAttribute.ServiceName" /> no es válida. 
+            </exception>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionEntry">
+      <summary>
+          Define la unidad más pequeña de un permiso de seguridad de acceso a código que se establece para un objeto <see cref="T:System.ServiceProcess.ServiceController" />.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntry.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" />.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntry.#ctor(System.ServiceProcess.ServiceControllerPermissionAccess,System.String,System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> con los niveles de acceso a permisos especificados, el nombre del equipo y un nombre corto que identifique al servicio.
+        </summary>
+      <param name="permissionAccess">
+              Uno de los valores de <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" />. 
+            </param>
+      <param name="machineName">
+              Nombre del equipo donde reside el servicio. 
+            </param>
+      <param name="serviceName">
+              Nombre corto que identifica el servicio ante el sistema. 
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                El valor de <paramref name="serviceName" /> es null.
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              
+                <paramref name="machineName " /> no es válido.
+              O bien
+              
+                <paramref name="serviceName " /> no es válido.
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntry.MachineName">
+      <summary>
+          Obtiene el nombre del equipo donde reside el servicio.
+        </summary>
+      <returns>
+          Nombre del equipo que está ejecutando el servicio asociado al <see cref="T:System.ServiceProcess.ServiceController" />.
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntry.PermissionAccess">
+      <summary>
+          Obtiene los niveles de acceso utilizados en la solicitud de permisos.
+        </summary>
+      <returns>
+          Combinación bit a bit de los valores de <see cref="T:System.ServiceProcess.ServiceControllerPermissionAccess" />.
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntry.ServiceName">
+      <summary>
+          Obtiene el nombre corto que identifica el servicio ante el sistema.
+        </summary>
+      <returns>
+          Nombre del servicio.
+        </returns>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerPermissionEntryCollection">
+      <summary>
+          Contiene una colección con establecimiento inflexible de tipos de objetos <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" />.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Add(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>
+          Agrega un objeto <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> especificado a esta colección.
+        </summary>
+      <returns>
+          Índice de base cero del objeto <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> agregado.
+        </returns>
+      <param name="value">
+              El objeto <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> que se agrega. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.AddRange(System.ServiceProcess.ServiceControllerPermissionEntry[])">
+      <summary>
+          Agrega a esta colección un conjunto de entradas de permiso especificadas.
+        </summary>
+      <param name="value">
+              Matriz de objetos de tipo <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> que contiene las entradas de permiso que se van a agregar.
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="value" /> es null.
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.AddRange(System.ServiceProcess.ServiceControllerPermissionEntryCollection)">
+      <summary>
+          Agrega a esta colección un conjunto de entradas de permiso especificadas.
+        </summary>
+      <param name="value">
+              <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntryCollection" /> que contiene las entradas de permiso que se van a agregar.
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="value" /> es null.
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Contains(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>
+          Determina si la colección contiene un objeto <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> especificado.
+        </summary>
+      <returns>
+          
+            Es true si el objeto <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> especificado pertenece a esta colección; en caso contrario, es false.
+        </returns>
+      <param name="value">
+              Objeto <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> que se va a buscar. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.CopyTo(System.ServiceProcess.ServiceControllerPermissionEntry[],System.Int32)">
+      <summary>
+          Copia las entradas de permiso de esta colección en una matriz, comenzando en un índice determinado de la matriz.
+        </summary>
+      <param name="array">
+              Matriz de tipo <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> que recibe las entradas de permiso copiadas. 
+            </param>
+      <param name="index">
+              Índice de base cero en el que se comienzan a copiar las entradas de permiso. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.IndexOf(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>
+          Determina el índice de una entrada de permiso especificada en esta colección.
+        </summary>
+      <returns>
+          Índice de base cero de la entrada de permiso especificada, o -1 si la entrada de permiso no se ha encontrado en la colección.
+        </returns>
+      <param name="value">
+              Entrada de permiso que se va a buscar. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Insert(System.Int32,System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>
+          Inserta una entrada de permiso en esta colección, en el índice especificado.
+        </summary>
+      <param name="index">
+              Índice de base cero de la colección en el que se va a insertar la entrada de permiso. 
+            </param>
+      <param name="value">
+              Entrada de permiso que se va a insertar en esta colección. 
+            </param>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Item(System.Int32)">
+      <summary>
+          Obtiene o establece el objeto que se encuentra en un índice especificado.
+        </summary>
+      <returns>
+          Objeto <see cref="T:System.ServiceProcess.ServiceControllerPermissionEntry" /> que existe en el índice especificado.
+        </returns>
+      <param name="index">
+              Índice de base cero de la colección. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnClear">
+      <summary>
+          Realiza procesos personalizados adicionales después de borrar el contenido de la colección.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnInsert(System.Int32,System.Object)">
+      <summary>
+          Realiza procesos personalizados adicionales antes de que se inserte una nueva entrada del permiso en la colección.
+        </summary>
+      <param name="index">
+              Índice de base cero en el que se va a insertar <paramref name="value" />. 
+            </param>
+      <param name="value">
+              Nuevo valor de la entrada de permiso en <paramref name="index" />. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnRemove(System.Int32,System.Object)">
+      <summary>
+          Realiza procesos personalizados adicionales cuando se quita una entrada de permiso nueva de la colección.
+        </summary>
+      <param name="index">
+              Índice de base cero en el que se puede encontrar <paramref name="value" />. 
+            </param>
+      <param name="value">
+              Entrada de permiso que se quita de <paramref name="index" />. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.OnSet(System.Int32,System.Object,System.Object)">
+      <summary>
+          Realiza procesos personalizados adicionales antes de establecer un valor en la colección.
+        </summary>
+      <param name="index">
+              Índice de base cero en el que se puede encontrar <paramref name="oldValue" />. 
+            </param>
+      <param name="oldValue">
+              Valor que se va a reemplazar por <paramref name="newValue" />. 
+            </param>
+      <param name="newValue">
+              Nuevo valor de la entrada de permiso en <paramref name="index" />. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceControllerPermissionEntryCollection.Remove(System.ServiceProcess.ServiceControllerPermissionEntry)">
+      <summary>
+          Quita una entrada de permiso especificada de esta colección.
+        </summary>
+      <param name="value">
+              Entrada de permiso que se va a quitar. 
+            </param>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceControllerStatus">
+      <summary>
+          Indica el estado actual del servicio.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.ContinuePending">
+      <summary>
+          La continuación del servicio está pendiente. Esto corresponde a la constante de Win32 SERVICE_CONTINUE_PENDING, que se define como 0x00000005.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.Paused">
+      <summary>
+          El servicio está en pausa. Esto corresponde a la constante de Win32 SERVICE_PAUSED, que se define como 0x00000007.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.PausePending">
+      <summary>
+          La pausa del servicio está pendiente. Esto corresponde a la constante de Win32 SERVICE_PAUSE_PENDING, que se define como 0x00000006.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.Running">
+      <summary>
+          El servicio está ejecutándose. Esto corresponde a la constante de Win32 SERVICE_RUNNING, que se define como 0x00000004.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.StartPending">
+      <summary>
+          El servicio está iniciándose. Esto corresponde a la constante de Win32 SERVICE_START_PENDING, que se define como 0x00000002.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.Stopped">
+      <summary>
+          El servicio no está ejecutándose. Esto corresponde a la constante de Win32 SERVICE_STOPPED, que se define como 0x00000001.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceControllerStatus.StopPending">
+      <summary>
+          El servicio está deteniéndose. Esto corresponde a la constante de Win32 SERVICE_STOP_PENDING, que se define como 0x00000003.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceInstaller">
+      <summary>
+          Instala una clase que extiende <see cref="T:System.ServiceProcess.ServiceBase" /> para implementar un servicio. La utilidad de instalación llama a esta clase al instalar una aplicación de servicio.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceInstaller" />.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>
+          Copia propiedades de una instancia de <see cref="T:System.ServiceProcess.ServiceBase" /> en este instalador.
+        </summary>
+      <param name="component">
+              <see cref="T:System.ComponentModel.IComponent" /> del que se va a copiar. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El componente que está asociando a este instalador no hereda de <see cref="T:System.ServiceProcess.ServiceBase" />. 
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.Description">
+      <summary>
+          Obtiene o establece la descripción del servicio.
+        </summary>
+      <returns>
+          Descripción del servicio. El valor predeterminado es una cadena vacía ("").
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.DisplayName">
+      <summary>
+          Indica el nombre descriptivo que identifica el servicio ante el usuario.
+        </summary>
+      <returns>
+          El nombre asociado al servicio, utilizado frecuentemente para herramientas interactivas.
+        </returns>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)">
+      <summary>
+          Instala el servicio escribiendo la información de la aplicación de servicio en el Registro. Este método está pensado para que lo utilicen las herramientas de instalación que procesan automáticamente los métodos apropiados.
+        </summary>
+      <param name="stateSaver">
+              <see cref="T:System.Collections.IDictionary" /> que contiene la información de contexto asociada a la instalación. 
+            </param>
+      <exception cref="T:System.InvalidOperationException">
+              La instalación no contiene <see cref="T:System.ServiceProcess.ServiceProcessInstaller" /> para el ejecutable.
+              O bien 
+              El nombre de archivo para el ensamblado es null o una cadena vacía.
+              O bien 
+              El nombre de servicio no es válido.
+              O bien 
+              No se pudo abrir el Administrador de control de servicios. 
+            </exception>
+      <exception cref="T:System.ArgumentException">
+              El nombre para mostrar del servicio tiene una longitud superior a 255 caracteres.
+            </exception>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              El sistema no pudo generar un identificador para el servicio. 
+              O bien
+              Ya hay instalado un servicio con ese nombre.
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" />
+        <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)">
+      <summary>
+          Indica si dos instaladores pueden instalar el mismo servicio.
+        </summary>
+      <returns>
+          
+            true si la llamada a <see cref="M:System.ServiceProcess.ServiceInstaller.Install(System.Collections.IDictionary)" /> en los dos instaladores tendría como resultado la instalación del mismo servicio; de lo contrario, es false.
+        </returns>
+      <param name="otherInstaller">
+              <see cref="T:System.Configuration.Install.ComponentInstaller" /> con el que se está comparando el instalador actual. 
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>
+          Deshace la información de la aplicación de servicio que el procedimiento de instalación escribió en el Registro. Este método está pensado para que lo utilicen las herramientas de instalación que procesan automáticamente los métodos apropiados.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene la información de contexto asociada a la instalación. 
+            </param>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" />
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.ServiceName">
+      <summary>
+          Indica el nombre que utiliza el sistema para identificar este servicio. Esta propiedad tiene que ser idéntica a la propiedad <see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> del servicio que se desea instalar.
+        </summary>
+      <returns>
+          El nombre del servicio que se va a instalar. Este valor tiene que establecerse antes de que la utilidad de instalación intente instalar el servicio.
+        </returns>
+      <exception cref="T:System.ArgumentException">
+              La propiedad <see cref="P:System.ServiceProcess.ServiceInstaller.ServiceName" /> no es válida. 
+            </exception>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.ServicesDependedOn">
+      <summary>
+          Indica los servicios que deben estar en ejecución para que se ejecute este servicio.
+        </summary>
+      <returns>
+          Una matriz de servicios que tiene que estar en ejecución para que el servicio asociado a este instalador pueda ejecutarse.
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceInstaller.StartType">
+      <summary>
+          Indica cómo y cuándo se inicia este servicio.
+        </summary>
+      <returns>
+          <see cref="T:System.ServiceProcess.ServiceStartMode" /> que representa la manera en la que se inicia el servicio. El valor predeterminado es Manual, que especifica que el servicio no se iniciará de forma automática después del reinicio.
+        </returns>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+              
+                No se puede establecer <see cref="P:System.ServiceProcess.ServiceInstaller.StartType" /> porque no se ha definido un valor para <see cref="T:System.ServiceProcess.ServiceStartMode" />.
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceInstaller.Uninstall(System.Collections.IDictionary)">
+      <summary>
+          Desinstala el servicio eliminando del Registro la información acerca de él.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene la información de contexto asociada a la instalación. 
+            </param>
+      <exception cref="T:System.ComponentModel.Win32Exception">
+              No se pudo abrir el Administrador de control de servicios.
+              O bien 
+              El sistema no pudo obtener un identificador para el servicio. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" />
+        <IPermission class="System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceProcessDescriptionAttribute">
+      <summary>
+          Especifica una descripción para una propiedad o para un evento.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessDescriptionAttribute.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceProcessDescriptionAttribute" /> utilizando la descripción especificada.
+        </summary>
+      <param name="description">
+              Texto de descripción definido por la aplicación. 
+            </param>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessDescriptionAttribute.Description">
+      <summary>
+          Obtiene el texto de descripción asociado al proceso de servicio.
+        </summary>
+      <returns>
+          Descripción definida por la aplicación.
+        </returns>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceProcessInstaller">
+      <summary>
+          Instala un ejecutable que contiene clases que extienden <see cref="T:System.ServiceProcess.ServiceBase" />. Las utilidades de instalación, como InstallUtil.exe, llaman a esta clase al instalar una aplicación de servicio.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.#ctor">
+      <summary>
+          Crea una nueva instancia de la clase <see cref="T:System.ServiceProcess.ServiceProcessInstaller" />. 
+        </summary>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.Account">
+      <summary>
+          Obtiene o establece el tipo de cuenta en la que se ejecutará esta aplicación de servicio.
+        </summary>
+      <returns>
+          <see cref="T:System.ServiceProcess.ServiceAccount" /> que define el tipo de cuenta en la que el sistema ejecuta este servicio. El valor predeterminado es User.
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+        <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.CopyFromComponent(System.ComponentModel.IComponent)">
+      <summary>
+          Implementa el método <see cref="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)" /> de la clase base sin un comportamiento específico de la clase <see cref="T:System.ServiceProcess.ServiceProcessInstaller" />.
+        </summary>
+      <param name="comp">
+              <see cref="T:System.ComponentModel.IComponent" /> que representa el proceso de servicio. 
+            </param>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.HelpText">
+      <summary>
+          Obtiene un texto de ayuda que se muestra para las opciones de instalación del servicio.
+        </summary>
+      <returns>
+          Texto de ayuda que proporciona una descripción de los pasos necesarios para establecer el nombre de usuario y la contraseña a fin de ejecutar el servicio en una cuenta determinada.
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.Install(System.Collections.IDictionary)">
+      <summary>
+          Escribe información de la aplicación de servicio en el Registro. Este método está pensado para que lo utilicen las herramientas de instalación, que llaman automáticamente a los métodos adecuados.
+        </summary>
+      <param name="stateSaver">
+              <see cref="T:System.Collections.IDictionary" /> que contiene la información de contexto asociada a la instalación. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El valor de <paramref name="stateSaver" /> es null. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" />
+        <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.Password">
+      <summary>
+          Obtiene o establece la contraseña asociada a la cuenta de usuario en la que se ejecuta la aplicación de servicio.
+        </summary>
+      <returns>
+          La contraseña asociada a la cuenta en la que se debe ejecutar el servicio. El valor predeterminado es una cadena vacía (""). La propiedad no es pública y nunca se serializa.
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+        <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="M:System.ServiceProcess.ServiceProcessInstaller.Rollback(System.Collections.IDictionary)">
+      <summary>
+          Deshace la información de la aplicación de servicio que el procedimiento de instalación escribió en el Registro. Este método está pensado para que lo utilicen las herramientas de instalación que procesan automáticamente los métodos apropiados.
+        </summary>
+      <param name="savedState">
+              <see cref="T:System.Collections.IDictionary" /> que contiene la información de contexto asociada a la instalación. 
+            </param>
+      <exception cref="T:System.ArgumentException">
+              El valor de <paramref name="savedState" /> es null.
+              O bien 
+              El parámetro <paramref name="savedState" /> está dañado o no existe. 
+            </exception>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.ServiceProcessInstaller.Username">
+      <summary>
+          Obtiene o establece la cuenta de usuario en la que se ejecutará la aplicación de servicio.
+        </summary>
+      <returns>
+          La cuenta en la que tiene que ejecutarse el servicio. El valor predeterminado es una cadena vacía ("").
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+        <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceStartMode">
+      <summary>
+          Indica el modo de inicio del servicio.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.Manual">
+      <summary>
+          Indica que un usuario (mediante el Administrador de control de servicios) o una aplicación inician el servicio de forma manual exclusivamente.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.Automatic">
+      <summary>
+          Indica que el sistema operativo va a iniciar (o inició) el servicio cuando se inicia el sistema. Si un servicio iniciado de forma automática depende de un servicio iniciado de forma manual, el servicio iniciado de forma manual se inicia también de forma automática cuando se inicia el sistema.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceStartMode.Disabled">
+      <summary>
+          Indica que el servicio está deshabilitado, por lo que ni un usuario ni una aplicación pueden iniciarlo.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.ServiceType">
+      <summary>
+          Representa el tipo del servicio.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.Adapter">
+      <summary>
+          Un servicio para un dispositivo de hardware que requiere su propio controlador.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.FileSystemDriver">
+      <summary>
+          Un controlador del sistema de archivos, que es también un controlador de dispositivo del núcleo.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.InteractiveProcess">
+      <summary>
+          Un servicio que puede comunicarse con el escritorio.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.KernelDriver">
+      <summary>
+          Un controlador de dispositivo del núcleo, como un disco duro u otro controlador de dispositivo de hardware de nivel bajo.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.RecognizerDriver">
+      <summary>
+          Un controlador del sistema de archivos utilizado durante el inicio para determinar los sistemas de archivos presentes en el sistema.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.Win32OwnProcess">
+      <summary>
+          Un programa Win32 que puede iniciar el Controlador del servicio y que obedece al protocolo de control de servicios. Este tipo de servicio Win32 se ejecuta en un proceso por sí mismo.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.ServiceType.Win32ShareProcess">
+      <summary>
+          Un servicio Win32 que puede compartir un proceso con otros servicios Win32.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.SessionChangeDescription">
+      <summary>
+          Identifica la razón para un cambio de la sesión de Servicios de Terminal Server.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.Equals(System.Object)">
+      <summary>
+          Determina si el objeto especificado es igual a la descripción del cambio de la sesión actual.
+        </summary>
+      <returns>
+          
+            Es true si <paramref name="obj" /> es igual a la estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" /> actual; en caso contrario, es false.
+        </returns>
+      <param name="obj">
+              Objeto que se va a comparar con la estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" /> actual.
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.Equals(System.ServiceProcess.SessionChangeDescription)">
+      <summary>
+          Determina si la descripción de cambio de sesión especificada es igual a la descripción de cambio de sesión actual.
+        </summary>
+      <returns>
+          
+            Es true si <paramref name="changeDescription" /> es igual a la estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" /> actual; en caso contrario, es false.
+        </returns>
+      <param name="changeDescription">
+              Estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" /> que se va a comparar con la estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" /> actual.
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.GetHashCode">
+      <summary>
+          Obtiene un código hash para la descripción de cambio de sesión actual.
+        </summary>
+      <returns>
+          Código hash para la descripción de cambio de sesión actual.
+        </returns>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.op_Equality(System.ServiceProcess.SessionChangeDescription,System.ServiceProcess.SessionChangeDescription)">
+      <summary>
+          Devuelve un valor que indica si dos estructuras <see cref="T:System.ServiceProcess.SessionChangeDescription" /> son iguales.
+        </summary>
+      <returns>
+          
+            Es true si <paramref name="a" /> y <paramref name="b" /> son iguales; en caso contrario, es false. 
+        </returns>
+      <param name="a">
+              Estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.
+            </param>
+      <param name="b">
+              Estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.SessionChangeDescription.op_Inequality(System.ServiceProcess.SessionChangeDescription,System.ServiceProcess.SessionChangeDescription)">
+      <summary>
+          Devuelve un valor que indica si dos estructuras <see cref="T:System.ServiceProcess.SessionChangeDescription" /> no son iguales.
+        </summary>
+      <returns>
+          
+            Es true si <paramref name="a" /> y <paramref name="b" /> no son iguales; en caso contrario, es false.
+        </returns>
+      <param name="a">
+              Estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.
+            </param>
+      <param name="b">
+              Estructura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.
+            </param>
+    </member>
+    <member name="P:System.ServiceProcess.SessionChangeDescription.Reason">
+      <summary>
+          Obtiene la razón para el cambio de la sesión.
+        </summary>
+      <returns>
+          Uno de los valores de <see cref="T:System.ServiceProcess.SessionChangeReason" />. 
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.SessionChangeDescription.SessionId">
+      <summary>
+          Obtiene el Id. de la sesión asociada.
+        </summary>
+      <returns>
+          Id. de la sesión asociada.
+        </returns>
+    </member>
+    <member name="T:System.ServiceProcess.SessionChangeReason">
+      <summary>
+          Especifica la razón para un aviso de cambio de sesión de Servicios de Terminal Server.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.ConsoleConnect">
+      <summary>
+          Una sesión de consola se ha conectado.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.ConsoleDisconnect">
+      <summary>
+          Una sesión de consola se ha desconectado.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.RemoteConnect">
+      <summary>
+          Una sesión remota se ha conectado.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.RemoteDisconnect">
+      <summary>
+          Una sesión remota se ha desconectado.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionLogon">
+      <summary>
+          Un usuario ha iniciado una sesión.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionLogoff">
+      <summary>
+          Un usuario ha cerrado una sesión.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionLock">
+      <summary>
+          Se ha bloqueado una sesión.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionUnlock">
+      <summary>
+          Se ha desbloqueado una sesión.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.SessionChangeReason.SessionRemoteControl">
+      <summary>
+          El estado del control remoto de una sesión ha cambiado.
+        </summary>
+    </member>
+    <member name="T:System.ServiceProcess.TimeoutException">
+      <summary>
+          Excepción que se produce cuando ha transcurrido el tiempo de espera especificado.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.TimeoutException" /> sin texto de mensaje.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.TimeoutException" /> con la información de serialización y el contexto especificados.
+        </summary>
+      <param name="info">
+              <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contiene los datos serializados del objeto que hacen referencia a la excepción que se va a producir.
+            </param>
+      <param name="context">
+              <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contiene información contextual sobre el origen o el destino.
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              El parámetro <paramref name="info" /> es null. 
+            </exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">
+              El nombre de la clase es null o <see cref="P:System.Exception.HResult" /> es cero (0). 
+            </exception>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.TimeoutException" /> con el texto de mensaje especificado.
+        </summary>
+      <param name="message">
+              Texto que describe el tipo o el origen de la excepción.
+            </param>
+    </member>
+    <member name="M:System.ServiceProcess.TimeoutException.#ctor(System.String,System.Exception)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.ServiceProcess.TimeoutException" /> con el texto de mensaje y la excepción interna especificados.
+        </summary>
+      <param name="message">
+              Texto que describe el tipo o el origen de la excepción.
+            </param>
+      <param name="innerException">
+              Excepción que ha producido la excepción actual. 
+            </param>
+    </member>
+    <member name="T:System.ServiceProcess.Design.ServiceInstallerDialog">
+      <summary>
+          Proporciona un cuadro de diálogo que solicita información de la cuenta de una aplicación de servicios para Windows.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.Design.ServiceInstallerDialog.#ctor">
+      <summary>
+          Inicializa una instancia nueva del formulario de cuenta de servicio.
+        </summary>
+    </member>
+    <member name="M:System.ServiceProcess.Design.ServiceInstallerDialog.Main">
+      <summary>
+          Inicia la ejecución de un bucle de mensajes de aplicación estándar y muestra el formulario de cuenta de servicio.
+        </summary>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Password">
+      <summary>
+          Obtiene o establece la contraseña para el formulario de cuenta de servicio.
+        </summary>
+      <returns>
+          Una cadena que representa la contraseña en el formulario de cuenta de servicio. El valor predeterminado es una cadena vacía ("").
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Result">
+      <summary>
+          Obtiene el resultado del cuadro de diálogo para el formulario de cuenta de servicio.
+        </summary>
+      <returns>
+          Una enumeración <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialogResult" /> que indica la respuesta del usuario al cuadro de diálogo. El valor predeterminado es OK.
+        </returns>
+    </member>
+    <member name="P:System.ServiceProcess.Design.ServiceInstallerDialog.Username">
+      <summary>
+          Obtiene o establece el nombre de usuario para el formulario de cuenta de servicio.
+        </summary>
+      <returns>
+          Una cadena que representa el nombre de usuario en el formulario de cuenta de servicio. El valor predeterminado es una cadena vacía ("").
+        </returns>
+      <PermissionSet>
+        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+        <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+      </PermissionSet>
+    </member>
+    <member name="T:System.ServiceProcess.Design.ServiceInstallerDialogResult">
+      <summary>
+          Especifica el valor devuelto por un formulario <see cref="T:System.ServiceProcess.Design.ServiceInstallerDialog" />.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.OK">
+      <summary>
+          El valor devuelto del cuadro de diálogo es OK. Este valor indica normalmente que el usuario confirmó las propiedades de cuenta e hizo clic en el botón OK para cerrar el cuadro de diálogo.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.UseSystem">
+      <summary>
+          Instale el servicio con una cuenta del sistema en lugar de una cuenta de usuario. Este valor indica normalmente que el cuadro de diálogo no se mostró al usuario. Por ejemplo, la propiedad <see cref="P:System.ServiceProcess.ServiceProcessInstaller.Account" /> se establece en algo distinto de User.
+        </summary>
+    </member>
+    <member name="F:System.ServiceProcess.Design.ServiceInstallerDialogResult.Canceled">
+      <summary>
+          El valor devuelto del cuadro de diálogo es Canceled. Este valor indica normalmente que el usuario canceló el cuadro de diálogo sin establecer los campos de cuenta.
+        </summary>
+    </member>
+  </members>
+</doc>

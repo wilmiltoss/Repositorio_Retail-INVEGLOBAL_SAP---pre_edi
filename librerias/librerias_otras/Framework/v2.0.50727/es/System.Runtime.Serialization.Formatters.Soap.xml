@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.Serialization.Formatters.Soap</name>
+  </assembly>
+  <members>
+    <member name="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter">
+      <summary>
+          Serializa o deserializa un objeto o todo un gráfico de objetos conectados, en formato SOAP.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> con los valores predeterminados de la propiedad.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.#ctor(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> con el <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> y el <see cref="T:System.Runtime.Serialization.StreamingContext" /> que se hayan especificado.
+        </summary>
+      <param name="selector">
+              Interfaz <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> que se va a utilizar con la nueva instancia de <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />. Puede ser null. 
+            </param>
+      <param name="context">
+              <see cref="T:System.Runtime.Serialization.StreamingContext" /> que guarda el origen y destino de la serialización. Si el parámetro <paramref name="context" /> es null, el valor predeterminado de <see cref="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context" /> es <see cref="F:System.Runtime.Serialization.StreamingContextStates.CrossMachine" />. 
+            </param>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.AssemblyFormat">
+      <summary>
+          Obtiene o establece el comportamiento del deserializador en lo que respecta a buscar y cargar ensamblados.
+        </summary>
+      <returns>
+          Uno de los valores de <see cref="T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle" /> que especifica el comportamiento del deserializador.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Binder">
+      <summary>
+          Obtiene o establece el <see cref="T:System.Runtime.Serialization.SerializationBinder" /> que controla el enlace entre un objeto serializado y un tipo.
+        </summary>
+      <returns>
+          <see cref="T:System.Runtime.Serialization.SerializationBinder" /> utilizado con este <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context">
+      <summary>
+          Obtiene o establece el <see cref="T:System.Runtime.Serialization.StreamingContext" /> utilizado con este <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.
+        </summary>
+      <returns>
+          <see cref="T:System.Runtime.Serialization.StreamingContext" /> utilizado con este <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream)">
+      <summary>
+          Deserializa los datos de la secuencia suministrada y reconstituye el gráfico de objetos.
+        </summary>
+      <returns>
+          Objeto superior del gráfico deserializado (raíz).
+        </returns>
+      <param name="serializationStream">
+              Secuencia que contiene los datos que se van a deserializar. 
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="serializationStream" /> es null. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)">
+      <summary>
+          Deserializa la secuencia a un gráfico de objetos; el <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> especificado se encarga de controlar los encabezados que aparecen en la secuencia.
+        </summary>
+      <returns>
+          Objeto superior del gráfico deserializado (raíz).
+        </returns>
+      <param name="serializationStream">
+              Secuencia que contiene los datos que se van a deserializar.
+            </param>
+      <param name="handler">
+              Delegado que va a controlar los encabezados que se encuentren en la secuencia. Puede ser null. 
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="serializationStream" /> es null. 
+            </exception>
+      <exception cref="T:System.Runtime.Serialization.SerializationException">
+              
+                <paramref name="serializationStream" /> admite operaciones de búsqueda, y su longitud es cero. 
+            </exception>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.FilterLevel">
+      <summary>
+          Obtiene o establece la enumeración <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> de deserialización automática para .NET Framework Remoting.
+        </summary>
+      <returns>
+          La enumeración <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> que representa el nivel actual de deserialización automática.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object)">
+      <summary>
+          Serializa el objeto o el gráfico de objetos con el objeto superior (raíz) especificado al <see cref="T:System.IO.Stream" /> indicado.
+        </summary>
+      <param name="serializationStream">
+              Secuencia en la que el formateador coloca los datos que se van a serializar. 
+            </param>
+      <param name="graph">
+              Objeto, o raíz del gráfico de objetos, que se va a serializar. Todos los objetos secundarios de este objeto raíz se serializan automáticamente. 
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="serializationStream" /> es null. 
+            </exception>
+    </member>
+    <member name="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])">
+      <summary>
+          Serializa un objeto o un gráfico de objetos con la raíz especificada en el <see cref="T:System.IO.Stream" /> especificado en formato RPC (llamada a procedimiento remoto) SOAP.
+        </summary>
+      <param name="serializationStream">
+              Secuencia en la que el formateador coloca los datos que se van a serializar. 
+            </param>
+      <param name="graph">
+              Objeto o raíz del gráfico de objetos que se va a serializar. Todos los objetos secundarios de este objeto raíz se serializan automáticamente. 
+            </param>
+      <param name="headers">
+              Encabezados de comunicación remota que se van a incluir en la serialización. Puede ser null. 
+            </param>
+      <exception cref="T:System.ArgumentNullException">
+              
+                <paramref name="serializationStream" /> es null. 
+            </exception>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.SurrogateSelector">
+      <summary>
+          Obtiene o establece el <see cref="T:System.Runtime.Serialization.SurrogateSelector" /> que controla la sustitución de tipos durante el proceso de serialización y deserialización.
+        </summary>
+      <returns>
+          <see cref="T:System.Runtime.Serialization.SurrogateSelector" /> utilizado con este <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject">
+      <summary>
+          Obtiene o establece <see cref="T:System.Runtime.Serialization.Formatters.ISoapMessage" /> donde se deserializa el objeto SOAP superior.
+        </summary>
+      <returns>
+          <see cref="T:System.Runtime.Serialization.Formatters.ISoapMessage" /> donde se deserializa el objeto SOAP superior.
+        </returns>
+    </member>
+    <member name="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TypeFormat">
+      <summary>
+          Obtiene o establece el formato en que se distribuyen las descripciones de tipos en la secuencia serializada.
+        </summary>
+      <returns>
+          Formato de distribución de las descripciones de tipos en la secuencia serializada.
+        </returns>
+    </member>
+  </members>
+</doc>

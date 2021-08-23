@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualC</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualC.DebugInfoInPDBAttribute">
+      <summary>
+          Un atributo aplicado a clases nativas que indica al depurador que busque información de campos en el archivo pdb en lugar de en los metadatos.
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.DebugInfoInPDBAttribute.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.VisualC.DebugInfoInPDBAttribute" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.VisualC.DecoratedNameAttribute">
+      <summary>
+          Un atributo utilizado por el compilador para pasar el nombre representativo de un método al vinculador.
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.DecoratedNameAttribute.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.VisualC.DecoratedNameAttribute" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.DecoratedNameAttribute.#ctor(System.String)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.VisualC.DecoratedNameAttribute" /> utilizando el nombre representativo especificado.
+        </summary>
+      <param name="decoratedName">
+              Nombre representativo de un método.
+            </param>
+    </member>
+    <member name="T:Microsoft.VisualC.IsConstModifier">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.IsConstModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsCXXReferenceModifier">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.IsCXXReferenceModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsLongModifier">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.IsLongModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsSignedModifier">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.IsSignedModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.IsVolatileModifier">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.IsVolatileModifier.#ctor"></member>
+    <member name="T:Microsoft.VisualC.MiscellaneousBitsAttribute">
+      <summary>
+          Un atributo que almacena información diversa sobre un tipo en metadatos.
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.MiscellaneousBitsAttribute.#ctor(System.Int32)">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.VisualC.MiscellaneousBitsAttribute" /> utilizando la máscara de bits especificada.
+        </summary>
+      <param name="miscellaneousBits">
+              Máscara de bits que contiene información sobre un tipo.
+            </param>
+    </member>
+    <member name="F:Microsoft.VisualC.MiscellaneousBitsAttribute.m_dwAttrs">
+      <summary>
+          Máscara de bits que contiene información sobre un tipo.
+        </summary>
+    </member>
+    <member name="T:Microsoft.VisualC.NeedsCopyConstructorModifier">
+      <summary>
+          Un modificador personalizado aplicado a parámetros que indica al contador de referencias de CLR que llame al constructor de copias del parámetro a la hora de calcular referencias al parámetro.
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.NeedsCopyConstructorModifier.#ctor">
+      <summary>
+          Inicializa una nueva instancia de la clase <see cref="T:Microsoft.VisualC.NeedsCopyConstructorModifier" />.
+        </summary>
+    </member>
+    <member name="T:Microsoft.VisualC.NoSignSpecifiedModifier">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualC.NoSignSpecifiedModifier.#ctor"></member>
+  </members>
+</doc>

@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualBasic.Vsa</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaCodeItem">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaCodeItem.#ctor(Microsoft.Vsa.IVsaCodeItem)">
+      <summary>
+        </summary>
+      <param name="item">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaCodeItem.AddEventSource(System.String,System.String)">
+      <summary>
+        </summary>
+      <param name="EventSourceName">
+               
+            </param>
+      <param name="EventSourceType">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaCodeItem.AppendSourceText(System.String)">
+      <summary>
+        </summary>
+      <param name="Text">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCodeItem.CodeDOM">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaCodeItem.RemoveEventSource(System.String)">
+      <summary>
+        </summary>
+      <param name="EventSourceName">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCodeItem.SourceText">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaCompilerError">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.Description">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.EndColumn">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.Line">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.LineText">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.Number">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.Severity">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.SourceItem">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.SourceMoniker">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaCompilerError.StartColumn">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaEngine">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.#ctor">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Vsa.VsaEngine._baseEngine">
+      <summary>
+        </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Vsa.VsaEngine._engineClosed">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.Assembly">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.CheckEngine">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.Close">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.Compile">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.CreateEngine">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.Dispose(System.Boolean)">
+      <summary>
+        </summary>
+      <param name="disposing">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.Evidence">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.Finalize">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.GenerateDebugInfo">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.GetExceptionToThrow(System.Exception)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="e">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.GetOption(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="Name">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.InitNew">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.IsCompiled">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.IsDirty">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.IsRunning">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.IsValidIdentifier(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="identifier">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.Items">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.Language">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.LCID">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.LoadSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+        </summary>
+      <param name="Site">
+               
+            </param>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Vsa.VsaEngine.m_Items">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.Name">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.Reset">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.RevokeCache">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.RootMoniker">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.RootNamespace">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.Run">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.SaveCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>
+        </summary>
+      <param name="PE">
+               
+            </param>
+      <param name="PDB">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.SaveSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+        </summary>
+      <param name="Site">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaEngine.SetOption(System.String,System.Object)">
+      <summary>
+        </summary>
+      <param name="Name">
+               
+            </param>
+      <param name="value">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.Site">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaEngine.Version">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaGlobalItem">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaGlobalItem.ExposeMembers">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaGlobalItem.TypeString">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaItem">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItem._item">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItem.GetOption(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="Name">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItem.IsDirty">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItem.ItemType">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItem.Name">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItem.SetOption(System.String,System.Object)">
+      <summary>
+        </summary>
+      <param name="Name">
+               
+            </param>
+      <param name="value">
+               
+            </param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaItems">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItems.#ctor(Microsoft.Vsa.IVsaItems)">
+      <summary>
+        </summary>
+      <param name="items">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItems.AddCodeItemWrapper(Microsoft.Vsa.IVsaItem)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="item">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItems.Count">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItems.CreateItem(System.String,Microsoft.Vsa.VsaItemType,Microsoft.Vsa.VsaItemFlag)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="Name">
+               
+            </param>
+      <param name="ItemType">
+               
+            </param>
+      <param name="ItemFlag">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItems.GetEnumerator">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItems.GetItemWrapper(Microsoft.Vsa.IVsaItem)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="item">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItems.Item(System.Int32)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="index">
+               
+            </param>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItems.Item(System.String)">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+      <param name="Name">
+               
+            </param>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Vsa.VsaItems.m_ItemCollection">
+      <summary>
+        </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItems.Remove(System.Int32)">
+      <summary>
+        </summary>
+      <param name="index">
+               
+            </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItems.Remove(System.String)">
+      <summary>
+        </summary>
+      <param name="Name">
+               
+            </param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaItemsEnumerator">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaItemsEnumerator.Current">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItemsEnumerator.MoveNext">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItemsEnumerator.Reset">
+      <summary>
+        </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Vsa.VsaReferenceItem">
+      <summary>
+        </summary>
+    </member>
+    <member name="P:Microsoft.VisualBasic.Vsa.VsaReferenceItem.AssemblyName">
+      <summary>
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaCompilerError.#ctor(Microsoft.Vsa.IVsaError)"></member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaGlobalItem.#ctor(Microsoft.Vsa.IVsaGlobalItem)"></member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaItem.#ctor(Microsoft.Vsa.IVsaItem)"></member>
+    <member name="M:Microsoft.VisualBasic.Vsa.VsaReferenceItem.#ctor(Microsoft.Vsa.IVsaReferenceItem)"></member>
+  </members>
+</doc>

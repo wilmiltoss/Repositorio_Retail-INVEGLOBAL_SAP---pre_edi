@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>CustomMarshalers</name>
+  </assembly>
+  <members>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler">
+      <summary>
+          Calcula referencias de la interfaz IDispatch COM a la interfaz <see cref="T:System.Collections.IEnumerable" /> de .NET Framework y viceversa.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.CleanUpManagedData(System.Object)">
+      <summary>
+          Realiza la limpieza necesaria en los datos administrados cuando ya no es necesario.
+        </summary>
+      <param name="pManagedObj">
+              Objeto administrado que se va a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>
+          Realiza la limpieza necesaria en los datos no administrados cuando ya no es necesario.
+        </summary>
+      <param name="pNativeData">
+              Puntero a los datos no administrados que se van a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.GetInstance(System.String)">
+      <summary>
+          Devuelve una instancia del contador de referencias personalizado.
+        </summary>
+      <returns>
+          Una instancia del contador de referencias personalizado.
+        </returns>
+      <param name="pstrCookie">
+              Parámetro "cookie" de cadena que puede usar el contador de referencias personalizado.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.GetNativeDataSize">
+      <summary>
+          Devuelve el tamaño en bytes de los datos no administrados de los que se van a calcular referencias.
+        </summary>
+      <returns>
+          -1 para indicar que el tipo que controla este contador de referencias no es un tipo de valor.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>
+          Calcula las referencias de un objeto de código administrado respecto al no administrado.
+        </summary>
+      <returns>
+          Un puntero al objeto no administrado.
+        </returns>
+      <param name="pManagedObj">
+              Objeto administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>
+          Calcula las referencias de un objeto de código no administrado respecto al administrado.
+        </summary>
+      <returns>
+          Un objeto administrado.
+        </returns>
+      <param name="pNativeData">
+              Un puntero al objeto no administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler">
+      <summary>
+          Calcula referencias de la interfaz IEnumVARIANT COM a la interfaz <see cref="T:System.Collections.IEnumerator" /> de .NET Framework y viceversa.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.CleanUpManagedData(System.Object)">
+      <summary>
+          Realiza la limpieza necesaria en los datos administrados cuando ya no es necesario.
+        </summary>
+      <param name="pManagedObj">
+              Objeto administrado que se va a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>
+          Realiza la limpieza necesaria en los datos no administrados cuando ya no es necesario.
+        </summary>
+      <param name="pNativeData">
+              Puntero a los datos no administrados que se van a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.GetInstance(System.String)">
+      <summary>
+          Devuelve una instancia del contador de referencias personalizado.
+        </summary>
+      <returns>
+          Una instancia del contador de referencias personalizado.
+        </returns>
+      <param name="pstrCookie">
+              Parámetro "cookie" de cadena que puede usar el contador de referencias personalizado.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.GetNativeDataSize">
+      <summary>
+          Devuelve el tamaño en bytes de los datos no administrados de los que se van a calcular referencias.
+        </summary>
+      <returns>
+          -1 para indicar que el tipo que controla este contador de referencias no es un tipo de valor.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>
+          Calcula las referencias de un objeto de código administrado respecto al no administrado.
+        </summary>
+      <returns>
+          Un puntero al objeto no administrado.
+        </returns>
+      <param name="pManagedObj">
+              Objeto administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>
+          Calcula las referencias de un objeto de código no administrado respecto al administrado.
+        </summary>
+      <returns>
+          Un objeto administrado.
+        </returns>
+      <param name="pNativeData">
+              Un puntero al objeto no administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler">
+      <summary>
+          Calcula referencias de la interfaz IDispatchEx COM a la interfaz <see cref="T:System.Runtime.InteropServices.Expando.IExpando" /> de .NET Framework o a la interfaz <see cref="T:System.Reflection.IReflect" /> y viceversa.
+        </summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.CleanUpManagedData(System.Object)">
+      <summary>
+          Realiza la limpieza necesaria en los datos administrados cuando ya no es necesario.
+        </summary>
+      <param name="pManagedObj">
+              Objeto administrado que se va a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>
+          Realiza la limpieza necesaria en los datos no administrados cuando ya no es necesario.
+        </summary>
+      <param name="pNativeData">
+              Puntero a los datos no administrados que se van a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.GetInstance(System.String)">
+      <summary>
+          Devuelve una instancia del contador de referencias personalizado.
+        </summary>
+      <returns>
+          Una instancia del contador de referencias personalizado.
+        </returns>
+      <param name="pstrCookie">
+              Parámetro "cookie" de cadena que puede usar el contador de referencias personalizado.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.GetNativeDataSize">
+      <summary>
+          Devuelve el tamaño en bytes de los datos no administrados de los que se van a calcular referencias.
+        </summary>
+      <returns>
+          -1 para indicar que el tipo que controla este contador de referencias no es un tipo de valor.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>
+          Calcula las referencias de un objeto de código administrado respecto al no administrado.
+        </summary>
+      <returns>
+          Un puntero al objeto no administrado.
+        </returns>
+      <param name="pManagedObj">
+              Objeto administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>
+          Calcula las referencias de un objeto de código no administrado respecto al administrado.
+        </summary>
+      <returns>
+          Un objeto administrado.
+        </returns>
+      <param name="pNativeData">
+              Puntero al objeto no administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="T:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler">
+      <summary>
+          Convierte la interfaz ITypeInfo no administrada a la clase <see cref="T:System.Type" /> administrada y la clase <see cref="T:System.Type" /> administrada a la interfaz ITypeInfo no administrada. 
+        </summary>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.CleanUpManagedData(System.Object)">
+      <summary>
+          Realiza la limpieza necesaria en los datos administrados cuando ya no es necesario.
+        </summary>
+      <param name="pManagedObj">
+              Objeto administrado que se va a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.CleanUpNativeData(System.IntPtr)">
+      <summary>
+          Realiza la limpieza necesaria en los datos no administrados cuando ya no es necesario.
+        </summary>
+      <param name="pNativeData">
+              Puntero a los datos no administrados que se van a destruir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.GetInstance(System.String)">
+      <summary>
+          Devuelve una instancia del contador de referencias personalizado.
+        </summary>
+      <returns>
+          Instancia del contador de referencias personalizado.
+        </returns>
+      <param name="pstrCookie">
+              Parámetro "cookie" de tipo string que el contador de referencias puede utilizar.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.GetNativeDataSize">
+      <summary>
+          Devuelve el tamaño en bytes de los datos no administrados que se van a convertir.
+        </summary>
+      <returns>
+          -1 para indicar que el tipo que este contador de referencias controla no es un tipo de valor.
+        </returns>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.MarshalManagedToNative(System.Object)">
+      <summary>
+          Convierte un objeto de código administrado a código no administrado.
+        </summary>
+      <returns>
+          Puntero al objeto no administrado.
+        </returns>
+      <param name="pManagedObj">
+              Objeto administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.MarshalNativeToManaged(System.IntPtr)">
+      <summary>
+          Convierte un objeto de código no administrado a código administrado.
+        </summary>
+      <returns>
+          Objeto administrado.
+        </returns>
+      <param name="pNativeData">
+              Puntero al objeto no administrado que se va a convertir.
+            </param>
+    </member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.#cctor"></member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.EnumeratorToEnumVariantMarshaler.#cctor"></member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.ExpandoToDispatchExMarshaler.#cctor"></member>
+    <member name="M:System.Runtime.InteropServices.CustomMarshalers.TypeToTypeInfoMarshaler.#cctor"></member>
+  </members>
+</doc>

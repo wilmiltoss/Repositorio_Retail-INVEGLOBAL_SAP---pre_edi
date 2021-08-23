@@ -1,0 +1,51 @@
+C:\proyectos_jfpv\vs_net\VS_2010\CdgUtiles\CdgUtiles\obj\Debug\ResolveAssemblyReference.cache
+C:\proyectos_jfpv\vs_net\VS_2010\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+C:\proyectos_jfpv\vs_net\VS_2010\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+C:\proyectos_jfpv\vs_net\VS_2010\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+C:\proyectos_jfpv\vs_net\VS_2010\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Debug\CdgUtilesXML.xml
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\obj\Debug\ResolveAssemblyReference.cache
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb
+C:\proyectos_jfpv\vs_net\VS_2010\CdgUtiles\CdgUtiles\bin\Debug\CdgUtilesXML.xml
+E:\PROYECTOS_JFP_VS\DOTNET\VS_2010\CdgUtiles\CdgUtiles\bin\Debug\OpenNETCF.Desktop.Communication.dll
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\bin\Debug\CdgUtilesXML.xml
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+C:\Users\cgaray\Dropbox\proyectos\vs_net\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\OpenNETCF.Desktop.Communication.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+E:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb
+C:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+C:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+C:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\OpenNETCF.Desktop.Communication.dll
+C:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.csprojResolveAssemblyReference.cache
+C:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+C:\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb
+E:\CDGS\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+E:\CDGS\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+E:\CDGS\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\bin\Debug\RAPI2.dll
+E:\CDGS\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+E:\CDGS\PROYECTOS_JFP_VS\DOTNET\CDGS\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.csprojAssemblyReference.cache
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.csproj.CoreCompileInputs.cache
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.csproj.CopyComplete
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb
+D:\DESARRROLLO\VisualStudio\INVEGLOBAL_CASERO\CdgUtiles\CdgUtiles\bin\Debug\System.Data.SQLite.dll
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.dll
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\bin\Debug\CdgUtiles.pdb
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\bin\Debug\System.Data.SQLite.dll
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.csprojAssemblyReference.cache
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.csproj.CoreCompileInputs.cache
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.csproj.CopyComplete
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.dll
+D:\DESARRROLLO\Repositorio_Retail\INVEGLOBAL_SAP - pre_edi\CdgUtiles\CdgUtiles\obj\Debug\CdgUtiles.pdb

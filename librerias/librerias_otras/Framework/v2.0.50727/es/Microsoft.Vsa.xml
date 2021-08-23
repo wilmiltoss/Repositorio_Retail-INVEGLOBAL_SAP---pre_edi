@@ -1,0 +1,1355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Vsa</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Vsa.IVsaCodeItem">
+      <summary>
+          Representa el elemento de código que va a ser compilado por el motor de secuencias de comandos.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaCodeItem.AddEventSource(System.String,System.String)">
+      <summary>
+          Agrega un origen de eventos al elemento de código. El elemento de código utiliza el origen de eventos para enlazar un evento al origen de eventos indicado; para ello, se llama al método IVsaSite.GetEventSourceInstance implementado por el host.
+        </summary>
+      <param name="eventSourceName">
+              Nombre de programación del origen de eventos.
+            </param>
+      <param name="eventSourceType">
+              Nombre de tipo del origen de eventos.
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaCodeItem.AppendSourceText(System.String)">
+      <summary>
+          Anexa el texto especificado al final del elemento de código.
+        </summary>
+      <param name="text">
+              Texto que se va a anexar al elemento de código.
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaCodeItem.CodeDOM">
+      <summary>
+          Obtiene el modelo CodeDOM (Code Document Object Model) representado en el elemento de código.
+        </summary>
+      <returns>
+          Devuelve el modelo CodeDOM del elemento de código.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaCodeItem.RemoveEventSource(System.String)">
+      <summary>
+          Quita el origen de eventos especificado del elemento de código.
+        </summary>
+      <param name="eventSourceName">
+              Nombre de programación del origen de eventos que se va a quitar.
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaCodeItem.SourceText">
+      <summary>
+          Obtiene o establece el texto de un elemento de código especificado, incluido el código generado automáticamente, si lo hubiera.
+        </summary>
+      <returns>
+          Devuelve el texto de origen del elemento de código.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaDTCodeItem">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.CanDelete">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.CanMove">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.CanRename">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.Hidden">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTCodeItem.ReadOnly">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaDTEngine">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaDTEngine.AttachDebugger(System.Boolean)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaDTEngine.GetIDE">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaDTEngine.InitCompleted">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaDTEngine.TargetURL">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaEngine">
+      <summary>
+          Define los métodos y propiedades que un motor de secuencias de comandos debe admitir y proporciona acceso mediante programación al motor de secuencias de comandos.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Assembly">
+      <summary>
+          Obtiene una referencia al ensamblado en ejecución generado por el método <see cref="M:Microsoft.Vsa.IVsaEngine.Run" />.
+        </summary>
+      <returns>
+          La referencia al ensamblado que se está ejecutando.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Close">
+      <summary>
+          Cierra el motor de secuencias de comandos y libera todos los recursos. Si el motor de secuencias de comandos se está ejecutando, se llama primero al método <see cref="M:Microsoft.Vsa.IVsaEngine.Reset" />.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Compile">
+      <summary>
+          Hace que el motor de secuencias de comandos compile el estado de origen existente.
+        </summary>
+      <returns>
+          Devuelve TRUE si la compilación se realiza correctamente, lo que indica que se puede llamar al método <see cref="M:Microsoft.Vsa.IVsaEngine.Run" /> en un ensamblado recién compilado. Devuelve FALSE si se produce un error en la compilación.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Evidence">
+      <summary>
+          Proporciona una evidencia con el fin de validar la identidad del objeto actual.
+        </summary>
+      <returns>
+          Devuelve una referencia a un objeto Evidence.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.GenerateDebugInfo">
+      <summary>
+          Obtiene o establece un valor booleano que indica si el motor de secuencias de comandos producirá información de depuración cuando se llame al método <see cref="M:Microsoft.Vsa.IVsaEngine.Compile" />.
+        </summary>
+      <returns>
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.GetOption(System.String)">
+      <summary>
+          Obtiene las opciones específicas de implementación de un motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve el valor de la opción.
+        </returns>
+      <param name="name">
+              Nombre de la opción que se va a obtener.
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.InitNew">
+      <summary>
+          Notifica que la fase de la inicialización ha finalizado y que el motor de secuencias de comandos está preparado para agregar objetos <see cref="T:Microsoft.Vsa.IVsaItem" />.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.IsCompiled">
+      <summary>
+        </summary>
+      <returns>
+          Devuelve TRUE si el motor de secuencias de comandos se configura para que genere información de depuración al llamar al método <see cref="M:Microsoft.Vsa.IVsaEngine.Compile" />. Devuelve FALSE si el motor de secuencias de comandos no va a devolver información de depuración.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.IsDirty">
+      <summary>
+          Obtiene un valor booleano que indica si el estado de origen del motor de secuencias de comandos ha cambiado desde la última vez que se guardó, o desde que el motor de secuencias de comandos se cargó originalmente.
+        </summary>
+      <returns>
+          Devuelve true si el motor de secuencias de comandos está marcado como modificado (por ejemplo, "sucio"). Devuelve false si el motor de secuencias de comandos no está sucio. El valor predeterminado de esta propiedad es false.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.IsRunning">
+      <summary>
+          Obtiene un valor booleano que indica si el motor de secuencias de comandos está en modo de ejecución.
+        </summary>
+      <returns>
+          Devuelve true si el motor de secuencias de comandos se está ejecutando. Devuelve false si el motor de secuencias de comandos no se está ejecutando. El valor predeterminado de esta propiedad es false.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.IsValidIdentifier(System.String)">
+      <summary>
+          Comprueba si el identificador proporcionado es válido para el motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve true si el identificador es válido; en caso contrario, devuelve false.
+        </returns>
+      <param name="identifier">
+              Valor de cadena proporcionado como identificador.
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Items">
+      <summary>
+          Obtiene la colección <see cref="T:Microsoft.Vsa.IVsaItems" /> de objetos <see cref="T:Microsoft.Vsa.IVsaItem" />, que representa todos los elementos agregados al motor de secuencias de comandos mediante el método <see cref="M:Microsoft.Vsa.IVsaItems.CreateItem" />, incluidos elementos de código, elementos de referencia y elementos globales.
+        </summary>
+      <returns>
+          Devuelve una colección <see cref="T:Microsoft.Vsa.IVsaItems" />.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Language">
+      <summary>
+          Obtiene el nombre sin adaptar del lenguaje de programación admitido por el motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve el nombre en inglés del lenguaje de programación admitido por el motor de secuencias de comandos.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.LCID">
+      <summary>
+          Obtiene o establece la configuración regional y el idioma en que se notificarán los mensajes de excepción.
+        </summary>
+      <returns>
+          Devuelve un valor entero que representa la configuración regional en que se notificarán los mensajes de excepción.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.LoadSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+          Indica al motor de secuencias de comandos que cargue elementos de origen desde su punto de persistencia, tal y como especifica el objeto proporcionado por el host que implementa la interfaz <see cref="T:Microsoft.Vsa.IVsaPersistSite" />.
+        </summary>
+      <param name="site">
+              Sitio desde el que se cargan los elementos de origen especificados.
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Name">
+      <summary>
+          Obtiene o establece el nombre de presentación del motor de secuencias de comandos que se utiliza principalmente para identificar motores de secuencias de comandos individuales a los usuarios en un entorno alojado en host.
+        </summary>
+      <returns>
+          Devuelve el valor de la propiedad Name del motor de secuencias de comandos, que puede ser una cadena vacía.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Reset">
+      <summary>
+          Quita el motor de secuencias de comandos del estado de ejecución y desconecta automáticamente los controladores de eventos enlazados.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.RevokeCache">
+      <summary>
+          Invalida el ensamblado almacenado en memoria caché para un motor de secuencias de comandos, especificado por su moniker raíz.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.RootMoniker">
+      <summary>
+          Obtiene o establece el moniker raíz de un motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve el valor actual de la propiedad RootMoniker.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.RootNamespace">
+      <summary>
+          Obtiene o establece el espacio de nombres raíz utilizado por el motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve el valor de cadena del espacio de nombres raíz.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.Run">
+      <summary>
+          Inicia la ejecución del código compilado en el motor de secuencias de comandos y enlaza todos los controladores de eventos.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.SaveCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>
+          Guarda el estado compilado del motor de secuencias de comandos; también puede guardar información de depuración.
+        </summary>
+      <param name="pe">
+              Estado compilado del motor de secuencias de comandos.
+            </param>
+      <param name="pdb">
+              Especifica la información de depuración contenida en el archivo .PDB correspondiente al archivo portable ejecutable (PE).
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.SaveSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+          Indica al motor de secuencias de comandos que conserve su estado de origen en el objeto <see cref="T:Microsoft.Vsa.IVsaPersistSite" /> especificado.
+        </summary>
+      <param name="site">
+              Sitio establecido por la interfaz <see cref="T:Microsoft.Vsa.IVsaPersistSite" /> donde se va a guardar el estado de origen.
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaEngine.SetOption(System.String,System.Object)">
+      <summary>
+          Establece las opciones específicas de implementación de un motor de secuencias de comandos.
+        </summary>
+      <param name="name">
+              Nombre de la opción que se va a establecer.
+            </param>
+      <param name="value">
+              Valor de la opción que se va a establecer.
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Site">
+      <summary>
+          Obtiene o establece el objeto <see cref="T:Microsoft.Vsa.IVsaSite" /> implementado por el host y que el motor de secuencias de comandos utiliza para comunicarse con el host.
+        </summary>
+      <returns>
+          Devuelve una referencia al objeto <see cref="T:Microsoft.Vsa.IVsaSite" /> actual.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaEngine.Version">
+      <summary>
+          Obtiene la versión actual del compilador de lenguaje admitido por el motor de secuencias de comandos, con el formato Major.Minor.Revision.Build.
+        </summary>
+      <returns>
+          Valor de cadena de la versión actual, con el formato Major.Minor.Revision.Build.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaError">
+      <summary>
+          Proporciona acceso a los errores de compilación encontrados durante la ejecución del método IVsaEngine.Compile Method.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Description">
+      <summary>
+          Obtiene una breve descripción del error, devolviendo en algunos casos una referencia al símbolo (token) del código fuente que está produciendo el error.
+        </summary>
+      <returns>
+          Devuelve una descripción de literal de cadena del error.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.EndColumn">
+      <summary>
+          Obtiene el número de la columna final del texto de origen que produjo el error, si está disponible.
+        </summary>
+      <returns>
+          Devuelve el número de la columna final del texto de origen que produjo el error, si está disponible.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Line">
+      <summary>
+          Obtiene el número de línea en que se produce un error.
+        </summary>
+      <returns>
+          Devuelve el número de línea en que se ha producido el error.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.LineText">
+      <summary>
+          Obtiene el texto de la línea de código fuente que produjo el error.
+        </summary>
+      <returns>
+          Devuelve el código fuente de literal de cadena de la línea que produjo el error.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Number">
+      <summary>
+          Obtiene un número que identifica el error de forma única.
+        </summary>
+      <returns>
+          Devuelve el número que identifica el error de forma única.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.Severity">
+      <summary>
+          Establece la gravedad del error.
+        </summary>
+      <returns>
+          Devuelve un entero (de 0 a 4) que representa la gravedad del error.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.SourceItem">
+      <summary>
+          Obtiene una referencia al objeto <see cref="T:Microsoft.Vsa.IVsaItem" /> que generó el error.
+        </summary>
+      <returns>
+          Devuelve una referencia al objeto <see cref="T:Microsoft.Vsa.IVsaItem" /> que generó el error.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.SourceMoniker">
+      <summary>
+          Obtiene el nombre completo del elemento de origen que contenía el error, en un formato reconocible por el motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve el nombre completo del elemento de origen que contenía el error.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaError.StartColumn">
+      <summary>
+          Obtiene el número de la columna inicial del texto de origen que produjo el error, si está disponible.
+        </summary>
+      <returns>
+          Devuelve el número de la columna inicial del texto de origen que produjo el error, si está disponible.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaGlobalItem">
+      <summary>
+          Describe los objetos globales agregados al motor de secuencias de comandos.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaGlobalItem.ExposeMembers">
+      <summary>
+          Establece un valor que indica si los miembros del objeto global deben estar disponibles para el motor de secuencias de comandos. [No se admite actualmente].
+        </summary>
+      <returns>
+          Devuelve TRUE si los miembros públicos del objeto global están disponibles para el motor de secuencias de comandos sin calificación, como si formaran parte del espacio de nombres global. Devuelve FALSE si un miembro del objeto global debe estar calificado con el nombre del objeto.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaGlobalItem.TypeString">
+      <summary>
+          Obtiene o establece el tipo del elemento global.
+        </summary>
+      <returns>
+          Devuelve el tipo de elemento del elemento global.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaIDE">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.DefaultSearchPath">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaIDE.EnableMainWindow(System.Boolean)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.ExtensibilityObject">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.IDEMode">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaIDE.ShowIDE(System.Boolean)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaIDE.Site">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaIDESite">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaIDESite.Notify(System.String,System.Object)">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaItem">
+      <summary>
+          Define una interfaz para todos los elementos agregados al motor de secuencias de comandos de .NET, incluidos elementos de código, elementos de referencia y elementos globales. Define propiedades y métodos genéricos que se aplican a todos los tipos de elementos que reconoce el motor.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItem.GetOption(System.String)">
+      <summary>
+          Obtiene las opciones específicas de implementación de un motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve el valor de la opción especificada.
+        </returns>
+      <param name="name">
+              Nombre de la opción que se va a recuperar.
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItem.IsDirty">
+      <summary>
+          Devuelve un valor que indica si la representación que hay en la memoria del elemento difiere de la representación conservada.
+        </summary>
+      <returns>
+          Devuelve true si el elemento ha cambiado y, por lo tanto, es necesario guardarlo; devuelve false si el elemento no ha cambiado.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItem.ItemType">
+      <summary>
+          Obtiene el tipo del objeto especificado, como determina el método IVsaItems.CreateItem Method.
+        </summary>
+      <returns>
+          Un tipo según enumera la enumeración <see cref="T:Microsoft.Vsa.VsaItemType" />.
+        </returns>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItem.Name">
+      <summary>
+          Obtiene o establece el nombre del elemento.
+        </summary>
+      <returns>
+          Devuelve el nombre de literal de cadena del elemento.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItem.SetOption(System.String,System.Object)">
+      <summary>
+          Establece las opciones específicas de implementación de un motor de secuencias de comandos.
+        </summary>
+      <param name="name">
+              Nombre de la opción que se va a establecer.
+            </param>
+      <param name="value">
+              Nuevo valor de la opción.
+            </param>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaItems">
+      <summary>
+          Define una interfaz para una colección de objetos <see cref="T:Microsoft.Vsa.IVsaItem" />, a la que se puede dirigir por nombre o por índice.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItems.Count">
+      <summary>
+          Obtiene el número de elementos de la colección especificada.
+        </summary>
+      <returns>
+          Devuelve el valor entero del número de elementos de la colección.
+        </returns>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItems.CreateItem(System.String,Microsoft.Vsa.VsaItemType,Microsoft.Vsa.VsaItemFlag)">
+      <summary>
+          Crea una nueva instancia de uno de los tipos de <see cref="T:Microsoft.Vsa.IVsaItem" />, según se define en la enumeración <see cref="T:Microsoft.Vsa.VsaItemType" />.
+        </summary>
+      <returns>
+          Devuelve una referencia al objeto <see cref="T:Microsoft.Vsa.IVsaItem" /> creado.
+        </returns>
+      <param name="name">
+              Nombre que se va a asociar al elemento nuevo. 
+              En los casos en que el elemento es un tipo de elemento de referencia, el parámetro name debe ser exactamente igual que el nombre del ensamblado al que se hace referencia, como se establece con la propiedad <see cref="P:Microsoft.Vsa.IVsaReferenceItem.AssemblyName" />. Sin embargo, en JScript, si no se especifica AssemblyName, JScript utilizará ItemName como nombre del ensamblado.
+            </param>
+      <param name="itemType">
+              Tipo de elemento creado, según se define en la enumeración <see cref="T:Microsoft.Vsa.VsaItemType" />.
+            </param>
+      <param name="itemFlag">
+              Indicador opcional que especifica el contenido inicial de un elemento Code. 
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItems.Item(System.Int32)">
+      <summary>
+          Obtiene un elemento de la colección por su valor de índice.
+        </summary>
+      <returns>
+          Devuelve el elemento situado en el índice especificado.
+        </returns>
+      <param name="index">
+              Índice de base cero de los elementos recuperables.
+            </param>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaItems.Item(System.String)">
+      <summary>
+          Obtiene un elemento de la colección por su nombre.
+        </summary>
+      <returns>
+          Devuelve el elemento especificado por nombre.
+        </returns>
+      <param name="name">
+              Nombre del elemento que se va a recuperar de la colección. 
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItems.Remove(System.Int32)">
+      <summary>
+          Quita un elemento de la colección, especificado por su valor de índice.
+        </summary>
+      <param name="index">
+              Valor de índice del elemento que se va a quitar. 
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaItems.Remove(System.String)">
+      <summary>
+          Quita un elemento de la colección, especificado por su nombre.
+        </summary>
+      <param name="name">
+              Nombre del elemento que se quita de la colección.
+            </param>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaPersistSite">
+      <summary>
+          Administra la persistencia de un proyecto y almacena y recupera código y otros elementos utilizando operaciones de guardar y cargar implementadas por el host.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaPersistSite.LoadElement(System.String)">
+      <summary>
+          Obtiene la cadena de origen guardada anteriormente utilizando el método <see cref="M:Microsoft.Vsa.IVsaPersistSite.SaveElement" />.
+        </summary>
+      <returns>
+          Devuelve el contenido del elemento de código fuente asociado al parámetro name.
+        </returns>
+      <param name="name">
+              Nombre del elemento de código que se va a cargar. Puede ser una referencia nula cuando se carga el archivo de proyecto.
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaPersistSite.SaveElement(System.String,System.String)">
+      <summary>
+          Guarda una cadena de origen arbitraria con un parámetro name determinado, que se puede utilizar después en una llamada al método <see cref="M:Microsoft.Vsa.IVsaPersistSite.LoadElement" /> para volver a cargar la cadena.
+        </summary>
+      <param name="name">
+              Nombre que se va a asociar al elemento de origen especificado. Puede ser una referencia nula cuando se guarda el archivo de proyecto.
+            </param>
+      <param name="source">
+              Cadena de origen del elemento.
+            </param>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaReferenceItem">
+      <summary>
+          Describe una referencia agregada al motor de secuencias de comandos.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.IVsaReferenceItem.AssemblyName">
+      <summary>
+          Obtiene o establece el nombre del ensamblado al que se hace referencia.
+        </summary>
+      <returns>
+          Devuelve el nombre de literal de cadena del ensamblado al que se hace referencia.
+        </returns>
+    </member>
+    <member name="T:Microsoft.Vsa.IVsaSite">
+      <summary>
+          Habilita la comunicación entre el host y el motor de secuencias de comandos. Esta interfaz es implementada por el host.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.GetCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>
+          Obtiene el estado compilado de un motor de secuencias de comandos y, opcionalmente, la información de depuración asociada.
+        </summary>
+      <param name="pe">
+              Estado compilado del motor; un ensamblado con forma de byte.
+            </param>
+      <param name="debugInfo">
+              Información de depuración del ensamblado, o una referencia nula si esa información no existe o no está disponible. 
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.GetEventSourceInstance(System.String,System.String)">
+      <summary>
+          Obtiene una referencia a un origen de eventos agregado anteriormente a un motor de secuencias de comandos utilizando el método <see cref="M:Microsoft.Vsa.IVsaCodeItem.AddEventSource" />.
+        </summary>
+      <returns>
+          Devuelve el origen de eventos al motor.
+        </returns>
+      <param name="itemName">
+              Nombre del elemento especificado.
+            </param>
+      <param name="eventSourceName">
+              Nombre del origen de eventos especificado.
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.GetGlobalInstance(System.String)">
+      <summary>
+          Obtiene una referencia a un elemento global, por ejemplo, el objeto Application proporcionado por el host.
+        </summary>
+      <returns>
+          Devuelve una referencia al objeto global.
+        </returns>
+      <param name="name">
+              Obtiene una referencia a un elemento global, por ejemplo, el objeto Application proporcionado por el host.
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.Notify(System.String,System.Object)">
+      <summary>
+          Notifica al host los eventos generados por el motor de secuencias de comandos de .NET.
+        </summary>
+      <param name="notify">
+              Notifica al host los eventos generados por el motor de secuencias de comandos de .NET.
+            </param>
+      <param name="info">
+              Notifica al host los eventos generados por el motor de secuencias de comandos de .NET.
+            </param>
+    </member>
+    <member name="M:Microsoft.Vsa.IVsaSite.OnCompilerError(Microsoft.Vsa.IVsaError)">
+      <summary>
+          Notifica al host cómo se ha de responder a los errores del compilador que encontró el motor de secuencias de comandos.
+        </summary>
+      <returns>
+          Devuelve TRUE si el compilador está configurado para continuar informando de los errores al objeto <see cref="T:Microsoft.Vsa.IVsaSite" />. Devuelve FALSE si el compilador está configurado para dejar de informar de los errores al objeto IVsaSite.
+        </returns>
+      <param name="error">
+              Objeto <see cref="T:Microsoft.Vsa.IVsaError" /> que representa el error. 
+            </param>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaError">
+      <summary>
+          Define el conjunto de excepciones que puede producir un motor de secuencias de comandos de .NET.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AppDomainCannotBeSet">
+      <summary>
+          Valor: 0x80133000
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AppDomainInvalid">
+      <summary>
+          Valor: 0x80133001
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ApplicationBaseCannotBeSet">
+      <summary>
+          Valor: 0x80133002
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ApplicationBaseInvalid">
+      <summary>
+          Valor: 0x80133003
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AssemblyExpected">
+      <summary>
+          Valor: 0x80133004
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.AssemblyNameInvalid">
+      <summary>
+          Valor: 0x80133005
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.BadAssembly">
+      <summary>
+          Valor: 0x80133006
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CachedAssemblyInvalid">
+      <summary>
+          Valor: 0x80133007
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CallbackUnexpected">
+      <summary>
+          Valor: 0x80133008
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CodeDOMNotAvailable">
+      <summary>
+          Valor: 0x80133009
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CompiledStateNotFound">
+      <summary>
+          Valor: 0x8013300A
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.DebugInfoNotSupported">
+      <summary>
+          Valor: 0x8013300B
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ElementNameInvalid">
+      <summary>
+          Valor: 0x8013300C
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ElementNotFound">
+      <summary>
+          Valor: 0x8013300D
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineBusy">
+      <summary>
+          Valor: 0x8013300E
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineCannotClose">
+      <summary>
+          Valor: 0x8013300F
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineCannotReset">
+      <summary>
+          Valor: 0x80133010
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineClosed">
+      <summary>
+          Valor: 0x80133011
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineEmpty">
+      <summary>
+          Valor: 0x80133012
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineInitialized">
+      <summary>
+          Valor: 0x80133013
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNameInUse">
+      <summary>
+          Valor: 0x80133014
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotCompiled">
+      <summary>
+          Valor: 0x8013301
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotInitialized">
+      <summary>
+          Valor: 0x80133016
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotRunning">
+      <summary>
+          Valor: 0x80133017
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineRunning">
+      <summary>
+          Valor: 0x80133018
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceInvalid">
+      <summary>
+          Valor: 0x80133019
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceNameInUse">
+      <summary>
+          Valor: 0x8013301A
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceNameInvalid">
+      <summary>
+          Valor: 0x8013301B
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceNotFound">
+      <summary>
+          Valor: 0x8013301C
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EventSourceTypeInvalid">
+      <summary>
+          Valor: 0x8013301D
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.GetCompiledStateFailed">
+      <summary>
+          Valor: 0x8013301E
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.GlobalInstanceInvalid">
+      <summary>
+          Valor: 0x8013301F
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.GlobalInstanceTypeInvalid">
+      <summary>
+          Valor: 0x80133020
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.InternalCompilerError">
+      <summary>
+          Valor: 0x80133021
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemCannotBeRemoved">
+      <summary>
+          Valor: 0x80133022
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemFlagNotSupported">
+      <summary>
+          Valor: 0x80133023
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemNameInUse">
+      <summary>
+          Valor: 0x80133024
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemNameInvalid">
+      <summary>
+          Valor: 0x80133025
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemNotFound">
+      <summary>
+          Valor: 0x80133026
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemTypeNotSupported">
+      <summary>
+          Valor: 0x80133027
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.LCIDNotSupported">
+      <summary>
+          Valor: 0x80133028
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.LoadElementFailed">
+      <summary>
+          Valor: 0x80133029
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NotificationInvalid">
+      <summary>
+          Valor: 0x8013302A
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.OptionInvalid">
+      <summary>
+          Valor: 0x8013302B
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.OptionNotSupported">
+      <summary>
+          Valor: 0x8013302C
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RevokeFailed">
+      <summary>
+          Valor: 0x8013302D
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerAlreadySet">
+      <summary>
+          Valor: 0x8013302E
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerInUse">
+      <summary>
+          Valor: 0x8013302F
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerInvalid">
+      <summary>
+          Valor: 0x80133030
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerNotSet">
+      <summary>
+          Valor: 0x80133031
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootMonikerProtocolInvalid">
+      <summary>
+          Valor: 0x80133032
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootNamespaceInvalid">
+      <summary>
+          Valor: 0x80133033
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.RootNamespaceNotSet">
+      <summary>
+          Valor: 0x80133034
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SaveCompiledStateFailed">
+      <summary>
+          Valor: 0x80133035
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SaveElementFailed">
+      <summary>
+          Valor: 0x80133036
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SiteAlreadySet">
+      <summary>
+          Valor: 0x80133037
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SiteInvalid">
+      <summary>
+          Valor: 0x80133038
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SiteNotSet">
+      <summary>
+          Valor: 0x80133039
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SourceItemNotAvailable">
+      <summary>
+          Valor: 0x8013303A
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.SourceMonikerNotAvailable">
+      <summary>
+          Valor: 0x8013303B
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.URLInvalid">
+      <summary>
+          Valor: 0x8013303C
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.BrowserNotExist">
+      <summary>
+          Valor: 0x8013303D
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.DebuggeeNotStarted">
+      <summary>
+          Valor: 0x8013303E
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNameInvalid">
+      <summary>
+          Valor: 0x8013303F
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNotExist">
+      <summary>
+          Valor: 0x80133040
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.FileFormatUnsupported">
+      <summary>
+          Valor: 0x80133041
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.FileTypeUnknown">
+      <summary>
+          Valor: 0x80133042
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ItemCannotBeRenamed">
+      <summary>
+          Valor: 0x80133043
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.MissingSource">
+      <summary>
+          Valor: 0x80133044
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NotInitCompleted">
+      <summary>
+          Valor: 0x80133045
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NameTooLong">
+      <summary>
+          Valor: 0x80133046
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ProcNameInUse">
+      <summary>
+          Valor: 0x80133047
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.ProcNameInvalid">
+      <summary>
+          Valor: 0x80133048
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.VsaServerDown">
+      <summary>
+          Valor: 0x80133049
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.MissingPdb">
+      <summary>
+          Valor: 0x8013304A
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.NotClientSideAndNoUrl">
+      <summary>
+          Valor: 0x8013304B
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.CannotAttachToWebServer">
+      <summary>
+          Valor: 0x8013304C
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.EngineNameNotSet">
+      <summary>
+          Valor: 0x8013303F
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaError.UnknownError">
+      <summary>
+          Valor: 0x801330FF
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaException">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(Microsoft.Vsa.VsaError)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(Microsoft.Vsa.VsaError,System.String)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(Microsoft.Vsa.VsaError,System.String,System.Exception)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(System.String)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.#ctor(System.String,System.Exception)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaException.ErrorCode">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaException.ToString">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaIDEMode">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaIDEMode.Break">
+      <summary>
+          Modo de interrupción: Hay un depurador asociado y en modo de interrupción.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaIDEMode.Design">
+      <summary>
+          Modo de diseño: No hay un depurador asociado.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaIDEMode.Run">
+      <summary>
+          Modo de ejecución: Hay un depurador asociado.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaItemFlag">
+      <summary>
+          Identifica el tipo de elemento de código como Class, Module o None.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemFlag.None">
+      <summary>
+          Valor: 0
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemFlag.Module">
+      <summary>
+          Valor: 1
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemFlag.Class">
+      <summary>
+          Valor: 2
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaItemType">
+      <summary>
+          Identifica el tipo de elemento como Code, Reference o AppGlobal.
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemType.Reference">
+      <summary>
+          Valor: 0
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemType.AppGlobal">
+      <summary>
+          Valor: 1
+        </summary>
+    </member>
+    <member name="F:Microsoft.Vsa.VsaItemType.Code">
+      <summary>
+          Valor: 2
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaLoader">
+      <summary>
+          Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.#ctor">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Assembly">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Close">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Compile">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Evidence">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.GenerateDebugInfo">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.GetOption(System.String)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.InitNew">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.IsCompiled">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.IsDirty">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.IsRunning">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.IsValidIdentifier(System.String)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Items">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Language">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.LCID">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.LoadSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Name">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Reset">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.RevokeCache">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.RootMoniker">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.RootNamespace">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.Run">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.SaveCompiledState(System.Byte[]@,System.Byte[]@)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.SaveSourceState(Microsoft.Vsa.IVsaPersistSite)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaLoader.SetOption(System.String,System.Object)">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Site">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaLoader.Version">
+      <summary>
+          Este miembro admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+        </summary>
+    </member>
+    <member name="T:Microsoft.Vsa.VsaModule">
+      <summary>
+          Este tipo es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.
+        </summary>
+    </member>
+    <member name="M:Microsoft.Vsa.VsaModule.#ctor(System.Boolean)">
+      <summary>
+          Este miembro es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.
+        </summary>
+    </member>
+    <member name="P:Microsoft.Vsa.VsaModule.IsVsaModule">
+      <summary>
+          Este miembro es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.
+        </summary>
+    </member>
+  </members>
+</doc>
